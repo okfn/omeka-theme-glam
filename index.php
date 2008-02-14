@@ -3,35 +3,28 @@
 	<div id="primary">
 		
 		<div id="featured-item">
-		<h2>Featured Item</h2>
-		
-			<?php $randomitem = random_featured_item();  ?>
-			<div class="feat-metadata">
-				<?php if(!empty($randomitem)): ?>
-				<?php if(has_thumbnail($randomitem)): ?>
-			<a class="feat-img" href="<?php echo uri('items/show/'.$randomitem->id); ?>"><?php fullsize($randomitem, null, 467); ?></a>
-			<?php endif; ?>
-			<h3 class="item-title"><a href="<?php echo uri('items/show/'.$randomitem->id); ?>"><?php echo $randomitem->title; ?></a></h3>
-			<p class="desc"><?php echo ($randomitem->description); ?></p>
-			<?php if ($randomitem->source) {
-			echo "<p class=\"source\">Source: <a href=\"".$randomitem->source."\">".$randomitem->source."</a></p>"; } ?>
-			<?php else: ?>
-					<h3>No Featured Items</h3>
-					<p>No featured items available.</p>	
-				<?php endif; ?>
-			</div>
+			<?php $randomItem = random_featured_item();  ?>
+			<h2>Featured Item</h2>
+			<?php if(!empty($randomItem)):?>
 			
-		</div>
+			    <h3><?php echo link_to_item($randomItem); ?></h3>
+    			<?php if(has_thumbnail($randomItem)): ?>
+    			    <?php echo link_to_square_thumbnail($randomItem, array('class'=>'image')); ?>
+    			<?php endif; ?>
+    			<p class="item-description"><?php echo h(snippet($randomItem->description, 0, 150)); ?></p>	
+    			<?php else: ?>
+    				<h3>No Featured Items</h3>
+    				<p>You have no featured items. Please make some featured.</p>	
+    		<?php endif; ?>	
+		</div><!--end featured-item-->	
 			
 		<div id="recent-items">
 		<h2>Recently Added</h2>
 			<?php $recent = recent_items(8); 
-			if(!empty($recent)):
-			?>
+			if(!empty($recent)): ?>
 			<ul>
 				<?php foreach( $recent as $item ): ?>
-				<li><a href="<?php echo uri('items/show/'.$item->id); ?>"><?php echo $item->title; ?></a><?php if ($item->description); 
-				{ echo "<span class=\"item-description\">".$item->description."</span>"; } ?></li>
+				<li><?php echo link_to_item($item); ?></li>
 				<?php endforeach; ?>
 			</ul>
 			<?php else: ?>
@@ -44,7 +37,7 @@
 	
 	<div id="secondary">
 			<h2>Tags</h2>
-			<?php tag_cloud(recent_tags(), uri('items')); ?>
+			<?php echo tag_cloud(recent_tags(), uri('items')); ?>
 	</div><!-- end secondary -->
 	
 <?php foot(); ?>
