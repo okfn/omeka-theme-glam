@@ -59,7 +59,9 @@ fieldset {border:0; padding:0;}
 .collection {margin: 1em 0; padding: 1em 0;border-bottom: 1px solid #ddd;}
 
 /* Search */
-#searchwrap {position: absolute; top: 0; right: 0; font-size: .9em; margin: 0 0 18px; padding: .5em 1em;}
+#simple-search { font-size: .9em; margin: 0 0 18px; padding: 1em 1em;float:left; width:250px;}
+#simple-search input {margin:0;padding: 0;}
+#search-wrap h2 {display:none;}
 
 /* Primary Navigation */
 #primary-nav {margin: 0; width: 100%; overflow: hidden;border-top: 1px solid #ccc;}
@@ -68,6 +70,16 @@ fieldset {border:0; padding:0;}
 		#primary-nav li a:link, #primary-nav li a:visited {float: left; display: block; padding: 6px .5em; color: #363636;}
 		#primary-nav li a:hover {color: #92278f;}
 		#primary-nav li.current a {color: #660066; font-weight: bold; padding: 5px .5em;}
+
+/* Secondary Navigation */
+#secondary-nav {margin: 0; width: 100%; overflow: hidden;border-top: 1px solid #ccc;}
+	#secondary-nav ul {float: right;margin: 0; display: inline; padding-right: 1em; background: url('../images/nav-bg.gif'); background-position: right center; background-repeat: no-repeat;}
+		#secondary-nav li {float: left; padding: .5em 0 .5em 1em; background: url('../images/nav-bg.gif'); background-position: left center; background-repeat: no-repeat;}
+		#secondary-nav li a:link, #secondary-nav li a:visited {float: left; display: block; padding: 6px .5em; color: #363636;}
+		#secondary-nav li a:hover {color: #92278f;}
+		#secondary-nav li.current a {color: #660066; font-weight: bold; padding: 5px .5em;}
+
+/* Footer Navigation */
 		
 /* Thumbnails */
 span.thumb {margin: 0 0 2em;}
@@ -85,9 +97,9 @@ span.thumb a img {border: 1px solid #ccc;}
 #recent-items ul li {list-style-type: square;list-style-position: outside; padding: 0 0 .5em;}
 
 /* Browse and Item Pages */
-#pagination ul {float: left; font-size: .9em; width: auto; padding: 0;}
-	#pagination li {float: left; display: inline; padding: 0 .5em;}
-	#pagination a {padding: 0 .5em 0 0;}
+.pagination ul {float: left; font-size: .9em; width: auto; padding: 0;}
+	.pagination li {float: left; display: inline; padding: 0 .5em;}
+	.pagination a {padding: 0 .5em 0 0;}
 	
 .desc p {margin: .5em 0 0; }
 
