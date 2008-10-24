@@ -59,13 +59,15 @@ fieldset {border:0; padding:0;}
 .collection {margin: 1em 0; padding: 1em 0;border-bottom: 1px solid #ddd;}
 
 /* Search */
-#simple-search { font-size: .9em; margin: 0 0 18px; padding: 1em 1em;float:left; width:250px;}
+#search-wrap {width:350px; float:right;}
+#simple-search { font-size: .9em; margin: 0 0 18px; padding: 1em 1em;display:block;float:left;}
 #simple-search input {margin:0;padding: 0;}
+#advanced-search {display:block;float:left;font-size: 1em; margin: 0 0 18px; padding: 1em 0em;}
 #search-wrap h2 {display:none;}
 
 /* Primary Navigation */
 #primary-nav {margin: 0; width: 100%; overflow: hidden;border-top: 1px solid #ccc;}
-	#primary-nav ul {float: right;margin: 0; display: inline; padding-right: 1em; background: url('../images/nav-bg.gif'); background-position: right center; background-repeat: no-repeat;}
+	#primary-nav ul {float: left;margin: 0; display: inline; padding:0; padding-right: 1em; background: url('../images/nav-bg.gif'); background-position: right center; background-repeat: no-repeat;}
 		#primary-nav li {float: left; padding: .5em 0 .5em 1em; background: url('../images/nav-bg.gif'); background-position: left center; background-repeat: no-repeat;}
 		#primary-nav li a:link, #primary-nav li a:visited {float: left; display: block; padding: 6px .5em; color: #363636;}
 		#primary-nav li a:hover {color: #92278f;}
@@ -80,6 +82,9 @@ fieldset {border:0; padding:0;}
 		#secondary-nav li.current a {color: #660066; font-weight: bold; padding: 5px .5em;}
 
 /* Footer Navigation */
+
+#footer ul.navigation {padding:0;}
+    #footer ul.navigation li {padding-right:10px;}
 		
 /* Thumbnails */
 span.thumb {margin: 0 0 2em;}

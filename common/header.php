@@ -25,16 +25,18 @@
 	<div id="wrap">
 
 		<div id="header">
-			<h1><a href="<?php echo uri(''); ?>"><?php echo settings('site_title'); ?></a></h1>
+			<h1><?php echo link_to_home_page(); ?></h1>
 		</div>
 		<div id="content">
+
 			<div id="primary-nav">
-				<div id="search-wrap">
-				    <h2>Search</h2>
-				    <?php echo simple_search(array('id'=>'simple-search'),uri('items/browse')); ?>
+    		    <div id="search-wrap">
+    			    <h2>Search</h2>
+    			    <?php echo simple_search('search',array('id'=>'simple-search')); ?>
+    			    <?php echo link_to_advanced_search('advanced search',array('id'=>'advanced-search')); ?>
     			</div>
     			
     			<ul class="navigation">
-    			    <?php echo nav(array('About' => uri('about'), 'Browse Items' => uri('items'), 'Browse Exhibits' => uri('exhibits'), 'Browse Collections'=>uri('collections'))); ?>
+    			    <?php echo public_nav_main(array('Browse Items' => uri('items'), 'Browse Collections'=>uri('collections'))); ?>
     			</ul>
 			</div>
