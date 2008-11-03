@@ -21,19 +21,20 @@
 <?php echo plugin_header(); ?>
 
 </head>
-<body>
+<body<?php echo $bodyid ? ' id="'.$bodyid.'"' : ''; ?><?php echo $bodyclass ? ' class="'.$bodyclass.'"' : ''; ?>>
 	<div id="wrap">
 
 		<div id="header">
 			<h1><?php echo link_to_home_page(); ?></h1>
 		</div>
+		
 		<div id="content">
 
 			<div id="primary-nav">
     		    <div id="search-wrap">
     			    <h2>Search</h2>
-    			    <?php echo simple_search('search',array('id'=>'simple-search')); ?>
-    			    <?php echo link_to_advanced_search('advanced search',array('id'=>'advanced-search')); ?>
+    			    <?php echo simple_search(); ?>
+    			    <?php echo link_to_advanced_search(); ?>
     			</div>
     			
     			<ul class="navigation">

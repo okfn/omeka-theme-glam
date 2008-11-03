@@ -62,7 +62,7 @@ fieldset {border:0; padding:0;}
 #search-wrap {width:350px; float:right;}
 #simple-search { font-size: .9em; margin: 0 0 18px; padding: 1em 1em;display:block;float:left;}
 #simple-search input {margin:0;padding: 0;}
-#advanced-search {display:block;float:left;font-size: 1em; margin: 0 0 18px; padding: 1em 0em;}
+#search-wrap a {display:block;float:left;font-size: 1em; margin: 0 0 18px; padding: 1em 0em;}
 #search-wrap h2 {display:none;}
 
 /* Primary Navigation */
