@@ -28,6 +28,7 @@ a:hover {color: #92278f;}
 a:active {color: #ff00ff;}
 
 h1 a, h1 a:visited {color: #660066; text-decoration: none;}
+h2 a {text-decoration:none;}
 h4 a:link, h4 a:visited { text-decoration: none; color: #660066; padding: .25em 0;}
 h4 a:hover {color: #92278f; }
 
@@ -59,10 +60,10 @@ fieldset {border:0; padding:0;}
 .collection {margin: 1em 0; padding: 1em 0;border-bottom: 1px solid #ddd;}
 
 /* Search */
-#search-wrap {width:350px; float:right;}
-#simple-search { font-size: .9em; margin: 0 0 18px; padding: 1em 1em;display:block;float:left;}
+#search-wrap {width:225px;;float:right;}
+#simple-search { font-size: .9em; padding: 1em 0 0 1em;margin:0;}
 #simple-search input {margin:0;padding: 0;}
-#search-wrap a {display:block;float:left;font-size: 1em; margin: 0 0 18px; padding: 1em 0em;}
+#search-wrap a {float:right;font-size: 1em; margin: 0 0 18px; padding: 1em 0em;}
 #search-wrap h2 {display:none;}
 
 /* Primary Navigation */
@@ -102,9 +103,9 @@ span.thumb a img {border: 1px solid #ccc;}
 #recent-items ul li {list-style-type: square;list-style-position: outside; padding: 0 0 .5em;}
 
 /* Browse and Item Pages */
-.pagination ul {float: left; font-size: .9em; width: auto; padding: 0;}
-	.pagination li {float: left; display: inline; padding: 0 .5em;}
-	.pagination a {padding: 0 .5em 0 0;}
+.item-pagination {float: left; font-size: .9em; width: auto; padding: 0;margin:1em 0 0;}
+	.item-pagination li {float: left; display: inline; padding: 0 .5em;}
+	.item-pagination a {padding: 0 .5em 0 0;}
 	
 .desc p {margin: .5em 0 0; }
 
@@ -171,25 +172,26 @@ ul.tags li {display: inline;padding:0 .5em 0 0;}
 	#exhibits .exhibit {border-bottom: 1px solid #ccc; margin-bottom: 1em;}
 
 #exhibit-header {clear: both;}
-		#exhibit-header h2 {text-transform: uppercase; margin-bottom: 0;}
-		#exhibit-header h2 a {text-decoration: none;} 
-		#exhibit-header h3 {clear: both; float: left; margin: 0;}
+		#exhibits h2 {text-transform: uppercase; margin-bottom: 0;}
+		#exhibits h2 a {text-decoration: none;} 
+		#exhibits h3 {clear: both; float: left; margin: 0;}
 	
-#nav-container {overflow: hidden;}
+#nav-container {overflow: hidden;zoom:1;}
 
-.exhibit-section-nav {float:left;padding-left: 0;}
+.exhibit-section-nav {float:left;margin-left: 0;}
 	.exhibit-section-nav li {list-style-type: none;float:left;text-transform: uppercase;letter-spacing: 0.14em; padding: 0 2em 0 0;}
 	.exhibit-section-nav li a {float: left;text-decoration: none; display: block; color: #a580a4;border-bottom: 2px solid #fff;}
 	.exhibit-section-nav li a:visited {color: #a580a4;}
 	.exhibit-section-nav li a:hover {color: #92278f;border-bottom: 2px solid #92278f;}
 	.exhibit-section-nav li a.current {border-bottom: 2px solid #660066; color: #660066;}
 	
-.exhibit-page-nav {clear:left;float:left; width: 100%; border-bottom: 1px solid #ddd; padding: 0 1em 0 0; margin-bottom: .5em;}
+.exhibit-page-nav {clear:left;float:left; overflow:hidden;width: 100%; border-bottom: 1px solid #ddd; padding: 0 1em 0 0; margin-bottom: .5em;margin-left:0;}
 	.exhibit-page-nav li {float: left; display: inline; padding: 0 2px 0 0; margin: 0;}
 	.exhibit-page-nav li a {display: inline; padding: 5px 1em .5em 0; text-decoration: none;}
 	.exhibit-page-nav li.current a {text-decoration:none;font-weight:bold;}
 
-.summary {margin-bottom: 0;}	
+.summary {margin-bottom: 0;}
+.exhibit-item {clear:both;overflow:hidden;}	
 .exhibit-item a {text-decoration: none;}
 a img {border: none;}
 .gallery-thumbnails-text-bottom {clear: both;}
