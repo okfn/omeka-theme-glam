@@ -12,6 +12,8 @@ strong {font-weight: bold;}
 
 /* Headings */
 h1, h2, h3 {font-family: 'Trebuchet MS', sans-serif; font-weight: normal; }
+#site-title {font-family: 'Trebuchet MS', sans-serif; font-weight: normal; }
+#site-title {color: #660066; text-transform: uppercase; letter-spacing: .2em; font-size: 3em; line-height: 1em; margin: 1em 0 0;}
 h1 {color: #660066; text-transform: uppercase; letter-spacing: .2em; font-size: 3em; line-height: 1em; margin: 1em 0 0;}
 h2 {text-align: left; border-bottom: 1px solid #ddd; font-size: 2em; line-height: .75em; margin-bottom: .75em;}
 h3 {font-size: 1.5em; line-height: 1em; margin-bottom: 1em;}
@@ -28,7 +30,12 @@ a:hover {color: #92278f;}
 a:active {color: #ff00ff;}
 
 h1 a, h1 a:visited {color: #660066; text-decoration: none;}
+<<<<<<< .mine
+h2 a, h2 a:visited {color: #660066; text-decoration: none;}
+#site-title a, #site-title a:visited {color: #660066; text-decoration: none;}
+=======
 h2 a {text-decoration:none;}
+>>>>>>> .r3271
 h4 a:link, h4 a:visited { text-decoration: none; color: #660066; padding: .25em 0;}
 h4 a:hover {color: #92278f; }
 
@@ -111,7 +118,7 @@ span.thumb a img {border: 1px solid #ccc;}
 
 .item {overflow: hidden; width: 100%; padding: 0; margin: 0;clear: both; border-bottom: 1px solid #eee; padding-bottom: 18px;}
 	.item .item-content {float:right; margin-left: 18px; margin-bottom: 18px;}
-	.item .item-meta {float:left;}
+	.item .item-meta {float:left;width:100%;}
  	.item span {line-height: 1.5em; margin-bottom: 1.5em;}
 	.item span.thumb {float: right;}
 	.item div.item-img {padding-left: 9px; float: right;}
