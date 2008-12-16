@@ -5,6 +5,7 @@
 	<h1 class="item-title"><?php echo item('Dublin Core', 'Title'); ?></h1>
 	
 	<ul>
+	    <h3>All Titles</h3>
         <?php foreach (item('Dublin Core', 'Title', 'all') as $title): ?>
            <li class="item-title">
            <?php echo $title; ?>
@@ -39,7 +40,7 @@
 	
 	<!-- The following prints a citation for this item. -->
 	<div id="citation" class="element">
-    	<h2>Citation</h2>
+    	<h3>Citation</h3>
     	<div id="citation-text" class="element-value"><?php echo item_citation(); ?></div>
 	</div>
 	
