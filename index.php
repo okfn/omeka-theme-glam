@@ -29,7 +29,13 @@
 	
 	<div id="secondary">
 			<h2>Tags</h2>
-                <?php echo tag_cloud($tags,uri('items/browse')); ?>
+            <?php 
+                if ($tags = get_tags(array('type' => 'Item', 'sort' => array('most', 'recent')))): 
+                    echo tag_cloud($tags, uri('items/browse'));
+                else: 
+            ?>
+            <p>No tags available.</p>                    
+            <?php endif; ?>        
 	</div><!-- end secondary -->
 	
 <?php foot(); ?>
