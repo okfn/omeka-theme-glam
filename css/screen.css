@@ -1,6 +1,3 @@
-/* == Reset == */
-@import url("reset.css");
-
 /* == Generic styles ======== */
 body {font: 75% "Helvetica Neue",Helvetica, Arial, sans-serif; color: #444; background: #fffff8;  margin:0; }
 html>body {font-size: 12px;}
