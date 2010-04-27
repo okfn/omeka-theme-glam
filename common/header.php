@@ -25,7 +25,7 @@
 	<div id="wrap">
 
 		<div id="header">
-			<div id="site-title"><?php echo link_to_home_page(); ?></div>
+			<div id="site-title"><?php echo link_to_home_page(minimalist_display_logo()); ?></div>
 		</div>
 		
 		<div id="content">
@@ -38,6 +38,6 @@
     			</div>
     			
     			<ul class="navigation">
-    			    <?php echo public_nav_main(array('Browse Items' => uri('items'), 'Browse Collections'=>uri('collections'))); ?>
+    			    <?php echo minimalist_public_nav_header(); ?>
     			</ul>
 			</div>

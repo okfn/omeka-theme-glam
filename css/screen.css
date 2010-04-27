@@ -82,7 +82,7 @@ fieldset {border:0; padding:0;}
 .collection {margin: 1em 0; padding: 1em 0;border-bottom: 1px solid #ddd;}
 
 /* Search */
-#search-wrap {width:225px;;float:right;}
+#search-wrap {width:225px;float:right;}
 #simple-search { font-size: .9em; padding: 1em 0 0 1em;margin:0;}
 #simple-search input {margin:0;padding: 0;}
 #search-wrap a {float:right;font-size: 1em; margin: 0 0 18px; padding: 1em 0em;}
@@ -90,7 +90,7 @@ fieldset {border:0; padding:0;}
 
 /* Primary Navigation */
 #primary-nav {margin: 0; width: 100%; overflow: hidden;border-top: 1px solid #ccc;}
-	#primary-nav ul {float: left;margin: 0; display: inline; padding:0; padding-right: 1em; background: url('../images/nav-bg.gif'); background-position: right center; background-repeat: no-repeat;}
+	#primary-nav ul {float: left;width: 500px; margin:0;padding:0;}
 		#primary-nav li {float: left; padding: .5em 0 .5em 1em; background: url('../images/nav-bg.gif'); background-position: left center; background-repeat: no-repeat;}
 		#primary-nav li a:link, #primary-nav li a:visited {float: left; display: block; padding: 6px .5em; color: #363636;}
 		#primary-nav li a:hover {color: #92278f;}
