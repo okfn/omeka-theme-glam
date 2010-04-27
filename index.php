@@ -2,13 +2,16 @@
 
 	<div id="primary">
 		
-		<div id="featured-item">
-            <?php echo display_random_featured_item(); ?>
-		</div><!--end featured-item-->	
-			
+	    <p><?php echo strip_formatting(get_theme_option('Homepage Text')); ?></p>
+        <?php echo minimalist_display_random_featured_item(); ?>
+        <?php echo minimalist_display_random_featured_collection(); ?>
+    	<?php echo minimalist_display_random_featured_exhibit(); ?>
+		
 		<div id="recent-items">
 		<h2>Recently Added</h2>
-    		<?php set_items_for_loop(recent_items(10)); ?>
+    		<?php 
+    		$homepageRecentItems = (int)get_theme_option('Homepage Recent Items') ? get_theme_option('Homepage Recent Items') : '10';
+    		set_items_for_loop(recent_items($homepageRecentItems)); ?>
     		<?php if (has_items_for_loop()): ?>
     		<ul class="items-list">
     			<?php while (loop_items()): ?>

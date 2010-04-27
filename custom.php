@@ -87,6 +87,45 @@ function minimalist_public_nav_header()
     return nav($navArray);
 }
 
+function minimalist_display_random_featured_item($withImage=false)
+{
+    $displayFeatured = get_theme_option('Display Featured Item');
+    $html = '';
+    
+    if ($displayFeatured == 1) {
+        $html .= '<div id="featured-item">'."\n";
+        $html .= display_random_featured_item($withImage)."\n";
+        $html .= '</div>'."\n";
+    }
+
+    return $html;
+}
+
+function minimalist_display_random_featured_collection()
+{
+    $displayFeatured = get_theme_option('Display Featured Collection');
+    $html = '';
+    
+    if ($displayFeatured == 1) {
+        $html .= '<div id="featured-collection">'."\n";
+        $html .= display_random_featured_collection()."\n";
+        $html .= '</div>'."\n";
+    }
+
+    return $html;
+}
+
+function minimalist_display_random_featured_exhibit()
+{
+    $displayFeatured = get_theme_option('Display Featured Exhibit');
+    $html = '';
+    
+    if ($displayFeatured == 1 && function_exists('exhibit_builder_display_random_featured_exhibit')) {
+        $html .= exhibit_builder_display_random_featured_exhibit()."\n";
+    }
+
+    return $html;
+}
 // General helpers
 function string_begins_with($string, $search)
 {
