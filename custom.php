@@ -79,12 +79,11 @@ function minimalist_public_nav_header()
                 $navArray[$link] = $url;
             }
         }
+        return nav($navArray);
     } else {
-        $filterName = 'public_navigation_main';
         $navArray = array('Browse Items' => uri('items'), 'Browse Collections'=>uri('collections'));
-        $navArray = apply_filters($filterName, $navArray);
+        return public_nav_main($navArray);
     }
-    return nav($navArray);
 }
 
 function minimalist_display_random_featured_item($withImage=false)
