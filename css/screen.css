@@ -2,43 +2,36 @@
 body {font: 75% "Helvetica Neue",Helvetica, Arial, sans-serif; color: #444; background: #fffff8;  margin:0; }
 html>body {font-size: 12px;}
 p, span,ul,ol,dl  {font-size: 1em; line-height: 1.6em;}
-ul {list-style:none;}
-ol {list-style-position:inside;}
 abbr,acronym {border: none; font-style: normal;}
 img a {border: none;}
-strong {font-weight: bold;}
 .clear {clear: both;}
-
+blockquote {font-style:italic;}
 /* Headings */
-h1, h2, h3 {font-family: 'Trebuchet MS', sans-serif; font-weight: normal; }
-#site-title {font-family: 'Trebuchet MS', sans-serif; font-weight: normal; }
-#site-title {color: #660066; text-transform: uppercase; letter-spacing: .2em; font-size: 3em; line-height: 1em; margin: 1em 0 0;}
-h1 {color: #660066; text-transform: uppercase; letter-spacing: .2em; font-size: 3em; line-height: 1em; margin: 1em 0 0;}
-h2 {text-align: left; border-bottom: 1px solid #ddd; font-size: 2em; line-height: .75em; margin-bottom: .75em;}
-    .element-set h2 {display:none;}
+h1, h2, h3, #site-title {font-family: 'Trebuchet MS', sans-serif; font-weight: normal; }
+h1, #site-title {color: #660066; text-transform: uppercase; letter-spacing: .2em; font-size: 3em; line-height: 1em; margin: 1em 0 0;}
+h2 { border-bottom: 1px solid #ddd; font-size: 2em; line-height: .75em; margin-bottom: .75em;}
+.element-set h2 {display:none;}
 h3 {font-size: 1.5em; line-height: 1em; margin-bottom: 1em;}
-h4 {font-size: 1.2em; line-height: 1.25em; margin: .75em 0 0;}
-h5 {font-size: 1.2em; line-height: 1.25em; margin: .75em 0; color: #666; letter-spacing: .1em; font-weight: normal;}
-h6 {}
 
-#searchwrap h3 {text-transform: uppercase; font-size: 1em; margin: 0;}
+h4,h5,h6 {font-size: 1.2em; line-height: 1.25em; margin: .75em 0 0;}
+h5,h6 {color: #666; font-weight: normal;}
+h6 {font-style:italic; }
 
 /* Links */
-a:link {color: #660066;}
+a:link,
 a:visited {color: #660066;}
 a:hover {color: #92278f;} 
 a:active {color: #ff00ff;}
 
-h1 a, h1 a:visited {color: #660066; text-decoration: none;}
+h1 a, 
+h2 a,
+h3 a,
+h4 a,
+#site-title a {text-decoration: none;}
 
-h2 a, h2 a:visited {color: #660066; text-decoration: none;}
-#site-title a, #site-title a:visited {color: #660066; text-decoration: none;}
-
-h4 a:link, h4 a:visited { text-decoration: none; color: #660066; padding: .25em 0;}
-h4 a:hover {color: #92278f; }
+h4 a {padding: .25em 0;}
 
 /* Forms */
-
 fieldset {border:0; padding:0;}
 	legend {font-size:1.5em; line-height:1em; margin:1em 0 0 ;}
 	input.textinput {margin-bottom:1em;}
@@ -60,10 +53,14 @@ fieldset {border:0; padding:0;}
     #primary input#description {width: 378px; height: 312px;}
     #primary .search-entry select {margin-bottom:.5em;}
     #primary #submit_search {margin:.5em 0 0 458px;}
-	
+
+/* Tables */
+table {width: 100%;}
+th,td {border-bottom:1px solid #ccc; margin:0;padding:0.5em 0;}
+th {border-width: 3px; text-align:left;}
+
 /* Reusable classes */
 .hide {text-indent: -1000em; width: 0; height: 0; overflow: hidden;}
-
 .navigation {list-style:none; margin: 2em 0 0;}
 	.navigation li {display:inline;}
 	.navigation a {text-decoration:none;}
@@ -71,15 +68,14 @@ fieldset {border:0; padding:0;}
 /* ====== Structure ====== */
 
 #wrap {width: 744px; margin: 0 auto; position: relative;}
-#header {width: 744px; margin: .5em 0 0; padding: 1em 0 0;}
+#header {margin: .5em 0 0; padding: 1em 0 0;}
 #content {clear: both; margin-bottom: 2em;}
-#primary {clear: both; margin: 3em 0 0; width: 744px;}
-#secondary {clear: both; margin: 3em 0 0;}
+#primary,#secondary {clear: both; margin: 3em 0 0; }
+#primary {width: 744px;}
 #featured-item {clear: both; margin: 1.5em 0 1em;}
 #recent-items {clear: both; overflow: hidden; margin: 1.5em 0;}
 #tagcloud {margin-top: 2em;}
 #footer {clear: both; padding: 1em .5em; margin: 3em 0 1em; background-color: #ddd;}
-.collection {margin: 1em 0; padding: 1em 0;border-bottom: 1px solid #ddd;}
 
 /* Search */
 #search-wrap {width:225px;float:right;}
@@ -87,6 +83,7 @@ fieldset {border:0; padding:0;}
 #simple-search input {margin:0;padding: 0;}
 #search-wrap a {float:right;font-size: 1em; margin: 0 0 18px; padding: 1em 0em;}
 #search-wrap h2 {display:none;}
+#searchwrap h3 {text-transform: uppercase; font-size: 1em; margin: 0;}
 
 /* Primary Navigation */
 #primary-nav {margin: 0; width: 100%; overflow: hidden;border-top: 1px solid #ccc;}
@@ -149,6 +146,7 @@ ul.tags { padding-left:0;}
 ul.tags li {display: inline;padding:0 .5em 0 0;}
 
 /* Collections */
+.collection {margin: 1em 0; padding: 1em 0;border-bottom: 1px solid #ddd;}
 .collection ul {margin: 0 0 1em 1em;}
 
 /* Microformats */
