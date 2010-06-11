@@ -71,8 +71,8 @@ function minimalist_public_nav_header()
                 $pairArray = explode('|', $pair, 2);
                 if (count($pairArray) == 2) {
                     $link = trim($pairArray[0]);
-                    $url = trim($pairArray[1]); 
-                    if (!string_begins_with($url, 'http://') && !string_begins_with($url, 'https://')){
+                    $url = trim($pairArray[1]);
+                    if (!(strncmp($url, 'http://', strlen($url)) == 0) && !(strncmp($url, 'https://', strlen($url)) == 0)) {                   
                         $url = uri($url);
                     }
                 }
@@ -124,9 +124,4 @@ function minimalist_display_random_featured_exhibit()
     }
 
     return $html;
-}
-// General helpers
-function string_begins_with($string, $search)
-{
-    return (strncmp($string, $search, strlen($search)) == 0);
 }
