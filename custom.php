@@ -72,7 +72,7 @@ function minimalist_public_nav_header()
                 if (count($pairArray) == 2) {
                     $link = trim($pairArray[0]);
                     $url = trim($pairArray[1]); 
-                    if (!strncmp($url, 'http://', strlen($url)) && !strncmp($url, 'https://', strlen($url))){
+                    if (strncmp($url, 'http://', 7) && strncmp($url, 'https://', 8)){                        
                         $url = uri($url);
                     }
                 }
