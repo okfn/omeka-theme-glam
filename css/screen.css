@@ -216,3 +216,37 @@ ul.tags li {display: inline;padding:0 .5em 0 0;}
 a img {border: none;}
 .gallery-thumbnails-text-bottom {clear: both;}
 #content .gallery-thumbnails-text-bottom .primary .exhibit-item {margin-right: 9px;}
+
+/* == Simple Pages styles == */
+.page #primary {float:left; width: 70%; clear:none;}
+.page #secondary {float:right; width: 28%; clear:none;padding-top: 3em;}
+.simple-pages-navigation {list-style:none;}
+.simple-pages-navigation ul {display:none;}
+.simple-pages-navigation .current ul {display:block;}
+.simple-pages-navigation a {
+    text-decoration:none;
+    border-bottom:1px solid #ddd;
+    display:block;
+    font-weight:bold;
+    padding: 4px;
+}
+
+.simple-pages-navigation a:link,
+.simple-pages-navigation a:visited {
+    color: #444;
+}
+
+.simple-pages-navigation a:hover,
+.simple-pages-navigation a:active {
+    background: rgba(0,0,0,0.05);
+    color: #606;
+}
+
+.simple-pages-navigation li.current a {
+    background: rgba(0,0,0,0.1);
+    color: #606;
+    
+}
+
+#simple-pages-breadcrumbs {margin-bottom:0.5em;font-weight:bold;}
+.page #primary h1 { margin:0 0 1em; }
