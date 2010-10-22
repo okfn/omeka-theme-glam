@@ -37,20 +37,17 @@ fieldset {border:0; padding:0;}
 	input.textinput {margin-bottom:1em;}
 	label {display:block;}
 	
-    #primary textarea {width:378px; height:312px;float:right;}
-    #primary legend {display:none;}
     #primary fieldset {display:block; clear:both;}
     #primary .inputs {overflow:hidden;zoom:1;}
-    #primary .field {border-bottom:1px solid #ccc; padding:0.75em 0; overflow:hidden; width:512px;}
-    #primary .field label {float:left; width: 114px;font-weight:normal;clear:left; }
-    #primary .field .label {float:left; width: 114px;font-weight:normal;clear:left; }
-    #primary .field .textinput, .field select {float:right; width: 378px;background:#fff;}
-    #primary .field select {width: 382px;}
-    #primary .field input {margin:0;margin-left:16px;}
-    #primary input.submitinput {margin-top:1em;}
-    #primary .radioinputs {display:block; margin-bottom:0.5em; overflow:hidden;}
+    #advanced-search-page .field {border-bottom:1px solid #ccc; padding:0.75em 0; overflow:hidden; width:512px;}
+    #advanced-search-page .field label {float:left; width: 30%;font-weight:normal;clear:left; }
+    #advanced-search-page .field .label {float:left; width: 30%;font-weight:normal;clear:left; }
+    #advanced-search-page .field .textinput, .field select {float:right; width: 90%;background:#fff;}
+    #advanced-search-page .field select {width: 92%;}
+	#advanced-search-page .field button {float:right;}
+	#advanced-search-page .field input {width: 70%;float:right;}
+    #advanced-search-page input.submitinput {margin-top:1em;}
     #primary .radioinputs label {display:block; float:left; width: 48%; clear:none;}
-    #primary input#description {width: 378px; height: 312px;}
     #primary .search-entry select {margin-bottom:.5em;}
     #primary #submit_search {margin:.5em 0 0 458px;}
 
