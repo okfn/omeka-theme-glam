@@ -54,6 +54,8 @@
     	<div id="citation-text" class="element-value"><?php echo item_citation(); ?></div>
 	</div>
 	
+	<?php echo plugin_append_to_items_show(); ?>
+	
 	<ul class="item-pagination navigation">
 	<li id="previous-item" class="previous">
 		<?php echo link_to_previous_item('Previous Item'); ?>
@@ -63,7 +65,6 @@
 	</li>
 	</ul>
 	
-	<?php echo plugin_append_to_items_show(); ?>
 </div><!-- end primary -->
 
 <?php foot(); ?>

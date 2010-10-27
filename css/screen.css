@@ -118,9 +118,9 @@ span.thumb a img {border: 1px solid #ccc;}
 #recent-items ul li {list-style-type: square;list-style-position: outside; padding: 0 0 .5em;}
 
 /* Browse and Item Pages */
-.pagination {float: left; font-size: .9em; width: auto; padding: 0;margin:0 0 1em 0;}
-	.pagination li {float: left; display: inline; padding: 0 .5em;}
-	.pagination a {padding: 0 .5em 0 0;}
+.pagination, .item-pagination {float: left; font-size: .9em; width: auto; padding: 0;margin:0 0 1em 0;}
+	.pagination li, .item-pagination li {float: left; display: inline; padding: 0 .5em;}
+	.pagination a, .item-pagination a {padding: 0 .5em 0 0;}
 	
 .desc p {margin: .5em 0 0; }
 
