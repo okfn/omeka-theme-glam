@@ -2,7 +2,7 @@
 
 	<div id="primary">
 		
-	    <p><?php echo strip_formatting(get_theme_option('Homepage Text')); ?></p>
+	    <p><?php echo get_theme_option('Homepage Text'); ?></p>
         <?php echo minimalist_display_random_featured_item(); ?>
         <?php echo minimalist_display_random_featured_collection(); ?>
     	<?php echo minimalist_display_random_featured_exhibit(); ?>
