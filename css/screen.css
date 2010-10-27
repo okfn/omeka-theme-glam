@@ -8,7 +8,7 @@ img a {border: none;}
 blockquote {font-style:italic;}
 /* Headings */
 h1, h2, h3, #site-title {font-family: 'Trebuchet MS', sans-serif; font-weight: normal; }
-h1, #site-title {color: #660066; text-transform: uppercase; letter-spacing: .2em; font-size: 3em; line-height: 1em; margin: 1em 0 0;}
+h1, #site-title {color: #660066; text-transform: uppercase; letter-spacing: .2em; font-size: 3em; line-height: 1em;}
 h2 { border-bottom: 1px solid #ddd; font-size: 2em; line-height: .75em; margin-bottom: .75em;}
 .element-set h2 {display:none;}
 h3 {font-size: 1.5em; line-height: 1em; margin-bottom: 1em;}
@@ -75,16 +75,15 @@ th {border-width: 3px; text-align:left;}
 #footer {clear: both; padding: 1em .5em; margin: 3em 0 1em; background-color: #ddd;}
 
 /* Search */
-#search-wrap {width:225px;float:right;}
+#search-wrap {float:right;}
 #simple-search { font-size: .9em; padding: 1em 0 0 1em;margin:0;}
 #simple-search input {margin:0;padding: 0;}
-#search-wrap a {float:right;font-size: 1em; margin: 0 0 18px; padding: 1em 0em;}
-#search-wrap h2 {display:none;}
+#search-wrap a {float:right;font-size: 1em; padding: 1em 0em;}
 #searchwrap h3 {text-transform: uppercase; font-size: 1em; margin: 0;}
 
 /* Primary Navigation */
 #primary-nav {margin: 0; width: 100%; overflow: hidden;border-top: 1px solid #ccc;}
-	#primary-nav ul {float: left;width: 500px; margin:0;padding:0;}
+	#primary-nav ul {float: left; margin:0;padding:0;}
 		#primary-nav li {float: left; padding: .5em 0 .5em 1em; background: url('../images/nav-bg.gif'); background-position: left center; background-repeat: no-repeat;}
 		#primary-nav li a:link, #primary-nav li a:visited {float: left; display: block; padding: 6px .5em; color: #363636;}
 		#primary-nav li a:hover {color: #92278f;}
@@ -195,7 +194,7 @@ ul.tags li {display: inline;padding:0 .5em 0 0;}
 	
 #nav-container {overflow: hidden;zoom:1;}
 
-.exhibit-section-nav {float:left;margin-left: 0;}
+.exhibit-section-nav {overflow:hidden;padding:0;margin-left: 0;}
 	.exhibit-section-nav li {list-style-type: none;float:left;text-transform: uppercase;letter-spacing: 0.14em; padding: 0 2em 0 0;}
 	.exhibit-section-nav li a {float: left;text-decoration: none; display: block; color: #a580a4;border-bottom: 2px solid #fff;}
 	.exhibit-section-nav li a:visited {color: #a580a4;}
@@ -207,6 +206,9 @@ ul.tags li {display: inline;padding:0 .5em 0 0;}
 	.exhibit-page-nav li a {display: inline; padding: 5px 1em .5em 0; text-decoration: none;}
 	.exhibit-page-nav li.current a {text-decoration:none;font-weight:bold;}
 
+#exhibit-page-navigation {clear:both;margin-bottom:1em;float:right;}
+#exhibit-page-navigation .next-page {margin-left:2em;}
+	
 .summary {margin-bottom: 0;}
 .exhibit-item {overflow:hidden;}	
 .exhibit-item a {text-decoration: none;}

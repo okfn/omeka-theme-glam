@@ -25,17 +25,17 @@
 	<div id="wrap">
 
 		<div id="header">
+			<div id="search-wrap">
+			    <?php echo simple_search(); ?>
+			    <?php echo link_to_advanced_search(); ?>
+			</div>
 			<div id="site-title"><?php echo link_to_home_page(minimalist_display_logo()); ?></div>
 		</div>
 		
 		<div id="content">
 
 			<div id="primary-nav">
-    		    <div id="search-wrap">
-    			    <h2>Search</h2>
-    			    <?php echo simple_search(); ?>
-    			    <?php echo link_to_advanced_search(); ?>
-    			</div>
+
     			
     			<ul class="navigation">
     			    <?php echo minimalist_public_nav_header(); ?>
