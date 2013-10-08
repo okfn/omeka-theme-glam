@@ -38,6 +38,7 @@ h3,
 #site-title {
 	font-family:'Trebuchet MS',sans-serif;
 	font-weight:normal;
+	padding-bottom:30px;
 	}
 h1,
 #site-title {
@@ -216,7 +217,7 @@ th {
 	margin:0 auto;
 	position:relative;
 	}
-#header {
+header {
 	margin:.5em 0 0;
 	padding:1em 0 0;
 	}
@@ -224,18 +225,27 @@ th {
 	clear:both;
 	margin-bottom:2em;
 	}
-#primary,
-#secondary {
+#intro{
 	clear:both;
 	margin:3em 0 0;
+	display:none;
 	}
-#primary {
+/* #primary {
 	width:744px;
-	}
+	} */
+
 #featured-item {
 	clear:both;
 	margin: 1.5em 0 1em;
 	}
+#featured-collection {
+	clear:both;
+	margin: 1.5em 0 1em;
+	}
+#featured-exhibit {
+	clear:both;
+	margin: 1.5em 0 1em;
+}
 #recent-items {
 	clear:both;
 	overflow:hidden;
@@ -244,7 +254,7 @@ th {
 #tagcloud {
 	margin-top: 2em;
 	}
-#footer {
+footer {
 	clear:both;
 	padding:1em .5em;
 	margin: 3em 0 1em;
@@ -275,36 +285,36 @@ th {
 	margin:0;
 	}
 
-/* Primary Navigation */
-#primary-nav {
+/* Top Navigation */
+#top-nav {
 	margin:0;
 	width:100%;
 	overflow:hidden;
 	border-top:1px solid #ccc;
 	}
-	#primary-nav ul {
+	#top-nav ul {
 		float:left;
 		margin:0;
 		padding:0;
 		}
-		#primary-nav li {
+		#top-nav li {
 			float:left;
 			padding:.5em 0 .5em 1em;
 			background:url('../images/nav-bg.gif');
 			background-position:left center;
 			background-repeat:no-repeat;
 			}
-		#primary-nav li a:link,
-		#primary-nav li a:visited {
+		#top-nav li a:link,
+		#top-nav li a:visited {
 			float:left;
 			display:block;
 			padding:6px .5em;
 			color:#363636;
 			}
-		#primary-nav li a:hover {
+		#top-nav li a:hover {
 			color:#92278f;
 			}
-		#primary-nav li.current a {
+		#top-nav li.current a {
 			color:#660066;
 			font-weight:bold;
 			padding:5px .5em;
@@ -351,11 +361,11 @@ th {
 
 /* Footer Navigation */
 
-#footer ul.navigation {
+#bottom-nav ul.navigation {
 	padding:0;
 	margin:0 0 10px;
 	}
-    #footer ul.navigation li {
+    #bottom-nav ul.navigation li {
 	padding-right:10px;
 	}
 		
@@ -457,6 +467,9 @@ span.thumb a img {
 .item-description {
 	display:block;
 	margin:0 0 1em;
+	}
+	.item-description a.show {
+		padding-left:5px;
 	}
 ul.tags {
 	padding-left:0;
