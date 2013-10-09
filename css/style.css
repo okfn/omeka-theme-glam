@@ -38,7 +38,7 @@ h3,
 #site-title {
 	font-family:'Trebuchet MS',sans-serif;
 	font-weight:normal;
-	padding-bottom:30px;
+
 	}
 h1,
 #site-title {
@@ -221,18 +221,18 @@ header {
 	margin:.5em 0 0;
 	padding:1em 0 0;
 	}
+#site-title {
+	padding-bottom: 1em;
+}
 #content {
 	clear:both;
-	margin-bottom:2em;
+	margin:3em 0 2em 0;
 	}
 #intro{
 	clear:both;
 	margin:3em 0 0;
 	display:none;
 	}
-/* #primary {
-	width:744px;
-	} */
 
 #featured-item {
 	clear:both;
@@ -295,7 +295,7 @@ footer {
 	#top-nav ul {
 		float:left;
 		margin:0;
-		padding:0;
+		padding: 0 0 0 1px;
 		}
 		#top-nav li {
 			float:left;
@@ -319,15 +319,14 @@ footer {
 			font-weight:bold;
 			padding:5px .5em;
 			}
-
 /* Secondary Navigation */
-#secondary-nav {
+nav.navigation.secondary-nav {
 	margin:0;
 	width:100%;
 	overflow:hidden;
 	border-top:1px solid #ccc;
 	}
-	#secondary-nav ul {
+	nav.navigation.secondary-navul {
 		float:right;
 		margin:0;
 		display:inline; 
@@ -336,24 +335,24 @@ footer {
 		background-position:right center;
 		background-repeat:no-repeat;
 		}
-		#secondary-nav li {
+		nav.navigation.secondary-nav li {
 			float:left;
 			padding:.5em 0 .5em 1em;
 			background:url('../images/nav-bg.gif');
 			background-position:left center;
 			background-repeat:no-repeat;
 			}
-		#secondary-nav li a:link, 
-		#secondary-nav li a:visited {
+		nav.navigation.secondary-nav li a:link, 
+		nav.navigation.secondary-nav li a:visited {
 			float:left;
 			display:block;
 			padding:6px .5em;
 			color:#363636;
 			}
-		#secondary-nav li a:hover {
+		nav.navigation.secondary-nav li a:hover {
 			color:#92278f;
 			}
-		#secondary-nav li.current a {
+		nav.navigation.secondary-nav li.current a {
 			color:#660066;
 			font-weight:bold;
 			padding:5px .5em;
@@ -368,6 +367,9 @@ footer {
     #bottom-nav ul.navigation li {
 	padding-right:10px;
 	}
+		#bottom-nav ul.navigation li ul, #bottom-nav ul.navigation li ul ul {
+			display:none;
+		}
 		
 /* Thumbnails */
 span.thumb {
@@ -716,15 +718,10 @@ a img {
 /* == Simple Pages styles == */
 .page #primary {
 	float:left;
-	width:70%;
+	width:100%;
 	clear:none;
 	}
-.page #secondary {
-	float:right;
-	width:28%;
-	clear:none;
-	padding-top:3em;
-	}
+
 .simple-pages-navigation {
 	list-style:none;
 	}
