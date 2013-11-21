@@ -76,19 +76,23 @@ header {
 #featured-item {
     clear:both;
     margin: 1.5em 0 1em;
+    padding-bottom:1em;
     }
 #featured-collection {
     clear:both;
     margin: 1.5em 0 1em;
+    padding-bottom:1em;
     }
 #featured-exhibit {
     clear:both;
     margin: 1.5em 0 1em;
+    padding-bottom:1em;
 }
 #recent-items {
     clear:both;
     overflow:hidden;
     margin: 1.5em 0;
+    padding-bottom:1em;
     }
 #tagcloud {
     margin-top: 2em;
@@ -138,7 +142,7 @@ h3,
 h1{
     color:$purple-dark;
     text-transform: uppercase;
-    letter-spacing: .2em;
+    letter-spacing: .05em;
     font-size: $font-size-main *2.5;
     line-height: 1em;
 }
@@ -521,6 +525,19 @@ span.thumb {
 }
 
 /* !---------- Browse and Item Pages ---------- */
+.items.show {
+    #content{
+        h1 {
+            text-transform: none;
+            letter-spacing: 0;
+        }
+        .element-set {
+            padding:.5em 0;
+        }
+
+    }
+}
+
 .item-pagination {
     float:left;
     font-size:.9em;
@@ -588,6 +605,7 @@ ul{
     }
 }
 
+
 /* !---------- Simple Pages Styles ---------- */
 .page #primary {
     float:left;
@@ -649,7 +667,7 @@ ul{
 
 /* !---------- Exhibit Styles ---------- */
 
-.exhibits .browse{
+.exhibits.browse{
     .exhibit{
         border-bottom: 1px solid $grey-light;
         margin-bottom: 1em;
@@ -661,6 +679,11 @@ ul{
             }
         }
     }
+}
+.exhibits.tags {
+   #secondary-nav {
+        @extend .secondary-nav;
+   }
 }
 .exhibits.summary {
     p, .tags{
@@ -808,7 +831,6 @@ ul{
     #exhibit-child-pages {
         width: 30%;
         float: left;
-        border-bottom: 1px solid $grey-super-light;
         li {
             display: block;
             float: right;
@@ -862,7 +884,7 @@ ul{
     .v-popular {
         font-size:140%;
         a, a:visited{
-            color: #ccc;
+            color: #bbb;
         }
         a:hover {
             color: #5B175A;
