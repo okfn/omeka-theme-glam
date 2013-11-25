@@ -61,7 +61,7 @@ header {
     padding:1em 0 0;
     }
 #site-title {
-    padding-bottom: 1em;
+    padding-bottom: .5em;
 }
 #content {
     clear:both;
@@ -73,6 +73,9 @@ header {
     margin:1em 0;
     padding-bottom: 1em;
     }
+#primary {
+	padding-bottom: 1em;
+}
 #featured-item {
     clear:both;
     margin: 1.5em 0 1em;
@@ -157,6 +160,7 @@ h3 {
     font-size: $font-size-main * 1.5;
     line-height: 1em;
     margin-bottom: 1em;
+    border-bottom:1px solid $grey-light;
 }
 h4,
 h5,
@@ -173,7 +177,13 @@ h6 {
 h6 {
     font-size:italic;
 }
-
+#content {
+	h1 {
+		padding-bottom:.5em;
+		margin-bottom:0;
+		border-bottom: 1px solid $grey-light;
+	}
+}
 /* !---------- Links ---------- */
 a:link,
 a:visited {
@@ -341,7 +351,6 @@ th {
     padding-top:1em;
     width: 100%;
     margin: 0;
-    border-bottom: 1px solid $grey-super-light;
     padding-bottom: 18px;
     }
 .navigation {
@@ -407,12 +416,12 @@ span.thumb {
             }
         li {
             float:left;
-            padding: .5em 1.5em .5em 1em;
+            padding: .5em 2em .5em 0;
             display:block;
 
-            background: url('../images/nav-bg.gif');
+            /*background: url('../images/nav-bg.gif');
             background-position: left center;
-            background-repeat:no-repeat;
+            background-repeat:no-repeat;*/
 
             &:hover > ul {
                 display: block;
@@ -432,15 +441,17 @@ span.thumb {
 
 .secondary-nav {
     margin:0;
-    width:100%;
+    width:65%;
+    float:left;
     overflow:hidden;
-    border-top:1px solid $grey-light;
+    padding-bottom:1em;
+
     ul {
         margin:0;
         display:inline; 
         li {
             float:left;
-            padding:.5em 1em .5em 0;
+            padding:.5em 2em .5em 0;
 
             a {
                 float:left;
@@ -465,7 +476,7 @@ span.thumb {
     width:65%;
     float:left;
     list-style-type:none;
-    margin:.5em 0;
+    margin:.5em 0 1em 0;
     padding-left:0;
     li {
         display:block;
@@ -479,8 +490,9 @@ span.thumb {
 }
 #sort-links{
     width:35%;
-    margin:.5em 0;
     float:left;
+    padding:.5em 0;
+
 
     .sort-label {   
         float: left;
@@ -505,14 +517,14 @@ span.thumb {
 #bottom-nav {
     .navigation {
         padding:0;
-        margin:0 0 10px;
+        margin:0 0 10px 0;
         width:100%;
         float:left;
         a {
         text-decoration: none;
         }
         li {
-            padding-right:10px;
+            padding-right:20px;
             text-decoration: none;
             display:block;
             float:left;
@@ -562,7 +574,6 @@ span.thumb {
     padding:0;
     margin:0;
     clear:both;
-    border-bottom:1px solid $grey-super-light;
     padding-bottom:18px;
     .item-content {
         float:right;
@@ -617,7 +628,7 @@ ul{
     }
     }
 #simple-pages-breadcrumbs {
-    margin-bottom: 1em;
+    margin-bottom: 1.5em;
     font-weight: bold;
 }
 
@@ -667,10 +678,14 @@ ul{
 
 /* !---------- Exhibit Styles ---------- */
 
+.exhibit {
+	clear:both;
+}
 .exhibits.browse{
     .exhibit{
-        border-bottom: 1px solid $grey-light;
+        /*border-bottom: 1px solid $grey-light;*/
         margin-bottom: 1em;
+        padding: .5em 0;
         h3{
             text-transform: uppercase;
             padding-top: .5em;
@@ -694,6 +709,7 @@ ul{
         width:70%;
         float:left;
         padding-right:5%;
+        padding-bottom:1em;
     }
     #exhibit-pages {
         width:25%;
@@ -781,6 +797,7 @@ ul{
                @extend #site-title;
                padding:0;
                font-size: $font-size-main *2.5;
+               letter-spacing: .05em;
             }
             ul{
                 padding-top: 1.5em;
@@ -864,97 +881,103 @@ ul{
 
 
 /* !---------- Microformats ---------- */
-.hTagcloud ul {
-    list-style:none;
-    margin-left:0;
-    padding-left:0;
-    li {
-        display:inline;
-        }
-    .popular,
-    .-popular {
-        font-size:120%;
-        a, a:visited{
-            color: #ccc;
-        }
-        a:hover {
-            color: #4B0049;
-        }
-    }
-    .v-popular {
-        font-size:140%;
-        a, a:visited{
-            color: #bbb;
-        }
-        a:hover {
-            color: #5B175A;
-        }
-    }
-    .vv-popular {
-        font-size:180%;
-        a, a:visited{
-            color: #bebebe;
-        }
-        a:hover {
-            color: #6C2E6A;
-            }
-        }
-    .vvv-popular {
-        font-size:220%;
-        a, a:visited{
-            color: #b1b1b1;
-        }
-        a:hover{
-            color: #7C467B;
-        }
-        }
-    .vvvv-popular {
-        font-size:260%;
-        a, a:visited{
-            color: #a3a3a3;
-        }
-        a:hover{
-            color: #8C5D8B;
-        }
-        }
-    .vvvvv-popular {
-        font-size:300%;
-        a, a:visited{
-            color: #959595;
-        }
-        a:hover{
-            color: #9D749C;
-        }
-        }
-    .vvvvvv-popular {
-        font-size:320%;
-        a, a:visited{
-            color: #888;
-        }
-        a:hover{
-            color: #AD8BAC;
-        }
-        }
-    .vvvvvvv-popular {
-        font-size:340%;
-        a, a:visited{
-            color: #7a7a7a;
-        }
-        a:hover{
-            color: #BEA2BD;
-        }
-        }
-    .vvvvvvvv-popular {
-        font-size:360%;
-        a, a:visited{
-            color: #6d6d6d;
-        }
-        a:hover{
-            color: #CEB9CD;
-        }
-        }
-}
+.hTagcloud {
+	width:100%;
+	float:left;
 
+	ul {
+	    list-style:none;
+	    width:100%;
+	    float:left;
+	    margin-left:0;
+	    padding-left:0;
+	    li {
+	        display:inline;
+	        }
+	    .popular,
+	    .-popular {
+	        font-size:120%;
+	        a, a:visited{
+	            color: #ccc;
+	        }
+	        a:hover {
+	            color: #4B0049;
+	        }
+	    }
+	    .v-popular {
+	        font-size:140%;
+	        a, a:visited{
+	            color: #bbb;
+	        }
+	        a:hover {
+	            color: #5B175A;
+	        }
+	    }
+	    .vv-popular {
+	        font-size:180%;
+	        a, a:visited{
+	            color: #bebebe;
+	        }
+	        a:hover {
+	            color: #6C2E6A;
+	            }
+	        }
+	    .vvv-popular {
+	        font-size:220%;
+	        a, a:visited{
+	            color: #b1b1b1;
+	        }
+	        a:hover{
+	            color: #7C467B;
+	        }
+	        }
+	    .vvvv-popular {
+	        font-size:260%;
+	        a, a:visited{
+	            color: #a3a3a3;
+	        }
+	        a:hover{
+	            color: #8C5D8B;
+	        }
+	        }
+	    .vvvvv-popular {
+	        font-size:300%;
+	        a, a:visited{
+	            color: #959595;
+	        }
+	        a:hover{
+	            color: #9D749C;
+	        }
+	        }
+	    .vvvvvv-popular {
+	        font-size:320%;
+	        a, a:visited{
+	            color: #888;
+	        }
+	        a:hover{
+	            color: #AD8BAC;
+	        }
+	        }
+	    .vvvvvvv-popular {
+	        font-size:340%;
+	        a, a:visited{
+	            color: #7a7a7a;
+	        }
+	        a:hover{
+	            color: #BEA2BD;
+	        }
+	        }
+	    .vvvvvvvv-popular {
+	        font-size:360%;
+	        a, a:visited{
+	            color: #6d6d6d;
+	        }
+	        a:hover{
+	            color: #CEB9CD;
+	        }
+	        }
+	}
+}
 
 @import "print";
 
