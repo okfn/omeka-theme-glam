@@ -73,27 +73,32 @@ header {
 }
 #featured-item {
     margin: 1.5em 0 3em 0;
-    padding-right:1em;
-    width:48%;
+    padding-right:2%;
+    width:55%;
     float:left;
 }
 #featured-collection {
     margin: 1.5em 0 3em 0;
-    padding-left:1em;
-    width:48%;
+    padding-left:1%;
+    width:40%;
     float:right;
 }
 #featured-exhibit {
-    clear:both;
     margin: 0 0 3em 0;
+    width:40%;
+    float:right;
 }
 #recent-items {
-    clear:both;
-    padding:1em 0;
+    width:100%;
+    float:left;
 }
 #outputs{
     clear:both;
     padding-top:3em;
+}
+.view-items-link {
+	clear:both;
+	padding-top:1%;
 }
 #item-output-formats .element-text #output-format-list{
     padding-left:0;
@@ -501,8 +506,8 @@ th {
         width:100%;
     }
     .item-img {
-        padding-left:9px;
-        float:right;
+        padding-right:9px;
+        float:left;
     }
 }
 .item-pagination {
