@@ -53,6 +53,7 @@ blockquote {
     width: 820px; 
     margin: 0 auto;
     position: relative;
+    padding:2em;
 }
 header {
     margin:2em 0 0 0;
@@ -335,7 +336,6 @@ th {
 /* !---------- Navigation ---------- */
 #top-nav {
     width:100%;
-    border-top:1px solid $grey-light;
     ul {
         width:100%;
         float:left;
@@ -349,6 +349,7 @@ th {
         }
         ul {
             position:absolute;
+            padding-top:0;
             li {
                 float:none;
                 position:relative;
@@ -356,9 +357,16 @@ th {
                 background-color:lighten($grey-light, 5%);
                 background-image:none;
                 border-bottom:1px solid $grey-super-light;
-
+                &.active a {
+                    background-color:none;
+                    color:$text-color-base;
+                }
                 &:hover {
-                    background-color:($grey-light);
+                    background-color:$grey-light;
+                }
+                a {
+                    border-top:none;
+                    padding:0;
                 }
             }
             ul {
@@ -369,19 +377,35 @@ th {
         }
         li {
             float:left;
-            padding: .5em 2em .5em 0;
+            padding: .5em .5em .5em 0;
+            min-width: 140px;
             display:block;
-            /*background: url('../images/nav-bg.gif');
-            background-position: left center;
-            background-repeat:no-repeat;*/
+            &.active a{
+                background-color: $grey-dark;
+                color:white;
+
+            }
+            &.active ul li a{
+                background-color: inherit;
+                color:$purple-dark;
+            }
             &:hover > ul {
                 display: block;
                 position:absolute;
-                width: 205px;
+                width: 150px;
             }
             a {
                 display: block;
                 text-decoration: none;
+                border-top:1px solid $grey-light;
+                padding:.5em 0 .5em .5em;
+
+                &:hover{
+                    background-color:$grey-light;
+                    color:$purple-dark;
+                }
+                
+
             }
         }
         ul {
@@ -534,8 +558,8 @@ th {
 }
 
 /* !---------- Simple Pages Styles ---------- */
-.page #primary {
-    float:left;
+.page #content {
+    overflow:auto;
     width:100%;
     clear:none;
 
@@ -706,17 +730,15 @@ th {
             }
         }
     }
-    #content {
-        h1 {
-            text-transform: none;
-            font-size: $font-size-main * 2;
-            letter-spacing: 0em;
-            padding:0;
-            color:$grey-dark;
-            border-bottom:2px solid $white;
-            width:70%;
-            float:left;
-        }
+    #content h1{
+        text-transform: none;
+        font-size: $font-size-main * 2;
+        letter-spacing: 0em;
+        padding:0;
+        color:$grey-dark;
+        border-bottom:2px solid $white;
+        width:70%;
+        float:left;
     }
     #exhibit-child-pages {
         width: 30%;
