@@ -63,7 +63,7 @@ header {
 }
 #content {
     clear:both;
-    padding: 1em 0;
+    padding: 1em 0 2em 0;
     overflow:auto;
 }
 #intro {
@@ -168,6 +168,7 @@ h2 {
 }
 h3 {
     font-size: $font-size-main * 1.5;
+    padding-bottom: .5em;
     margin-bottom: .75em;
     border-bottom: 1px solid $grey-light;
 }
@@ -477,7 +478,7 @@ th {
         float:left;
         padding-right:2%;
         #page {
-            width:50px;
+            width:30px;
             text-align:right;
         }
     }
@@ -654,37 +655,39 @@ th {
     p, .tags{
         margin-bottom: 1em;
     }
-    
+    .exhibit-credits{
+    	padding-top:1em;
+    }
     #primary {
-        width:70%;
+        width:65%;
         float:left;
         padding-right:5%;
         padding-bottom:1em;
     }
     #exhibit-pages {
-        width:25%;
+        width:30%;
         float:left;
 
         ul {
             margin-left:0;
-            padding-left:0;
             font-size: $font-size-main * 1.1;
             list-style-type: none;
-            border-top: solid 1px $background-color;
+            padding-top:1em;
 
             li {
-                padding:.5em 0 .5em .5em;
-                border-bottom: solid 1px $background-color;
-                background-color:lighten($grey-light, 5%);
+                padding:0 0 .5em .5em;
             
                 a{
                     text-decoration: none;
+                    padding:.5em;
+                    &:hover{
+                    	background-color: $grey-light;
+                	}
                 }
                 ul {
-                    list-style-type: square;
                     border-top:none;
-                    padding-left:1.5em;
-                    
+                    padding:.5em 0 .5em 1.5em;
+                    list-style-type: square;
                     li{
                         border-bottom: none;
                         padding-bottom: 0;
@@ -835,87 +838,90 @@ th {
         padding-left:0;
         li {
             display:inline;
+            a {
+            	text-decoration: none;
+            }
         }
         .popular,
         .-popular {
             font-size:120%;
             a, a:visited {
-                color: #ccc;
+                color: lighten($accent-green, 10%);
             }
             a:hover {
-                color: #4B0049;
+                color: darken($accent-green, 20%);
             }
         }
         .v-popular {
             font-size:140%;
             a, a:visited {
-                color: #bbb;
+                color: $accent-green;
             }
             a:hover {
-                color: #5B175A;
+                color: lighten($accent-yellow, 10%);
             }
         }
         .vv-popular {
             font-size:180%;
             a, a:visited {
-                color: #bebebe;
+                color: darken($accent-green, 10%);
             }
             a:hover {
-                color: #6C2E6A;
+                color: $accent-yellow;
             }
         }
         .vvv-popular {
             font-size:220%;
             a, a:visited {
-                color: #b1b1b1;
+                color: lighten($accent-red, 10%);
             }
             a:hover {
-                color: #7C467B;
+                color: darken($accent-red, 30%);
             }
         }
         .vvvv-popular {
             font-size:260%;
             a, a:visited {
-                color: #a3a3a3;
+                color: $accent-red;
             }
             a:hover {
-                color: #8C5D8B;
+                color: lighten($accent-red, 30%);
             }
         }
         .vvvvv-popular {
             font-size:300%;
             a, a:visited {
-                color: #959595;
+                color: lighten($accent-main, 10%);
             }
             a:hover {
-                color: #9D749C;
+                color: $grey-medium;
             }
         }
         .vvvvvv-popular {
             font-size:320%;
             a, a:visited {
-                color: #888;
+                color: $accent-main;
             }
             a:hover {
-                color: #AD8BAC;
+                color: $grey-light;
             }
         }
         .vvvvvvv-popular {
             font-size:340%;
             a, a:visited {
-                color: #7a7a7a;
+                color: darken($accent-main, 10%);
             }
             a:hover {
-                color: #BEA2BD;
+                color: lighten($accent-main, 30%);
             }
         }
         .vvvvvvvv-popular {
             font-size:360%;
             a, a:visited {
-                color: #6d6d6d;
+                color: darken ($accent-main, 20%);
             }
             a:hover {
-                color: #CEB9CD;
+                color: lighten($accent-main, 40%);
             }
         }
     }
