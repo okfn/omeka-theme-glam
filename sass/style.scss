@@ -73,6 +73,7 @@ header {
 }
 #primary {
     padding-bottom: 1em;
+    clear:both;
 }
 #featured-item {
     margin: 1.5em 0 3em 0;
@@ -219,7 +220,8 @@ a.show {
 fieldset {
     border:0;
     padding:0;
-    
+    margin-bottom:1em;
+
     legend {
         font-size:1.5em;
         line-height:1em;
@@ -231,7 +233,39 @@ fieldset {
     label {
         display:block;
     }
+    select {
+        margin:1em 0;
+    }
+    textarea{
+        margin-bottom:1em;
+    }
+    .field {
+        margin-bottom: .5em;
+    }
 }
+/*-- Contribution Form --*/
+
+#geolocation_address.textinput {
+    margin-bottom: .5em;
+}
+#geolocation_find_location_by_address{
+    margin-left:.5em;
+}
+#contribution-confirm-submit {
+    margin-top:1em;
+    input {
+        float:left;
+        margin-top:.25em;
+    }
+    label{
+        float:left;
+        margin-left:.5em;
+    }
+    #form-submit{
+        margin-top:1em;
+    }
+}
+/*-- end Contribution Form --*/
 #search-container {
     width:30%;
     float:right;
@@ -524,7 +558,7 @@ th {
     text-decoration: none;
     }
     li {
-        padding:.5em 2em 1em 0;
+        padding:.5em 1.5em 1em 0;
         text-decoration: none;
         display:block;
         float:left;
@@ -547,10 +581,10 @@ th {
 }
 /* !---------- Footer Text ---------- */
 #footer-text {
-    float:right;
+    float:left;
     font-style: italic;
     p {
-        margin-top:0;
+        margin:.5em 0;
     }
 }
 /* !---------- Browse and Item Pages ---------- */
@@ -573,7 +607,8 @@ th {
     font-size:.9em;
     width:auto;
     padding:0;
-    margin:1em 0;
+    margin: 2em auto 1em auto; 
+
     li{
         float:left;
         display:inline;
@@ -588,7 +623,15 @@ th {
     display:block;
     margin:0 0 1em;
 }
-
+.items.show{ 
+    h2{
+        font-weight: bold;
+        border-bottom: none;
+    }
+    .element {
+        overflow: auto;
+    }
+}
 /* !---------- Simple Pages Styles ---------- */
 .page #content {
     overflow:auto;
@@ -601,6 +644,7 @@ th {
 }
 #simple-pages-breadcrumbs {
     margin-bottom: 1.5em;
+    font-style: italic;
     a{
         text-decoration: none;
         &:hover{
