@@ -102,6 +102,7 @@ header {
     clear:both;
     padding-top:3em;
 }
+
 .view-items-link {
 	clear:both;
 	padding-top:1%;
@@ -147,11 +148,7 @@ h1 {
     text-transform: uppercase;
     font-size: $font-size-main *2.5;
 }
-#content h1 {
-    padding-bottom:.5em;
-    letter-spacing: 0;
-    margin-bottom:0;
-}
+
 h2 {
     font-size: $font-size-main * 2;
     padding-bottom: .5em;
@@ -240,7 +237,7 @@ fieldset {
         margin-bottom:1em;
     }
     .field {
-        margin-bottom: .5em;
+        margin-bottom: .5em;    
     }
 }
 /*-- Contribution Form --*/
@@ -431,11 +428,11 @@ th {
         li {
             float:left;
             padding: .5em .5em .5em 0;
-            min-width: 120px;
+            min-width: 100px;
             display:block;
             &.active a{
                 background-color: $grey-medium;
-                color:white;
+                color:$background-color;
 
             }
             &.active ul li a{
@@ -472,7 +469,7 @@ th {
     width:100%;
     float:left;
     overflow:hidden;
-    padding-bottom:1em;
+    padding-bottom:2em;
 
     ul {
         margin:0;
@@ -553,12 +550,13 @@ th {
     padding:0;
     width:100%;
     float:left;
+    padding-bottom:1em;
     border-top:1px solid $grey-medium;
     a {
     text-decoration: none;
     }
     li {
-        padding:.5em 1.5em 1em 0;
+        padding:.5em 1.5em 0 0;
         text-decoration: none;
         display:block;
         float:left;
@@ -667,7 +665,7 @@ th {
         list-style-type: none;
         padding:0;
         .collection {
-            @extend h2;
+            @include Second-Head;
             border-bottom:none;
             padding-top:.5em;
             font-weight: bold;
@@ -681,7 +679,7 @@ th {
 .exhibit {
     clear:both;
 }
-.exhibits .browse .exhibit{
+.exhibits.browse.exhibit{
     margin-bottom: 1em;
     padding: .5em 0;
     h3 {
@@ -692,7 +690,7 @@ th {
         }
     }
 }
-.exhibits.tags #secondary-nav{
+#secondary-nav{
     @extend .secondary-nav;
 }
 .exhibits.summary {
@@ -714,141 +712,125 @@ th {
 
         ul {
             margin-left:0;
-            font-size: $font-size-main * 1.1;
             list-style-type: none;
-            padding-top:1em;
-
+            padding:0;
             li {
-                padding:0 0 .5em .5em;
-            
                 a{
                     text-decoration: none;
                     padding:.5em;
+                    display:block;
+                    border-bottom:1px solid $grey-light;
                     &:hover{
-                    	background-color: $grey-light;
-                	}
+                        background-color:$grey-light;
+                    }                    
                 }
                 ul {
-                    border-top:none;
-                    padding:.5em 0 .5em 1.5em;
-                    list-style-type: square;
-                    li{
-                        border-bottom: none;
-                        padding-bottom: 0;
+                    margin-left:1.5em;
+                }
+            }
+        }
+    }
+
+}
+
+.exhibits.show {
+    #exhibit-pages {
+        overflow: auto;
+        margin:1em 0;
+        ul{
+            margin-left:0;
+        }
+        .exhibit-page-nav {
+            clear:left;
+            float:left;
+            width:100%;
+            border-bottom:1px solid $grey-light;    
+            padding:0;
+            margin-bottom:.5em;
+            margin-left:0;
+            li {
+                float:none;
+                display:block;
+                padding:0 2px 0 0;
+                margin:0;
+                text-transform:uppercase;
+
+                .exhibit-title {
+                   @include Main-Title;
+                   &:hover{
+                    background-color:$background-color;
+                   }
+
+                }
+                ul {
+                    padding: 1.5em 4em 0 0;
+                    float:left;
+                    font-size: $font-size-main * 1.1;
+                    li {
+                        text-transform:none;
+                        display:block;
+                        float:left;
+                        a {
+                            padding:.5em;
+                        }
+                    }
+                }
+                a {
+                    display:block;
+                    padding:5px 1em .5em 0;
+                    text-decoration:none;
+                    color: darken($purple-super-light, 10%);
+
+                    &:hover {
+                        color: $purple-main;
+                        background-color: $grey-super-light;
+                        
+                    }
+                    &:active {
+                        color: $purple-light;
+                    }
+                }
+
+                &.current {
+                    a {
+                        text-decoration:none;
+                        display:block;
+                        background-color: $grey-light;
+                        color:darken($purple-super-light, 15%);
+                        &:hover{
+                            background-color:$grey-super-light;
+                            color:$purple-main;
+                        }
                     }
                 }
             }
         }
     }
-
-}
-
-#exhibit-pages {
-    overflow: hidden;
-    zoom:1;
-
-    ul{
-        margin-left:0;
-        li {
-            ul {
-                padding-left:0;
-                padding-right:10%;
-            }
-        }
-    }
-}
-.exhibit-page {
-    overflow:hidden;
-    padding:0;
-}
-.exhibits.show {
-    #exhibit-page-navigation {
-        clear:both;
-        margin-bottom:1em;
-        float:right;
-        
-        .next-page {
-                margin-left:2em;
-        }
-    }
-    .exhibit-page-nav {
-        clear:left;
-        float:left;
-        width:100%;
-        border-bottom:1px solid $grey-light;    
-        padding:0 1em 0 0;
-        margin-bottom:.5em;
-        margin-left:0;
-
-        li {
-            float:none;
-            display:block;
-            padding:0 2px 0 0;
-            margin:0;
-            text-transform:uppercase;
-
-            .exhibit-title {
-               @extend #site-title;
-               padding:0;
-               font-size: $font-size-main *2.5;
-               letter-spacing: .05em;
-            }
-            ul {
-                padding-top: 1.5em;
-                margin-left:-15px;
-                float:left;
-                font-size: $font-size-main * 1.1;
-                li {
-                    text-transform:none;
-                    display:block;
-                    float:left;
-                }
-            }
-            a {
-                display:inline;
-                padding:5px 1em .5em 0;
-                text-decoration:none;
-                color: darken($purple-super-light, 10%);
-
-                &:hover {
-                    color: $purple-main;
-                }
-                &:active {
-                    color: $purple-light;
-                }
-            }
-
-            &.current {
-                a {
-                    text-decoration:none;
-                    font-weight:bold;
-                }
-            }
-        }
-    }
-    #content h1{
-        text-transform: none;
-        font-size: $font-size-main * 2;
-        letter-spacing: 0em;
-        padding:0;
-        color:$grey-dark;
-        border-bottom:2px solid $white;
+    h1{
+        @include Second-Head;
         width:70%;
         float:left;
+        padding-bottom: 0;
+        border-bottom: none;
     }
     #exhibit-child-pages {
         width: 30%;
         float: left;
-        li {
+        margin:1em 0;
+        li a {
             display: block;
-            float: right;
-            padding-bottom:.5em;
-            border-bottom: none;
-            font-size: $font-size-main * 1.1;
+            padding:.5em;
+            border-bottom: 1px solid $grey-super-light;
+            font-weight: bold;
+            &:hover{
+                background-color:$grey-super-light;
+            }
         }
 
     }
-
+    .exhibit-block{
+        overflow: auto;
+    }
     .exhibit-item {
         overflow: hidden;
         a {
@@ -864,6 +846,30 @@ th {
             margin-right:9px;
         }
     }
+    #exhibit-page-navigation {
+        clear:both;
+        margin-bottom:1em;
+        float:right;
+        a{
+            display:block;
+            padding:.5em 0;
+            text-decoration: none;
+            &:hover{
+                background-color:$grey-super-light;
+            }
+        }
+        .current-page{
+            display:block;
+            background-color:$grey-light;
+            color:darken($purple-super-light, 15%);
+            padding:.5em 0;
+            margin-top:0;
+        }
+
+        .next-page {
+            margin-left:2em;
+        }
+    }
 }
 
 
@@ -873,6 +879,7 @@ th {
 .hTagcloud {
     width:100%;
     float:left;
+    margin-top:1em;
 
     ul {
         list-style:none;
