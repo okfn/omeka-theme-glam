@@ -33,6 +33,7 @@ body {
     margin:0;
     ul {
         margin:0;
+        padding:0;
     }
 }
 abbr, acronym {
@@ -634,10 +635,15 @@ th {
         overflow: auto;
     }
 }
-.collections h2{
-    @include Head-Grey;
-    border-bottom: none;
-    padding-bottom: 0;
+.collections {
+    h2{
+        @include Head-Grey;
+        padding-bottom: 0;
+        font-weight: normal;
+    }
+    h3 {
+        border-bottom: none;
+    }
 }
 #collection-items{
     margin-top:2em; 
@@ -833,7 +839,7 @@ th {
     }
     #exhibit-child-pages {
         width: 30%;
-        float: left;
+        float: right;
         margin:1em 0;
         li a {
             display: block;
