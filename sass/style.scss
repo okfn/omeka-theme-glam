@@ -88,6 +88,7 @@ header {
     float:right;
 }
 #featured-exhibit {
+    clear:both;
     margin: 0 0 3em 0;
     width:42%;
     float:right;
@@ -504,6 +505,9 @@ th {
     float:left;
     list-style-type:none;
     padding:1em 0;
+    ul{
+        width: 100%;
+    }
     li {
         display:block;
         float:left;
@@ -630,6 +634,19 @@ th {
         overflow: auto;
     }
 }
+.collections h2{
+    @include Head-Grey;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+#collection-items{
+    margin-top:2em; 
+    h2 {
+        font-weight: normal;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+}
 /* !---------- Simple Pages Styles ---------- */
 .page #content {
     overflow:auto;
@@ -678,6 +695,7 @@ th {
 
 .exhibit {
     clear:both;
+    padding-bottom: 1em;
 }
 .exhibits.browse.exhibit{
     margin-bottom: 1em;
