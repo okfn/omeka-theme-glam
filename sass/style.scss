@@ -81,6 +81,7 @@ header {
     padding-right:5%;
     width:52%;
     float:left;
+    min-height: 200px;
 }
 #featured-collection {
     margin: 1.5em 0 3em 0;
@@ -89,7 +90,6 @@ header {
     float:right;
 }
 #featured-exhibit {
-    clear:both;
     margin: 0 0 3em 0;
     width:42%;
     float:right;
