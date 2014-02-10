@@ -587,6 +587,7 @@ th {
 #footer-text {
     float:left;
     font-style: italic;
+    padding-top:1em;
     p {
         margin:.5em 0;
     }
@@ -788,7 +789,6 @@ th {
                 ul {
                     padding: 1.5em 4em 0 0;
                     float:left;
-                    font-size: $font-size-main * 1.1;
                     li {
                         text-transform:none;
                         display:block;
@@ -895,7 +895,7 @@ th {
 .hTagcloud {
     width:100%;
     float:left;
-    margin-top:1em;
+    margin:1em 0;
     ul {
         list-style:none;
         width:100%;

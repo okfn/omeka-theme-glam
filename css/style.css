@@ -1150,31 +1150,32 @@
   #footer-text {
     float: left;
     font-style: italic;
+    padding-top: 1em;
   }
-  /* line 590, ../sass/_screen.scss */
+  /* line 591, ../sass/_screen.scss */
   #footer-text p {
     margin: .5em 0;
   }
 
   /* !---------- Browse and Item Pages ---------- */
-  /* line 596, ../sass/_screen.scss */
+  /* line 597, ../sass/_screen.scss */
   .item {
     width: 100%;
     padding: 1em 0;
     overflow: auto;
   }
-  /* line 600, ../sass/_screen.scss */
+  /* line 601, ../sass/_screen.scss */
   .item .item-meta {
     float: left;
     width: 100%;
   }
-  /* line 604, ../sass/_screen.scss */
+  /* line 605, ../sass/_screen.scss */
   .item .item-img {
     padding-right: 9px;
     float: left;
   }
 
-  /* line 609, ../sass/_screen.scss */
+  /* line 610, ../sass/_screen.scss */
   .item-pagination {
     float: left;
     font-size: .9em;
@@ -1182,34 +1183,34 @@
     padding: 0;
     margin: 2em auto 1em auto;
   }
-  /* line 616, ../sass/_screen.scss */
+  /* line 617, ../sass/_screen.scss */
   .item-pagination li {
     float: left;
     display: inline;
     padding: 0 .5em;
   }
-  /* line 621, ../sass/_screen.scss */
+  /* line 622, ../sass/_screen.scss */
   .item-pagination a {
     padding: 0 .5em 0 0;
   }
 
-  /* line 626, ../sass/_screen.scss */
+  /* line 627, ../sass/_screen.scss */
   .item-description {
     display: block;
     margin: 0 0 1em;
   }
 
-  /* line 631, ../sass/_screen.scss */
+  /* line 632, ../sass/_screen.scss */
   .items.show h2 {
     font-weight: bold;
     border-bottom: none;
   }
-  /* line 635, ../sass/_screen.scss */
+  /* line 636, ../sass/_screen.scss */
   .items.show .element {
     overflow: auto;
   }
 
-  /* line 640, ../sass/_screen.scss */
+  /* line 641, ../sass/_screen.scss */
   .collections h2 {
     font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", sans-serif;
     font-weight: bold;
@@ -1219,16 +1220,16 @@
     padding-bottom: 0;
     font-weight: normal;
   }
-  /* line 645, ../sass/_screen.scss */
+  /* line 646, ../sass/_screen.scss */
   .collections h3 {
     border-bottom: none;
   }
 
-  /* line 649, ../sass/_screen.scss */
+  /* line 650, ../sass/_screen.scss */
   #collection-items {
     margin-top: 2em;
   }
-  /* line 651, ../sass/_screen.scss */
+  /* line 652, ../sass/_screen.scss */
   #collection-items h2 {
     font-weight: normal;
     padding-bottom: 0;
@@ -1236,52 +1237,52 @@
   }
 
   /* !---------- Simple Pages Styles ---------- */
-  /* line 658, ../sass/_screen.scss */
+  /* line 659, ../sass/_screen.scss */
   .page #content {
     overflow: auto;
     width: 100%;
     clear: none;
   }
-  /* line 662, ../sass/_screen.scss */
+  /* line 663, ../sass/_screen.scss */
   .page #content h1 {
     margin: 0 0 1em;
   }
 
-  /* line 666, ../sass/_screen.scss */
+  /* line 667, ../sass/_screen.scss */
   #simple-pages-breadcrumbs {
     margin-bottom: 1.5em;
     font-style: italic;
   }
-  /* line 669, ../sass/_screen.scss */
+  /* line 670, ../sass/_screen.scss */
   #simple-pages-breadcrumbs a {
     text-decoration: none;
   }
-  /* line 671, ../sass/_screen.scss */
+  /* line 672, ../sass/_screen.scss */
   #simple-pages-breadcrumbs a:hover {
     text-decoration: underline;
   }
 
   /* !---------- Collections ---------- */
-  /* line 678, ../sass/_screen.scss */
+  /* line 679, ../sass/_screen.scss */
   .collection {
     padding: 1em 0;
   }
-  /* line 680, ../sass/_screen.scss */
+  /* line 681, ../sass/_screen.scss */
   .collection ul {
     margin: 0 0 1em 1em;
   }
 
-  /* line 684, ../sass/_screen.scss */
+  /* line 685, ../sass/_screen.scss */
   #item-filters {
     width: 100%;
     float: left;
   }
-  /* line 687, ../sass/_screen.scss */
+  /* line 688, ../sass/_screen.scss */
   #item-filters ul {
     list-style-type: none;
     padding: 0;
   }
-  /* line 690, ../sass/_screen.scss */
+  /* line 691, ../sass/_screen.scss */
   #item-filters ul .collection {
     font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", sans-serif;
     font-size: 28px;
@@ -1298,79 +1299,79 @@
   }
 
   /* !---------- Exhibit Styles ---------- */
-  /* line 702, ../sass/_screen.scss */
+  /* line 703, ../sass/_screen.scss */
   .exhibit {
     clear: both;
     padding-bottom: 1em;
   }
 
-  /* line 706, ../sass/_screen.scss */
+  /* line 707, ../sass/_screen.scss */
   .exhibits.browse.exhibit {
     margin-bottom: 1em;
     padding: .5em 0;
   }
-  /* line 709, ../sass/_screen.scss */
+  /* line 710, ../sass/_screen.scss */
   .exhibits.browse.exhibit h3 {
     text-transform: uppercase;
     padding-top: .5em;
   }
-  /* line 712, ../sass/_screen.scss */
+  /* line 713, ../sass/_screen.scss */
   .exhibits.browse.exhibit h3 a {
     text-decoration: none;
   }
 
-  /* line 721, ../sass/_screen.scss */
+  /* line 722, ../sass/_screen.scss */
   .exhibits.summary p, .exhibits.summary .tags {
     margin-bottom: 1em;
   }
-  /* line 724, ../sass/_screen.scss */
+  /* line 725, ../sass/_screen.scss */
   .exhibits.summary .exhibit-credits {
     padding-top: 1em;
   }
-  /* line 727, ../sass/_screen.scss */
+  /* line 728, ../sass/_screen.scss */
   .exhibits.summary #primary {
     width: 65%;
     float: left;
     padding-right: 5%;
     padding-bottom: 1em;
   }
-  /* line 733, ../sass/_screen.scss */
+  /* line 734, ../sass/_screen.scss */
   .exhibits.summary #exhibit-pages {
     width: 30%;
     float: left;
   }
-  /* line 737, ../sass/_screen.scss */
+  /* line 738, ../sass/_screen.scss */
   .exhibits.summary #exhibit-pages ul {
     margin-left: 0;
     list-style-type: none;
     padding: 0;
   }
-  /* line 742, ../sass/_screen.scss */
+  /* line 743, ../sass/_screen.scss */
   .exhibits.summary #exhibit-pages ul li a {
     text-decoration: none;
     padding: .5em;
     display: block;
     border-bottom: 1px solid #dddddd;
   }
-  /* line 747, ../sass/_screen.scss */
+  /* line 748, ../sass/_screen.scss */
   .exhibits.summary #exhibit-pages ul li a:hover {
     background-color: #dddddd;
   }
-  /* line 751, ../sass/_screen.scss */
+  /* line 752, ../sass/_screen.scss */
   .exhibits.summary #exhibit-pages ul li ul {
     margin-left: 1.5em;
   }
 
-  /* line 761, ../sass/_screen.scss */
+  /* line 762, ../sass/_screen.scss */
   .exhibits.show #exhibit-pages {
     overflow: auto;
     margin: 1em 0;
   }
-  /* line 764, ../sass/_screen.scss */
+  /* line 765, ../sass/_screen.scss */
   .exhibits.show #exhibit-pages ul {
     margin-left: 0;
   }
-  /* line 767, ../sass/_screen.scss */
+  /* line 768, ../sass/_screen.scss */
   .exhibits.show #exhibit-pages .exhibit-page-nav {
     clear: left;
     float: left;
@@ -1380,7 +1381,7 @@
     margin-bottom: .5em;
     margin-left: 0;
   }
-  /* line 775, ../sass/_screen.scss */
+  /* line 776, ../sass/_screen.scss */
   .exhibits.show #exhibit-pages .exhibit-page-nav li {
     float: none;
     display: block;
@@ -1388,7 +1389,7 @@
     margin: 0;
     text-transform: uppercase;
   }
-  /* line 782, ../sass/_screen.scss */
+  /* line 783, ../sass/_screen.scss */
   .exhibits.show #exhibit-pages .exhibit-page-nav li .exhibit-title {
     font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", sans-serif;
     font-weight: normal;
@@ -1397,15 +1398,14 @@
     text-transform: uppercase;
     font-size: 35px;
   }
-  /* line 784, ../sass/_screen.scss */
+  /* line 785, ../sass/_screen.scss */
   .exhibits.show #exhibit-pages .exhibit-page-nav li .exhibit-title:hover {
     background-color: #fffff8;
   }
-  /* line 788, ../sass/_screen.scss */
+  /* line 789, ../sass/_screen.scss */
   .exhibits.show #exhibit-pages .exhibit-page-nav li ul {
     padding: 1.5em 4em 0 0;
     float: left;
-    font-size: 15.4px;
   }
   /* line 792, ../sass/_screen.scss */
   .exhibits.show #exhibit-pages .exhibit-page-nav li ul li {
@@ -1535,7 +1535,7 @@
   .hTagcloud {
     width: 100%;
     float: left;
-    margin-top: 1em;
+    margin: 1em 0;
   }
   /* line 899, ../sass/_screen.scss */
   .hTagcloud ul {
