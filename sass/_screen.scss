@@ -1,0 +1,58 @@
+@import "susy";
+@import "mixins";
+@import "base";
+
+/* -------------------------------------------------------------------------*/
+/* Table of Contents 
+-- General Styles
+-- Layout
+- 
+
+/* -------------------------------------------------------------------------*/
+/* General */
+body {
+  font-family: $font-family-main;
+  font-size: $font-size-main;
+  line-height: 1.6em;
+  color: $text-color;
+  background: $background-color;
+  margin:0;
+	ul {
+	    margin:0;
+	    padding:0;
+	}
+}
+abbr, acronym {
+  border:none;
+  font-style: normal;
+}
+img a {
+  border:none;
+}
+.clear {
+  clear:both;
+}
+blockquote {
+  font-style:italic;
+}
+
+/* -------------------------------------------------------------------------*/
+/* Layout */
+#wrap {
+  @include container;
+  @include susy-grid-background;
+
+  header, footer {
+  	clear:both;
+  	margin:2em 0 0 0;
+  }
+
+  #search-container {@include span-columns(4 omega,12);$from-direction:left;}
+  #site-title {@include span-columns(8,12);}
+  nav {clear:both;}
+
+  #featured-item {@include span-columns (7,12);}
+  #featured-collection {@include span-columns (5 omega,12);}
+  #featured-exhibit {@include span-columns (5 omega,12);}
+  #recent-items {clear:both;}
+}

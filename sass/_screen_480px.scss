@@ -1,0 +1,10 @@
+@import "susy";
+@import "mixins";
+
+
+#wrap {
+  @include at-breakpoint(6 480px) {
+    @include container;
+    @include susy-grid-background;
+  }
+}
