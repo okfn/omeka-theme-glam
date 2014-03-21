@@ -16,20 +16,32 @@
 /* Layout */
 #wrap {
     @include container;
-   /* @include susy-grid-background;*/
+/*    @include susy-grid-background;
+*/
+   background-color:$background-color;
+   .secondary-nav {@include span-columns(4);}
+   .pagination {@include span-columns(4);}
+   .secondary-nav li {@include span-columns(3);}
+   #sort-links{@include span-columns(4);}
+   #outputs {@include span-columns(4)}
+   footer {@include bleed($grid-padding);}
+   #bottom-nav {display: none;}
 
     @include at-breakpoint(30em 8) {
         @include container;
-        /*@include susy-grid-background;*/
-
+/*        @include susy-grid-background;
+*/
         #site-title {@include span-columns(5);}
         #search-container {@include span-columns(3 omega);}
         #top-nav {@include span-columns (8 omega);}
         #content {@include span-columns (8 omega);}
+        .secondary-nav li {@include span-columns(2);}
+        .pagination {@include span-columns(2);}
+        #sort-links {@include span-columns(5);}
         #primary {@include span-columns (8);}
         #recent-items {@include span-columns (8);}
         #exhibit-pages {@include span-columns (8);}
-        footer {@include span-columns (8 omega);}
+        #bottom-nav {display:block;}
     }
     @include at-breakpoint(60em 12) {
         @include container;
@@ -37,25 +49,36 @@
 */
         #site-title {@include span-columns (8);}
         #search-container {@include span-columns (4 omega);}
-        #primary {@include span-columns (8,12);}
+        #primary {@include span-columns (7,12);}
+        .secondary-nav li {@include span-columns(2);}
+        .pagination {@include span-columns(2);}
+        #sort-links {@include span-columns(9);}
         #featured-item {padding-right:1em;}
         #featured-collection {padding-right:1em;}
         #featured-exhibit {padding-right:1em;}
         #recent-items {@include span-columns (4 omega, 12);}
         #exhibit-pages {@include span-columns (4 omega, 12);}
-        footer {@include span-columns (12 omega);}
     }   
 }
-
+#featured-item,
+    #featured-collection,
+    #featured-exhibit,
+    .element-set,
+    .item,
+    .element, 
+    .collection,
+    .exhibit {
+        margin:.5em 0 1.5em 0;
+}
 
 /* -------------------------------------------------------------------------*/
 /* General */
 body {
+    background-color:#E5E5E5;
     font-family: $font-family-main;
     font-size: $font-size-main;
     line-height: 1.6em;
     color: $text-color;
-    background: $background-color;
     margin:0;
 }
 abbr, acronym {
@@ -71,12 +94,20 @@ a.show {
 blockquote {
     font-style:italic;
 }
-.element, .item {
-    padding-bottom: .5em;
-    border-bottom: 1px solid $grey-light;
-
+.item,
+    .element{ 
+        padding-bottom: .5em;
+        border-bottom: 1px solid $grey-light;
+        clear:both;
 }
-
+#outputs {
+    margin-top:1em;
+}
+footer {
+    background-color:lighten($accent-super-light, 5%);
+    padding:.5em;
+    overflow: auto;
+}
 /* -------------------------------------------------------------------------*/
 /* Headings */
 
@@ -84,7 +115,8 @@ blockquote {
     font-family: $font-family-title;
     font-weight:normal;
     line-height: normal;
-    margin-bottom: .5em;
+    padding: .5em 0;
+    margin:0;
     color: $grey-medium;
 }
 #{headings(4,6)} {
@@ -125,7 +157,74 @@ a {
     &:hover{text-decoration:underline;}
 }
 
+/* -------------------------------------------------------------------------*/
+/* Navigation */
+.navigation, 
+    #sort-links {
+        list-style:none; 
+        padding:0;
+        ul {
+            margin:0;
+            padding:0;
+        } 
+        li {
+            display:inline;
+        }
+}
+.secondary-nav {
+    ul {
+        li {
+            padding-bottom:.5em;
+            &.active a {
+                text-decoration: underline;
+                font-weight: bold;
+            }
+            a:visited {
+                color:$accent-main;
+            }
+        }
+    }
+}
+.pagination {
+    list-style-type:none;
+    padding:0;
+    margin:1em 0 0 0;
+    li {
+        padding-right:2%;
+        float:left;
+        #page {
+            width:30px;
+            text-align:right;
+        }
+    }
+}
+#sort-links{
+    margin:1em 0 2em 0;
+    .sort-label {
+        float:left;
+    }
+    li {
+        float:left;
+        padding:0 5px 0 10px;
 
-
-
-
+        &.sorting a {
+            text-decoration: underline;
+            font-weight: bold;
+        }
+        a:visited {
+            color:$accent-main;
+        }
+    }
+}
+#bottom-nav {
+    li {
+        padding-right:20px;
+        &.active {
+            text-decoration: underline;
+            font-weight: bold;
+        }
+        ul{
+            display: none;
+        }
+    }
+}

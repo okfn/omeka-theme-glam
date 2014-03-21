@@ -438,13 +438,61 @@ table {
   padding-right: 1em;
   margin-left: auto;
   margin-right: auto;
-  /* @include susy-grid-background;*/
+  /*    @include susy-grid-background;
+  */
+  background-color: white;
 }
 /* line 38, ../../../../../.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-0.12.4/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
 #wrap:after {
   content: "";
   display: table;
   clear: both;
+}
+/* line 22, ../sass/_mobile-first.scss */
+#wrap .secondary-nav {
+  width: 100%;
+  float: left;
+  margin-right: 5.26316%;
+  display: inline;
+}
+/* line 23, ../sass/_mobile-first.scss */
+#wrap .pagination {
+  width: 100%;
+  float: left;
+  margin-right: 5.26316%;
+  display: inline;
+}
+/* line 24, ../sass/_mobile-first.scss */
+#wrap .secondary-nav li {
+  width: 73.68421%;
+  float: left;
+  margin-right: 5.26316%;
+  display: inline;
+}
+/* line 25, ../sass/_mobile-first.scss */
+#wrap #sort-links {
+  width: 100%;
+  float: left;
+  margin-right: 5.26316%;
+  display: inline;
+}
+/* line 26, ../sass/_mobile-first.scss */
+#wrap #outputs {
+  width: 100%;
+  float: left;
+  margin-right: 5.26316%;
+  display: inline;
+}
+/* line 27, ../sass/_mobile-first.scss */
+#wrap footer {
+  margin-left: -1em;
+  padding-left: 1em;
+  margin-right: -1em;
+  padding-right: 1em;
+}
+/* line 28, ../sass/_mobile-first.scss */
+#wrap #bottom-nav {
+  display: none;
 }
 @media (min-width: 30em) {
   /* line 17, ../sass/_mobile-first.scss */
@@ -454,7 +502,8 @@ table {
     padding-right: 1em;
     margin-left: auto;
     margin-right: auto;
-    /*@include susy-grid-background;*/
+    /*        @include susy-grid-background;
+    */
   }
   /* line 38, ../../../../../.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-0.12.4/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
   #wrap:after {
@@ -462,53 +511,69 @@ table {
     display: table;
     clear: both;
   }
-  /* line 25, ../sass/_mobile-first.scss */
+  /* line 34, ../sass/_mobile-first.scss */
   #wrap #site-title {
     width: 61.53846%;
     float: left;
     margin-right: 2.5641%;
   }
-  /* line 26, ../sass/_mobile-first.scss */
+  /* line 35, ../sass/_mobile-first.scss */
   #wrap #search-container {
     width: 35.89744%;
     float: right;
     margin-right: 0;
   }
-  /* line 27, ../sass/_mobile-first.scss */
+  /* line 36, ../sass/_mobile-first.scss */
   #wrap #top-nav {
     width: 100%;
     float: right;
     margin-right: 0;
   }
-  /* line 28, ../sass/_mobile-first.scss */
+  /* line 37, ../sass/_mobile-first.scss */
   #wrap #content {
     width: 100%;
     float: right;
     margin-right: 0;
   }
-  /* line 29, ../sass/_mobile-first.scss */
+  /* line 38, ../sass/_mobile-first.scss */
+  #wrap .secondary-nav li {
+    width: 23.07692%;
+    float: left;
+    margin-right: 2.5641%;
+  }
+  /* line 39, ../sass/_mobile-first.scss */
+  #wrap .pagination {
+    width: 23.07692%;
+    float: left;
+    margin-right: 2.5641%;
+  }
+  /* line 40, ../sass/_mobile-first.scss */
+  #wrap #sort-links {
+    width: 61.53846%;
+    float: left;
+    margin-right: 2.5641%;
+  }
+  /* line 41, ../sass/_mobile-first.scss */
   #wrap #primary {
     width: 100%;
     float: left;
     margin-right: 2.5641%;
   }
-  /* line 30, ../sass/_mobile-first.scss */
+  /* line 42, ../sass/_mobile-first.scss */
   #wrap #recent-items {
     width: 100%;
     float: left;
     margin-right: 2.5641%;
   }
-  /* line 31, ../sass/_mobile-first.scss */
+  /* line 43, ../sass/_mobile-first.scss */
   #wrap #exhibit-pages {
     width: 100%;
     float: left;
     margin-right: 2.5641%;
   }
-  /* line 32, ../sass/_mobile-first.scss */
-  #wrap footer {
-    width: 100%;
-    float: right;
-    margin-right: 0;
+  /* line 44, ../sass/_mobile-first.scss */
+  #wrap #bottom-nav {
+    display: block;
   }
 }
 @media (min-width: 60em) {
@@ -528,140 +593,179 @@ table {
     display: table;
     clear: both;
   }
-  /* line 38, ../sass/_mobile-first.scss */
+  /* line 50, ../sass/_mobile-first.scss */
   #wrap #site-title {
     width: 66.10169%;
     float: left;
     margin-right: 1.69492%;
   }
-  /* line 39, ../sass/_mobile-first.scss */
+  /* line 51, ../sass/_mobile-first.scss */
   #wrap #search-container {
     width: 32.20339%;
     float: right;
     margin-right: 0;
   }
-  /* line 40, ../sass/_mobile-first.scss */
+  /* line 52, ../sass/_mobile-first.scss */
   #wrap #primary {
-    width: 66.10169%;
+    width: 57.62712%;
     float: left;
     margin-right: 1.69492%;
   }
-  /* line 41, ../sass/_mobile-first.scss */
+  /* line 53, ../sass/_mobile-first.scss */
+  #wrap .secondary-nav li {
+    width: 15.25424%;
+    float: left;
+    margin-right: 1.69492%;
+  }
+  /* line 54, ../sass/_mobile-first.scss */
+  #wrap .pagination {
+    width: 15.25424%;
+    float: left;
+    margin-right: 1.69492%;
+  }
+  /* line 55, ../sass/_mobile-first.scss */
+  #wrap #sort-links {
+    width: 74.57627%;
+    float: left;
+    margin-right: 1.69492%;
+  }
+  /* line 56, ../sass/_mobile-first.scss */
   #wrap #featured-item {
     padding-right: 1em;
   }
-  /* line 42, ../sass/_mobile-first.scss */
+  /* line 57, ../sass/_mobile-first.scss */
   #wrap #featured-collection {
     padding-right: 1em;
   }
-  /* line 43, ../sass/_mobile-first.scss */
+  /* line 58, ../sass/_mobile-first.scss */
   #wrap #featured-exhibit {
     padding-right: 1em;
   }
-  /* line 44, ../sass/_mobile-first.scss */
+  /* line 59, ../sass/_mobile-first.scss */
   #wrap #recent-items {
     width: 32.20339%;
     float: right;
     margin-right: 0;
   }
-  /* line 45, ../sass/_mobile-first.scss */
+  /* line 60, ../sass/_mobile-first.scss */
   #wrap #exhibit-pages {
     width: 32.20339%;
     float: right;
     margin-right: 0;
   }
-  /* line 46, ../sass/_mobile-first.scss */
-  #wrap footer {
-    width: 100%;
-    float: right;
-    margin-right: 0;
-  }
+}
+
+/* line 70, ../sass/_mobile-first.scss */
+#featured-item,
+#featured-collection,
+#featured-exhibit,
+.element-set,
+.item,
+.element,
+.collection,
+.exhibit {
+  margin: .5em 0 1.5em 0;
 }
 
 /* -------------------------------------------------------------------------*/
 /* General */
-/* line 53, ../sass/_mobile-first.scss */
+/* line 76, ../sass/_mobile-first.scss */
 body {
+  background-color: #E5E5E5;
   font-family: "Lucida Bright", Georgia, serif;
   font-size: 16px;
   line-height: 1.6em;
   color: #444444;
-  background: white;
   margin: 0;
 }
 
-/* line 61, ../sass/_mobile-first.scss */
+/* line 84, ../sass/_mobile-first.scss */
 abbr, acronym {
   border: none;
   font-style: normal;
 }
 
-/* line 65, ../sass/_mobile-first.scss */
+/* line 88, ../sass/_mobile-first.scss */
 .clear {
   clear: both;
 }
 
-/* line 68, ../sass/_mobile-first.scss */
+/* line 91, ../sass/_mobile-first.scss */
 a.show {
   padding-left: 5px;
   font-style: italic;
 }
 
-/* line 71, ../sass/_mobile-first.scss */
+/* line 94, ../sass/_mobile-first.scss */
 blockquote {
   font-style: italic;
 }
 
-/* line 74, ../sass/_mobile-first.scss */
-.element, .item {
+/* line 98, ../sass/_mobile-first.scss */
+.item,
+.element {
   padding-bottom: .5em;
   border-bottom: 1px solid #dddddd;
+  clear: both;
+}
+
+/* line 103, ../sass/_mobile-first.scss */
+#outputs {
+  margin-top: 1em;
+}
+
+/* line 106, ../sass/_mobile-first.scss */
+footer {
+  background-color: #e2e7fc;
+  padding: .5em;
+  overflow: auto;
 }
 
 /* -------------------------------------------------------------------------*/
 /* Headings */
-/* line 83, ../sass/_mobile-first.scss */
+/* line 114, ../sass/_mobile-first.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", sans-serif;
   font-weight: normal;
   line-height: normal;
-  margin-bottom: .5em;
+  padding: .5em 0;
+  margin: 0;
   color: #666666;
 }
 
-/* line 90, ../sass/_mobile-first.scss */
+/* line 122, ../sass/_mobile-first.scss */
 h4, h5, h6 {
   font-style: 19.2px;
 }
 
-/* line 93, ../sass/_mobile-first.scss */
+/* line 125, ../sass/_mobile-first.scss */
 h5, h6 {
   font-weight: bold;
 }
 
-/* line 96, ../sass/_mobile-first.scss */
+/* line 128, ../sass/_mobile-first.scss */
 h1 {
   text-transform: uppercase;
   font-size: 40px;
 }
 
-/* line 100, ../sass/_mobile-first.scss */
+/* line 132, ../sass/_mobile-first.scss */
 h2 {
   font-size: 32px;
   text-transform: capitalize;
 }
 
-/* line 104, ../sass/_mobile-first.scss */
+/* line 136, ../sass/_mobile-first.scss */
 h3 {
   font-size: 24px;
 }
 
-/* line 107, ../sass/_mobile-first.scss */
+/* line 139, ../sass/_mobile-first.scss */
 h6 {
   font-size: italic;
 }
 
-/* line 110, ../sass/_mobile-first.scss */
+/* line 142, ../sass/_mobile-first.scss */
 #site-title {
   color: #425580;
   font-variant: small-caps;
@@ -670,7 +774,7 @@ h6 {
   line-height: .9em;
   margin: .5em 0;
 }
-/* line 117, ../sass/_mobile-first.scss */
+/* line 149, ../sass/_mobile-first.scss */
 #site-title a {
   text-decoration: none;
   color: #425580;
@@ -678,7 +782,7 @@ h6 {
 
 /* -------------------------------------------------------------------------*/
 /* Links */
-/* line 122, ../sass/_mobile-first.scss */
+/* line 154, ../sass/_mobile-first.scss */
 a {
   color: #6881dd;
   text-decoration: none;
@@ -695,9 +799,97 @@ a:hover {
 a:active {
   color: #cbd4f9;
 }
-/* line 125, ../sass/_mobile-first.scss */
+/* line 157, ../sass/_mobile-first.scss */
 a:hover {
   text-decoration: underline;
+}
+
+/* -------------------------------------------------------------------------*/
+/* Navigation */
+/* line 163, ../sass/_mobile-first.scss */
+.navigation,
+#sort-links {
+  list-style: none;
+  padding: 0;
+}
+/* line 166, ../sass/_mobile-first.scss */
+.navigation ul,
+#sort-links ul {
+  margin: 0;
+  padding: 0;
+}
+/* line 170, ../sass/_mobile-first.scss */
+.navigation li,
+#sort-links li {
+  display: inline;
+}
+
+/* line 176, ../sass/_mobile-first.scss */
+.secondary-nav ul li {
+  padding-bottom: .5em;
+}
+/* line 178, ../sass/_mobile-first.scss */
+.secondary-nav ul li.active a {
+  text-decoration: underline;
+  font-weight: bold;
+}
+/* line 182, ../sass/_mobile-first.scss */
+.secondary-nav ul li a:visited {
+  color: #6881dd;
+}
+
+/* line 188, ../sass/_mobile-first.scss */
+.pagination {
+  list-style-type: none;
+  padding: 0;
+  margin: 1em 0 0 0;
+}
+/* line 192, ../sass/_mobile-first.scss */
+.pagination li {
+  padding-right: 2%;
+  float: left;
+}
+/* line 195, ../sass/_mobile-first.scss */
+.pagination li #page {
+  width: 30px;
+  text-align: right;
+}
+
+/* line 201, ../sass/_mobile-first.scss */
+#sort-links {
+  margin: 1em 0 2em 0;
+}
+/* line 203, ../sass/_mobile-first.scss */
+#sort-links .sort-label {
+  float: left;
+}
+/* line 206, ../sass/_mobile-first.scss */
+#sort-links li {
+  float: left;
+  padding: 0 5px 0 10px;
+}
+/* line 210, ../sass/_mobile-first.scss */
+#sort-links li.sorting a {
+  text-decoration: underline;
+  font-weight: bold;
+}
+/* line 214, ../sass/_mobile-first.scss */
+#sort-links li a:visited {
+  color: #6881dd;
+}
+
+/* line 220, ../sass/_mobile-first.scss */
+#bottom-nav li {
+  padding-right: 20px;
+}
+/* line 222, ../sass/_mobile-first.scss */
+#bottom-nav li.active {
+  text-decoration: underline;
+  font-weight: bold;
+}
+/* line 226, ../sass/_mobile-first.scss */
+#bottom-nav li ul {
+  display: none;
 }
 
 /* -------------------------------------------------------------------------*/
