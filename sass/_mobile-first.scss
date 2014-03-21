@@ -1,0 +1,131 @@
+@import "susy";
+@import "mixins";
+@import "base";
+@import "compass";
+
+/* -------------------------------------------------------------------------*/
+/* Table of Contents 
+-- General Styles
+---- Layout
+---- General Styles
+---- Headings
+---- Links
+-- Navigation
+
+/* -------------------------------------------------------------------------*/
+/* Layout */
+#wrap {
+    @include container;
+   /* @include susy-grid-background;*/
+
+    @include at-breakpoint(30em 8) {
+        @include container;
+        /*@include susy-grid-background;*/
+
+        #site-title {@include span-columns(5);}
+        #search-container {@include span-columns(3 omega);}
+        #top-nav {@include span-columns (8 omega);}
+        #content {@include span-columns (8 omega);}
+        #primary {@include span-columns (8);}
+        #recent-items {@include span-columns (8);}
+        #exhibit-pages {@include span-columns (8);}
+        footer {@include span-columns (8 omega);}
+    }
+    @include at-breakpoint(60em 12) {
+        @include container;
+/*        @include susy-grid-background;
+*/
+        #site-title {@include span-columns (8);}
+        #search-container {@include span-columns (4 omega);}
+        #primary {@include span-columns (8,12);}
+        #featured-item {padding-right:1em;}
+        #featured-collection {padding-right:1em;}
+        #featured-exhibit {padding-right:1em;}
+        #recent-items {@include span-columns (4 omega, 12);}
+        #exhibit-pages {@include span-columns (4 omega, 12);}
+        footer {@include span-columns (12 omega);}
+    }   
+}
+
+
+/* -------------------------------------------------------------------------*/
+/* General */
+body {
+    font-family: $font-family-main;
+    font-size: $font-size-main;
+    line-height: 1.6em;
+    color: $text-color;
+    background: $background-color;
+    margin:0;
+}
+abbr, acronym {
+    border:none;
+    font-style: normal;
+}
+.clear {
+    clear:both;
+}
+a.show {
+    padding-left: 5px; font-style: italic;
+}
+blockquote {
+    font-style:italic;
+}
+.element, .item {
+    padding-bottom: .5em;
+    border-bottom: 1px solid $grey-light;
+
+}
+
+/* -------------------------------------------------------------------------*/
+/* Headings */
+
+#{headings()} {
+    font-family: $font-family-title;
+    font-weight:normal;
+    line-height: normal;
+    margin-bottom: .5em;
+    color: $grey-medium;
+}
+#{headings(4,6)} {
+    font-style: $font-size-main * 1.2;
+}
+#{headings(5,6)} {
+    font-weight: bold;
+}
+h1 {
+    text-transform: uppercase;
+    font-size: $font-size-main *2.5;
+}
+h2 {
+    font-size: $font-size-main * 2;
+    text-transform: capitalize;
+}
+h3 {
+    font-size: $font-size-main * 1.5;
+}
+h6 {
+    font-size:italic;
+}
+#site-title {
+    color:$accent-dark;
+    font-variant: small-caps;
+    font-size: $font-size-main *3.5;
+    font-weight: bold;
+    line-height: .9em;
+    margin: .5em 0;
+    a{text-decoration: none;color:$accent-dark;}
+}
+
+/* -------------------------------------------------------------------------*/
+/* Links */
+a {
+    @include link-colors($accent-main, $accent-light, $accent-super-light, $accent-dark);
+    text-decoration: none;
+    &:hover{text-decoration:underline;}
+}
+
+
+
+
+
