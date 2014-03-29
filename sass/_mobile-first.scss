@@ -11,6 +11,10 @@
 ---- Headings
 ---- Links
 -- Navigation
+-- Forms
+---- Search
+---- Contribution
+-- Tables
 
 /* -------------------------------------------------------------------------*/
 /* Layout */
@@ -19,11 +23,15 @@
 /*    @include susy-grid-background;
 */
    background-color:$background-color;
+   #search-container{@include span-columns(4 omega);}
    .secondary-nav {@include span-columns(4);}
    .pagination {@include span-columns(4);}
    .secondary-nav li {@include span-columns(3);}
    #sort-links{@include span-columns(4);}
    #outputs {@include span-columns(4)}
+   #advanced-search-form label {@include span-columns (4);}
+   #advanced-search-form .inputs {@include span-columns (4 omega);}
+   #advanced-search-form input {@include span-columns (3);}
    footer {@include bleed($grid-padding);}
    #bottom-nav {display: none;}
 
@@ -31,8 +39,8 @@
         @include container;
 /*        @include susy-grid-background;
 */
-        #site-title {@include span-columns(5);}
-        #search-container {@include span-columns(3 omega);}
+        #site-title {@include span-columns(8);}
+        #search-container {@include span-columns(8 omega);}
         #top-nav {@include span-columns (8 omega);}
         #content {@include span-columns (8 omega);}
         .secondary-nav li {@include span-columns(2);}
@@ -41,13 +49,13 @@
         #primary {@include span-columns (8);}
         #recent-items {@include span-columns (8);}
         #exhibit-pages {@include span-columns (8);}
-        #bottom-nav {display:block;}
+        #bottom-nav {display:none;}
     }
     @include at-breakpoint(60em 12) {
         @include container;
 /*        @include susy-grid-background;
 */
-        #site-title {@include span-columns (8);}
+        #site-title {@include span-columns (7);}
         #search-container {@include span-columns (4 omega);}
         #primary {@include span-columns (7,12);}
         .secondary-nav li {@include span-columns(2);}
@@ -80,6 +88,10 @@ body {
     line-height: 1.6em;
     color: $text-color;
     margin:0;
+}
+#content {
+    padding:1em 0;
+    overflow: auto;
 }
 abbr, acronym {
     border:none;
@@ -228,3 +240,149 @@ a {
         }
     }
 }
+
+
+/* -------------------------------------------------------------------------*/
+/* Forms */
+fieldset {
+    border:0;
+    padding:0;
+    margin-bottom:1em;
+
+    legend {
+        font-size:1.5em;
+        line-height:1em;
+        margin:1em 0 0 ;
+    }
+    input.textinput {
+        margin-bottom:1em;
+    }
+    label {
+        display:block;
+    }
+    select {
+        margin:1em 0;
+    }
+    textarea{
+        margin-bottom:1em;
+    }
+    .field {
+        margin-bottom: .5em;    
+    }
+}
+form {
+    clear:both;
+    padding:1em 0;
+    input {
+        padding:0;
+    }
+}
+#content {
+    fieldset {
+        display:block;
+        clear:both;
+    }
+    .inputs {
+        overflow:hidden;
+        zoom:1;
+    }
+    .radioinputs {
+        label {
+            display:block;
+            float:left;
+            width:48%;
+            clear:none;
+        }
+    }
+    .search-entry {
+        select {
+            margin-bottom:.5em;
+        }
+    }
+    #submit_search {
+        margin:.5em 0 0 458px;
+        }   
+    }
+
+
+/*-- Search--*/
+
+#search-container {
+    width:30%;
+    float:right;
+    font-size: .9em;
+    padding: 1em 0 0 1em;
+    margin:0;
+
+    input {
+        margin:0 0 0 .5em;
+    }
+    a {
+        float:right;
+        font-size: 1em;
+        padding: 1em 0em;
+    }
+    h3 {
+        text-transform:uppercase;
+        font-size:1em;
+        margin:0;
+    }       
+}       
+#search-form {
+    float:right;
+}    
+#advanced-search-form {
+    .field {
+        border-bottom:1px solid $grey-light;
+        padding:.5em 0 1em 0;
+        overflow: auto;
+    }
+    select {
+        margin-left:1px;
+    }
+    .search-entry{
+        margin:.5em 0;
+        overflow:auto;
+    }
+} 
+
+/*-- Contribution Form --*/
+
+#geolocation_address.textinput {
+    margin-bottom: .5em;
+}
+#geolocation_find_location_by_address{
+    margin-left:.5em;
+}
+#contribution-confirm-submit {
+    margin-top:1em;
+    input {
+        float:left;
+        margin-top:.25em;
+    }
+    label{
+        float:left;
+        margin-left:.5em;
+    }
+    #form-submit{
+        margin-top:1em;
+    }
+}
+
+/* -------------------------------------------------------------------------*/
+/* Tables */
+table {
+    width:100%;
+}
+th,
+td {
+    border-bottom:1px solid $grey-light;
+    margin:0;
+    padding:0.5em 0;
+}
+th {
+    border-width:3px;
+    text-align:left;
+}
+
+
