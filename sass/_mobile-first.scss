@@ -66,6 +66,12 @@
         #featured-exhibit {padding-right:1em;}
         #recent-items {@include span-columns (4 omega, 12);}
         #exhibit-pages {@include span-columns (4 omega, 12);}
+        #advanced-search-form label {@include span-columns (4,12);}
+        #advanced-search-form .label {@include span-columns (4,12);}
+        #advanced-search-form .inputs {@include span-columns (7, 12);}
+        #advanced-search-form input {@include span-columns (7, 12);}
+        #advanced-search-form .submit {@include span-columns (3, 12);}
+        #bottom-nav {display: block;}
     }   
 }
 #featured-item,
@@ -109,7 +115,7 @@ blockquote {
 .item,
     .element{ 
         padding-bottom: .5em;
-        border-bottom: 1px solid $grey-light;
+        border-top: 1px solid $grey-light;
         clear:both;
 }
 #outputs {
@@ -272,10 +278,16 @@ fieldset {
 }
 form {
     clear:both;
-    padding:1em 0;
     input {
         padding:0;
     }
+    button, 
+        select,
+        .submit,
+        input {
+            @include border-radius(3px);
+            background-color: $grey-super-light;
+        }
 }
 #content {
     fieldset {
@@ -295,6 +307,7 @@ form {
         }
     }
     .search-entry {
+        padding-bottom:.5em;
         select {
             margin-bottom:.5em;
         }
@@ -333,7 +346,7 @@ form {
 }    
 #advanced-search-form {
     .field {
-        border-bottom:1px solid $grey-light;
+        border-top:1px solid $grey-light;
         padding:.5em 0 1em 0;
         overflow: auto;
     }
@@ -341,7 +354,7 @@ form {
         margin-left:1px;
     }
     .search-entry{
-        margin:.5em 0;
+        margin-bottom:.5em;
         overflow:auto;
     }
 } 
