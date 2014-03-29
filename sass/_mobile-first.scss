@@ -34,8 +34,8 @@
    #advanced-search-form label {@include span-columns (4);}
    #advanced-search-form .inputs {@include span-columns (4 omega);}
    #advanced-search-form input {@include span-columns (3);}
-   .item-img{@include span-columns(4 omega);}
-   .item-description {@include span-columns(4 omega);}
+   .hentry .item-img{@include span-columns(4 omega);}
+   .hentry .item-description {@include span-columns(4 omega);}
    footer {@include bleed($grid-padding);}
    #bottom-nav {display: none;}
 
@@ -52,9 +52,7 @@
         #sort-links {@include span-columns(8);}
         #primary {@include span-columns (8);}
         #recent-items {@include span-columns (8);}
-/*        .item-img{@include span-columns (3);}
-      .item-description {@include span-columns(4 omega);}
-*/        #exhibit-pages {@include span-columns (8);}
+        #exhibit-pages {@include span-columns (8);}
         #bottom-nav {display:none;}
     }
     @include at-breakpoint(60em 12) {
@@ -71,8 +69,8 @@
         #featured-collection {padding-right:1em;}
         #featured-exhibit {padding-right:1em;}
         #recent-items {@include span-columns (4 omega, 12);}
-        .item-img{@include span-columns(3, 12);}
-        .item-description {@include span-columns(9 omega);}        
+        .hentry .item-img{@include span-columns(3, 12);}
+        .hentry .item-description {@include span-columns(9 omega);}        
         #exhibit-pages {@include span-columns (4 omega, 12);}
         #advanced-search-form label {@include span-columns (4,12);}
         #advanced-search-form .label {@include span-columns (4,12);}
@@ -91,6 +89,7 @@
     .collection,
     .exhibit {
         margin:.5em 0 1.5em 0;
+        overflow: auto;
 }
 
 /* -------------------------------------------------------------------------*/
