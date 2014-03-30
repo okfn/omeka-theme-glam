@@ -448,6 +448,7 @@ table {
   /*    @include susy-grid-background;
   */
   background-color: white;
+  overflow: auto;
 }
 /* line 38, ../../../../../.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-0.12.4/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
 #wrap:after {
@@ -455,7 +456,7 @@ table {
   display: table;
   clear: both;
 }
-/* line 29, ../sass/_mobile-first.scss */
+/* line 30, ../sass/_mobile-first.scss */
 #wrap #search-container {
   width: 100%;
   float: right;
@@ -463,49 +464,57 @@ table {
   *margin-left: -1em;
   display: inline;
 }
-/* line 30, ../sass/_mobile-first.scss */
+/* line 31, ../sass/_mobile-first.scss */
 #wrap .secondary-nav {
   width: 100%;
   float: left;
   margin-right: 5.26316%;
   display: inline;
 }
-/* line 31, ../sass/_mobile-first.scss */
+/* line 32, ../sass/_mobile-first.scss */
 #wrap .pagination {
   width: 100%;
   float: left;
   margin-right: 5.26316%;
   display: inline;
 }
-/* line 32, ../sass/_mobile-first.scss */
+/* line 33, ../sass/_mobile-first.scss */
 #wrap .secondary-nav li {
   width: 73.68421%;
   float: left;
   margin-right: 5.26316%;
   display: inline;
 }
-/* line 33, ../sass/_mobile-first.scss */
+/* line 34, ../sass/_mobile-first.scss */
+#wrap #item-filters {
+  width: 100%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -1em;
+  display: inline;
+}
+/* line 35, ../sass/_mobile-first.scss */
 #wrap #sort-links {
   width: 100%;
   float: left;
   margin-right: 5.26316%;
   display: inline;
 }
-/* line 34, ../sass/_mobile-first.scss */
+/* line 36, ../sass/_mobile-first.scss */
 #wrap #outputs {
   width: 100%;
   float: left;
   margin-right: 5.26316%;
   display: inline;
 }
-/* line 35, ../sass/_mobile-first.scss */
+/* line 37, ../sass/_mobile-first.scss */
 #wrap #advanced-search-form label {
   width: 100%;
   float: left;
   margin-right: 5.26316%;
   display: inline;
 }
-/* line 36, ../sass/_mobile-first.scss */
+/* line 38, ../sass/_mobile-first.scss */
 #wrap #advanced-search-form .inputs {
   width: 100%;
   float: right;
@@ -513,14 +522,14 @@ table {
   *margin-left: -1em;
   display: inline;
 }
-/* line 37, ../sass/_mobile-first.scss */
+/* line 39, ../sass/_mobile-first.scss */
 #wrap #advanced-search-form input {
   width: 73.68421%;
   float: left;
   margin-right: 5.26316%;
   display: inline;
 }
-/* line 38, ../sass/_mobile-first.scss */
+/* line 40, ../sass/_mobile-first.scss */
 #wrap .hentry .item-img {
   width: 100%;
   float: right;
@@ -528,7 +537,7 @@ table {
   *margin-left: -1em;
   display: inline;
 }
-/* line 39, ../sass/_mobile-first.scss */
+/* line 41, ../sass/_mobile-first.scss */
 #wrap .hentry .item-description {
   width: 100%;
   float: right;
@@ -536,14 +545,14 @@ table {
   *margin-left: -1em;
   display: inline;
 }
-/* line 40, ../sass/_mobile-first.scss */
+/* line 42, ../sass/_mobile-first.scss */
 #wrap footer {
   margin-left: -1em;
   padding-left: 1em;
   margin-right: -1em;
   padding-right: 1em;
 }
-/* line 41, ../sass/_mobile-first.scss */
+/* line 43, ../sass/_mobile-first.scss */
 #wrap #bottom-nav {
   display: none;
 }
@@ -564,67 +573,67 @@ table {
     display: table;
     clear: both;
   }
-  /* line 47, ../sass/_mobile-first.scss */
+  /* line 49, ../sass/_mobile-first.scss */
   #wrap #site-title {
     width: 100%;
     float: left;
     margin-right: 2.5641%;
   }
-  /* line 48, ../sass/_mobile-first.scss */
+  /* line 50, ../sass/_mobile-first.scss */
   #wrap #search-container {
     width: 100%;
     float: right;
     margin-right: 0;
   }
-  /* line 49, ../sass/_mobile-first.scss */
+  /* line 51, ../sass/_mobile-first.scss */
   #wrap #top-nav {
     width: 100%;
     float: right;
     margin-right: 0;
   }
-  /* line 50, ../sass/_mobile-first.scss */
+  /* line 52, ../sass/_mobile-first.scss */
   #wrap #content {
     width: 100%;
     float: right;
     margin-right: 0;
   }
-  /* line 51, ../sass/_mobile-first.scss */
+  /* line 53, ../sass/_mobile-first.scss */
   #wrap .secondary-nav li {
     width: 23.07692%;
     float: left;
     margin-right: 2.5641%;
   }
-  /* line 52, ../sass/_mobile-first.scss */
+  /* line 54, ../sass/_mobile-first.scss */
   #wrap .pagination {
     width: 100%;
     float: left;
     margin-right: 2.5641%;
   }
-  /* line 53, ../sass/_mobile-first.scss */
+  /* line 55, ../sass/_mobile-first.scss */
   #wrap #sort-links {
     width: 100%;
     float: left;
     margin-right: 2.5641%;
   }
-  /* line 54, ../sass/_mobile-first.scss */
+  /* line 56, ../sass/_mobile-first.scss */
   #wrap #primary {
     width: 100%;
     float: left;
     margin-right: 2.5641%;
   }
-  /* line 55, ../sass/_mobile-first.scss */
+  /* line 57, ../sass/_mobile-first.scss */
   #wrap #recent-items {
     width: 100%;
     float: left;
     margin-right: 2.5641%;
   }
-  /* line 56, ../sass/_mobile-first.scss */
+  /* line 58, ../sass/_mobile-first.scss */
   #wrap #exhibit-pages {
     width: 100%;
     float: left;
     margin-right: 2.5641%;
   }
-  /* line 57, ../sass/_mobile-first.scss */
+  /* line 59, ../sass/_mobile-first.scss */
   #wrap #bottom-nav {
     display: none;
   }
@@ -646,115 +655,115 @@ table {
     display: table;
     clear: both;
   }
-  /* line 63, ../sass/_mobile-first.scss */
+  /* line 65, ../sass/_mobile-first.scss */
   #wrap #site-title {
     width: 57.62712%;
     float: left;
     margin-right: 1.69492%;
   }
-  /* line 64, ../sass/_mobile-first.scss */
+  /* line 66, ../sass/_mobile-first.scss */
   #wrap #search-container {
     width: 32.20339%;
     float: right;
     margin-right: 0;
   }
-  /* line 65, ../sass/_mobile-first.scss */
+  /* line 67, ../sass/_mobile-first.scss */
   #wrap #primary {
     width: 57.62712%;
     float: left;
     margin-right: 1.69492%;
   }
-  /* line 66, ../sass/_mobile-first.scss */
+  /* line 68, ../sass/_mobile-first.scss */
   #wrap .secondary-nav li {
     width: 15.25424%;
     float: left;
     margin-right: 1.69492%;
   }
-  /* line 67, ../sass/_mobile-first.scss */
+  /* line 69, ../sass/_mobile-first.scss */
   #wrap .pagination {
     width: 100%;
     float: left;
     margin-right: 1.69492%;
   }
-  /* line 68, ../sass/_mobile-first.scss */
+  /* line 70, ../sass/_mobile-first.scss */
   #wrap #sort-links {
     width: 100%;
     float: left;
     margin-right: 1.69492%;
   }
-  /* line 69, ../sass/_mobile-first.scss */
+  /* line 71, ../sass/_mobile-first.scss */
   #wrap #featured-item {
     padding-right: 1em;
   }
-  /* line 70, ../sass/_mobile-first.scss */
+  /* line 72, ../sass/_mobile-first.scss */
   #wrap #featured-collection {
     padding-right: 1em;
   }
-  /* line 71, ../sass/_mobile-first.scss */
+  /* line 73, ../sass/_mobile-first.scss */
   #wrap #featured-exhibit {
     padding-right: 1em;
   }
-  /* line 72, ../sass/_mobile-first.scss */
+  /* line 74, ../sass/_mobile-first.scss */
   #wrap #recent-items {
     width: 32.20339%;
     float: right;
     margin-right: 0;
   }
-  /* line 73, ../sass/_mobile-first.scss */
+  /* line 75, ../sass/_mobile-first.scss */
   #wrap .hentry .item-img {
     width: 23.72881%;
     float: left;
     margin-right: 1.69492%;
   }
-  /* line 74, ../sass/_mobile-first.scss */
+  /* line 76, ../sass/_mobile-first.scss */
   #wrap .hentry .item-description {
     width: 74.57627%;
     float: right;
     margin-right: 0;
   }
-  /* line 75, ../sass/_mobile-first.scss */
+  /* line 77, ../sass/_mobile-first.scss */
   #wrap #exhibit-pages {
     width: 32.20339%;
     float: right;
     margin-right: 0;
   }
-  /* line 76, ../sass/_mobile-first.scss */
+  /* line 78, ../sass/_mobile-first.scss */
   #wrap #advanced-search-form label {
     width: 32.20339%;
     float: left;
     margin-right: 1.69492%;
   }
-  /* line 77, ../sass/_mobile-first.scss */
+  /* line 79, ../sass/_mobile-first.scss */
   #wrap #advanced-search-form .label {
     width: 32.20339%;
     float: left;
     margin-right: 1.69492%;
   }
-  /* line 78, ../sass/_mobile-first.scss */
+  /* line 80, ../sass/_mobile-first.scss */
   #wrap #advanced-search-form .inputs {
     width: 57.62712%;
     float: left;
     margin-right: 1.69492%;
   }
-  /* line 79, ../sass/_mobile-first.scss */
+  /* line 81, ../sass/_mobile-first.scss */
   #wrap #advanced-search-form input {
     width: 57.62712%;
     float: left;
     margin-right: 1.69492%;
   }
-  /* line 80, ../sass/_mobile-first.scss */
+  /* line 82, ../sass/_mobile-first.scss */
   #wrap #advanced-search-form .submit {
     width: 23.72881%;
     float: left;
     margin-right: 1.69492%;
   }
-  /* line 81, ../sass/_mobile-first.scss */
+  /* line 83, ../sass/_mobile-first.scss */
   #wrap #bottom-nav {
     display: block;
   }
 }
 
-/* line 88, ../sass/_mobile-first.scss */
+/* line 90, ../sass/_mobile-first.scss */
 .element-set,
 .item,
 .element,
@@ -764,7 +773,7 @@ table {
   overflow: auto;
 }
 
-/* line 94, ../sass/_mobile-first.scss */
+/* line 96, ../sass/_mobile-first.scss */
 #featured-item,
 #featured-collection,
 #featured-exhibit {
@@ -774,7 +783,7 @@ table {
 
 /* -------------------------------------------------------------------------*/
 /* General */
-/* line 101, ../sass/_mobile-first.scss */
+/* line 103, ../sass/_mobile-first.scss */
 body {
   background-color: #E5E5E5;
   font-family: "Lucida Bright", Georgia, serif;
@@ -784,46 +793,46 @@ body {
   margin: 0;
 }
 
-/* line 109, ../sass/_mobile-first.scss */
+/* line 111, ../sass/_mobile-first.scss */
 #content {
   padding: 1em 0;
   overflow: auto;
 }
 
-/* line 113, ../sass/_mobile-first.scss */
+/* line 115, ../sass/_mobile-first.scss */
 abbr, acronym {
   border: none;
   font-style: normal;
 }
 
-/* line 117, ../sass/_mobile-first.scss */
+/* line 119, ../sass/_mobile-first.scss */
 .clear {
   clear: both;
 }
 
-/* line 120, ../sass/_mobile-first.scss */
+/* line 122, ../sass/_mobile-first.scss */
 a.show {
   padding-left: 5px;
   font-style: italic;
 }
 
-/* line 123, ../sass/_mobile-first.scss */
+/* line 125, ../sass/_mobile-first.scss */
 blockquote {
   font-style: italic;
 }
 
-/* line 126, ../sass/_mobile-first.scss */
+/* line 128, ../sass/_mobile-first.scss */
 #featured-item {
   padding: 0 1em;
   background-color: #e2e7fc;
 }
 
-/* line 130, ../sass/_mobile-first.scss */
+/* line 132, ../sass/_mobile-first.scss */
 .intro {
   font-style: italic;
 }
 
-/* line 134, ../sass/_mobile-first.scss */
+/* line 136, ../sass/_mobile-first.scss */
 .item,
 .element {
   padding-bottom: .5em;
@@ -831,12 +840,12 @@ blockquote {
   clear: both;
 }
 
-/* line 139, ../sass/_mobile-first.scss */
+/* line 141, ../sass/_mobile-first.scss */
 #outputs {
   margin-top: 1em;
 }
 
-/* line 142, ../sass/_mobile-first.scss */
+/* line 144, ../sass/_mobile-first.scss */
 footer {
   background-color: #e2e7fc;
   padding: .5em;
@@ -845,8 +854,8 @@ footer {
 
 /* -------------------------------------------------------------------------*/
 /* Headings */
-/* line 150, ../sass/_mobile-first.scss */
-h1, h2, h3, h4, h5, h6 {
+/* line 152, ../sass/_mobile-first.scss */
+h1, h2, #item-filters .collection, h3, h4, h5, h6 {
   font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", sans-serif;
   font-weight: normal;
   line-height: normal;
@@ -855,39 +864,39 @@ h1, h2, h3, h4, h5, h6 {
   color: #666666;
 }
 
-/* line 158, ../sass/_mobile-first.scss */
+/* line 160, ../sass/_mobile-first.scss */
 h4, h5, h6 {
   font-style: 19.2px;
 }
 
-/* line 161, ../sass/_mobile-first.scss */
+/* line 163, ../sass/_mobile-first.scss */
 h5, h6 {
   font-weight: bold;
 }
 
-/* line 164, ../sass/_mobile-first.scss */
+/* line 166, ../sass/_mobile-first.scss */
 h1 {
   text-transform: uppercase;
   font-size: 40px;
 }
 
-/* line 168, ../sass/_mobile-first.scss */
-h2 {
+/* line 170, ../sass/_mobile-first.scss */
+h2, #item-filters .collection {
   font-size: 32px;
   text-transform: capitalize;
 }
 
-/* line 172, ../sass/_mobile-first.scss */
+/* line 174, ../sass/_mobile-first.scss */
 h3 {
   font-size: 24px;
 }
 
-/* line 175, ../sass/_mobile-first.scss */
+/* line 177, ../sass/_mobile-first.scss */
 h6 {
   font-size: italic;
 }
 
-/* line 178, ../sass/_mobile-first.scss */
+/* line 180, ../sass/_mobile-first.scss */
 #site-title {
   color: #425580;
   font-variant: small-caps;
@@ -896,7 +905,7 @@ h6 {
   line-height: .9em;
   margin: .5em 0;
 }
-/* line 185, ../sass/_mobile-first.scss */
+/* line 187, ../sass/_mobile-first.scss */
 #site-title a {
   text-decoration: none;
   color: #425580;
@@ -904,7 +913,7 @@ h6 {
 
 /* -------------------------------------------------------------------------*/
 /* Links */
-/* line 190, ../sass/_mobile-first.scss */
+/* line 192, ../sass/_mobile-first.scss */
 a {
   color: #6881dd;
   text-decoration: none;
@@ -921,46 +930,46 @@ a:hover {
 a:active {
   color: #cbd4f9;
 }
-/* line 193, ../sass/_mobile-first.scss */
+/* line 195, ../sass/_mobile-first.scss */
 a:hover {
   text-decoration: underline;
 }
 
 /* -------------------------------------------------------------------------*/
 /* Navigation */
-/* line 199, ../sass/_mobile-first.scss */
+/* line 201, ../sass/_mobile-first.scss */
 .navigation,
 #sort-links {
   list-style: none;
   padding: 0;
 }
-/* line 202, ../sass/_mobile-first.scss */
+/* line 204, ../sass/_mobile-first.scss */
 .navigation ul,
 #sort-links ul {
   margin: 0;
   padding: 0;
 }
-/* line 206, ../sass/_mobile-first.scss */
+/* line 208, ../sass/_mobile-first.scss */
 .navigation li,
 #sort-links li {
   display: inline;
 }
 
-/* line 212, ../sass/_mobile-first.scss */
+/* line 214, ../sass/_mobile-first.scss */
 .secondary-nav ul li {
   padding-bottom: .5em;
 }
-/* line 214, ../sass/_mobile-first.scss */
+/* line 216, ../sass/_mobile-first.scss */
 .secondary-nav ul li.active a {
   text-decoration: underline;
   font-weight: bold;
 }
-/* line 218, ../sass/_mobile-first.scss */
+/* line 220, ../sass/_mobile-first.scss */
 .secondary-nav ul li a:visited {
   color: #6881dd;
 }
 
-/* line 225, ../sass/_mobile-first.scss */
+/* line 227, ../sass/_mobile-first.scss */
 .pagination,
 .item-pagination {
   margin: 0;
@@ -999,87 +1008,87 @@ a:hover {
   padding-right: 0;
 }
 
-/* line 229, ../sass/_mobile-first.scss */
+/* line 231, ../sass/_mobile-first.scss */
 #sort-links {
   margin: .5em 0 2em 0;
 }
-/* line 231, ../sass/_mobile-first.scss */
+/* line 233, ../sass/_mobile-first.scss */
 #sort-links .sort-label {
   float: left;
 }
-/* line 234, ../sass/_mobile-first.scss */
+/* line 236, ../sass/_mobile-first.scss */
 #sort-links li {
   float: left;
   padding: 0 5px 0 10px;
 }
-/* line 238, ../sass/_mobile-first.scss */
+/* line 240, ../sass/_mobile-first.scss */
 #sort-links li.sorting a {
   text-decoration: underline;
   font-weight: bold;
 }
-/* line 242, ../sass/_mobile-first.scss */
+/* line 244, ../sass/_mobile-first.scss */
 #sort-links li a:visited {
   color: #6881dd;
 }
 
-/* line 248, ../sass/_mobile-first.scss */
+/* line 250, ../sass/_mobile-first.scss */
 #bottom-nav li {
   padding-right: 20px;
 }
-/* line 250, ../sass/_mobile-first.scss */
+/* line 252, ../sass/_mobile-first.scss */
 #bottom-nav li.active {
   text-decoration: underline;
   font-weight: bold;
 }
-/* line 254, ../sass/_mobile-first.scss */
+/* line 256, ../sass/_mobile-first.scss */
 #bottom-nav li ul {
   display: none;
 }
 
 /* -------------------------------------------------------------------------*/
 /* Forms */
-/* line 263, ../sass/_mobile-first.scss */
+/* line 265, ../sass/_mobile-first.scss */
 fieldset {
   border: 0;
   padding: 0;
   margin-bottom: 1em;
 }
-/* line 268, ../sass/_mobile-first.scss */
+/* line 270, ../sass/_mobile-first.scss */
 fieldset legend {
   font-size: 1.5em;
   line-height: 1em;
   margin: 1em 0 0;
 }
-/* line 273, ../sass/_mobile-first.scss */
+/* line 275, ../sass/_mobile-first.scss */
 fieldset input.textinput {
   margin-bottom: 1em;
 }
-/* line 276, ../sass/_mobile-first.scss */
+/* line 278, ../sass/_mobile-first.scss */
 fieldset label {
   display: block;
 }
-/* line 279, ../sass/_mobile-first.scss */
+/* line 281, ../sass/_mobile-first.scss */
 fieldset select {
   margin: 1em 0;
 }
-/* line 282, ../sass/_mobile-first.scss */
+/* line 284, ../sass/_mobile-first.scss */
 fieldset textarea {
   margin-bottom: 1em;
 }
-/* line 285, ../sass/_mobile-first.scss */
+/* line 287, ../sass/_mobile-first.scss */
 fieldset .field {
   margin-bottom: .5em;
 }
 
-/* line 289, ../sass/_mobile-first.scss */
+/* line 291, ../sass/_mobile-first.scss */
 form {
   clear: both;
 }
-/* line 291, ../sass/_mobile-first.scss */
+/* line 293, ../sass/_mobile-first.scss */
 form input {
   padding: 0;
 }
-/* line 297, ../sass/_mobile-first.scss */
+/* line 299, ../sass/_mobile-first.scss */
 form button,
 form select,
 form .submit,
@@ -1092,38 +1101,38 @@ form input {
   background-color: #eeeeee;
 }
 
-/* line 303, ../sass/_mobile-first.scss */
+/* line 305, ../sass/_mobile-first.scss */
 #content fieldset {
   display: block;
   clear: both;
 }
-/* line 307, ../sass/_mobile-first.scss */
+/* line 309, ../sass/_mobile-first.scss */
 #content .inputs {
   overflow: hidden;
   zoom: 1;
 }
-/* line 312, ../sass/_mobile-first.scss */
+/* line 314, ../sass/_mobile-first.scss */
 #content .radioinputs label {
   display: block;
   float: left;
   width: 48%;
   clear: none;
 }
-/* line 319, ../sass/_mobile-first.scss */
+/* line 321, ../sass/_mobile-first.scss */
 #content .search-entry {
   padding-bottom: .5em;
 }
-/* line 321, ../sass/_mobile-first.scss */
+/* line 323, ../sass/_mobile-first.scss */
 #content .search-entry select {
   margin-bottom: .5em;
 }
-/* line 325, ../sass/_mobile-first.scss */
+/* line 327, ../sass/_mobile-first.scss */
 #content #submit_search {
   margin: .5em 0 0 458px;
 }
 
 /*-- Search--*/
-/* line 333, ../sass/_mobile-first.scss */
+/* line 335, ../sass/_mobile-first.scss */
 #search-container {
   width: 30%;
   float: right;
@@ -1131,82 +1140,82 @@ form input {
   padding: 1em 0 0 1em;
   margin: 0;
 }
-/* line 340, ../sass/_mobile-first.scss */
+/* line 342, ../sass/_mobile-first.scss */
 #search-container input {
   margin: 0 0 0 .5em;
 }
-/* line 343, ../sass/_mobile-first.scss */
+/* line 345, ../sass/_mobile-first.scss */
 #search-container a {
   float: right;
   font-size: 1em;
   padding: 1em 0em;
 }
-/* line 348, ../sass/_mobile-first.scss */
+/* line 350, ../sass/_mobile-first.scss */
 #search-container h3 {
   text-transform: uppercase;
   font-size: 1em;
   margin: 0;
 }
 
-/* line 354, ../sass/_mobile-first.scss */
+/* line 356, ../sass/_mobile-first.scss */
 #search-form {
   float: right;
 }
 
-/* line 358, ../sass/_mobile-first.scss */
+/* line 360, ../sass/_mobile-first.scss */
 #advanced-search-form .field {
   border-top: 1px solid #dddddd;
   padding: .5em 0 1em 0;
   overflow: auto;
 }
-/* line 363, ../sass/_mobile-first.scss */
+/* line 365, ../sass/_mobile-first.scss */
 #advanced-search-form select {
   margin-left: 1px;
 }
-/* line 366, ../sass/_mobile-first.scss */
+/* line 368, ../sass/_mobile-first.scss */
 #advanced-search-form .search-entry {
   margin-bottom: .5em;
   overflow: auto;
 }
 
 /*-- Contribution Form --*/
-/* line 374, ../sass/_mobile-first.scss */
+/* line 376, ../sass/_mobile-first.scss */
 #geolocation_address.textinput {
   margin-bottom: .5em;
 }
 
-/* line 377, ../sass/_mobile-first.scss */
+/* line 379, ../sass/_mobile-first.scss */
 #geolocation_find_location_by_address {
   margin-left: .5em;
 }
 
-/* line 380, ../sass/_mobile-first.scss */
+/* line 382, ../sass/_mobile-first.scss */
 #contribution-confirm-submit {
   margin-top: 1em;
 }
-/* line 382, ../sass/_mobile-first.scss */
+/* line 384, ../sass/_mobile-first.scss */
 #contribution-confirm-submit input {
   float: left;
   margin-top: .25em;
 }
-/* line 386, ../sass/_mobile-first.scss */
+/* line 388, ../sass/_mobile-first.scss */
 #contribution-confirm-submit label {
   float: left;
   margin-left: .5em;
 }
-/* line 390, ../sass/_mobile-first.scss */
+/* line 392, ../sass/_mobile-first.scss */
 #contribution-confirm-submit #form-submit {
   margin-top: 1em;
 }
 
 /* -------------------------------------------------------------------------*/
 /* Tables */
-/* line 397, ../sass/_mobile-first.scss */
+/* line 399, ../sass/_mobile-first.scss */
 table {
   width: 100%;
 }
 
-/* line 401, ../sass/_mobile-first.scss */
+/* line 403, ../sass/_mobile-first.scss */
 th,
 td {
   border-bottom: 1px solid #dddddd;
@@ -1214,7 +1223,7 @@ td {
   padding: 0.5em 0;
 }
 
-/* line 406, ../sass/_mobile-first.scss */
+/* line 408, ../sass/_mobile-first.scss */
 th {
   border-width: 3px;
   text-align: left;
@@ -1222,26 +1231,26 @@ th {
 
 /* -------------------------------------------------------------------------*/
 /* Browse and Item Pages */
-/* line 414, ../sass/_mobile-first.scss */
+/* line 416, ../sass/_mobile-first.scss */
 .item {
   overflow: auto;
 }
-/* line 416, ../sass/_mobile-first.scss */
+/* line 418, ../sass/_mobile-first.scss */
 .item .item-img {
   padding-bottom: .5em;
 }
-/* line 419, ../sass/_mobile-first.scss */
+/* line 421, ../sass/_mobile-first.scss */
 .item .tags {
   float: left;
   padding: .5em 0;
 }
 
-/* line 425, ../sass/_mobile-first.scss */
+/* line 427, ../sass/_mobile-first.scss */
 .show .item-file {
   float: left;
   padding-right: 1em;
 }
-/* line 429, ../sass/_mobile-first.scss */
+/* line 431, ../sass/_mobile-first.scss */
 .show #output-format-list {
   margin: 0;
   padding: 0;
@@ -1271,6 +1280,36 @@ th {
 /* line 50, ../../../../../.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-0.12.4/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
 .show #output-format-list li.last {
   padding-right: 0;
+}
+
+/* -------------------------------------------------------------------------*/
+/* Collections */
+/* line 439, ../sass/_mobile-first.scss */
+.collections .collection {
+  margin-bottom: 2em;
+}
+/* line 442, ../sass/_mobile-first.scss */
+.collections .element {
+  margin: 0 0 1em 0;
+  padding: 0;
+}
+/* line 446, ../sass/_mobile-first.scss */
+.collections .view-items-link {
+  margin: .5em 0;
+}
+/* line 449, ../sass/_mobile-first.scss */
+.collections .item h3 {
+  padding: 1em 0;
+}
+
+/* line 454, ../sass/_mobile-first.scss */
+#item-filters ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+/* line 458, ../sass/_mobile-first.scss */
+#item-filters .collection {
+  overflow: initial;
 }
 
 /* -------------------------------------------------------------------------*/

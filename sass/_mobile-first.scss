@@ -26,10 +26,12 @@
 /*    @include susy-grid-background;
 */
    background-color:$background-color;
+   overflow: auto;
    #search-container{@include span-columns(4 omega);}
    .secondary-nav {@include span-columns(4);}
    .pagination {@include span-columns(4);}
    .secondary-nav li {@include span-columns(3);}
+   #item-filters {@include span-columns (4 omega);}
    #sort-links{@include span-columns(4);}
    #outputs {@include span-columns(4)}
    #advanced-search-form label {@include span-columns (4);}
@@ -428,5 +430,33 @@ th {
     }
     #output-format-list {
         @include horizontal-list;
+    }
+}
+
+/* -------------------------------------------------------------------------*/
+/* Collections */
+.collections {
+    .collection {
+        margin-bottom:2em;
+    }
+    .element {
+        margin: 0 0 1em 0;
+        padding:0;
+    }
+    .view-items-link {
+        margin:.5em 0;
+    }
+    .item h3 {
+        padding: 1em 0;
+    }
+}
+#item-filters {
+    ul{
+        list-style-type: none;
+        padding-left: 0;
+    }
+    .collection {
+        overflow: initial;
+        @extend h2;
     }
 }
