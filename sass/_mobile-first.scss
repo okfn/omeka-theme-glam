@@ -15,7 +15,8 @@
 ---- Search
 ---- Contribution
 -- Tables
--- Browse and Item Pages
+-- Content
+---- Browse and Item Pages
 
 
 /* -------------------------------------------------------------------------*/
@@ -80,10 +81,7 @@
         #bottom-nav {display: block;}
     }   
 }
-#featured-item,
-    #featured-collection,
-    #featured-exhibit,
-    .element-set,
+.element-set,
     .item,
     .element, 
     .collection,
@@ -91,6 +89,12 @@
         margin:.5em 0 1.5em 0;
         overflow: auto;
 }
+#featured-item,
+    #featured-collection,
+    #featured-exhibit {
+        overflow: auto;
+        margin:.5em 0 2em 0;
+    }
 
 /* -------------------------------------------------------------------------*/
 /* General */
@@ -118,6 +122,13 @@ a.show {
 }
 blockquote {
     font-style:italic;
+}
+#featured-item{
+    padding:0 1em;
+    background-color: lighten($accent-super-light, 5%);
+}
+.intro {
+    font-style: italic;
 }
 .item,
     .element{ 
@@ -210,18 +221,10 @@ a {
         }
     }
 }
-.pagination {
-    list-style-type:none;
-    padding:0;
-    margin:1em 0 0 0;
-    li {
-        padding-right:2%;
-        float:left;
-        #page {
-            width:30px;
-            text-align:right;
-        }
-    }
+.pagination, 
+    .item-pagination {
+        @include horizontal-list;
+        padding-top:2em;
 }
 #sort-links{
     margin:.5em 0 2em 0;
@@ -416,5 +419,14 @@ th {
     .tags{
         float:left;
         padding:.5em 0;
+    }
+}
+.show {
+    .item-file {
+        float:left;
+        padding-right:1em;
+    }
+    #output-format-list {
+        @include horizontal-list;
     }
 }
