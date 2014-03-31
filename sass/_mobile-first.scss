@@ -17,7 +17,8 @@
 -- Tables
 -- Content
 ---- Browse and Item Pages
-
+---- Collections
+---- Simple Pages
 
 /* -------------------------------------------------------------------------*/
 /* Layout */
@@ -466,5 +467,19 @@ th {
     .collection {
         overflow: initial;
         @extend h2;
+    }
+}
+
+/* -------------------------------------------------------------------------*/
+/* Simple Pages */
+
+#simple-pages-breadcrumbs {
+    margin-bottom: 1.5em;
+    font-style: italic;
+    a{
+        text-decoration: none;
+        &:hover{
+            text-decoration:underline;
+        }
     }
 }
