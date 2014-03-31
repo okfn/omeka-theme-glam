@@ -223,11 +223,19 @@ a {
         }
     }
 }
-.pagination, 
-    .item-pagination {
-        @include horizontal-list;
-        padding-top:2em;
+.pagination{
+    @include horizontal-list;
+    padding-top:1em; 
+    .page-input #page{
+        width:30px;
+        text-align:right;
+    }  
 }
+.item-pagination {
+    @include horizontal-list;
+    padding-top:2em;
+}
+
 #sort-links{
     margin:.5em 0 2em 0;
     .sort-label {
