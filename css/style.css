@@ -1002,13 +1002,17 @@ a:hover {
 .pagination li.last {
   padding-right: 0;
 }
-/* line 230, ../sass/_mobile-first.scss */
+/* line 231, ../sass/_mobile-first.scss */
+.pagination .page-input form {
+  padding: 0;
+}
+/* line 234, ../sass/_mobile-first.scss */
 .pagination .page-input #page {
   width: 30px;
   text-align: right;
 }
 
-/* line 235, ../sass/_mobile-first.scss */
+/* line 240, ../sass/_mobile-first.scss */
 .item-pagination {
   margin: 0;
   padding: 0;
@@ -1041,87 +1045,88 @@ a:hover {
   padding-right: 0;
 }
 
-/* line 240, ../sass/_mobile-first.scss */
+/* line 245, ../sass/_mobile-first.scss */
 #sort-links {
   margin: .5em 0 2em 0;
 }
-/* line 242, ../sass/_mobile-first.scss */
+/* line 247, ../sass/_mobile-first.scss */
 #sort-links .sort-label {
   float: left;
 }
-/* line 245, ../sass/_mobile-first.scss */
+/* line 250, ../sass/_mobile-first.scss */
 #sort-links li {
   float: left;
   padding: 0 5px 0 10px;
 }
-/* line 249, ../sass/_mobile-first.scss */
+/* line 254, ../sass/_mobile-first.scss */
 #sort-links li.sorting a {
   text-decoration: underline;
   font-weight: bold;
 }
-/* line 253, ../sass/_mobile-first.scss */
+/* line 258, ../sass/_mobile-first.scss */
 #sort-links li a:visited {
   color: #6881dd;
 }
 
-/* line 259, ../sass/_mobile-first.scss */
+/* line 264, ../sass/_mobile-first.scss */
 #bottom-nav li {
   padding-right: 20px;
 }
-/* line 261, ../sass/_mobile-first.scss */
+/* line 266, ../sass/_mobile-first.scss */
 #bottom-nav li.active {
   text-decoration: underline;
   font-weight: bold;
 }
-/* line 265, ../sass/_mobile-first.scss */
+/* line 270, ../sass/_mobile-first.scss */
 #bottom-nav li ul {
   display: none;
 }
 
 /* -------------------------------------------------------------------------*/
 /* Forms */
-/* line 274, ../sass/_mobile-first.scss */
+/* line 279, ../sass/_mobile-first.scss */
 fieldset {
   border: 0;
   padding: 0;
   margin-bottom: 1em;
 }
-/* line 279, ../sass/_mobile-first.scss */
+/* line 284, ../sass/_mobile-first.scss */
 fieldset legend {
   font-size: 1.5em;
   line-height: 1em;
   margin: 1em 0 0;
 }
-/* line 284, ../sass/_mobile-first.scss */
+/* line 289, ../sass/_mobile-first.scss */
 fieldset input.textinput {
   margin-bottom: 1em;
 }
-/* line 287, ../sass/_mobile-first.scss */
+/* line 292, ../sass/_mobile-first.scss */
 fieldset label {
   display: block;
 }
-/* line 290, ../sass/_mobile-first.scss */
+/* line 295, ../sass/_mobile-first.scss */
 fieldset select {
   margin: 1em 0;
 }
-/* line 293, ../sass/_mobile-first.scss */
+/* line 298, ../sass/_mobile-first.scss */
 fieldset textarea {
   margin-bottom: 1em;
 }
-/* line 296, ../sass/_mobile-first.scss */
+/* line 301, ../sass/_mobile-first.scss */
 fieldset .field {
   margin-bottom: .5em;
 }
 
-/* line 300, ../sass/_mobile-first.scss */
+/* line 305, ../sass/_mobile-first.scss */
 form {
   clear: both;
+  padding: 1em 0;
 }
-/* line 302, ../sass/_mobile-first.scss */
+/* line 308, ../sass/_mobile-first.scss */
 form input {
   padding: 0;
 }
-/* line 308, ../sass/_mobile-first.scss */
+/* line 314, ../sass/_mobile-first.scss */
 form button,
 form select,
 form .submit,
@@ -1134,38 +1139,38 @@ form input {
   background-color: #eeeeee;
 }
 
-/* line 314, ../sass/_mobile-first.scss */
+/* line 320, ../sass/_mobile-first.scss */
 #content fieldset {
   display: block;
   clear: both;
 }
-/* line 318, ../sass/_mobile-first.scss */
+/* line 324, ../sass/_mobile-first.scss */
 #content .inputs {
   overflow: hidden;
   zoom: 1;
 }
-/* line 323, ../sass/_mobile-first.scss */
+/* line 329, ../sass/_mobile-first.scss */
 #content .radioinputs label {
   display: block;
   float: left;
   width: 48%;
   clear: none;
 }
-/* line 330, ../sass/_mobile-first.scss */
+/* line 336, ../sass/_mobile-first.scss */
 #content .search-entry {
   padding-bottom: .5em;
 }
-/* line 332, ../sass/_mobile-first.scss */
+/* line 338, ../sass/_mobile-first.scss */
 #content .search-entry select {
   margin-bottom: .5em;
 }
-/* line 336, ../sass/_mobile-first.scss */
+/* line 342, ../sass/_mobile-first.scss */
 #content #submit_search {
   margin: .5em 0 0 458px;
 }
 
 /*-- Search--*/
-/* line 344, ../sass/_mobile-first.scss */
+/* line 350, ../sass/_mobile-first.scss */
 #search-container {
   width: 30%;
   float: right;
@@ -1173,82 +1178,84 @@ form input {
   padding: 1em 0 0 1em;
   margin: 0;
 }
-/* line 351, ../sass/_mobile-first.scss */
+/* line 357, ../sass/_mobile-first.scss */
 #search-container input {
   margin: 0 0 0 .5em;
 }
-/* line 354, ../sass/_mobile-first.scss */
+/* line 360, ../sass/_mobile-first.scss */
 #search-container a {
   float: right;
   font-size: 1em;
   padding: 1em 0em;
 }
-/* line 359, ../sass/_mobile-first.scss */
+/* line 365, ../sass/_mobile-first.scss */
 #search-container h3 {
   text-transform: uppercase;
   font-size: 1em;
   margin: 0;
 }
 
-/* line 365, ../sass/_mobile-first.scss */
+/* line 371, ../sass/_mobile-first.scss */
 #search-form {
   float: right;
 }
 
-/* line 369, ../sass/_mobile-first.scss */
+/* line 375, ../sass/_mobile-first.scss */
 #advanced-search-form .field {
   border-top: 1px solid #dddddd;
   padding: .5em 0 1em 0;
   overflow: auto;
 }
-/* line 374, ../sass/_mobile-first.scss */
+/* line 380, ../sass/_mobile-first.scss */
 #advanced-search-form select {
   margin-left: 1px;
 }
-/* line 377, ../sass/_mobile-first.scss */
+/* line 383, ../sass/_mobile-first.scss */
 #advanced-search-form .search-entry {
   margin-bottom: .5em;
   overflow: auto;
 }
 
 /*-- Contribution Form --*/
-/* line 385, ../sass/_mobile-first.scss */
+/* line 391, ../sass/_mobile-first.scss */
 #geolocation_address.textinput {
   margin-bottom: .5em;
 }
 
-/* line 388, ../sass/_mobile-first.scss */
+/* line 394, ../sass/_mobile-first.scss */
 #geolocation_find_location_by_address {
   margin-left: .5em;
 }
 
-/* line 391, ../sass/_mobile-first.scss */
+/* line 397, ../sass/_mobile-first.scss */
 #contribution-confirm-submit {
   margin-top: 1em;
 }
-/* line 393, ../sass/_mobile-first.scss */
+/* line 399, ../sass/_mobile-first.scss */
 #contribution-confirm-submit input {
   float: left;
   margin-top: .25em;
 }
-/* line 397, ../sass/_mobile-first.scss */
+/* line 403, ../sass/_mobile-first.scss */
 #contribution-confirm-submit label {
   float: left;
   margin-left: .5em;
 }
-/* line 401, ../sass/_mobile-first.scss */
+/* line 407, ../sass/_mobile-first.scss */
 #contribution-confirm-submit #form-submit {
   margin-top: 1em;
 }
 
 /* -------------------------------------------------------------------------*/
 /* Tables */
-/* line 408, ../sass/_mobile-first.scss */
+/* line 414, ../sass/_mobile-first.scss */
 table {
   width: 100%;
+  margin: 1em 0;
+  overflow: auto;
 }
 
-/* line 412, ../sass/_mobile-first.scss */
+/* line 420, ../sass/_mobile-first.scss */
 th,
 td {
   border-bottom: 1px solid #dddddd;
@@ -1256,7 +1263,7 @@ td {
   padding: 0.5em 0;
 }
 
-/* line 417, ../sass/_mobile-first.scss */
+/* line 425, ../sass/_mobile-first.scss */
 th {
   border-width: 3px;
   text-align: left;
@@ -1264,26 +1271,26 @@ th {
 
 /* -------------------------------------------------------------------------*/
 /* Browse and Item Pages */
-/* line 425, ../sass/_mobile-first.scss */
+/* line 433, ../sass/_mobile-first.scss */
 .item {
   overflow: auto;
 }
-/* line 427, ../sass/_mobile-first.scss */
+/* line 435, ../sass/_mobile-first.scss */
 .item .item-img {
   padding-bottom: .5em;
 }
-/* line 430, ../sass/_mobile-first.scss */
+/* line 438, ../sass/_mobile-first.scss */
 .item .tags {
   float: left;
   padding: .5em 0;
 }
 
-/* line 436, ../sass/_mobile-first.scss */
+/* line 444, ../sass/_mobile-first.scss */
 .show .item-file {
   float: left;
   padding-right: 1em;
 }
-/* line 440, ../sass/_mobile-first.scss */
+/* line 448, ../sass/_mobile-first.scss */
 .show #output-format-list {
   margin: 0;
   padding: 0;
@@ -1317,46 +1324,46 @@ th {
 
 /* -------------------------------------------------------------------------*/
 /* Collections */
-/* line 448, ../sass/_mobile-first.scss */
+/* line 456, ../sass/_mobile-first.scss */
 .collections .collection {
   margin-bottom: 2em;
 }
-/* line 451, ../sass/_mobile-first.scss */
+/* line 459, ../sass/_mobile-first.scss */
 .collections .element {
   margin: 0 0 1em 0;
   padding: 0;
 }
-/* line 455, ../sass/_mobile-first.scss */
+/* line 463, ../sass/_mobile-first.scss */
 .collections .view-items-link {
   margin: .5em 0;
 }
-/* line 458, ../sass/_mobile-first.scss */
+/* line 466, ../sass/_mobile-first.scss */
 .collections .item h3 {
   padding: 1em 0;
 }
 
-/* line 463, ../sass/_mobile-first.scss */
+/* line 471, ../sass/_mobile-first.scss */
 #item-filters ul {
   list-style-type: none;
   padding-left: 0;
 }
-/* line 467, ../sass/_mobile-first.scss */
+/* line 475, ../sass/_mobile-first.scss */
 #item-filters .collection {
   overflow: initial;
 }
 
 /* -------------------------------------------------------------------------*/
 /* Simple Pages */
-/* line 476, ../sass/_mobile-first.scss */
+/* line 484, ../sass/_mobile-first.scss */
 #simple-pages-breadcrumbs {
   margin-bottom: 1.5em;
   font-style: italic;
 }
-/* line 479, ../sass/_mobile-first.scss */
+/* line 487, ../sass/_mobile-first.scss */
 #simple-pages-breadcrumbs a {
   text-decoration: none;
 }
-/* line 481, ../sass/_mobile-first.scss */
+/* line 489, ../sass/_mobile-first.scss */
 #simple-pages-breadcrumbs a:hover {
   text-decoration: underline;
 }
