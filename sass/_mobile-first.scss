@@ -19,6 +19,7 @@
 ---- Browse and Item Pages
 ---- Collections
 ---- Simple Pages
+---- Exhibits
 
 /* -------------------------------------------------------------------------*/
 /* Layout */
@@ -29,9 +30,8 @@
    background-color:$background-color;
    overflow: auto;
    #search-container{@include span-columns(4 omega);}
-   .secondary-nav {@include span-columns(4);}
+   .secondary-nav {@include horizontal-list(10px);}
    .pagination {@include span-columns(4);}
-   .secondary-nav li {@include span-columns(3);}
    #item-filters {@include span-columns (4 omega);}
    #sort-links{@include span-columns(4);}
    #outputs {@include span-columns(4)}
@@ -51,7 +51,7 @@
         #search-container {@include span-columns(8 omega);}
         #top-nav {@include span-columns (8 omega);}
         #content {@include span-columns (8 omega);}
-        .secondary-nav li {@include span-columns(2);}
+        .secondary-nav {@include horizontal-list (1em);}
         .pagination {@include span-columns(8);}
         #sort-links {@include span-columns(8);}
         #primary {@include span-columns (8);}
@@ -65,16 +65,17 @@
 */
         #site-title {@include span-columns (7);}
         #search-container {@include span-columns (4 omega);}
-        #primary {@include span-columns (7,12);}
-        .secondary-nav li {@include span-columns(2);}
+        #featured {@include span-columns (7,12);}
+        .secondary-nav {@include horizontal-list(1em);}
         .pagination {@include span-columns(12);}
         #sort-links {@include span-columns(12);}
         #featured-item {padding-right:1em;}
         #featured-collection {padding-right:1em;}
         #featured-exhibit {padding-right:1em;}
-        #recent-items {@include span-columns (4 omega, 12);}
+        #recent-items {@include span-columns (5 omega, 12);}
         .hentry .item-img{@include span-columns(3, 12);}
-        .hentry .item-description {@include span-columns(9 omega);}        
+        .hentry .item-description {@include span-columns(9,12);}
+        .hentry .tags {@include span-columns (12);}        
         #exhibit-pages {@include span-columns (4 omega, 12);}
         #advanced-search-form label {@include span-columns (4,12);}
         #advanced-search-form .label {@include span-columns (4,12);}
@@ -135,7 +136,7 @@ blockquote {
 }
 .item,
     .element{ 
-        padding-bottom: .5em;
+        padding-top:1em;
         border-top: 1px solid $grey-light;
         clear:both;
 }
@@ -211,6 +212,7 @@ a {
         }
 }
 .secondary-nav {
+
     ul {
         li {
             padding-bottom:.5em;
@@ -243,7 +245,7 @@ a {
 }
 
 #sort-links{
-    margin:.5em 0 2em 0;
+    margin:1em 0 2em 0;
     .sort-label {
         float:left;
     }
@@ -491,3 +493,6 @@ th {
         }
     }
 }
+
+/* -------------------------------------------------------------------------*/
+/* Exhibits */
