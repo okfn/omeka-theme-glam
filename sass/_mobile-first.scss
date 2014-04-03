@@ -27,7 +27,7 @@
     @include container;
 /*    @include susy-grid-background;
 */
-   background-color:$background-color;
+   background-color:white;
    overflow: auto;
    #search-container{@include span-columns(4 omega);}
    .secondary-nav {@include horizontal-list(10px);}
@@ -97,13 +97,13 @@
     #featured-collection,
     #featured-exhibit {
         overflow: auto;
-        margin:.5em 0 2em 0;
+        margin:0 0 2em 0;
     }
 
 /* -------------------------------------------------------------------------*/
 /* General */
 body {
-    background-color:#E5E5E5;
+    background-color:$background-color;
     font-family: $font-family-main;
     font-size: $font-size-main;
     line-height: 1.6em;
@@ -128,8 +128,10 @@ blockquote {
     font-style:italic;
 }
 #featured-item{
+/*
     padding:0 1em;
-    background-color: lighten($accent-super-light, 5%);
+    background-color: $accent-super-light;
+*/
 }
 .intro {
     font-style: italic;
@@ -137,7 +139,6 @@ blockquote {
 .item,
     .element{ 
         padding-top:1em;
-        border-top: 1px solid $grey-light;
         clear:both;
 }
 #outputs {
@@ -172,6 +173,7 @@ h1 {
 h2 {
     font-size: $font-size-main * 2;
     text-transform: capitalize;
+    border-top: 3px solid #bacedb;
 }
 h3 {
     font-size: $font-size-main * 1.5;
