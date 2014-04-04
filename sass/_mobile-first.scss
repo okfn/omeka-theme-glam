@@ -74,7 +74,7 @@
         #featured-exhibit {padding-right:1em;}
         #recent-items {@include span-columns (5 omega, 12);}
         .hentry .item-img{@include span-columns(3, 12);}
-        .hentry .item-description {@include span-columns(9,12);}
+        .hentry .item-description {@include span-columns(9,12);margin-right:0em;}
         .hentry .tags {@include span-columns (12);}        
         #exhibit-pages {@include span-columns (4 omega, 12);}
         .exhibits #primary {@include span-columns (7, 12);}
