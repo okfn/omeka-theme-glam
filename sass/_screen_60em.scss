@@ -1,0 +1,48 @@
+#top-nav {
+    overflow: auto;
+    background-color: $accent-super-light;
+    min-height: 40px;
+    position:relative;
+    a {
+        @include link-colors($text-color);
+
+    }
+
+}
+
+#top-nav .navigation {
+    position: relative;
+
+    li {
+        display: block;
+        width: 100%;
+        @include trailing-border(1px, 0, $base-font-size, solid);
+/*        &:hover{
+            background-color:$accent-main;
+        }
+*/
+        a {
+            display:block;
+            &:hover {
+                background-color:$accent-main;
+                @include link-colors(white);
+            }
+        }
+        
+        &:last-of-type {
+            border-color: transparent;
+        }
+    }
+    .sub-nav.open {
+        width: 100%;
+        min-width: intrinsic;
+        position:relative;
+        top:0;
+        a:hover {
+            background-color:#dce6ec;
+            color:$accent-dark;
+            text-decoration: none;
+
+        }
+    }
+}
