@@ -23,69 +23,71 @@
 
 /* -------------------------------------------------------------------------*/
 /* Layout */
-#wrap {
-    @include container;
-/*    @include susy-grid-background;
-*/
-   background-color:white;
-   overflow: auto;
-   #search-container{@include span-columns(4 omega);}
-   #content {@include span-columns (4);}
-   .secondary-nav {@include horizontal-list(10px);}
-   .pagination {@include span-columns(4);}
-   #item-filters {@include span-columns (4 omega);}
-   #sort-links{@include span-columns(4);}
-   #outputs {@include span-columns(4)}
-   #advanced-search-form label {@include span-columns (4);}
-   #advanced-search-form .inputs {@include span-columns (4 omega);}
-   #advanced-search-form input {@include span-columns (3);}
-   .hentry .item-img{@include span-columns(4 omega);}
-   .hentry .item-description {@include span-columns(4 omega);}
-   footer {@include bleed($grid-padding);}
-   #bottom-nav {display: none;}
+body {
+    #wrap {
+        @include container;
+    /*    @include susy-grid-background;
+    */
+       background-color:white;
+       overflow: auto;
+       #search-container{@include span-columns(4 omega);}
+       #content {@include span-columns (4);}
+       #primary {@include span-columns (4);}
+       .secondary-nav {@include horizontal-list(10px);}
+       .pagination {@include span-columns(4);}
+       #item-filters {@include span-columns (4 omega);}
+       #sort-links{@include span-columns(4);}
+       #outputs {@include span-columns(4)}
+       #advanced-search-form label {@include span-columns (4);}
+       #advanced-search-form .inputs {@include span-columns (4 omega);}
+       #advanced-search-form input {@include span-columns (3);}
+       .hentry .item-img{@include span-columns(4 omega);}
+       .hentry .item-description {@include span-columns(4 omega);}
+       #exhibit-pages {@include span-columns (4);}
+       footer {@include bleed($grid-padding);}
+       #bottom-nav {display: none;}
 
-    @include at-breakpoint(30em 8) {
-        @include container;
-/*        @include susy-grid-background;
-*/
-        #site-title {@include span-columns(8);}
-        #search-container {@include span-columns(8 omega);}
-        #top-nav {@include span-columns (8);}
-        #content {@include span-columns (8);}
-        .secondary-nav {@include horizontal-list (1em);}
-        .pagination {@include span-columns(8);}
-        #sort-links {@include span-columns(8);}
-        #primary {@include span-columns (8);}
-        #recent-items {@include span-columns (8);}
-        #exhibit-pages {@include span-columns (8);}
-        #bottom-nav {display:none;}
-    }
-    @include at-breakpoint(60em 12) {
-        @include container;
-/*        @include susy-grid-background;
-*/
-        #site-title {@include span-columns (7);}
-        #search-container {@include span-columns (4 omega);}
-        #featured {@include span-columns (7,12);}
-        .secondary-nav {@include horizontal-list(1em);}
-        .pagination {@include span-columns(12);}
-        #sort-links {@include span-columns(12);}
-        #featured-item {padding-right:1em;}
-        #featured-collection {padding-right:1em;}
-        #featured-exhibit {padding-right:1em;}
-        #recent-items {@include span-columns (5 omega, 12);}
-        .hentry .item-img{@include span-columns(3, 12);}
-        .hentry .item-description {@include span-columns(9,12);margin-right:0em;}
-        .hentry .tags {@include span-columns (12);}        
-        #exhibit-pages {@include span-columns (4 omega, 12);}
-        .exhibits #primary {@include span-columns (7, 12);}
-        #advanced-search-form label {@include span-columns (4,12);}
-        #advanced-search-form .label {@include span-columns (4,12);}
-        #advanced-search-form .inputs {@include span-columns (7, 12);}
-        #advanced-search-form input {@include span-columns (7, 12);}
-        #advanced-search-form .submit {@include span-columns (3, 12);}
-        #bottom-nav {display: block;}
-    }   
+        @include at-breakpoint(30em 8) {
+            @include container;
+    /*        @include susy-grid-background;
+    */
+            #site-title {@include span-columns(8);}
+            #search-container {@include span-columns(8 omega);}
+            #top-nav {@include span-columns (8);}
+            #content {@include span-columns (8);}
+            .secondary-nav {@include horizontal-list (1em);}
+            .pagination {@include span-columns(8);}
+            #sort-links {@include span-columns(8);}
+            #recent-items {@include span-columns (8);}
+            #exhibit-pages {@include span-columns (8);}
+            #bottom-nav {display:none;}
+        }
+        @include at-breakpoint(60em 12) {
+            @include container;
+    /*        @include susy-grid-background;
+    */
+            #site-title {@include span-columns (7);}
+            #search-container {@include span-columns (4 omega);}
+            #featured {@include span-columns (7,12);}
+            .secondary-nav {@include horizontal-list(1em);}
+            .pagination {@include span-columns(12);}
+            #sort-links {@include span-columns(12);}
+            #featured-item {padding-right:1em;}
+            #featured-collection {padding-right:1em;}
+            #featured-exhibit {padding-right:1em;}
+            #recent-items {@include span-columns (5 omega, 12);}
+            .hentry .item-img{@include span-columns(3, 12);}
+            .hentry .item-description {@include span-columns(9,12);margin-right:0em;}
+            .hentry .tags {@include span-columns (12);}        
+            #exhibit-pages {@include span-columns (4 omega, 12);}
+            #advanced-search-form label {@include span-columns (4,12);}
+            #advanced-search-form .label {@include span-columns (4,12);}
+            #advanced-search-form .inputs {@include span-columns (7, 12);}
+            #advanced-search-form input {@include span-columns (7, 12);}
+            #advanced-search-form .submit {@include span-columns (3, 12);}
+            #bottom-nav {display: block;}
+        }  
+    } 
 }
 .element-set,
     .item,
@@ -215,9 +217,7 @@ a {
             display:inline;
         }
 }
-#top-nav li.active.nav-item {
-    background-color: $background-color;
-}
+
 .secondary-nav {
 
     ul {
@@ -308,13 +308,30 @@ a {
     padding: 0;
     margin: 0;
     position: relative;
+
+    &:hover{
+        background-color: $accent-main;
+        a:hover{
+            color:white;
+            text-decoration: none;
+        }
+    }
+    &.active {
+        background-color: lighten($accent-main, 10%);
+        &:hover{
+            background-color:$accent-main;
+        }
+        a {
+            color:white;
+        }
+    }
 }
 
 /* first descendant link within a top level navigation item */
 .nav-item > a {
     position: relative;
     display: inline-block;
-    padding: rhythm(.5) rhythm();
+    padding: .75em 1em .75em .5em;
     margin: 0;
     border: 0;
 }
@@ -343,15 +360,13 @@ a {
     border: 0;
     margin: 0;
     background-color: lighten($accent-super-light, 10%);
-    z-index: 2;
-    ul {
-    }
+
 }
 
 /* sub-navigation panel open state */
 .sub-nav.open {
     display: block;
-    min-width: 200%;
+    min-width: 300%;
     padding: 0 1em 0 0;
 }
 
@@ -615,3 +630,11 @@ th {
 /* Exhibits */
 
 
+
+@media screen and (min-width:60em) {
+    .exhibits #wrap{
+        #primary {
+            @include span-columns (7,12);
+        }
+    }
+}
