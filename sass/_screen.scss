@@ -95,14 +95,15 @@ body {
     .element, 
     .collection,
     .exhibit {
-        margin:1.5em 0;
+        margin:1em 0 1.5em 0;
         overflow: auto;
 }
-#featured-item,
+#featured,
+    #featured-item,
     #featured-collection,
     #featured-exhibit {
         overflow: auto;
-        margin:0 0 2em 0;
+        margin:1em 0 1.5em 0;
     }
 
 /* -------------------------------------------------------------------------*/
@@ -132,12 +133,7 @@ a.show {
 blockquote {
     font-style:italic;
 }
-#featured-item{
-/*
-    padding:0 1em;
-    background-color: $accent-super-light;
-*/
-}
+
 .intro {
     font-style: italic;
 }
@@ -207,6 +203,7 @@ a {
 
 /* -------------------------------------------------------------------------*/
 /* Navigation */
+
 .navigation, 
     #sort-links {
         list-style:none; 
@@ -220,8 +217,7 @@ a {
         }
 }
 
-.secondary-nav {
-
+.secondary-nav, #secondary-nav {
     ul {
         li {
             padding-bottom:.5em;
@@ -237,7 +233,7 @@ a {
 }
 .pagination{
     @include horizontal-list;
-    padding-top:1em; 
+    margin:2em 0 1em 0; 
     .page-input {
         form {
             padding:0;
@@ -245,6 +241,9 @@ a {
         #page{
             width:30px;
             text-align:right;
+        }
+        input {
+            width:30px;
         } 
     } 
 }
@@ -254,7 +253,7 @@ a {
 }
 
 #sort-links{
-    margin:1em 0 2em 0;
+    margin:0 0 1em 0;
     .sort-label {
         float:left;
     }
@@ -269,6 +268,11 @@ a {
         a:visited {
             color:$accent-main;
         }
+    }
+}
+.exhibits.tags {
+    #secondary-nav {
+        @include horizontal-list(1em);
     }
 }
 #bottom-nav {
@@ -645,6 +649,7 @@ th {
 
                 a {
                     display:block;
+                    padding-left:1em;
                     &:hover{text-decoration:none;}
                 }
                 ul {
@@ -709,11 +714,15 @@ th {
     }
     #exhibit-child-pages {
         .exhibit-child-nav {
-            margin:0;
+            @include span-columns (6,12);
+            margin:0 0 1em 0;
             li {
                 border-top:2px solid $accent-main;
                 display:block;
                 padding:.5em 0;
+                a {
+                    padding-left:1em;
+                }
             }
         }
 /*        @media screen and (min-width:60em) {
@@ -721,11 +730,31 @@ th {
         }*/
     }
     .exhibit-block {
-        overflow: auto;
         margin-top:1em;
+        padding-right:1em;
+        .exhibit-items.left {
+            margin-right:5%;
+        }
+        .exhibit-items.right {
+            margin-left:5%;
+        }
     }
     #exhibit-page-navigation {
         clear:both;
+        margin:0;
+        padding:1em 0em;
+    }
+    #exhibit-nav-next, 
+        #exhibit-nav-up,
+        #exhibit-nav-prev {
+            padding:.5em;
+        }
+    .current-page {
+        clear:both;
+        display:block;
+        background-color: $accent-light;
+        padding:.5em;
+        color:white;
     }
 }
 
@@ -733,10 +762,139 @@ th {
 @media screen and (min-width:60em) {
     .exhibits #wrap{
         #primary {
-            @include span-columns (8,12);
+            @include span-columns (9,12);
         }
         #exhibit-pages {
             @include span-columns (3 omega, 12);
         }
     }
 }
+
+
+/* -------------------------------------------------------------------------*/
+/* TagCloud */
+.hTagcloud {
+    margin:2em 0;
+    ul {
+        list-style:none;
+        margin-left:0;
+        padding-left:0;
+        li {
+            display:inline;
+            a {
+                text-decoration: none;
+            }
+        }
+        .popular,
+        .-popular {
+            font-size:120%;
+            a {
+                color: lighten($accent-green, 10%);
+                &:visited {
+                    color:$grey-super-light;
+                }
+                &:hover {
+                    color: darken($accent-green, 20%);
+                }
+            }
+        }
+        .v-popular {
+            font-size:140%;
+            a {
+                color: $accent-green;
+                &:visited {
+                    color:$grey-super-light;
+                }
+                &:hover {
+                    color: lighten($accent-yellow, 10%);
+                }
+            }
+        }
+        .vv-popular {
+            font-size:180%;
+            a {
+                color: darken($accent-green, 10%);
+                &:visited {
+                    color: $grey-light;
+                }
+                &:hover {
+                    color: $accent-yellow;
+                }
+            }
+        }
+        .vvv-popular {
+            font-size:220%;
+            a {
+                color: lighten($accent-red, 10%);
+                &:visited {
+                    color:$grey-light;
+                }
+                &:hover {
+                    color: darken($accent-red, 30%);
+                }
+            }
+        }
+        .vvvv-popular {
+            font-size:260%;
+            a {
+                color: $accent-red;
+                &:visited {
+                    color: $grey-medium;
+                }
+                &:hover {
+                    color: lighten($accent-red, 30%);
+                }
+            }
+        }
+        .vvvvv-popular {
+            font-size:300%;
+            a {
+                color: lighten($accent-main, 10%);
+                &:visited {
+                    color:$grey-medium;
+                }
+                &:hover {
+                    color: $grey-medium;
+                }
+            }
+        }
+        .vvvvvv-popular {
+            font-size:320%;
+            a {
+                color: $accent-main;
+                &:visited {
+                    color: $grey-dark;
+                }
+                &:hover {
+                    color: $grey-light;
+                }
+            }
+        }
+        .vvvvvvv-popular {
+            font-size:340%;
+            a {
+                color: darken($accent-main, 10%);
+                &:visited {
+                    color:$grey-dark;
+                }
+                &:hover {
+                    color: lighten($accent-main, 30%);
+                }
+            }
+        }
+        .vvvvvvvv-popular {
+            font-size:360%;
+            a {
+                color: darken($accent-main, 20%);
+                &::visited{
+                    color:$grey-dark;
+                }
+                &:hover {
+                    color: lighten($accent-main, 40%);
+                }
+            }
+        }
+    }
+}
+
+
