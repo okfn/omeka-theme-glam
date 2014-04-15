@@ -33,8 +33,8 @@ body {
        #search-container{@include span-columns(4 omega);}
        .nav-menu {@include span-columns (4); margin-right:0;}
        #content {@include span-columns (4);}
-       #primary {@include span-columns (4);}
-       .secondary-nav {@include horizontal-list(10px);}
+/*       #primary {@include span-columns (4);}
+*/       .secondary-nav {@include horizontal-list(10px);}
        .pagination {@include span-columns(4);}
        #item-filters {@include span-columns (4 omega);}
        #sort-links{@include span-columns(4);}
@@ -44,8 +44,8 @@ body {
        #advanced-search-form input {@include span-columns (3);}
        .hentry .item-img{@include span-columns(4 omega);}
        .hentry .item-description {@include span-columns(4 omega);}
-       #exhibit-pages {@include span-columns (4);}
-       footer {@include bleed($grid-padding);}
+/*       #exhibit-pages {@include span-columns (4);}
+*/       footer {@include bleed($grid-padding);}
        #bottom-nav {display: none;}
 
         @include at-breakpoint(30em 8) {
@@ -60,8 +60,8 @@ body {
             .pagination {@include span-columns(8);}
             #sort-links {@include span-columns(8);}
             #recent-items {@include span-columns (8);}
-            #exhibit-pages {@include span-columns (8);}
-            #bottom-nav {display:none;}
+/*            #exhibit-pages {@include span-columns (8);}
+*/            #bottom-nav {display:none;}
         }
         @include at-breakpoint(60em 12) {
             @include container;
@@ -80,8 +80,8 @@ body {
             .hentry .item-img{@include span-columns(3, 12);}
             .hentry .item-description {@include span-columns(9,12);margin-right:0em;}
             .hentry .tags {@include span-columns (12);}        
-            #exhibit-pages {@include span-columns (4 omega, 12);}
-            #advanced-search-form label {@include span-columns (4,12);}
+/*            #exhibit-pages {@include span-columns (4 omega, 12);}
+*/            #advanced-search-form label {@include span-columns (4,12);}
             #advanced-search-form .label {@include span-columns (4,12);}
             #advanced-search-form .inputs {@include span-columns (7, 12);}
             #advanced-search-form input {@include span-columns (7, 12);}
@@ -98,10 +98,11 @@ body {
         margin:1em 0 1.5em 0;
         overflow: auto;
 }
-#featured,
-    #featured-item,
+/*#featured,
+*/    #featured-item,
     #featured-collection,
-    #featured-exhibit {
+    #featured-exhibit, 
+    #recent-items {
         overflow: auto;
         margin:1em 0 1.5em 0;
     }
@@ -650,6 +651,9 @@ th {
                 a {
                     display:block;
                     padding-left:1em;
+                    background-image: url("../images/nav-bg.png");
+                    background-repeat:no-repeat;
+                    background-position: left center;
                     &:hover{text-decoration:none;}
                 }
                 ul {
@@ -658,15 +662,24 @@ th {
             }
         }
     }
+    @media screen and (min-width:60em) {
+        #primary {
+            @include span-columns (9,12);
+        }
+        #exhibit-pages {
+            @include span-columns (3 omega, 12);
+        }
+    }
+
 }
 .exhibits.show {
     #exhibit-pages {
-        padding-top:1em;
+        padding:1em 0;
+        border-bottom:2px solid $accent-main;
         ul {
             margin:1em 0 0 0;
             list-style-type: none;
             li {
-                padding: .5em 0;
                 display:block;
                 border-top:2px solid $accent-light;
 
@@ -683,45 +696,60 @@ th {
         .current-page {
             display:block;
             background-color: $accent-light;
-            margin-top:1em;
             padding:.5em;
             color:white;
         }
 
         #secondary-nav {
-            padding-bottom:1em;
+            overflow:hidden;
             li {
                 border:none;
 
             }
             ul {
-                margin-left:0;
-                .current {
-                    background-color: $accent-light;
-                    a{color:white;}
+                @include horizontal-list(.5em);
+                .current a {
+                    color: $accent-dark;
+                    background-color: lighten($accent-super-light, 10%);
+
                 }
                 li {
-                    border-top:2px solid $accent-main;
-                    padding-left:.5em;
-                    margin-top:.5em;
+                    padding-top:.5em;
+                    a {
+                        padding:.5em;
+                        &:hover{
+                            text-decoration:underline;
+                            color:$accent-light;
+                        }
+                    }
+                    
                 }
             }
             .exhibit-title {
                 font-family:$font-family-title;
                 text-transform: uppercase;
+                font-size: 1.25em;
             }
         }
     }
     #exhibit-child-pages {
+        clear:both;
+        overflow: hidden;
+        padding:.5em 0;
         .exhibit-child-nav {
-            @include span-columns (6,12);
-            margin:0 0 1em 0;
+            margin:.5em 0;
+            @include horizontal-list;
             li {
-                border-top:2px solid $accent-main;
-                display:block;
+                background-image: url("../images/nav-bg.png");
+                background-repeat:no-repeat;
+                background-position: left center;
                 padding:.5em 0;
+                border:none;
                 a {
-                    padding-left:1em;
+                    padding:.5em .5em .5em 1em;
+                    display: initial;
+                    border-top:1px solid $accent-main;
+                    margin-right:.5em;
                 }
             }
         }
@@ -743,23 +771,30 @@ th {
         clear:both;
         margin:0;
         padding:1em 0em;
+
+        .current-page {
+            clear:both;
+            display:block;
+            background-color: $accent-light;
+            padding:.5em;
+            color:white;
+            width:100%;
+        }
+
     }
     #exhibit-nav-next, 
-        #exhibit-nav-up,
         #exhibit-nav-prev {
             padding:.5em;
+            width: initial;
         }
-    .current-page {
-        clear:both;
-        display:block;
-        background-color: $accent-light;
+    #exhibit-nav-up {
         padding:.5em;
-        color:white;
     }
+
 }
 
 
-@media screen and (min-width:60em) {
+/*@media screen and (min-width:60em) {
     .exhibits #wrap{
         #primary {
             @include span-columns (9,12);
@@ -768,7 +803,7 @@ th {
             @include span-columns (3 omega, 12);
         }
     }
-}
+}*/
 
 
 /* -------------------------------------------------------------------------*/
