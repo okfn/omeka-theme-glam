@@ -664,10 +664,13 @@ th {
     }
     @media screen and (min-width:60em) {
         #primary {
-            @include span-columns (9,12);
+            @include span-columns (8,12);
+            .exhibit-description, .exhibit-credits {
+                padding-right:1em;
+            }
         }
         #exhibit-pages {
-            @include span-columns (3 omega, 12);
+            @include span-columns (4 omega, 12);
         }
     }
 
@@ -771,24 +774,41 @@ th {
         clear:both;
         margin:0;
         padding:1em 0em;
-
+        div {
+            padding:.5em 0;
+        }
+        #exhibit-nav-next, 
+            #exhibit-nav-prev {
+                width: 45%;
+                margin-top:.5em;
+            }
         .current-page {
             clear:both;
             display:block;
             background-color: $accent-light;
-            padding:.5em;
+            padding:.5em 0;
             color:white;
+            margin-top:.5em;
+        }
+        #exhibit-nav-up {
+            clear:both;
             width:100%;
         }
 
-    }
-    #exhibit-nav-next, 
-        #exhibit-nav-prev {
-            padding:.5em;
-            width: initial;
-        }
-    #exhibit-nav-up {
-        padding:.5em;
+        @media screen and (min-width:60em){
+            #exhibit-nav-next, 
+            #exhibit-nav-prev {
+                width: initial;
+            }
+            #exhibit-nav-up {
+                clear:none;
+                width:33%;
+                .current-page {
+                    clear:none;
+                }
+            }
+
+        }    
     }
 
 }
