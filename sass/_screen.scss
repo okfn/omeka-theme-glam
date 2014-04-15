@@ -713,7 +713,7 @@ th {
                 @include horizontal-list(.5em);
                 .current a {
                     color: $accent-dark;
-                    background-color: lighten($accent-super-light, 10%);
+                    background-color: lighten($accent-super-light, 5%);
 
                 }
                 li {
@@ -741,19 +741,18 @@ th {
         padding:.5em 0;
         .exhibit-child-nav {
             margin:.5em 0;
-            @include horizontal-list;
-            li {
+/*            @include horizontal-list;
+*/            li {
                 background-image: url("../images/nav-bg.png");
                 background-repeat:no-repeat;
                 background-position: left center;
                 padding:.5em 0;
                 border:none;
                 a {
-                    padding:.5em .5em .5em 1em;
+                    padding:.5em 1em .5em 1em;
                     display: initial;
-                    border-top:1px solid $accent-main;
-                    margin-right:.5em;
-                }
+/*                    border-top:1px solid $accent-main;
+*/                }
             }
         }
 /*        @media screen and (min-width:60em) {

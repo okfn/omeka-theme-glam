@@ -1751,7 +1751,7 @@ th {
 /* line 714, ../sass/_screen.scss */
 .exhibits.show #exhibit-pages #secondary-nav ul .current a {
   color: #6d8e8f;
-  background-color: #dce6ec;
+  background-color: #cbdae4;
 }
 /* line 719, ../sass/_screen.scss */
 .exhibits.show #exhibit-pages #secondary-nav ul li {
@@ -1784,34 +1784,8 @@ th {
 /* line 742, ../sass/_screen.scss */
 .exhibits.show #exhibit-child-pages .exhibit-child-nav {
   margin: .5em 0;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  overflow: hidden;
-  *zoom: 1;
-}
-/* line 60, ../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/compass-0.12.4/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
-.exhibits.show #exhibit-child-pages .exhibit-child-nav li {
-  list-style-image: none;
-  list-style-type: none;
-  margin-left: 0;
-  white-space: nowrap;
-  display: inline;
-  float: left;
-  padding-left: 4px;
-  padding-right: 4px;
-}
-/* line 48, ../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/compass-0.12.4/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
-.exhibits.show #exhibit-child-pages .exhibit-child-nav li:first-child, .exhibits.show #exhibit-child-pages .exhibit-child-nav li.first {
-  padding-left: 0;
-}
-/* line 49, ../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/compass-0.12.4/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
-.exhibits.show #exhibit-child-pages .exhibit-child-nav li:last-child {
-  padding-right: 0;
-}
-/* line 50, ../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/compass-0.12.4/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
-.exhibits.show #exhibit-child-pages .exhibit-child-nav li.last {
-  padding-right: 0;
+  /*            @include horizontal-list;
+  */
 }
 /* line 745, ../sass/_screen.scss */
 .exhibits.show #exhibit-child-pages .exhibit-child-nav li {
@@ -1823,41 +1797,41 @@ th {
 }
 /* line 751, ../sass/_screen.scss */
 .exhibits.show #exhibit-child-pages .exhibit-child-nav li a {
-  padding: .5em .5em .5em 1em;
+  padding: .5em 1em .5em 1em;
   display: initial;
-  border-top: 1px solid #6b8a9c;
-  margin-right: .5em;
+  /*                    border-top:1px solid $accent-main;
+  */
 }
-/* line 763, ../sass/_screen.scss */
+/* line 762, ../sass/_screen.scss */
 .exhibits.show .exhibit-block {
   margin-top: 1em;
   padding-right: 1em;
 }
-/* line 766, ../sass/_screen.scss */
+/* line 765, ../sass/_screen.scss */
 .exhibits.show .exhibit-block .exhibit-items.left {
   margin-right: 5%;
 }
-/* line 769, ../sass/_screen.scss */
+/* line 768, ../sass/_screen.scss */
 .exhibits.show .exhibit-block .exhibit-items.right {
   margin-left: 5%;
 }
-/* line 773, ../sass/_screen.scss */
+/* line 772, ../sass/_screen.scss */
 .exhibits.show #exhibit-page-navigation {
   clear: both;
   margin: 0;
   padding: 1em 0em;
 }
-/* line 777, ../sass/_screen.scss */
+/* line 776, ../sass/_screen.scss */
 .exhibits.show #exhibit-page-navigation div {
   padding: .5em 0;
 }
-/* line 781, ../sass/_screen.scss */
+/* line 780, ../sass/_screen.scss */
 .exhibits.show #exhibit-page-navigation #exhibit-nav-next,
 .exhibits.show #exhibit-page-navigation #exhibit-nav-prev {
   width: 45%;
   margin-top: .5em;
 }
-/* line 785, ../sass/_screen.scss */
+/* line 784, ../sass/_screen.scss */
 .exhibits.show #exhibit-page-navigation .current-page {
   clear: both;
   display: block;
@@ -1866,23 +1840,23 @@ th {
   color: white;
   margin-top: .5em;
 }
-/* line 793, ../sass/_screen.scss */
+/* line 792, ../sass/_screen.scss */
 .exhibits.show #exhibit-page-navigation #exhibit-nav-up {
   clear: both;
   width: 100%;
 }
 @media screen and (min-width: 60em) {
-  /* line 800, ../sass/_screen.scss */
+  /* line 799, ../sass/_screen.scss */
   .exhibits.show #exhibit-page-navigation #exhibit-nav-next,
   .exhibits.show #exhibit-page-navigation #exhibit-nav-prev {
     width: initial;
   }
-  /* line 803, ../sass/_screen.scss */
+  /* line 802, ../sass/_screen.scss */
   .exhibits.show #exhibit-page-navigation #exhibit-nav-up {
     clear: none;
     width: 33%;
   }
-  /* line 806, ../sass/_screen.scss */
+  /* line 805, ../sass/_screen.scss */
   .exhibits.show #exhibit-page-navigation #exhibit-nav-up .current-page {
     clear: none;
   }
@@ -1900,169 +1874,169 @@ th {
 }*/
 /* -------------------------------------------------------------------------*/
 /* TagCloud */
-/* line 831, ../sass/_screen.scss */
+/* line 830, ../sass/_screen.scss */
 .hTagcloud {
   margin: 2em 0;
 }
-/* line 833, ../sass/_screen.scss */
+/* line 832, ../sass/_screen.scss */
 .hTagcloud ul {
   list-style: none;
   margin-left: 0;
   padding-left: 0;
 }
-/* line 837, ../sass/_screen.scss */
+/* line 836, ../sass/_screen.scss */
 .hTagcloud ul li {
   display: inline;
 }
-/* line 839, ../sass/_screen.scss */
+/* line 838, ../sass/_screen.scss */
 .hTagcloud ul li a {
   text-decoration: none;
 }
-/* line 844, ../sass/_screen.scss */
+/* line 843, ../sass/_screen.scss */
 .hTagcloud ul .popular,
 .hTagcloud ul .-popular {
   font-size: 120%;
 }
-/* line 846, ../sass/_screen.scss */
+/* line 845, ../sass/_screen.scss */
 .hTagcloud ul .popular a,
 .hTagcloud ul .-popular a {
   color: #8dd258;
 }
-/* line 848, ../sass/_screen.scss */
+/* line 847, ../sass/_screen.scss */
 .hTagcloud ul .popular a:visited,
 .hTagcloud ul .-popular a:visited {
   color: #eeeeee;
 }
-/* line 851, ../sass/_screen.scss */
+/* line 850, ../sass/_screen.scss */
 .hTagcloud ul .popular a:hover,
 .hTagcloud ul .-popular a:hover {
   color: #43721f;
 }
-/* line 856, ../sass/_screen.scss */
+/* line 855, ../sass/_screen.scss */
 .hTagcloud ul .v-popular {
   font-size: 140%;
 }
-/* line 858, ../sass/_screen.scss */
+/* line 857, ../sass/_screen.scss */
 .hTagcloud ul .v-popular a {
   color: #72c334;
 }
-/* line 860, ../sass/_screen.scss */
+/* line 859, ../sass/_screen.scss */
 .hTagcloud ul .v-popular a:visited {
   color: #eeeeee;
 }
-/* line 863, ../sass/_screen.scss */
+/* line 862, ../sass/_screen.scss */
 .hTagcloud ul .v-popular a:hover {
   color: #c6dc62;
 }
-/* line 868, ../sass/_screen.scss */
+/* line 867, ../sass/_screen.scss */
 .hTagcloud ul .vv-popular {
   font-size: 180%;
 }
-/* line 870, ../sass/_screen.scss */
+/* line 869, ../sass/_screen.scss */
 .hTagcloud ul .vv-popular a {
   color: #5a9b29;
 }
-/* line 872, ../sass/_screen.scss */
+/* line 871, ../sass/_screen.scss */
 .hTagcloud ul .vv-popular a:visited {
   color: #dddddd;
 }
-/* line 875, ../sass/_screen.scss */
+/* line 874, ../sass/_screen.scss */
 .hTagcloud ul .vv-popular a:hover {
   color: #b7d338;
 }
-/* line 880, ../sass/_screen.scss */
+/* line 879, ../sass/_screen.scss */
 .hTagcloud ul .vvv-popular {
   font-size: 220%;
 }
-/* line 882, ../sass/_screen.scss */
+/* line 881, ../sass/_screen.scss */
 .hTagcloud ul .vvv-popular a {
   color: #d35a7d;
 }
-/* line 884, ../sass/_screen.scss */
+/* line 883, ../sass/_screen.scss */
 .hTagcloud ul .vvv-popular a:visited {
   color: #dddddd;
 }
-/* line 887, ../sass/_screen.scss */
+/* line 886, ../sass/_screen.scss */
 .hTagcloud ul .vvv-popular a:hover {
   color: #4c1524;
 }
-/* line 892, ../sass/_screen.scss */
+/* line 891, ../sass/_screen.scss */
 .hTagcloud ul .vvvv-popular {
   font-size: 260%;
 }
-/* line 894, ../sass/_screen.scss */
+/* line 893, ../sass/_screen.scss */
 .hTagcloud ul .vvvv-popular a {
   color: #c5355e;
 }
-/* line 896, ../sass/_screen.scss */
+/* line 895, ../sass/_screen.scss */
 .hTagcloud ul .vvvv-popular a:visited {
   color: #666666;
 }
-/* line 899, ../sass/_screen.scss */
+/* line 898, ../sass/_screen.scss */
 .hTagcloud ul .vvvv-popular a:hover {
   color: #e8abbc;
 }
-/* line 904, ../sass/_screen.scss */
+/* line 903, ../sass/_screen.scss */
 .hTagcloud ul .vvvvv-popular {
   font-size: 300%;
 }
-/* line 906, ../sass/_screen.scss */
+/* line 905, ../sass/_screen.scss */
 .hTagcloud ul .vvvvv-popular a {
   color: #8aa2b0;
 }
-/* line 908, ../sass/_screen.scss */
+/* line 907, ../sass/_screen.scss */
 .hTagcloud ul .vvvvv-popular a:visited {
   color: #666666;
 }
-/* line 911, ../sass/_screen.scss */
+/* line 910, ../sass/_screen.scss */
 .hTagcloud ul .vvvvv-popular a:hover {
   color: #666666;
 }
-/* line 916, ../sass/_screen.scss */
+/* line 915, ../sass/_screen.scss */
 .hTagcloud ul .vvvvvv-popular {
   font-size: 320%;
 }
-/* line 918, ../sass/_screen.scss */
+/* line 917, ../sass/_screen.scss */
 .hTagcloud ul .vvvvvv-popular a {
   color: #6b8a9c;
 }
-/* line 920, ../sass/_screen.scss */
+/* line 919, ../sass/_screen.scss */
 .hTagcloud ul .vvvvvv-popular a:visited {
   color: #363636;
 }
-/* line 923, ../sass/_screen.scss */
+/* line 922, ../sass/_screen.scss */
 .hTagcloud ul .vvvvvv-popular a:hover {
   color: #dddddd;
 }
-/* line 928, ../sass/_screen.scss */
+/* line 927, ../sass/_screen.scss */
 .hTagcloud ul .vvvvvvv-popular {
   font-size: 340%;
 }
-/* line 930, ../sass/_screen.scss */
+/* line 929, ../sass/_screen.scss */
 .hTagcloud ul .vvvvvvv-popular a {
   color: #55707f;
 }
-/* line 932, ../sass/_screen.scss */
+/* line 931, ../sass/_screen.scss */
 .hTagcloud ul .vvvvvvv-popular a:visited {
   color: #363636;
 }
-/* line 935, ../sass/_screen.scss */
+/* line 934, ../sass/_screen.scss */
 .hTagcloud ul .vvvvvvv-popular a:hover {
   color: #c7d2d9;
 }
-/* line 940, ../sass/_screen.scss */
+/* line 939, ../sass/_screen.scss */
 .hTagcloud ul .vvvvvvvv-popular {
   font-size: 360%;
 }
-/* line 942, ../sass/_screen.scss */
+/* line 941, ../sass/_screen.scss */
 .hTagcloud ul .vvvvvvvv-popular a {
   color: #415560;
 }
-/* line 944, ../sass/_screen.scss */
+/* line 943, ../sass/_screen.scss */
 .hTagcloud ul .vvvvvvvv-popular a::visited {
   color: #363636;
 }
-/* line 947, ../sass/_screen.scss */
+/* line 946, ../sass/_screen.scss */
 .hTagcloud ul .vvvvvvvv-popular a:hover {
   color: #e5ebee;
 }
