@@ -1,0 +1,52 @@
+/* -------------------------------------------------------------------------*/
+/* Navigation */
+
+#top-nav {
+    overflow: auto;
+    background-color:lighten($accent-super-light, 5%);
+    min-height: 40px;
+    position:relative;
+
+    li {
+        display: block;
+        width: 100%;
+        @include trailing-border(1px, 0, $base-font-size, solid);
+/*        &:hover{
+            background-color:$accent-main;
+        }
+*/
+        .active a {
+            color:white;
+        }
+        a {
+            display:block;
+            &:hover {
+                background-color:$accent-main;
+                @include link-colors(white);
+            }
+        }
+        
+        &:last-of-type {
+            border-color: transparent;
+        }
+
+        a.open {
+            color:white;
+            background-color: $accent-main;
+        }
+    }
+    .sub-nav.open {
+        width: 100%;
+        min-width: intrinsic;
+        position:relative;
+        top:0;
+        
+        a:hover {
+            background-color:#dce6ec;
+            color:$accent-main;
+            text-decoration: none;
+
+        }
+    }
+}
+
