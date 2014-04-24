@@ -1,5 +1,4 @@
 @import "susy";
-@import "mixins";
 @import "base";
 @import "compass";
 
@@ -455,8 +454,8 @@ form {
         select,
         .submit,
         input {
-            @include border-radius(3px);
-            background-color: $grey-super-light;
+            /*@include border-radius(3px);
+            background-color: $grey-super-light;*/
         }
 }
 
@@ -492,10 +491,7 @@ form {
 /*-- Search--*/
 
 #search-container {
-    width:30%;
-    float:right;
-    font-size: .9em;
-    padding: 1em 0 0 1em;
+    padding: 1em 0 1em 1em;
     margin:0;
 
     input {
@@ -512,9 +508,86 @@ form {
         margin:0;
     }       
 }       
-#search-form {
-    float:right;
-}    
+#search-container.with-advanced {
+
+    #search-form {
+        position:relative;
+    }
+    input[type=text] {
+        width: 70%;
+        float:left;
+        height:1.5em;
+        margin:0;        
+    }
+    
+    input[type=submit] {
+        width: 20%;
+        float:left;
+        padding:4px;
+        margin:0;
+
+    }
+
+    .show-advanced {
+        width: 8%;
+        display: block;
+        float: right;
+        text-align: center;
+        padding:3px 0;
+
+        &:hover {
+            text-decoration: none;
+        }
+
+    }
+    #advanced-form {
+        // display: none;
+        position: absolute;
+        top: 3em;
+        background-color: #fff;
+        z-index: 20;
+        width: 90%;
+        border: 1px solid;
+        border-color: $grey-light;
+        border-top-color: #fff;
+        padding:0 5%;
+
+        text-align: left;
+        
+        &.closed {
+            left: -9999px;
+        }
+        
+        &.open  {
+            left: 0;
+        }
+        
+        p {
+        }
+        
+        fieldset {
+        }
+        
+        label {
+    /*        font-size: $base-font-size;
+    */        font-weight: normal;
+            float:left;
+        }
+        
+        input[type=checkbox],
+        input[type=radio] {
+            margin: rhythm(.25) 5px 0 0;
+            float:left;
+        }
+        
+        & > *:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+
+
 #advanced-search-form {
     .field {
         border-top:1px solid $grey-light;

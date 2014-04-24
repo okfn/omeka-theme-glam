@@ -29,6 +29,7 @@
     <?php 
     queue_js_file('jquery-accessibleMegaMenu');
     queue_js_file('main');
+    queue_js_file('globals');
     echo head_js(); 
     ?>
 </head>
@@ -46,7 +47,7 @@
             <div id="site-title"><?php echo link_to_home_page(theme_logo()); ?></div>
 
             <div id="search-container">
-                <?php echo search_form(); ?>
+                <?php echo search_form(array('show_advanced' => true)); ?>
             </div><!-- end search -->
             
             <nav id="top-nav">
