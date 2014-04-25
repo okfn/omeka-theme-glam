@@ -44,7 +44,7 @@ body {
        .hentry .item-img{@include span-columns(4 omega);}
        .hentry .item-description {@include span-columns(4 omega);}
 /*       #exhibit-pages {@include span-columns (4);}
-*/       footer {@include bleed($grid-padding);}
+*/       footer {@include bleed($grid-padding);@include span-columns(4);}
        #bottom-nav {display: none;}
 
         @include at-breakpoint(30em 8) {
@@ -176,7 +176,7 @@ h1 {
 h2 {
     font-size: $font-size-main * 2;
     text-transform: capitalize;
-    border-top: 3px solid #bacedb;
+    border-top: 3px solid $accent-super-light;
 }
 h3 {
     font-size: $font-size-main * 1.5;
@@ -197,7 +197,7 @@ h6 {
 /* -------------------------------------------------------------------------*/
 /* Links */
 a {
-    @include link-colors($accent-main, $accent-light, $accent-super-light, $accent-dark);
+    @include link-colors($accent-main, $accent-bright, $accent-light, $accent-dark, $accent-dark);
     text-decoration: none;
     &:hover{text-decoration:underline;}
 }
@@ -318,16 +318,16 @@ a {
     position: relative;
 
     &:hover{
-        background-color: $accent-main;
+        background-color: $accent-light;
         a:hover{
             color:white;
             text-decoration: none;
         }
     }
     &.active {
-        background-color: lighten($accent-main, 10%);
+        background-color: lighten($accent-light, 10%);
         &:hover{
-            background-color:$accent-main;
+            background-color:$accent-light;
         }
         a {
             color:white;
@@ -348,7 +348,7 @@ a {
    navigation item */
 .nav-item > a:focus,
 .nav-item > a.open {
-    background-color: $accent-main;
+    background-color: $accent-light;
     color:white;
 }
 
@@ -683,6 +683,12 @@ th {
     .item h3 {
         padding: 1em 0;
     }
+    &.show {
+        .item {
+            border-top:2px solid $grey-light;
+
+        }
+    }
 }
 #item-filters {
     ul{
@@ -753,7 +759,7 @@ th {
 .exhibits.show {
     #exhibit-pages {
         padding:1em 0;
-        border-bottom:2px solid $accent-main;
+        border-bottom:2px solid $accent-light;
         ul {
             margin:1em 0 0 0;
             list-style-type: none;
