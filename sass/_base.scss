@@ -17,15 +17,15 @@ $show-grid-backgrounds  : true;
 // ---------------------------------------------------------------------------
 // Color
 
-$background-color: lighten(#C9C9D0, 10%);
+$background-color: #eee;
 $text-color: #444;
 
 
-$accent-dark: #2B265C;
-$accent-main: #62189A;
-$accent-light: #78768e;
-$accent-bright: #6861AE;
-$accent-super-light: #a1a0b8;
+$accent-dark: #3E0D20;
+$accent-main: #5F283D;
+$accent-light: #927C84;
+$accent-bright: #894292;
+$accent-super-light: lighten(#907F92, 10%);
 
 $grey-dark: #363636;
 $grey-medium: #666;

@@ -147,9 +147,10 @@ blockquote {
     margin-top:1em;
 }
 footer {
-    background-color:lighten($accent-super-light, 5%);
-    padding:.5em;
+/*    background-color:lighten($accent-super-light, 5%);
+*/    padding:.5em;
     overflow: auto;
+    border-top:5px double $accent-super-light;
 }
 /* -------------------------------------------------------------------------*/
 /* Headings */
@@ -646,6 +647,10 @@ th {
 
 /* -------------------------------------------------------------------------*/
 /* Browse and Item Pages */
+#home .item {
+    border-top:1px solid $grey-light;
+}
+
     
 .item {
     overflow: auto;
