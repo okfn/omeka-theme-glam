@@ -1382,7 +1382,7 @@ form button, form #form-submit, form #send {
 }
 /* line 463, ../sass/_screen.scss */
 #search-container.with-advanced input[type=submit] {
-  width: 20%;
+  width: auto;
   float: left;
   padding: 4px;
   margin: 0;
