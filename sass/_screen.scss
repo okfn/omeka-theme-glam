@@ -12,12 +12,16 @@
 -- Navigation
 -- Forms
 ---- Search
+------ Advanced Search
 ---- Contribution
 -- Tables
 -- Content
 ---- Browse and Item Pages
 ---- Collections
+---- TagCloud
+-- Plugins
 ---- Simple Pages
+---- Maps
 ---- Exhibits
 
 /* -------------------------------------------------------------------------*/
@@ -445,14 +449,14 @@ form {
     }       
 }       
 #search-container.with-advanced {
-
+    font-size:.9em;
     #search-form {
         position:relative;
     }
     input[type=text] {
         width: 70%;
         float:left;
-        height:1.5em;
+        height:20px;
         margin:0;        
     }
     
@@ -461,6 +465,7 @@ form {
         float:left;
         padding:4px;
         margin:0;
+
 
     }
 
@@ -529,6 +534,12 @@ form {
         border-top:1px solid $grey-light;
         padding:.5em 0 1em 0;
         overflow: auto;
+        .two {
+            @include span-columns(3,12);
+            label {
+                width:100% !important;
+            }
+        }
     }
     .add_search {
         padding:2px 10px;
@@ -657,6 +668,132 @@ th {
 }
 
 /* -------------------------------------------------------------------------*/
+/* TagCloud */
+.hTagcloud {
+    margin:2em 0;
+    ul {
+        list-style:none;
+        margin-left:0;
+        padding-left:0;
+        li {
+            display:inline;
+            a {
+                text-decoration: none;
+            }
+        }
+        .popular,
+        .-popular {
+            font-size:120%;
+            a {
+                color: lighten($accent-green, 10%);
+                &:visited {
+                    color:$grey-super-light;
+                }
+                &:hover {
+                    color: darken($accent-green, 20%);
+                }
+            }
+        }
+        .v-popular {
+            font-size:140%;
+            a {
+                color: $accent-green;
+                &:visited {
+                    color:$grey-super-light;
+                }
+                &:hover {
+                    color: lighten($accent-yellow, 10%);
+                }
+            }
+        }
+        .vv-popular {
+            font-size:180%;
+            a {
+                color: darken($accent-green, 10%);
+                &:visited {
+                    color: $grey-light;
+                }
+                &:hover {
+                    color: $accent-yellow;
+                }
+            }
+        }
+        .vvv-popular {
+            font-size:220%;
+            a {
+                color: lighten($accent-red, 10%);
+                &:visited {
+                    color:$grey-light;
+                }
+                &:hover {
+                    color: darken($accent-red, 30%);
+                }
+            }
+        }
+        .vvvv-popular {
+            font-size:260%;
+            a {
+                color: $accent-red;
+                &:visited {
+                    color: $grey-medium;
+                }
+                &:hover {
+                    color: lighten($accent-red, 30%);
+                }
+            }
+        }
+        .vvvvv-popular {
+            font-size:300%;
+            a {
+                color: lighten($accent-main, 10%);
+                &:visited {
+                    color:$grey-medium;
+                }
+                &:hover {
+                    color: $grey-medium;
+                }
+            }
+        }
+        .vvvvvv-popular {
+            font-size:320%;
+            a {
+                color: $accent-main;
+                &:visited {
+                    color: $grey-dark;
+                }
+                &:hover {
+                    color: $grey-light;
+                }
+            }
+        }
+        .vvvvvvv-popular {
+            font-size:340%;
+            a {
+                color: darken($accent-main, 10%);
+                &:visited {
+                    color:$grey-dark;
+                }
+                &:hover {
+                    color: lighten($accent-main, 30%);
+                }
+            }
+        }
+        .vvvvvvvv-popular {
+            font-size:360%;
+            a {
+                color: darken($accent-main, 20%);
+                &::visited{
+                    color:$grey-dark;
+                }
+                &:hover {
+                    color: lighten($accent-main, 40%);
+                }
+            }
+        }
+    }
+}
+
+/* -------------------------------------------------------------------------*/
 /* Simple Pages */
 
 #simple-pages-breadcrumbs {
@@ -672,8 +809,13 @@ th {
 
 /* -------------------------------------------------------------------------*/
 /* Maps */
-#map-links {
-    padding-top:0 !important;
+#map {
+    #map-links {
+        padding-top:0 !important;
+    }
+    #link-block {
+        height:auto;
+    }
 }
 
 /* -------------------------------------------------------------------------*/
@@ -822,128 +964,3 @@ th {
     }
 }
 
-/* -------------------------------------------------------------------------*/
-/* TagCloud */
-.hTagcloud {
-    margin:2em 0;
-    ul {
-        list-style:none;
-        margin-left:0;
-        padding-left:0;
-        li {
-            display:inline;
-            a {
-                text-decoration: none;
-            }
-        }
-        .popular,
-        .-popular {
-            font-size:120%;
-            a {
-                color: lighten($accent-green, 10%);
-                &:visited {
-                    color:$grey-super-light;
-                }
-                &:hover {
-                    color: darken($accent-green, 20%);
-                }
-            }
-        }
-        .v-popular {
-            font-size:140%;
-            a {
-                color: $accent-green;
-                &:visited {
-                    color:$grey-super-light;
-                }
-                &:hover {
-                    color: lighten($accent-yellow, 10%);
-                }
-            }
-        }
-        .vv-popular {
-            font-size:180%;
-            a {
-                color: darken($accent-green, 10%);
-                &:visited {
-                    color: $grey-light;
-                }
-                &:hover {
-                    color: $accent-yellow;
-                }
-            }
-        }
-        .vvv-popular {
-            font-size:220%;
-            a {
-                color: lighten($accent-red, 10%);
-                &:visited {
-                    color:$grey-light;
-                }
-                &:hover {
-                    color: darken($accent-red, 30%);
-                }
-            }
-        }
-        .vvvv-popular {
-            font-size:260%;
-            a {
-                color: $accent-red;
-                &:visited {
-                    color: $grey-medium;
-                }
-                &:hover {
-                    color: lighten($accent-red, 30%);
-                }
-            }
-        }
-        .vvvvv-popular {
-            font-size:300%;
-            a {
-                color: lighten($accent-main, 10%);
-                &:visited {
-                    color:$grey-medium;
-                }
-                &:hover {
-                    color: $grey-medium;
-                }
-            }
-        }
-        .vvvvvv-popular {
-            font-size:320%;
-            a {
-                color: $accent-main;
-                &:visited {
-                    color: $grey-dark;
-                }
-                &:hover {
-                    color: $grey-light;
-                }
-            }
-        }
-        .vvvvvvv-popular {
-            font-size:340%;
-            a {
-                color: darken($accent-main, 10%);
-                &:visited {
-                    color:$grey-dark;
-                }
-                &:hover {
-                    color: lighten($accent-main, 30%);
-                }
-            }
-        }
-        .vvvvvvvv-popular {
-            font-size:360%;
-            a {
-                color: darken($accent-main, 20%);
-                &::visited{
-                    color:$grey-dark;
-                }
-                &:hover {
-                    color: lighten($accent-main, 40%);
-                }
-            }
-        }
-    }
-}
