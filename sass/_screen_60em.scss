@@ -15,9 +15,9 @@
     background-color: white;
     
     .active {
-        background-color: lighten($accent-light, 10%);
+        background-color: lighten($accent-main, 10%);
         a {
-            color:white !important;
+            color:white;
         }
     }
     
@@ -33,7 +33,7 @@
         }
         
         &:hover, &:focus {
-            background-color: $accent-light;
+            background-color: $accent-main;
         }
     }
 
@@ -47,6 +47,9 @@
         position: relative;
 
     }
+    .nav-item.active a{
+        color:white;
+    }
 /* first descendant link within a top level navigation item */
     .nav-item > a {
         position: relative;
@@ -58,18 +61,21 @@
         &:hover {
             color:white;
         }
+        &:focus{
+            color:white;
+        }
     }
 /* focus/open states of first descendant link within a top level 
    navigation item */
     .nav-item > a:focus,
     .nav-item > a.open {
-        background-color: $accent-light;
+        background-color: $accent-main;
     }
 
 /* open state of first descendant link within a top level 
    navigation item */
     .nav-item > a.open {
-        background-color: $accent-light;
+        background-color: $accent-main;
         color:white;
         border-bottom: none;
         z-index: 1;
@@ -89,6 +95,15 @@
         background-color: lighten($accent-super-light, 10%);
         min-width: 250px;
 
+        .active {
+            background-color: lighten($accent-super-light, 10%);
+            a {
+                color:$accent-main;
+                &:hover{
+                    color:white;
+                }
+            }
+        }
         ul {
             display: block;
             vertical-align: top;
@@ -96,6 +111,7 @@
             padding: 0;
             
             a {
+                color:$accent-main;
                 &:before {
                     content: "\2014\0020";
                 }
@@ -107,10 +123,40 @@
             margin: 0;
             padding: 0;
 
+            a {
+                color:$accent-main;
+            }
             a:hover {
                 background-color:lighten($accent-light, 10%);
+                color:white;
             }
         }
     }
 }
+
+/* -------------------------------------------------------------------------*/
+/* Exhibits */
+.exhibits.show {
+    #primary {
+        @include span-columns (8,12);
+        .exhibit-description, .exhibit-credits {
+            padding-right:1em;
+        }
+    }
+    #exhibit-pages {
+        @include span-columns (4 omega, 12);
+    }
+    #exhibit-nav-next, 
+        #exhibit-nav-prev {
+            width: initial;
+        }
+    #exhibit-nav-up {
+        clear:none;
+        width:33%;
+        .current-page {
+            clear:none;
+        }
+    }
+}
+
 

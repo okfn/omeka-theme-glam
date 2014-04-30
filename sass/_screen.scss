@@ -32,19 +32,16 @@ body {
        #search-container{@include span-columns(4 omega);}
        .nav-menu {@include span-columns (4); margin-right:0;}
        #content {@include span-columns (4);}
-/*       #primary {@include span-columns (4);}
-*/       .secondary-nav {@include horizontal-list(10px);}
+       .secondary-nav {@include horizontal-list(10px);}
        .pagination {@include span-columns(4);}
        #item-filters {@include span-columns (4 omega);}
        #sort-links{@include span-columns(4);}
        #outputs {@include span-columns(4)}
        #advanced-search-form label {@include span-columns (4);}
        #advanced-search-form .inputs {@include span-columns (4 omega);}
-/*       #advanced-search-form input {@include span-columns (3);}
-*/       .hentry .item-img{@include span-columns(4 omega);}
+       .hentry .item-img{@include span-columns(4 omega);}
        .hentry .item-description {@include span-columns(4 omega);}
-/*       #exhibit-pages {@include span-columns (4);}
-*/       footer {@include bleed($grid-padding);@include span-columns(4);}
+       footer {@include bleed($grid-padding);@include span-columns(4);}
        #bottom-nav {display: none;}
 
         @include at-breakpoint(30em 8) {
@@ -59,8 +56,7 @@ body {
             .pagination {@include span-columns(8);}
             #sort-links {@include span-columns(8);}
             #recent-items {@include span-columns (8);}
-/*            #exhibit-pages {@include span-columns (8);}
-*/            #bottom-nav {display:none;}
+            #bottom-nav {display:none;}
         }
         @include at-breakpoint(60em 12) {
             @include container;
@@ -91,7 +87,7 @@ body {
     .element, 
     .collection,
     .exhibit {
-        margin:1em 0 1.5em 0;
+        margin:1em 0;
         overflow: auto;
         clear:both;
 }
@@ -297,7 +293,6 @@ a {
         display: block;
         width: 100%;
         @include trailing-border(1px, 0, $base-font-size, solid);
-
         .active a {
             color:white;
         }
@@ -322,31 +317,32 @@ a {
     .sub-nav {
         display:none;
         background-color: #c0b6c1;
-
-        &.open {
-            display: block;
-            width:100%;
-            min-width: intrinsic;
-            position:relative;
-            margin:0;
+    }
+    .sub-nav.open {
+        display: block;
+        width:100%;
+        min-width: intrinsic;
+        position:relative;
+        margin:0;
+        padding:0;
+        top:0;
+        li {
             padding:0;
-            top:0;
-            li {
-                padding:0;
-                a {
-                    color:$accent-main;
-                    padding:1em;
-                    border-bottom:1px solid white;
-                }
-                
-                a:hover {
-                    color:white;
-                    text-decoration: none;
-                    background-color:#c0b6c1;
-
-                }
-
+            a {
+                color:$accent-main;
+                padding:1em;
+                border-bottom:1px solid white;
             }
+            
+            a:hover {
+                color:white;
+                text-decoration: none;
+                background-color:lighten($accent-light, 10%);
+            }
+
+        }
+        ul a:before {
+            content: "\2014\0020";
         }
     }
 }
@@ -394,10 +390,6 @@ form {
     button, 
         select,
         .submit,
-        input {
-            /*@include border-radius(3px);
-            background-color: $grey-super-light;*/
-        }
     button, #form-submit, #send {
         padding:2px 10px;
     }
@@ -513,8 +505,7 @@ form {
         }
         
         label {
-    /*        font-size: $base-font-size;
-    */        font-weight: normal;
+            font-weight: normal;
             float:left;
         }
         
@@ -646,9 +637,10 @@ th {
         padding: 1em 0;
     }
     &.show {
-        .item {
+        h3 {
+            font-size: 25px;
+            padding:.5em 0;
             border-top:2px solid $grey-light;
-
         }
     }
 }
@@ -712,18 +704,6 @@ th {
             }
         }
     }
-    @media screen and (min-width:60em) {
-        #primary {
-            @include span-columns (8,12);
-            .exhibit-description, .exhibit-credits {
-                padding-right:1em;
-            }
-        }
-        #exhibit-pages {
-            @include span-columns (4 omega, 12);
-        }
-    }
-
 }
 .exhibits.show {
     #exhibit-pages {
@@ -801,13 +781,9 @@ th {
                 a {
                     padding:.5em 1em .5em 1em;
                     display: initial;
-/*                    border-top:1px solid $accent-main;
-*/                }
+                }
             }
         }
-/*        @media screen and (min-width:60em) {
-            @include span-columns (3 omega,12);
-        }*/
     }
     .exhibit-block {
         margin-top:1em;
@@ -842,38 +818,9 @@ th {
         #exhibit-nav-up {
             clear:both;
             width:100%;
-        }
-
-        @media screen and (min-width:60em){
-            #exhibit-nav-next, 
-            #exhibit-nav-prev {
-                width: initial;
-            }
-            #exhibit-nav-up {
-                clear:none;
-                width:33%;
-                .current-page {
-                    clear:none;
-                }
-            }
-
-        }    
+        } 
     }
-
 }
-
-
-/*@media screen and (min-width:60em) {
-    .exhibits #wrap{
-        #primary {
-            @include span-columns (9,12);
-        }
-        #exhibit-pages {
-            @include span-columns (3 omega, 12);
-        }
-    }
-}*/
-
 
 /* -------------------------------------------------------------------------*/
 /* TagCloud */
