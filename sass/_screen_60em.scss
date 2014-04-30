@@ -1,51 +1,115 @@
-/* -------------------------------------------------------------------------*/
-/* Navigation */
-
-#top-nav {
-    overflow: auto;
-    background-color:lighten($accent-super-light, 5%);
-    min-height: 40px;
-    position:relative;
-
-    li {
-        display: block;
-        width: 100%;
-        @include trailing-border(1px, 0, $base-font-size, solid);
-/*        &:hover{
-            background-color:$accent-main;
-        }
-*/
-        .active a {
-            color:white;
-        }
+/*------------ Mega Menu Styles -----------*/
+/* mega menu list */
+/*** Adapted from Emiglio by Kim Nguyen ****/
+/* mega menu list */
+#top-nav .nav-menu {
+    width: 100%;
+    display: block;
+    overflow:initial;
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    z-index: 15;
+    float: left;
+    background-color: white;
+    
+    .active {
+        background-color: lighten($accent-light, 10%);
         a {
-            display:block;
-            &:hover {
-                background-color:$accent-main;
-                @include link-colors(white);
-            }
-        }
-        
-        &:last-of-type {
-            border-color: transparent;
-        }
-
-        a.open {
-            color:white;
-            background-color: $accent-main;
+            color:white !important;
         }
     }
-    .sub-nav.open {
-        width: 100%;
-        min-width: intrinsic;
-        position:relative;
-        top:0;
-        
-        a:hover {
-            background-color:#dce6ec;
-            color:$accent-main;
-            text-decoration: none;
+    
+    li {
+        width:auto;
+    }
+    a {
+        text-decoration: none;
+        padding:.5em;
 
+        &:link, &:visited {
+            color: $accent-main;
+        }
+        
+        &:hover, &:focus {
+            background-color: $accent-light;
+        }
+    }
+
+/* a top level navigation item in the mega menu */
+    .nav-item {
+        list-style: none;
+        display: block;
+        float: left;
+        padding: 0;
+        margin: 0;
+        position: relative;
+
+    }
+/* first descendant link within a top level navigation item */
+    .nav-item > a {
+        position: relative;
+        display: inline-block;
+        padding: .5em 1em .5em .5em;
+        margin: 0;
+        border: 0;
+        color: $accent-main;
+        &:hover {
+            color:white;
+        }
+    }
+/* focus/open states of first descendant link within a top level 
+   navigation item */
+    .nav-item > a:focus,
+    .nav-item > a.open {
+        background-color: $accent-light;
+    }
+
+/* open state of first descendant link within a top level 
+   navigation item */
+    .nav-item > a.open {
+        background-color: $accent-light;
+        color:white;
+        border-bottom: none;
+        z-index: 1;
+    }
+    .sub-nav {
+        position: absolute;
+        display: none;
+        top: 2.5em;
+        padding: 0;
+        border: 0;
+        margin: 0;
+        background-color: $accent-light;
+        z-index: 2;
+    }
+    .sub-nav.open {
+        display: block;
+        background-color: lighten($accent-super-light, 10%);
+        min-width: 250px;
+
+        ul {
+            display: block;
+            vertical-align: top;
+            margin: 0;
+            padding: 0;
+            
+            a {
+                &:before {
+                    content: "\2014\0020";
+                }
+            }
+        }
+        li {
+            display: block;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+
+            a:hover {
+                background-color:lighten($accent-light, 10%);
+            }
         }
     }
 }
