@@ -1375,14 +1375,14 @@ form button, form #form-submit, form #send {
 }
 /* line 456, ../sass/_screen.scss */
 #search-container.with-advanced input[type=text] {
-  width: 70%;
+  width: 65%;
   float: left;
   height: 20px;
   margin: 0;
 }
 /* line 463, ../sass/_screen.scss */
 #search-container.with-advanced input[type=submit] {
-  width: auto;
+  width: 25%;
   float: left;
   padding: 4px;
   margin: 0;
