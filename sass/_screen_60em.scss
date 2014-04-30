@@ -23,6 +23,7 @@
     
     li {
         width:auto;
+        border:none;
     }
     a {
         text-decoration: none;
@@ -54,7 +55,7 @@
     .nav-item > a {
         position: relative;
         display: inline-block;
-        padding: .5em 1em .5em .5em;
+        padding: .5em 1em;
         margin: 0;
         border: 0;
         color: $accent-main;
@@ -136,7 +137,7 @@
 
 /* -------------------------------------------------------------------------*/
 /* Exhibits */
-.exhibits.show {
+.exhibits.summary {
     #primary {
         @include span-columns (8,12);
         .exhibit-description, .exhibit-credits {
@@ -146,6 +147,8 @@
     #exhibit-pages {
         @include span-columns (4 omega, 12);
     }
+}
+.exhibits.show {
     #exhibit-nav-next, 
         #exhibit-nav-prev {
             width: initial;

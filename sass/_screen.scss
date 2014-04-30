@@ -292,11 +292,14 @@ a {
     .nav-menu {
         overflow: auto;
         background-color:lighten($accent-super-light, 5%);
+        .active {
+            background-color: lighten($accent-main, 10%);
+            a{color:white;}
+        }
     }
     li {
         display: block;
         width: 100%;
-        @include trailing-border(1px, 0, $base-font-size, solid);
         .active a {
             color:white;
         }
@@ -306,6 +309,7 @@ a {
             &:hover {
                 background-color:$accent-main;
                 @include link-colors(white);
+                text-decoration: none;
             }
         }
         
@@ -835,13 +839,12 @@ th {
                 a {
                     display:block;
                     padding-left:1em;
-                    background-image: url("../images/nav-bg.png");
-                    background-repeat:no-repeat;
-                    background-position: left center;
                     &:hover{text-decoration:none;}
                 }
-                ul {
-                    margin-left:2em;
+                ul a {
+                    &:before {
+                        content: "\2014\0020";
+                    }
                 }
             }
         }
@@ -904,6 +907,7 @@ th {
                 font-family:$font-family-title;
                 text-transform: uppercase;
                 font-size: 1.25em;
+                padding-bottom:.5em;
             }
         }
     }
@@ -915,14 +919,14 @@ th {
             margin:.5em 0;
 /*            @include horizontal-list;
 */            li {
-                background-image: url("../images/nav-bg.png");
-                background-repeat:no-repeat;
-                background-position: left center;
                 padding:.5em 0;
                 border:none;
                 a {
-                    padding:.5em 1em .5em 1em;
+                    padding:.5em 1em .5em 0;
                     display: initial;
+                    &:before {
+                        content: "\2014\0020";
+                    }
                 }
             }
         }
@@ -930,6 +934,8 @@ th {
     .exhibit-block {
         margin-top:1em;
         padding-right:1em;
+        overflow: auto;
+        clear:both;
         .exhibit-items.left {
             margin-right:5%;
         }
