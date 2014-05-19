@@ -1428,7 +1428,7 @@ th {
 }
 .exhibits.show #exhibit-pages #secondary-nav ul li {
   padding: 0;
-  margin-right: 5px;
+  margin: 0 5px 5px 0;
   display: block;
   float: left;
 }
@@ -1461,7 +1461,7 @@ th {
   border: none;
   display: block;
   float: left;
-  margin-right: 5px;
+  margin: 0 5px 5px 0;
 }
 .exhibits.show #exhibit-child-pages .exhibit-child-nav li a {
   padding: 10px;
@@ -1471,6 +1471,9 @@ th {
   background-color: #684b98;
   color: white;
   text-decoration: none;
+}
+.exhibits.show #exhibit-child-pages .exhibit-child-nav li a:before {
+  content: "\2014\0020";
 }
 .exhibits.show .exhibit-block {
   margin-top: 1em;

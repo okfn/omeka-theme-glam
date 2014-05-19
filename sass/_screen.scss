@@ -866,7 +866,7 @@ th {
                 }
                 li {
                     padding:0;
-                    margin-right:5px;
+                    margin:0 5px 5px 0;
                     display:block;
                     float:left;
 
@@ -895,10 +895,11 @@ th {
                 border:none;
                 display:block;
                 float:left;
-                margin-right:5px;
+                margin:0 5px 5px 0;
                 
                 a {
                     @include link-button;
+                    @include line-button;
                 }
             }
         }
