@@ -84,6 +84,17 @@
         #bottom-nav {display: block;}
     }  
 } 
+
+/* -------------------------------------------------------------------------*/
+/* General */
+body {
+    background-color:$background-color;
+    font-family: $font-family-main;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+    color: $text-color;
+    margin:0;
+}
 .element-set,
     .item,
     .element, 
@@ -102,16 +113,6 @@
         margin:1em 0 1.5em 0;
     }
 
-/* -------------------------------------------------------------------------*/
-/* General */
-body {
-    background-color:$background-color;
-    font-family: $font-family-main;
-    font-size: $base-font-size;
-    line-height: $base-line-height;
-    color: $text-color;
-    margin:0;
-}
 #content {
     padding:1em 0 2em 0;
     overflow: auto;
@@ -617,10 +618,9 @@ th {
 /* -------------------------------------------------------------------------*/
 /* Browse and Item Pages */
 
-#home .item {
+#recent-items .item {
     border-top:1px solid $grey-light;
 }
-
     
 .item {
     overflow: auto;
@@ -904,7 +904,7 @@ th {
                 }
                 li {
                     padding:0;
-                    background-color: $accent-super-light;
+                    background-color: lighten($accent-super-light, 5%);
                     margin-right:5px;
                     display:block;
                     float:left;
@@ -941,8 +941,16 @@ th {
 */            li {
                 padding:.5em 0;
                 border:none;
+                display:block;
+                float:left;
+                background-color: lighten($accent-super-light, 5%);
+                margin-right:5px;
+                &:hover{
+                    background-color:$accent-main;
+                    a {color:white;}
+                }
                 a {
-                    padding:.5em 1em .5em 0;
+                    padding:.5em 1em;
                     display: initial;
                     &:before {
                         content: "\2014\0020";
