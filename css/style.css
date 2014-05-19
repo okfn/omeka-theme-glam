@@ -781,15 +781,14 @@ body #wrap #bottom-nav {
   /* line 79, ../sass/_screen.scss */
   body #wrap .hentry .item-img {
     width: 22.85714%;
-    float: left;
-    margin-right: 2.85714%;
+    float: right;
+    margin-right: 0;
   }
   /* line 80, ../sass/_screen.scss */
   body #wrap .hentry .item-description {
     width: 74.28571%;
     float: left;
     margin-right: 2.85714%;
-    margin-right: 0em;
   }
   /* line 81, ../sass/_screen.scss */
   body #wrap .hentry .tags {

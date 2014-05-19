@@ -76,8 +76,8 @@ body {
             #featured-collection {padding-right:1em;}
             #featured-exhibit {padding-right:1em;}
             #recent-items {@include span-columns (5 omega, 12);}
-            .hentry .item-img{@include span-columns(3, 12);}
-            .hentry .item-description {@include span-columns(9,12);margin-right:0em;}
+            .hentry .item-img{@include span-columns(3 omega, 12);}
+            .hentry .item-description {@include span-columns(9,12);}
             .hentry .tags {@include span-columns (12);}        
             #advanced-search-form label {@include span-columns (3,12);}
             #advanced-search-form .label {@include span-columns (3,12);}
