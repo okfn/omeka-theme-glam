@@ -158,6 +158,11 @@ a {
 
 /* -------------------------------------------------------------------------*/
 /* Navigation */
+.browse {
+    .secondary-nav li, #secondary-nav li{
+        @include line-button;   
+    }
+}
 
 .navigation, 
     #sort-links {
@@ -173,10 +178,9 @@ a {
 }
 
 .secondary-nav, #secondary-nav {
-    @include horizontal-list(5px);
     margin-bottom: 1em;
-    li {
-        @include line-button;
+    li {   
+        margin-right:10px;
         &.active a {
             font-weight: bold;
         }
@@ -279,7 +283,7 @@ a {
     }
     .sub-nav {
         display:none;
-        background-color: #c0b6c1;
+        background-color: lighten($accent-super-light, 5%);
     }
     .sub-nav.open {
         display: block;

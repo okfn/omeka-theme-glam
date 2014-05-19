@@ -644,6 +644,10 @@ a:hover {
 
 /* -------------------------------------------------------------------------*/
 /* Navigation */
+.browse .secondary-nav li:before, .browse #secondary-nav li:before {
+  content: "\2014\0020";
+}
+
 .navigation,
 #sort-links {
   list-style: none;
@@ -660,34 +664,10 @@ a:hover {
 }
 
 .secondary-nav, #secondary-nav {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  overflow: hidden;
-  *zoom: 1;
   margin-bottom: 1em;
 }
 .secondary-nav li, #secondary-nav li {
-  list-style-image: none;
-  list-style-type: none;
-  margin-left: 0;
-  white-space: nowrap;
-  display: inline;
-  float: left;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-.secondary-nav li:first-child, .secondary-nav li.first, #secondary-nav li:first-child, #secondary-nav li.first {
-  padding-left: 0;
-}
-.secondary-nav li:last-child, #secondary-nav li:last-child {
-  padding-right: 0;
-}
-.secondary-nav li.last, #secondary-nav li.last {
-  padding-right: 0;
-}
-.secondary-nav li:before, #secondary-nav li:before {
-  content: "\2014\0020";
+  margin-right: 10px;
 }
 .secondary-nav li.active a, #secondary-nav li.active a {
   font-weight: bold;
@@ -867,7 +847,7 @@ a:hover {
 }
 #top-nav .sub-nav {
   display: none;
-  background-color: #c0b6c1;
+  background-color: #eaeaea;
 }
 #top-nav .sub-nav.open {
   display: block;
