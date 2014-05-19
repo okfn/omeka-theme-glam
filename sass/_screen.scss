@@ -35,7 +35,7 @@ body {
        overflow: auto;
        #search-container{@include span-columns(4 omega);}
        .nav-menu {@include span-columns (4); margin-right:0;}
-       #content {@include span-columns (4);}
+       #content {@include span-columns (4 omega);}
        .secondary-nav {@include horizontal-list(10px);}
        .pagination {@include span-columns(4);}
        #item-filters {@include span-columns (4 omega);}
@@ -45,7 +45,7 @@ body {
        #advanced-search-form .inputs {@include span-columns (4 omega);}
        .hentry .item-img{@include span-columns(4 omega);}
        .hentry .item-description {@include span-columns(4 omega);}
-       footer {@include bleed($grid-padding);@include span-columns(4);}
+       footer {@include span-columns(4 omega);}
        #bottom-nav {display: none;}
 
         @include at-breakpoint(30em 8) {
@@ -55,7 +55,7 @@ body {
             #site-title {@include span-columns(8);}
             #search-container {@include span-columns(8 omega);}
             #top-nav {@include span-columns (8);}
-            #content {@include span-columns (8);}
+            #content {@include span-columns (8 omega);}
             .secondary-nav {@include horizontal-list (1em);}
             .pagination {@include span-columns(8);}
             #sort-links {@include span-columns(8);}
@@ -111,7 +111,6 @@ body {
     font-family: $font-family-main;
     font-size: $base-font-size;
     line-height: $base-line-height;
-    @include establish-baseline;
     color: $text-color;
     margin:0;
 }
@@ -142,7 +141,7 @@ blockquote {
     margin-top:1em;
 }
 footer {
-    padding:.5em;
+    padding:.5em 0;
     overflow: auto;
     border-top:5px double $accent-super-light;
 }
@@ -152,7 +151,7 @@ footer {
 #{headings()} {
     font-family: $font-family-title;
     font-weight:normal;
-    line-height: normal;
+    line-height: $base-line-height;
     padding: .5em 0;
     margin:0;
     color: $grey-medium;
@@ -184,7 +183,7 @@ h6 {
     font-variant: small-caps;
     font-size: $base-font-size *3.5;
     font-weight: bold;
-    line-height: .9em;
+    line-height: $base-line-height * .75;
     margin: .5em 0;
     a{text-decoration: none;color:$accent-dark;}
 }
@@ -192,7 +191,7 @@ h6 {
 /* -------------------------------------------------------------------------*/
 /* Links */
 a {
-    @include link-colors($accent-main, $accent-bright, $accent-light, $accent-dark, $accent-dark);
+    @include link-colors($accent-main, $accent-bright, $accent-light, lighten($accent-main, 10%), $accent-dark);
     text-decoration: none;
     &:hover{text-decoration:underline;}
 }
@@ -365,7 +364,6 @@ fieldset {
 
     legend {
         font-size:1.5em;
-        line-height:1em;
         margin:1em 0 0 ;
     }
     input.textinput {
