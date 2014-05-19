@@ -1,5 +1,6 @@
 @import "susy";
 @import "base";
+@import "mixins";
 @import "compass";
 
 /* -------------------------------------------------------------------------*/
@@ -84,6 +85,17 @@
         #bottom-nav {display: block;}
     }  
 } 
+
+/* -------------------------------------------------------------------------*/
+/* General */
+body {
+    background-color:$background-color;
+    font-family: $font-family-main;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+    color: $text-color;
+    margin:0;
+}
 .element-set,
     .item,
     .element, 
@@ -102,16 +114,6 @@
         margin:1em 0 1.5em 0;
     }
 
-/* -------------------------------------------------------------------------*/
-/* General */
-body {
-    background-color:$background-color;
-    font-family: $font-family-main;
-    font-size: $base-font-size;
-    line-height: $base-line-height;
-    color: $text-color;
-    margin:0;
-}
 #content {
     padding:1em 0 2em 0;
     overflow: auto;
@@ -211,17 +213,14 @@ a {
         }
 }
 
-.secondary-nav, #secondary-nav {
-    ul {
-        li {
-            padding-bottom:.5em;
-            &.active a {
-                text-decoration: underline;
-                font-weight: bold;
-            }
-            a:visited {
-                color:$accent-main;
-            }
+.secondary-nav ul, #secondary-nav ul {
+    li {
+        @include line-button;
+        &.active a {
+            font-weight: bold;
+        }
+        a:visited {
+            color:$accent-main;
         }
     }
 }
@@ -238,8 +237,13 @@ a {
         }
         input {
             width:30px;
+            text-align:center;
         } 
-    } 
+    }
+    .pagination_next a, 
+        .pagination_previous a {
+            @include link-button;
+        } 
 }
 .item-pagination {
     @include horizontal-list;
@@ -254,7 +258,7 @@ a {
     li {
         float:left;
         padding:0 5px 0 10px;
-
+        @include line-button;
         &.sorting a {
             text-decoration: underline;
             font-weight: bold;
@@ -272,8 +276,8 @@ a {
 #bottom-nav {
     li {
         padding-right:20px;
+        @include line-button;
         &.active {
-            text-decoration: underline;
             font-weight: bold;
         }
         ul{
@@ -481,13 +485,13 @@ form {
     }
 
     .show-advanced {
-        width: 6%;
+        width: 4%;
         display: block;
         float: left;
         text-align: center;
-        padding:10px 0 0 0;
-        height: $base-line-height;
-
+        @include link-button;
+        padding:2px;
+        margin: 0 2px;
         &:hover {
             text-decoration: none;
         }
@@ -617,10 +621,9 @@ th {
 /* -------------------------------------------------------------------------*/
 /* Browse and Item Pages */
 
-#home .item {
-    border-top:1px solid $grey-light;
+#recent-items .item {
+    border-bottom:1px solid $grey-light;
 }
-
     
 .item {
     overflow: auto;
@@ -682,11 +685,13 @@ th {
 /* -------------------------------------------------------------------------*/
 /* TagCloud */
 .hTagcloud {
-    margin:2em 0;
+    margin:1em 0;
+    border-top:3px solid $grey-light;
     ul {
         list-style:none;
         margin-left:0;
         padding-left:0;
+        padding-top:1em;
         li {
             display:inline;
             a {
@@ -899,26 +904,17 @@ th {
                 float:left;
                 margin:0 0 5px 0;
                 .current a {
-                    color: white;
-
+                    background-color: lighten($accent-main, 5%);
+                    color:white;
                 }
                 li {
                     padding:0;
-                    background-color: $accent-super-light;
                     margin-right:5px;
                     display:block;
                     float:left;
-                    &.current {
-                        background-color: lighten($accent-main, 5%);
-                    }
-                    &:hover{
-                        background-color: $accent-main;
-                    }
+
                     a {
-                        padding:.5em 1em;
-                        &:hover{
-                            color:white;
-                        }
+                        @include link-button;
                     }
                     
                 }
@@ -939,14 +935,13 @@ th {
             margin:.5em 0;
 /*            @include horizontal-list;
 */            li {
-                padding:.5em 0;
                 border:none;
+                display:block;
+                float:left;
+                margin-right:5px;
+                
                 a {
-                    padding:.5em 1em .5em 0;
-                    display: initial;
-                    &:before {
-                        content: "\2014\0020";
-                    }
+                    @include link-button;
                 }
             }
         }
