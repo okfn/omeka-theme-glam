@@ -44,12 +44,16 @@
         display: block;
         float: left;
         padding: 0;
-        margin: 0;
+        margin: 0 5px 0 0;
+        background-color:lighten($accent-super-light, 5%);
         position: relative;
 
     }
-    .nav-item.active a{
-        color:white;
+    .nav-item.active {
+        background-color:lighten($accent-main, 10%);
+        a{
+            color:white;
+        }
     }
 /* first descendant link within a top level navigation item */
     .nav-item > a {
