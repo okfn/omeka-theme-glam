@@ -152,12 +152,12 @@
         @include span-columns (4 omega, 12);
     }
 }
-.exhibits.show {
+.exhibits.show #exhibit-page-navigation{
     #exhibit-nav-next, 
         #exhibit-nav-prev {
-            width: initial;
+            width: 33%;
         }
-    #exhibit-nav-up {
+     #exhibit-nav-up {
         clear:none;
         width:33%;
         .current-page {

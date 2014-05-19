@@ -26,66 +26,64 @@
 
 /* -------------------------------------------------------------------------*/
 /* Layout */
-body {
-    #wrap {
-        @include container;
-    /*    @include susy-grid-background;
-    */
-       background-color:white;
-       overflow: auto;
-       #search-container{@include span-columns(4 omega);}
-       .nav-menu {@include span-columns (4); margin-right:0;}
-       #content {@include span-columns (4 omega);}
-       .secondary-nav {@include horizontal-list(10px);}
-       .pagination {@include span-columns(4);}
-       #item-filters {@include span-columns (4 omega);}
-       #sort-links{@include span-columns(4);}
-       #outputs {@include span-columns(4)}
-       #advanced-search-form label {@include span-columns (4);}
-       #advanced-search-form .inputs {@include span-columns (4 omega);}
-       .hentry .item-img{@include span-columns(4 omega);}
-       .hentry .item-description {@include span-columns(4 omega);}
-       footer {@include span-columns(4 omega);}
-       #bottom-nav {display: none;}
+#wrap {
+    @include container;
+/*    @include susy-grid-background;
+*/
+   background-color:white;
+   overflow: auto;
+   #search-container{@include span-columns(4 omega);}
+   .nav-menu {@include span-columns (4); margin-right:0;}
+   #content {@include span-columns (4 omega);}
+   .secondary-nav {@include horizontal-list(10px);}
+   .pagination {@include span-columns(4);}
+   #item-filters {@include span-columns (4 omega);}
+   #sort-links{@include span-columns(4);}
+   #outputs {@include span-columns(4)}
+   #advanced-search-form label {@include span-columns (4);}
+   #advanced-search-form .inputs {@include span-columns (4 omega);}
+   .hentry .item-img{@include span-columns(4 omega);}
+   .hentry .item-description {@include span-columns(4 omega);}
+   footer {@include span-columns(4 omega);}
+   #bottom-nav {display: none;}
 
-        @include at-breakpoint(30em 8) {
-            @include container;
-    /*        @include susy-grid-background;
-    */
-            #site-title {@include span-columns(8);}
-            #search-container {@include span-columns(8 omega);}
-            #top-nav {@include span-columns (8);}
-            #content {@include span-columns (8 omega);}
-            .secondary-nav {@include horizontal-list (1em);}
-            .pagination {@include span-columns(8);}
-            #sort-links {@include span-columns(8);}
-            #recent-items {@include span-columns (8);}
-            #bottom-nav {display:none;}
-        }
-        @include at-breakpoint(60em 12) {
-            @include container;
-    /*        @include susy-grid-background;
-    */
-            #site-title {@include span-columns (7);}
-            #search-container {@include span-columns (4 omega);}
-            #featured {@include span-columns (7,12);}
-            .secondary-nav {@include horizontal-list(1em);}
-            .pagination {@include span-columns(12);}
-            #sort-links {@include span-columns(12);}
-            #featured-item {padding-right:1em;}
-            #featured-collection {padding-right:1em;}
-            #featured-exhibit {padding-right:1em;}
-            #recent-items {@include span-columns (5 omega, 12);}
-            .hentry .item-img{@include span-columns(3 omega, 12);}
-            .hentry .item-description {@include span-columns(9,12);}
-            .hentry .tags {@include span-columns (12);}        
-            #advanced-search-form label {@include span-columns (3,12);}
-            #advanced-search-form .label {@include span-columns (3,12);}
-            #advanced-search-form .inputs {@include span-columns (9 omega, 12);}
-            #bottom-nav {display: block;}
-        }  
-    } 
-}
+    @include at-breakpoint(30em 8) {
+        @include container;
+/*        @include susy-grid-background;
+*/
+        #site-title {@include span-columns(8);}
+        #search-container {@include span-columns(8 omega);}
+        #top-nav {@include span-columns (8);}
+        #content {@include span-columns (8 omega);}
+        .secondary-nav {@include horizontal-list (1em);}
+        .pagination {@include span-columns(8);}
+        #sort-links {@include span-columns(8);}
+        #recent-items {@include span-columns (8);}
+        #bottom-nav {display:none;}
+    }
+    @include at-breakpoint(60em 12) {
+        @include container;
+/*        @include susy-grid-background;
+*/
+        #site-title {@include span-columns (7);}
+        #search-container {@include span-columns (4 omega);}
+        #featured {@include span-columns (7,12);}
+        .secondary-nav {@include horizontal-list(1em);}
+        .pagination {@include span-columns(12);}
+        #sort-links {@include span-columns(12);}
+        #featured-item {padding-right:1em;}
+        #featured-collection {padding-right:1em;}
+        #featured-exhibit {padding-right:1em;}
+        #recent-items {@include span-columns (5 omega, 12);}
+        .hentry .item-img{@include span-columns(3 omega, 12);}
+        .hentry .item-description {@include span-columns(9,12);}
+        .hentry .tags {@include span-columns (12);}        
+        #advanced-search-form label {@include span-columns (3,12);}
+        #advanced-search-form .label {@include span-columns (3,12);}
+        #advanced-search-form .inputs {@include span-columns (9 omega, 12);}
+        #bottom-nav {display: block;}
+    }  
+} 
 .element-set,
     .item,
     .element, 
@@ -395,11 +393,21 @@ form {
     input {
         padding:0;
     }
+    input[type="text"]{
+        height:$base-line-height;
+    }
+    input[type="submit"]{
+        padding:5px;
+    }
+    input[type="button"]{
+        padding:5px;
+    }
     button, 
         select,
         .submit,
-    button, #form-submit, #send {
-        padding:2px 10px;
+        #form-submit,
+        #send {
+        padding:4px 6px;
     }
 }
 
@@ -460,21 +468,20 @@ form {
     input[type=text] {
         width: 65%;
         float:left;
-        height:20px;
+        height:$base-line-height;
         margin:0;        
     }
     
     input[type=submit] {
         width: 25%;
         float:left;
-        padding:4px;
         margin:0;
 
 
     }
 
     .show-advanced {
-        width: 8%;
+        width: 6%;
         display: block;
         float: right;
         text-align: center;
@@ -834,7 +841,7 @@ th {
             li {
                 padding: .5em 0;
                 display:block;
-                border-top:2px solid $accent-light;
+                border-top:2px solid $accent-super-light;
 
                 a {
                     display:block;
@@ -853,13 +860,13 @@ th {
 .exhibits.show {
     #exhibit-pages {
         padding:1em 0;
-        border-bottom:2px solid $accent-light;
+        border-bottom:2px solid $accent-super-light;
         ul {
             margin:1em 0 0 0;
             list-style-type: none;
             li {
                 display:block;
-                border-top:2px solid $accent-light;
+                border-top:2px solid $accent-super-light;
 
                 a {
                     display:block;
@@ -885,19 +892,29 @@ th {
 
             }
             ul {
-                @include horizontal-list(.5em);
+/*                @include horizontal-list(.5em);
+*/                
+                margin:0;
                 .current a {
-                    color: $accent-dark;
-                    background-color: lighten($accent-super-light, 5%);
+                    color: white;
 
                 }
                 li {
                     padding-top:.5em;
+                    background-color: $accent-super-light;
+                    margin-right:5px;
+                    display:block;
+                    float:left;
+                    &.current {
+                        background-color: lighten($accent-main, 5%);
+                    }
+                    &:hover{
+                        background-color: $accent-main;
+                    }
                     a {
                         padding:.5em;
                         &:hover{
-                            text-decoration:underline;
-                            color:$accent-light;
+                            color:white;
                         }
                     }
                     
@@ -958,7 +975,7 @@ th {
         .current-page {
             clear:both;
             display:block;
-            background-color: $accent-light;
+            background-color: $accent-main;
             padding:.5em 0;
             color:white;
             margin-top:.5em;
