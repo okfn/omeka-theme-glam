@@ -109,8 +109,9 @@ body {
 body {
     background-color:$background-color;
     font-family: $font-family-main;
-    font-size: $font-size-main;
-    line-height: 1.6em;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+    @include establish-baseline;
     color: $text-color;
     margin:0;
 }
@@ -157,23 +158,23 @@ footer {
     color: $grey-medium;
 }
 #{headings(4,6)} {
-    font-style: $font-size-main * 1.2;
+    font-style: $base-font-size * 1.2;
 }
 #{headings(5,6)} {
     font-weight: bold;
 }
 h1 {
     text-transform: uppercase;
-    font-size: $font-size-main *2.5;
+    font-size: $base-font-size *2.5;
     clear:both;
 }
 h2 {
-    font-size: $font-size-main * 2;
+    font-size: $base-font-size * 2;
     text-transform: capitalize;
     border-top: 3px solid $accent-super-light;
 }
 h3 {
-    font-size: $font-size-main * 1.5;
+    font-size: $base-font-size * 1.5;
 }
 h6 {
     font-size:italic;
@@ -181,7 +182,7 @@ h6 {
 #site-title {
     color:$accent-dark;
     font-variant: small-caps;
-    font-size: $font-size-main *3.5;
+    font-size: $base-font-size *3.5;
     font-weight: bold;
     line-height: .9em;
     margin: .5em 0;
