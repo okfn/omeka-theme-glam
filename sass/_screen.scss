@@ -384,6 +384,7 @@ fieldset {
 form {
     clear:both;
     padding:1em 0;
+    border:1px solic $grey-light;
     div {
         /*padding-bottom:1em;*/
         input {
@@ -476,16 +477,16 @@ form {
         width: 25%;
         float:left;
         margin:0;
-
-
+        height:$base-line-height;
     }
 
     .show-advanced {
         width: 6%;
         display: block;
-        float: right;
+        float: left;
         text-align: center;
-        padding:3px 0;
+        padding:10px 0 0 0;
+        height: $base-line-height;
 
         &:hover {
             text-decoration: none;
@@ -495,7 +496,7 @@ form {
     #advanced-form {
         // display: none;
         position: absolute;
-        top: 3em;
+        top: 3.5em;
         background-color: #fff;
         z-index: 20;
         width: 90%;
@@ -894,13 +895,15 @@ th {
             ul {
 /*                @include horizontal-list(.5em);
 */                
-                margin:0;
+                width:100%;
+                float:left;
+                margin:0 0 5px 0;
                 .current a {
                     color: white;
 
                 }
                 li {
-                    padding-top:.5em;
+                    padding:0;
                     background-color: $accent-super-light;
                     margin-right:5px;
                     display:block;
@@ -912,7 +915,7 @@ th {
                         background-color: $accent-main;
                     }
                     a {
-                        padding:.5em;
+                        padding:.5em 1em;
                         &:hover{
                             color:white;
                         }

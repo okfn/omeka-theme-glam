@@ -50,8 +50,12 @@
             <div id="site-title"><?php echo link_to_home_page(theme_logo()); ?></div>
 
             <div id="search-container">
+                <?php if (get_theme_option('use_advanced_search')): ?>
                 <?php echo search_form(array('show_advanced' => true)); ?>
-            </div><!-- end search -->
+                <?php else: ?>
+                <?Php echo search_form(); ?>
+                <?php endif; ?>
+            </div>
             
             <nav id="top-nav">
                 <?php echo public_nav_main(); ?>

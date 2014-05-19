@@ -1,11 +1,5 @@
 <?php echo head(array('bodyid'=>'home')); ?>
 
-<?php if ($description = option('description')): ?>
-<aside class="intro" role="introduction">
-    <p><?php echo $description; ?></p>
-</aside>
-<?php endif; ?>
-
 <?php if (get_theme_option('Homepage Text')): ?>
 <p class="intro"><?php echo get_theme_option('Homepage Text'); ?></p>
 <?php endif; ?>
