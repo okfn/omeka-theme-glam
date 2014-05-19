@@ -156,10 +156,17 @@
     #exhibit-nav-next, 
         #exhibit-nav-prev {
             width: 33%;
+            a {
+                @include link-button;
+            }
         }
      #exhibit-nav-up {
         clear:none;
         width:33%;
+        a{
+            display: block;
+            @include link-button;
+        }
         .current-page {
             clear:none;
         }

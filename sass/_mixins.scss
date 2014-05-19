@@ -1,0 +1,9 @@
+@mixin link-button {
+    padding: 10px;
+    background-color: lighten($accent-super-light, 5%);
+    &:hover {
+        background-color:$accent-main;
+        color:white;
+        text-decoration: none;
+   }
+}
