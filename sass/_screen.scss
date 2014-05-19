@@ -213,10 +213,10 @@ a {
         }
 }
 
-.secondary-nav, #secondary-nav ul li{
+.secondary-nav ul, #secondary-nav ul {
     li {
+        @include line-button;
         &.active a {
-            text-decoration: underline;
             font-weight: bold;
         }
         a:visited {
@@ -258,7 +258,7 @@ a {
     li {
         float:left;
         padding:0 5px 0 10px;
-
+        @include line-button;
         &.sorting a {
             text-decoration: underline;
             font-weight: bold;
@@ -276,8 +276,8 @@ a {
 #bottom-nav {
     li {
         padding-right:20px;
+        @include line-button;
         &.active {
-            text-decoration: underline;
             font-weight: bold;
         }
         ul{
@@ -485,13 +485,13 @@ form {
     }
 
     .show-advanced {
-        width: 6%;
+        width: 4%;
         display: block;
         float: left;
         text-align: center;
-        padding:10px 0 0 0;
-        height: $base-line-height;
-
+        @include link-button;
+        padding:2px;
+        margin: 0 2px;
         &:hover {
             text-decoration: none;
         }
@@ -685,11 +685,13 @@ th {
 /* -------------------------------------------------------------------------*/
 /* TagCloud */
 .hTagcloud {
-    margin:2em 0;
+    margin:1em 0;
+    border-top:3px solid $grey-light;
     ul {
         list-style:none;
         margin-left:0;
         padding-left:0;
+        padding-top:1em;
         li {
             display:inline;
             a {
