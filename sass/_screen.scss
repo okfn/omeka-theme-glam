@@ -29,62 +29,22 @@
 /* Layout */
 #wrap {
     @include container;
-/*    @include susy-grid-background;
-*/
-   background-color:white;
-   overflow: auto;
-   #search-container{@include span-columns(4 omega);}
-   .nav-menu {@include span-columns (4); margin-right:0;}
-   #content {@include span-columns (4 omega);}
-   .secondary-nav {@include horizontal-list(10px);}
-   .pagination {@include span-columns(4);}
-   #item-filters {@include span-columns (4 omega);}
-   #sort-links{@include span-columns(4);}
-   #outputs {@include span-columns(4)}
-   #advanced-search-form label {@include span-columns (4);}
-   #advanced-search-form .inputs {@include span-columns (4 omega);}
-   .hentry .item-img{@include span-columns(4 omega);}
-   .hentry .item-description {@include span-columns(4 omega);}
-   footer {@include span-columns(4 omega);}
-   #bottom-nav {display: none;}
+    /*@include susy-grid-background;*/
 
-    @include at-breakpoint(30em 8) {
-        @include container;
-/*        @include susy-grid-background;
-*/
-        #site-title {@include span-columns(8);}
-        #search-container {@include span-columns(8 omega);}
-        #top-nav {@include span-columns (8);}
-        #content {@include span-columns (8 omega);}
-        .secondary-nav {@include horizontal-list (1em);}
-        .pagination {@include span-columns(8);}
-        #sort-links {@include span-columns(8);}
-        #recent-items {@include span-columns (8);}
-        #bottom-nav {display:none;}
-    }
-    @include at-breakpoint(60em 12) {
-        @include container;
-/*        @include susy-grid-background;
-*/
-        #site-title {@include span-columns (7);}
-        #search-container {@include span-columns (4 omega);}
-        #featured {@include span-columns (7,12);}
-        .secondary-nav {@include horizontal-list(1em);}
-        .pagination {@include span-columns(12);}
-        #sort-links {@include span-columns(12);}
-        #featured-item {padding-right:1em;}
-        #featured-collection {padding-right:1em;}
-        #featured-exhibit {padding-right:1em;}
-        #recent-items {@include span-columns (5 omega, 12);}
-        .hentry .item-img{@include span-columns(3 omega, 12);}
-        .hentry .item-description {@include span-columns(9,12);}
-        .hentry .tags {@include span-columns (12);}        
-        #advanced-search-form label {@include span-columns (3,12);}
-        #advanced-search-form .label {@include span-columns (3,12);}
-        #advanced-search-form .inputs {@include span-columns (9 omega, 12);}
-        #bottom-nav {display: block;}
-    }  
-} 
+    overflow: auto;
+    #search-container{@include span-columns(12 omega);}
+    .nav-menu {@include span-columns (12); margin-right:0;}
+    #content {@include span-columns (12 omega);}
+    .pagination {@include span-columns(12);}
+    #item-filters {@include span-columns (12 omega);}
+    #sort-links{@include span-columns(12);}
+    #outputs {@include span-columns(12)}
+    #advanced-search-form label {@include span-columns (12);}
+    #advanced-search-form .inputs {@include span-columns (12 omega);}
+    .hentry .item-img{@include span-columns(12 omega);}
+    .hentry .item-description {@include span-columns(12 omega);}
+    footer {@include span-columns(12 omega);}
+}
 
 /* -------------------------------------------------------------------------*/
 /* General */
@@ -105,8 +65,7 @@ body {
         overflow: auto;
         clear:both;
 }
-/*#featured,
-*/    #featured-item,
+#featured-item,
     #featured-collection,
     #featured-exhibit, 
     #recent-items {
@@ -185,7 +144,7 @@ h6 {
     font-size: $base-font-size *3.5;
     font-weight: bold;
     line-height: $base-line-height * 2;
-    margin: .5em 0;
+    margin: 20px 0;
     a{text-decoration: none;color:$accent-dark;}
 }
 
@@ -214,6 +173,7 @@ a {
 }
 
 .secondary-nav, #secondary-nav {
+    @include horizontal-list(5px);
     margin-bottom: 1em;
     li {
         @include line-button;
@@ -275,16 +235,7 @@ a {
     }
 }
 #bottom-nav {
-    li {
-        padding-right:20px;
-        @include line-button;
-        &.active {
-            font-weight: bold;
-        }
-        ul{
-            display: none;
-        }
-    }
+   display: none;
 }
 
 /* -------------------------------------------------------------------------*/
@@ -449,9 +400,10 @@ form {
 /*-- Search--*/
 
 #search-container {
-    padding: 1em 0 1em 1em;
-    margin:0;
-
+    margin: 10px 0;
+    form {
+        padding: 0;
+    }
     input {
         margin:0 0 0 .5em;
     }
@@ -985,4 +937,3 @@ th {
         } 
     }
 }
-

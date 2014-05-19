@@ -1,3 +1,52 @@
+@import "susy";
+@import "base";
+@import "mixins";
+@import "compass";
+
+/* -------------------------------------------------------------------------*/
+/* Table of Contents 
+-- Layout
+-- General
+-- Search
+-- Navigation
+-- Exhibits
+
+/* -------------------------------------------------------------------------*/
+/* Layout */
+#wrap {
+    #site-title {@include span-columns (7,12);}
+    #search-container {@include span-columns (4 omega, 12);}
+    #featured {@include span-columns (7,12);}
+    .pagination {@include span-columns(12);}
+    #sort-links {@include span-columns(12);}
+    #recent-items {@include span-columns (5 omega, 12);}
+    .hentry .item-img{@include span-columns(3 omega, 12);}
+    .hentry .item-description {@include span-columns(9, 12);}
+    .hentry .tags {@include span-columns (12);}        
+    #advanced-search-form label {@include span-columns (3,12);}
+    #advanced-search-form .label {@include span-columns (3,12);}
+    #advanced-search-form .inputs {@include span-columns (9 omega, 12);}
+} 
+
+/* -------------------------------------------------------------------------*/
+/* General */
+
+#featured-image, 
+    #featured-collection, 
+    #featured-exhibit {
+        padding-right:1em;
+}
+
+/* -------------------------------------------------------------------------*/
+/* Search */
+
+#search-container {
+    margin: 30px 0;
+}
+
+/* -------------------------------------------------------------------------*/
+/* Navigation */
+
 /*------------ Mega Menu Styles -----------*/
 /* mega menu list */
 /*** Adapted from Emiglio by Kim Nguyen ****/
@@ -139,8 +188,23 @@
     }
 }
 
+#bottom-nav{
+    display: block;
+    li {
+        padding-right:20px;
+        @include line-button;
+        &.active {
+            font-weight: bold;
+        }
+        ul{
+            display: none;
+        }
+    }
+}
+
 /* -------------------------------------------------------------------------*/
 /* Exhibits */
+
 .exhibits.summary {
     #primary {
         @include span-columns (8,12);
