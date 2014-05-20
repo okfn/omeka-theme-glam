@@ -642,6 +642,7 @@ th {
     font-style: italic;
     a{
         @include link-button;
+        display: initial;
     }
 }
 

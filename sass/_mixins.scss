@@ -2,6 +2,7 @@
     padding: 5px;
     display: block;
     background-color: lighten($grey-light, 5%);
+    margin-bottom:.5em;
     &:hover {
         background-color:$accent-main;
         color:white;
