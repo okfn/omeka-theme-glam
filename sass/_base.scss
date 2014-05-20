@@ -8,7 +8,7 @@
 
 $total-columns  : 12;
 $column-width   : 4em;
-$gutter-width   : 2em;
+$gutter-width   : 1em;
 $grid-padding   : $gutter-width;
 
 $show-grid-backgrounds: true;
@@ -21,21 +21,17 @@ $background-color: #fff;
 $text-color: #444;
 
 
-$accent-dark: #5C3F8D;
-$accent-main: #684B98;
-$accent-light: #BE75CB;
-$accent-bright: #894292;
-$accent-super-light: #ddd;
+$accent-dark: #5C3F8D; // Slightly darker Purple for title and visited links.
+$accent-main: #684B98; // Purple
+$accent-light: #BE75CB; // Pink
 
+$grey-dark: #363636; // tag cloud
+$grey-medium: #555; //Headers
+$grey-light: #ddd; // Primary accent
 
-$grey-dark: #363636;
-$grey-medium: #555;
-$grey-light: #ccc;
-$grey-super-light: #eee;
-
-$accent-red: #C5355E;
-$accent-green: #72C334;
-$accent-yellow: #B7D338;
+$accent-red: #C5355E; // tag cloud
+$accent-green: #72C334; // tag cloud
+$accent-yellow: #B7D338; // tag cloud
 
 
 // ---------------------------------------------------------------------------

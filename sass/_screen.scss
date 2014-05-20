@@ -2,6 +2,7 @@
 @import "base";
 @import "mixins";
 @import "compass";
+@import "blueprint/form";
 
 /* -------------------------------------------------------------------------*/
 /* Table of Contents 
@@ -11,6 +12,8 @@
 ---- Headings
 ---- Links
 -- Navigation
+---- General Nav
+---- Mega-Menu Navigation
 -- Forms
 ---- Search
 ------ Advanced Search
@@ -29,8 +32,8 @@
 /* Layout */
 #wrap {
     @include container;
-    /*@include susy-grid-background;*/
-
+/*    @include susy-grid-background;
+*/
     overflow: auto;
     #search-container{@include span-columns(12 omega);}
     .nav-menu {@include span-columns (12); margin-right:0;}
@@ -47,7 +50,7 @@
 }
 
 /* -------------------------------------------------------------------------*/
-/* General */
+/* General Styles */
 body {
     background-color:$background-color;
     font-family: $font-family-main;
@@ -60,8 +63,9 @@ body {
     .item,
     .element, 
     .collection,
-    .exhibit {
-        margin:1em 0;
+    .exhibit, 
+    .hTagcloud {
+        padding:1em 0;
         overflow: auto;
         clear:both;
 }
@@ -81,7 +85,6 @@ abbr, acronym {
     border:none;
     font-style: normal;
 }
-
 .clear {
     clear:both;
 }
@@ -91,18 +94,16 @@ a.show {
 blockquote {
     font-style:italic;
 }
-
 .intro {
     font-style: italic;
 }
-
 #outputs {
     margin-top:1em;
 }
 footer {
     padding:.5em 0;
     overflow: auto;
-    border-top:5px double $accent-super-light;
+    border-top:5px double $grey-light;
 }
 /* -------------------------------------------------------------------------*/
 /* Headings */
@@ -129,7 +130,7 @@ h1 {
 h2 {
     font-size: $base-font-size * 2;
     text-transform: capitalize;
-    border-top: 3px solid $accent-super-light;
+    border-top: 3px solid $grey-light;
 }
 h3 {
     font-size: $base-font-size * 1.5;
@@ -145,19 +146,20 @@ h6 {
     font-weight: bold;
     line-height: $base-line-height * 2;
     margin: 20px 0;
-    a{text-decoration: none;color:$accent-dark;}
+    a{text-decoration:none; color:$accent-dark;}
 }
 
 /* -------------------------------------------------------------------------*/
 /* Links */
 a {
-    @include link-colors($accent-main, $accent-bright, $accent-light, lighten($accent-main, 10%), $accent-dark);
+    @include link-colors($accent-main, saturate($accent-light,5%), $accent-light, lighten($accent-main, 10%), $accent-dark);
     text-decoration: none;
     &:hover{text-decoration:underline;}
 }
 
+
 /* -------------------------------------------------------------------------*/
-/* Navigation */
+/* General Navigation */
 .navigation, 
     #sort-links {
         list-style:none; 
@@ -171,27 +173,30 @@ a {
         }
 }
 
-.secondary-nav, #secondary-nav {
-    margin-bottom: 1em;
-    li {   
-        margin-right:10px;
-        &.active a {
-            font-weight: bold;
+.secondary-nav, 
+    #secondary-nav {
+        margin-bottom: 1em;
+        li {   
+            margin-right:5px;
+            &.active a {
+                font-weight: bold;
+            }
+            a:visited {
+                color:$accent-main;
+            }
         }
-        a:visited {
-            color:$accent-main;
-        }
-    }
 }
-.browse {
-    .secondary-nav li, #secondary-nav li{
-        @include line-button;   
-    }
+.browse, 
+    .tags,
+    .items {
+        .secondary-nav li, #secondary-nav li{
+            @include line-button;   
+        }
 }
 
 .pagination{
     @include horizontal-list;
-    margin:2em 0 1em 0; 
+    margin:1em 0; 
     .page-input {
         form {
             padding:0;
@@ -203,6 +208,7 @@ a {
         input {
             width:30px;
             text-align:center;
+            margin:0;
         } 
     }
     .pagination_next a, 
@@ -236,24 +242,20 @@ a {
         }
     }
 }
-.exhibits.tags {
-    #secondary-nav {
-        @include horizontal-list(1em);
-    }
-}
+
 #bottom-nav {
    display: none;
 }
 
 /* -------------------------------------------------------------------------*/
-/* Navigation */
+/* Top Navigation - Mega Menu Styles */
 
 #top-nav {
     min-height: 40px;
-    position:relative;
-    .nav-menu {
+/*    position:relative;
+*/    .nav-menu {
         overflow: auto;
-        background-color:lighten($accent-super-light, 5%);
+        background-color:lighten($grey-light, 5%);
         .active {
             background-color: lighten($accent-main, 10%);
             a{color:white;}
@@ -286,7 +288,7 @@ a {
     }
     .sub-nav {
         display:none;
-        background-color: lighten($accent-super-light, 10%);
+        background-color: lighten($grey-light, 10%);
     }
     .sub-nav.open {
         display: block;
@@ -301,15 +303,16 @@ a {
             a {
                 color:$accent-main;
                 padding:1em;
-                border-bottom:1px solid white;
+                border-bottom:1px solid white;      
             }
-            
             a:hover {
                 color:white;
                 text-decoration: none;
                 background-color:lighten($accent-light, 10%);
             }
-
+        }
+        .active a{
+            color:white;
         }
         ul a:before {
             content: "\2014\0020";
@@ -319,148 +322,53 @@ a {
 
 /* -------------------------------------------------------------------------*/
 /* Forms */
-fieldset {
-    border:0;
-    padding:0;
-    margin-bottom:1em;
 
-    legend {
-        font-size:1.5em;
-        margin:1em 0 0 ;
-    }
-    input.textinput {
+form {
+    @include blueprint-form-sizes(80%, 80%, 250px);
+
+    fieldset {
+        border:0;
+        padding:0;
         margin-bottom:1em;
     }
-    label {
-        display:block;
-    }
-    select {
+    label, input, select {
         margin:1em 0;
     }
-    textarea{
-        margin-bottom:1em;
-    }
-    .field {
-        margin-bottom: .5em;    
-    }
-}
-form {
-    clear:both;
-    padding:1em 0;
-    border:1px solic $grey-light;
-    div {
-        /*padding-bottom:1em;*/
-        input {
-            padding: 2px 10px;
-        }
-    }
-    input {
-        padding:0;
-    }
-    input[type="text"]{
-        height:$base-line-height;
-    }
-    input[type="submit"]{
-        padding:5px;
-    }
-    input[type="button"]{
-        padding:5px;
-    }
-    button, 
-        select,
-        .submit,
-        #form-submit,
-        #send {
-        padding:4px 6px;
+    input, select {
+        margin-right: .5em;
     }
 }
 
-#content {
-    fieldset {
-        display:block;
-        clear:both;
-    }
-    .inputs {
-        overflow:hidden;
-        zoom:1;
-    }
-    .radioinputs {
-        label {
-            display:block;
-            float:left;
-            width:48%;
-            clear:none;
-        }
-    }
-    .search-entry {
-        padding-bottom:.5em;
-        select {
-            margin-bottom:.5em;
-        }
-    }
-    #submit_search {
-        margin:.5em 0 0 458px;
-        }   
-    }
-
-
+/* -------------------------------------------------------------------------*/
 /*-- Search--*/
 
 #search-container {
-    margin: 10px 0;
-    form {
-        padding: 0;
-    }
-    input {
-        margin:0 0 0 .5em;
-    }
-    a {
-        float:left;
-        font-size: 1em;
-        padding: 1em 0em;
-    }
-    h3 {
-        text-transform:uppercase;
-        font-size:1em;
-        margin:0;
-    }       
-}       
-#search-container.with-advanced {
-    font-size:.9em;
     #search-form {
         position:relative;
     }
     input[type=text] {
-        width: 65%;
+        width: 50%;
         float:left;
-        height:$base-line-height;
         margin:0;        
     }
-    
     input[type=submit] {
-        width: 25%;
         float:left;
         margin:0;
-        height:$base-line-height;
     }
-
     .show-advanced {
-        width: 4%;
+        @include link-button;
+        width: 10%;
         display: block;
         float: left;
         text-align: center;
-        @include link-button;
-        padding:2px;
+        padding:0;
         margin: 0 2px;
-        &:hover {
-            text-decoration: none;
-        }
-
+        border: 1px solid $grey-light;
     }
     #advanced-form {
         // display: none;
         position: absolute;
-        top: 3.5em;
+        top: 2em;
         background-color: #fff;
         z-index: 20;
         width: 90%;
@@ -468,72 +376,46 @@ form {
         border-color: $grey-light;
         border-top-color: #fff;
         padding:0 5%;
-
         text-align: left;
         
         &.closed {
             left: -9999px;
-        }
-        
+        }      
         &.open  {
             left: 0;
         }
-        
-        p {
-        }
-        
-        fieldset {
-        }
-        
         label {
             font-weight: normal;
-            float:left;
         }
-        
         input[type=checkbox],
         input[type=radio] {
             margin: rhythm(.25) 5px 0 0;
             float:left;
         }
-        
-        & > *:last-child {
-            margin-bottom: 0;
-        }
     }
 }
 
-
-
+/* -------------------------------------------------------------------------*/
+/* Advanced Search Form */
 #advanced-search-form {
     padding:2em 0;
     .field {
         border-top:1px solid $grey-light;
-        padding:.5em 0 1em 0;
         overflow: auto;
         .two {
-            @include span-columns(3,12);
             label {
                 width:100% !important;
             }
         }
-    }
-    .add_search {
-        padding:2px 10px;
-    }
-    input {
-        width:75%;
-    }
-    select {
-        margin-left:1px;
-    }
-    .search-entry{
-        margin-bottom:.5em;
-        overflow:auto;
-    }
-    .submit {
-        padding:2px 10px;
-        margin-top:1em;
-        width:100px;
+        .five select{
+            width:100% !important;
+        }
+        label, input, select, button {
+            margin:.5em 0;
+        }
+        label {
+            width:100%;
+        }
     }
 } 
 
@@ -644,9 +526,8 @@ th {
 
 /* -------------------------------------------------------------------------*/
 /* TagCloud */
+
 .hTagcloud {
-    margin:1em 0;
-    border-top:3px solid $grey-light;
     ul {
         list-style:none;
         margin-left:0;
@@ -664,7 +545,7 @@ th {
             a {
                 color: lighten($accent-green, 10%);
                 &:visited {
-                    color:$grey-super-light;
+                    color:lighten($grey-light, 5%);
                 }
                 &:hover {
                     color: darken($accent-green, 20%);
@@ -676,7 +557,7 @@ th {
             a {
                 color: $accent-green;
                 &:visited {
-                    color:$grey-super-light;
+                    color:lighten($grey-light, 5%);
                 }
                 &:hover {
                     color: lighten($accent-yellow, 10%);
@@ -777,15 +658,13 @@ th {
     margin-bottom: 1.5em;
     font-style: italic;
     a{
-        text-decoration: none;
-        &:hover{
-            text-decoration:underline;
-        }
+        @include link-button;
     }
 }
 
 /* -------------------------------------------------------------------------*/
 /* Maps */
+
 #map {
     #map-links {
         padding-top:0 !important;
@@ -807,7 +686,7 @@ th {
             li {
                 padding: .5em 0;
                 display:block;
-                border-top:2px solid $accent-super-light;
+                border-top:2px solid $grey-light;
 
                 a {
                     display:block;
@@ -823,16 +702,17 @@ th {
         }
     }
 }
+
 .exhibits.show {
     #exhibit-pages {
         padding:1em 0;
-        border-bottom:2px solid $accent-super-light;
+        border-bottom:2px solid $grey-light;
         ul {
             margin:1em 0 0 0;
             list-style-type: none;
             li {
                 display:block;
-                border-top:2px solid $accent-super-light;
+                border-top:2px solid $grey-light;
 
                 a {
                     display:block;
@@ -855,11 +735,8 @@ th {
             overflow:hidden;
             li {
                 border:none;
-
             }
-            ul {
-/*                @include horizontal-list(.5em);
-*/                
+            ul {               
                 width:100%;
                 float:left;
                 margin:0 0 5px 0;
@@ -875,8 +752,7 @@ th {
 
                     a {
                         @include link-button;
-                    }
-                    
+                    }       
                 }
             }
             .exhibit-title {
@@ -893,8 +769,7 @@ th {
         padding:.5em 0;
         .exhibit-child-nav {
             margin:.5em 0;
-/*            @include horizontal-list;
-*/            li {
+            li {
                 border:none;
                 display:block;
                 float:left;
@@ -923,13 +798,17 @@ th {
         clear:both;
         margin:0;
         padding:1em 0em;
-        div {
-            padding:.5em 0;
-        }
+        
         #exhibit-nav-next, 
             #exhibit-nav-prev {
                 width: 45%;
                 margin-top:.5em;
+                a {
+                    @include link-button;
+                    &:hover{
+                        color:white;
+                    }
+                }
             }
         .current-page {
             clear:both;
@@ -942,6 +821,15 @@ th {
         #exhibit-nav-up {
             clear:both;
             width:100%;
+            a {
+                display:block;
+                @include link-button;
+
+                &:hover{
+                    color:white;    
+                }
+            }
+
         } 
     }
 }

@@ -15,7 +15,7 @@
 /* Layout */
 #wrap {
     #site-title {@include span-columns (7,12);}
-    #search-container {@include span-columns (4 omega, 12);}
+    #search-container {@include span-columns (5 omega, 12);}
     #featured {@include span-columns (7,12);}
     .pagination {@include span-columns(12);}
     #sort-links {@include span-columns(12);}
@@ -42,8 +42,29 @@
 
 #search-container {
     margin: 30px 0;
-}
 
+    input[type=text] {
+        width: 70%;     
+    }
+    .show-advanced {
+        width: 5%;
+    }
+}
+/* -------------------------------------------------------------------------*/
+/* Advanced Search Form */
+#advanced-search-form {
+    .field {
+        .two {
+            @include span-columns(3,12);
+            label {
+                width:100% !important;
+            }
+        }
+        label, .label, input, select, button {
+           margin:1em 0;
+        }
+    }
+}
 /* -------------------------------------------------------------------------*/
 /* Navigation */
 
@@ -94,7 +115,7 @@
         float: left;
         padding: 0;
         margin: 5px 5px 0 0;
-        background-color:lighten($accent-super-light, 5%);
+        background-color:lighten($grey-light, 5%);
         position: relative;
 
     }
@@ -143,14 +164,15 @@
         margin: 0;
         background-color: $accent-light;
         z-index: 2;
+        border:1px solid lighten($grey-medium, 10%);
     }
     .sub-nav.open {
         display: block;
-        background-color: lighten($accent-super-light, 10%);
+        background-color: lighten($grey-light, 10%);
         min-width: 250px;
 
         .active {
-            background-color: lighten($accent-super-light, 10%);
+            background-color: lighten($grey-light, 10%);
             a {
                 color:$accent-main;
                 &:hover{
@@ -220,17 +242,10 @@
     #exhibit-nav-next, 
         #exhibit-nav-prev {
             width: 33%;
-            a {
-                @include link-button;
-            }
         }
      #exhibit-nav-up {
         clear:none;
         width:33%;
-        a{
-            display: block;
-            @include link-button;
-        }
         .current-page {
             clear:none;
         }
