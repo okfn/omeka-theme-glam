@@ -240,18 +240,29 @@
         @include span-columns (4 omega, 12);
     }
 }
-.exhibits.show #exhibit-page-navigation{
-    #exhibit-nav-next, 
-        #exhibit-nav-prev {
-            width: 33%;
+
+.exhibits.show {
+    #secondary-nav.exhibit-page-nav li {
+        width:100%;
+        float:left;
+        margin-top:.5em;
+        ul li {
+            width:auto;
+
         }
-     #exhibit-nav-up {
-        clear:none;
-        width:33%;
-        .current-page {
+    }
+    #exhibit-page-navigation{
+        #exhibit-nav-next, 
+            #exhibit-nav-prev {
+                width: 33%;
+            }
+         #exhibit-nav-up {
             clear:none;
+            width:33%;
+            .current-page {
+                clear:none;
+            }
         }
     }
 }
-
 

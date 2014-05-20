@@ -24,7 +24,7 @@
 ---- TagCloud
 -- Plugins
 ---- Simple Pages
----- Maps
+---- Geolocation
 ---- Exhibits
 
 /* -------------------------------------------------------------------------*/
@@ -76,7 +76,9 @@ body {
         overflow: auto;
         margin:1em 0 1.5em 0;
     }
-
+.intro {
+    font-style: italic;
+}
 #content {
     padding:1em 0 2em 0;
     overflow: auto;
@@ -94,8 +96,11 @@ a.show {
 blockquote {
     font-style:italic;
 }
-.intro {
-    font-style: italic;
+.view-items-link {
+    margin:1em 0 .5em 0;
+    a {
+        @include link-button;
+    }
 }
 #outputs {
     margin-top:1em;
@@ -130,7 +135,7 @@ h1 {
 h2 {
     font-size: $base-font-size * 2;
     text-transform: capitalize;
-    border-top: 3px solid $grey-light;
+    border-top: 4px solid $grey-light;
 }
 h3 {
     font-size: $base-font-size * 1.5;
@@ -224,7 +229,11 @@ a {
 }
 .item-pagination {
     @include horizontal-list;
-    padding-top:2em;
+    padding:2em 0 1em 0;
+
+    .next a, .previous a {
+        @include link-button;
+    }
 }
 
 #sort-links{
@@ -414,12 +423,9 @@ form {
         .five select{
             width:100% !important;
         }
-        label, input, select, button {
-            margin:.5em 0;
-        }
-        label {
-            width:100%;
-        }
+    }
+    label, input, select, button {
+        margin:.5em 0;
     }
 } 
 
@@ -459,6 +465,9 @@ th {
     }
 }
 .show {
+    .element {
+        border-top:1px solid $grey-light;
+    }
     .item-file {
         float:left;
         padding-right:1em;
@@ -479,21 +488,10 @@ th {
         margin: 0 0 1em 0;
         padding:0;
     }
-    .view-items-link {
-        margin:.5em 0;
-        a {
-            @include link-button;
-        }
-    }
-    .item h3 {
-        padding: 1em 0;
-    }
-    &.show {
-        h3 {
-            font-size: 25px;
-            padding:.5em 0;
-            border-top:2px solid $grey-light;
-        }
+
+    .item {
+        border-top:1px solid $grey-light;
+
     }
 }
 #item-filters {
@@ -647,7 +645,7 @@ th {
 }
 
 /* -------------------------------------------------------------------------*/
-/* Maps */
+/* Geolocation */
 
 #map {
     #map-links {
@@ -655,6 +653,19 @@ th {
     }
     #link-block {
         height:auto;
+    }
+}
+
+#geolocation {
+    margin:1em 0;
+}
+/* -------------------------------------------------------------------------*/
+/* Comments */
+#comments-container {
+    margin:1em 0;
+    #comments {
+        margin:0;
+        padding:0;
     }
 }
 
@@ -690,8 +701,8 @@ th {
 .exhibits.show {
     #exhibit-pages {
         padding:1em 0;
-        border-bottom:2px solid $grey-light;
-        ul {
+/*        border-bottom:2px solid $grey-light;
+*/        ul {
             margin:1em 0 0 0;
             list-style-type: none;
             li {

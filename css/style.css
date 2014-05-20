@@ -400,7 +400,7 @@ table {
 ---- TagCloud
 -- Plugins
 ---- Simple Pages
----- Maps
+---- Geolocation
 ---- Exhibits
 
 /* -------------------------------------------------------------------------*/
@@ -545,6 +545,10 @@ body {
   margin: 1em 0 1.5em 0;
 }
 
+.intro {
+  font-style: italic;
+}
+
 #content {
   padding: 1em 0 2em 0;
   overflow: auto;
@@ -568,8 +572,17 @@ blockquote {
   font-style: italic;
 }
 
-.intro {
-  font-style: italic;
+.view-items-link {
+  margin: 1em 0 .5em 0;
+}
+.view-items-link a {
+  padding: 10px;
+  background-color: #eaeaea;
+}
+.view-items-link a:hover {
+  background-color: #684b98;
+  color: white;
+  text-decoration: none;
 }
 
 #outputs {
@@ -610,7 +623,7 @@ h1 {
 h2, #item-filters .collection {
   font-size: 32px;
   text-transform: capitalize;
-  border-top: 3px solid #dddddd;
+  border-top: 4px solid #dddddd;
 }
 
 h3 {
@@ -764,7 +777,7 @@ a:hover {
   border: 0;
   overflow: hidden;
   *zoom: 1;
-  padding-top: 2em;
+  padding: 2em 0 1em 0;
 }
 .item-pagination li {
   list-style-image: none;
@@ -784,6 +797,15 @@ a:hover {
 }
 .item-pagination li.last {
   padding-right: 0;
+}
+.item-pagination .next a, .item-pagination .previous a {
+  padding: 10px;
+  background-color: #eaeaea;
+}
+.item-pagination .next a:hover, .item-pagination .previous a:hover {
+  background-color: #684b98;
+  color: white;
+  text-decoration: none;
 }
 
 #sort-links {
@@ -978,11 +1000,8 @@ form label, form input, form select {
 #advanced-search-form .field .five select {
   width: 100% !important;
 }
-#advanced-search-form .field label, #advanced-search-form .field input, #advanced-search-form .field select, #advanced-search-form .field button {
+#advanced-search-form label, #advanced-search-form input, #advanced-search-form select, #advanced-search-form button {
   margin: .5em 0;
-}
-#advanced-search-form .field label {
-  width: 100%;
 }
 
 /* -------------------------------------------------------------------------*/
@@ -1022,6 +1041,9 @@ th {
   padding: .5em 0;
 }
 
+.show .element {
+  border-top: 1px solid #dddddd;
+}
 .show .item-file {
   float: left;
   padding-right: 1em;
@@ -1062,25 +1084,8 @@ th {
   margin: 0 0 1em 0;
   padding: 0;
 }
-.collections .view-items-link {
-  margin: .5em 0;
-}
-.collections .view-items-link a {
-  padding: 10px;
-  background-color: #eaeaea;
-}
-.collections .view-items-link a:hover {
-  background-color: #684b98;
-  color: white;
-  text-decoration: none;
-}
-.collections .item h3 {
-  padding: 1em 0;
-}
-.collections.show h3 {
-  font-size: 25px;
-  padding: .5em 0;
-  border-top: 2px solid #dddddd;
+.collections .item {
+  border-top: 1px solid #dddddd;
 }
 
 #item-filters ul {
@@ -1236,12 +1241,26 @@ th {
 }
 
 /* -------------------------------------------------------------------------*/
-/* Maps */
+/* Geolocation */
 #map #map-links {
   padding-top: 0 !important;
 }
 #map #link-block {
   height: auto;
+}
+
+#geolocation {
+  margin: 1em 0;
+}
+
+/* -------------------------------------------------------------------------*/
+/* Comments */
+#comments-container {
+  margin: 1em 0;
+}
+#comments-container #comments {
+  margin: 0;
+  padding: 0;
 }
 
 /* -------------------------------------------------------------------------*/
@@ -1272,7 +1291,8 @@ th {
 
 .exhibits.show #exhibit-pages {
   padding: 1em 0;
-  border-bottom: 2px solid #dddddd;
+  /*        border-bottom:2px solid $grey-light;
+  */
 }
 .exhibits.show #exhibit-pages ul {
   margin: 1em 0 0 0;
@@ -1731,6 +1751,14 @@ th {
     display: inline;
   }
 
+  .exhibits.show #secondary-nav.exhibit-page-nav li {
+    width: 100%;
+    float: left;
+    margin-top: .5em;
+  }
+  .exhibits.show #secondary-nav.exhibit-page-nav li ul li {
+    width: auto;
+  }
   .exhibits.show #exhibit-page-navigation #exhibit-nav-next,
   .exhibits.show #exhibit-page-navigation #exhibit-nav-prev {
     width: 33%;
