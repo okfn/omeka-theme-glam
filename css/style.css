@@ -644,10 +644,6 @@ a:hover {
 
 /* -------------------------------------------------------------------------*/
 /* Navigation */
-.browse .secondary-nav li:before, .browse #secondary-nav li:before {
-  content: "\2014\0020";
-}
-
 .navigation,
 #sort-links {
   list-style: none;
@@ -674,6 +670,10 @@ a:hover {
 }
 .secondary-nav li a:visited, #secondary-nav li a:visited {
   color: #684b98;
+}
+
+.browse .secondary-nav li:before, .browse #secondary-nav li:before {
+  content: "\2014\0020";
 }
 
 .pagination {
@@ -715,12 +715,17 @@ a:hover {
   text-align: center;
 }
 .pagination .pagination_next a,
-.pagination .pagination_previous a {
+.pagination .pagination_previous a,
+.pagination .previous-page a,
+.pagination .next-page a {
   padding: 10px;
   background-color: #eaeaea;
+  line-height: 24px;
 }
 .pagination .pagination_next a:hover,
-.pagination .pagination_previous a:hover {
+.pagination .pagination_previous a:hover,
+.pagination .previous-page a:hover,
+.pagination .next-page a:hover {
   background-color: #684b98;
   color: white;
   text-decoration: none;
@@ -847,7 +852,7 @@ a:hover {
 }
 #top-nav .sub-nav {
   display: none;
-  background-color: #eaeaea;
+  background-color: #f7f7f7;
 }
 #top-nav .sub-nav.open {
   display: block;
