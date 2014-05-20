@@ -576,7 +576,8 @@ blockquote {
   margin: 1em 0 .5em 0;
 }
 .view-items-link a {
-  padding: 10px;
+  padding: 5px;
+  display: block;
   background-color: #eaeaea;
 }
 .view-items-link a:hover {
@@ -742,6 +743,9 @@ a:hover {
 .pagination li.last {
   padding-right: 0;
 }
+.pagination .page-input {
+  padding-top: 5px;
+}
 .pagination .page-input form {
   padding: 0;
 }
@@ -758,7 +762,8 @@ a:hover {
 .pagination .pagination_previous a,
 .pagination .previous-page a,
 .pagination .next-page a {
-  padding: 10px;
+  padding: 5px;
+  display: block;
   background-color: #eaeaea;
   line-height: 24px;
 }
@@ -799,7 +804,8 @@ a:hover {
   padding-right: 0;
 }
 .item-pagination .next a, .item-pagination .previous a {
-  padding: 10px;
+  padding: 5px;
+  display: block;
   background-color: #eaeaea;
 }
 .item-pagination .next a:hover, .item-pagination .previous a:hover {
@@ -943,7 +949,8 @@ form label, form input, form select {
   margin: 0;
 }
 #search-container .show-advanced {
-  padding: 10px;
+  padding: 5px;
+  display: block;
   background-color: #eaeaea;
   width: 10%;
   display: block;
@@ -1231,7 +1238,8 @@ th {
   font-style: italic;
 }
 #simple-pages-breadcrumbs a {
-  padding: 10px;
+  padding: 5px;
+  display: block;
   background-color: #eaeaea;
 }
 #simple-pages-breadcrumbs a:hover {
@@ -1339,7 +1347,8 @@ th {
   float: left;
 }
 .exhibits.show #exhibit-pages #secondary-nav ul li a {
-  padding: 10px;
+  padding: 5px;
+  display: block;
   background-color: #eaeaea;
 }
 .exhibits.show #exhibit-pages #secondary-nav ul li a:hover {
@@ -1368,7 +1377,8 @@ th {
   margin: 0 5px 5px 0;
 }
 .exhibits.show #exhibit-child-pages .exhibit-child-nav li a {
-  padding: 10px;
+  padding: 5px;
+  display: block;
   background-color: #eaeaea;
 }
 .exhibits.show #exhibit-child-pages .exhibit-child-nav li a:hover {
@@ -1403,7 +1413,8 @@ th {
 }
 .exhibits.show #exhibit-page-navigation #exhibit-nav-next a,
 .exhibits.show #exhibit-page-navigation #exhibit-nav-prev a {
-  padding: 10px;
+  padding: 5px;
+  display: block;
   background-color: #eaeaea;
 }
 .exhibits.show #exhibit-page-navigation #exhibit-nav-next a:hover,
@@ -1430,7 +1441,8 @@ th {
 }
 .exhibits.show #exhibit-page-navigation #exhibit-nav-up a {
   display: block;
-  padding: 10px;
+  padding: 5px;
+  display: block;
   background-color: #eaeaea;
 }
 .exhibits.show #exhibit-page-navigation #exhibit-nav-up a:hover {
