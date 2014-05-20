@@ -16,8 +16,7 @@
 ---- Mega-Menu Navigation
 -- Forms
 ---- Search
------- Advanced Search
----- Contribution
+---- Advanced Search
 -- Tables
 -- Content
 ---- Browse and Item Pages
@@ -35,19 +34,20 @@
 /*    @include susy-grid-background;
 */
     overflow: auto;
-    #search-container{@include span-columns(12 omega);}
-    .nav-menu {@include span-columns (12); margin-right:0;}
-    #content {@include span-columns (12 omega);}
-    .pagination {@include span-columns(12);}
-    #item-filters {@include span-columns (12 omega);}
-    #sort-links{@include span-columns(12);}
-    #outputs {@include span-columns(12)}
-    #advanced-search-form label {@include span-columns (12);}
-    #advanced-search-form .inputs {@include span-columns (12 omega);}
-    .hentry .item-img{@include span-columns(12 omega);}
-    .hentry .item-description {@include span-columns(12 omega);}
-    footer {@include span-columns(12 omega);}
 }
+#search-container{@include span-columns(12 omega);}
+.nav-menu {@include span-columns (12); margin-right:0;}
+#content {@include span-columns (12 omega);}
+.pagination {@include span-columns(12);}
+#item-filters {@include span-columns (12 omega);}
+#sort-links{@include span-columns(12);}
+#outputs {@include span-columns(12)}
+#advanced-search-form label {@include span-columns (12);}
+#advanced-search-form .inputs {@include span-columns (12 omega);}
+.hentry .item-img{@include span-columns(12 omega);}
+.hentry .item-description {@include span-columns(12 omega);}
+footer {@include span-columns(12 omega);}
+
 
 /* -------------------------------------------------------------------------*/
 /* General Styles */
@@ -418,29 +418,6 @@ form {
         }
     }
 } 
-
-/*-- Contribution Form --*/
-
-#geolocation_address.textinput {
-    margin-bottom: .5em;
-}
-#geolocation_find_location_by_address{
-    margin-left:.5em;
-}
-#contribution-confirm-submit {
-    margin-top:1em;
-    input {
-        float:left;
-        margin-top:.25em;
-    }
-    label{
-        float:left;
-        margin-left:.5em;
-    }
-    #form-submit{
-        margin-top:1em;
-    }
-}
 
 /* -------------------------------------------------------------------------*/
 /* Tables */
@@ -829,7 +806,6 @@ th {
                     color:white;    
                 }
             }
-
         } 
     }
 }

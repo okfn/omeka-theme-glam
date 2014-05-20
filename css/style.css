@@ -392,8 +392,7 @@ table {
 ---- Mega-Menu Navigation
 -- Forms
 ---- Search
------- Advanced Search
----- Contribution
+---- Advanced Search
 -- Tables
 -- Content
 ---- Browse and Item Pages
@@ -423,80 +422,92 @@ table {
   display: table;
   clear: both;
 }
-#wrap #search-container {
+
+#search-container {
   width: 100%;
   float: right;
   margin-right: 0;
   *margin-left: -1em;
   display: inline;
 }
-#wrap .nav-menu {
+
+.nav-menu {
   width: 100%;
   float: left;
   margin-right: 1.69492%;
   display: inline;
   margin-right: 0;
 }
-#wrap #content {
+
+#content {
   width: 100%;
   float: right;
   margin-right: 0;
   *margin-left: -1em;
   display: inline;
 }
-#wrap .pagination {
+
+.pagination {
   width: 100%;
   float: left;
   margin-right: 1.69492%;
   display: inline;
 }
-#wrap #item-filters {
+
+#item-filters {
   width: 100%;
   float: right;
   margin-right: 0;
   *margin-left: -1em;
   display: inline;
 }
-#wrap #sort-links {
+
+#sort-links {
   width: 100%;
   float: left;
   margin-right: 1.69492%;
   display: inline;
 }
-#wrap #outputs {
+
+#outputs {
   width: 100%;
   float: left;
   margin-right: 1.69492%;
   display: inline;
 }
-#wrap #advanced-search-form label {
+
+#advanced-search-form label {
   width: 100%;
   float: left;
   margin-right: 1.69492%;
   display: inline;
 }
-#wrap #advanced-search-form .inputs {
+
+#advanced-search-form .inputs {
   width: 100%;
   float: right;
   margin-right: 0;
   *margin-left: -1em;
   display: inline;
 }
-#wrap .hentry .item-img {
+
+.hentry .item-img {
   width: 100%;
   float: right;
   margin-right: 0;
   *margin-left: -1em;
   display: inline;
 }
-#wrap .hentry .item-description {
+
+.hentry .item-description {
   width: 100%;
   float: right;
   margin-right: 0;
   *margin-left: -1em;
   display: inline;
 }
-#wrap footer {
+
+footer {
   width: 100%;
   float: right;
   margin-right: 0;
@@ -970,30 +981,6 @@ form input, form select {
   width: 100%;
 }
 
-/*-- Contribution Form --*/
-#geolocation_address.textinput {
-  margin-bottom: .5em;
-}
-
-#geolocation_find_location_by_address {
-  margin-left: .5em;
-}
-
-#contribution-confirm-submit {
-  margin-top: 1em;
-}
-#contribution-confirm-submit input {
-  float: left;
-  margin-top: .25em;
-}
-#contribution-confirm-submit label {
-  float: left;
-  margin-left: .5em;
-}
-#contribution-confirm-submit #form-submit {
-  margin-top: 1em;
-}
-
 /* -------------------------------------------------------------------------*/
 /* Tables */
 table {
@@ -1435,76 +1422,87 @@ th {
   
   /* -------------------------------------------------------------------------*/
   /* Layout */
-  #wrap #site-title {
+  #site-title {
     width: 57.62712%;
     float: left;
     margin-right: 1.69492%;
     display: inline;
   }
-  #wrap #search-container {
+
+  #search-container {
     width: 40.67797%;
     float: right;
     margin-right: 0;
     *margin-left: -1em;
     display: inline;
   }
-  #wrap #featured {
+
+  #featured {
     width: 57.62712%;
     float: left;
     margin-right: 1.69492%;
     display: inline;
   }
-  #wrap .pagination {
+
+  .pagination {
     width: 100%;
     float: left;
     margin-right: 1.69492%;
     display: inline;
   }
-  #wrap #sort-links {
+
+  #sort-links {
     width: 100%;
     float: left;
     margin-right: 1.69492%;
     display: inline;
   }
-  #wrap #recent-items {
+
+  #recent-items {
     width: 40.67797%;
     float: right;
     margin-right: 0;
     *margin-left: -1em;
     display: inline;
   }
-  #wrap .hentry .item-img {
+
+  .hentry .item-img {
     width: 23.72881%;
     float: right;
     margin-right: 0;
     *margin-left: -1em;
     display: inline;
   }
-  #wrap .hentry .item-description {
+
+  .hentry .item-description {
     width: 74.57627%;
     float: left;
     margin-right: 1.69492%;
     display: inline;
   }
-  #wrap .hentry .tags {
+
+  .hentry .tags {
     width: 100%;
     float: left;
     margin-right: 1.69492%;
     display: inline;
   }
-  #wrap #advanced-search-form label {
+
+  #advanced-search-form label {
     width: 23.72881%;
     float: left;
     margin-right: 1.69492%;
     display: inline;
   }
-  #wrap #advanced-search-form .label {
+
+  #advanced-search-form .label {
     width: 23.72881%;
     float: left;
     margin-right: 1.69492%;
     display: inline;
   }
-  #wrap #advanced-search-form .inputs {
+
+  #advanced-search-form .inputs {
     width: 74.57627%;
     float: right;
     margin-right: 0;
