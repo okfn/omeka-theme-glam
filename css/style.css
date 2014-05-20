@@ -677,10 +677,13 @@ a:hover {
 .secondary-nav,
 #secondary-nav {
   margin-bottom: 1em;
+  overflow: auto;
 }
 .secondary-nav li,
 #secondary-nav li {
-  margin-right: 5px;
+  margin-right: 10px;
+  display: block;
+  float: left;
 }
 .secondary-nav li.active a,
 #secondary-nav li.active a {
@@ -789,9 +792,13 @@ a:hover {
 #sort-links .sort-label {
   float: left;
 }
+#sort-links #sort-links-list {
+  overflow: auto;
+  padding-left: 10px;
+}
 #sort-links li {
   float: left;
-  padding: 0 5px 0 10px;
+  margin-right: 10px;
 }
 #sort-links li:before {
   content: "\2014\0020";
@@ -1681,9 +1688,13 @@ th {
 
   #bottom-nav {
     display: block;
+    overflow: auto;
+    margin-bottom: 1em;
   }
   #bottom-nav li {
     padding-right: 20px;
+    display: block;
+    float: left;
   }
   #bottom-nav li:before {
     content: "\2014\0020";

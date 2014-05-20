@@ -209,10 +209,14 @@
 }
 
 #bottom-nav{
-    display: block;
+    display:block;
+    overflow: auto;
+    margin-bottom:1em;
     li {
         padding-right:20px;
         @include line-button;
+        display:block;
+        float:left;
         &.active {
             font-weight: bold;
         }

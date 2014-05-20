@@ -176,8 +176,11 @@ a {
 .secondary-nav, 
     #secondary-nav {
         margin-bottom: 1em;
+        overflow: auto;
         li {   
-            margin-right:5px;
+            margin-right:10px;
+            display: block;
+            float:left;
             &.active a {
                 font-weight: bold;
             }
@@ -229,9 +232,13 @@ a {
     .sort-label {
         float:left;
     }
+    #sort-links-list {
+        overflow: auto;
+        padding-left:10px;
+    }
     li {
         float:left;
-        padding:0 5px 0 10px;
+        margin-right:10px;
         @include line-button;
         &.sorting a {
             text-decoration: underline;
