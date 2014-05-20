@@ -903,10 +903,7 @@ form fieldset {
   margin-bottom: 1em;
 }
 form label, form input, form select {
-  margin: 1em 0;
-}
-form input, form select {
-  margin-right: .5em;
+  margin: 1em .5em 1em 0;
 }
 
 /* -------------------------------------------------------------------------*/
@@ -1067,6 +1064,15 @@ th {
 }
 .collections .view-items-link {
   margin: .5em 0;
+}
+.collections .view-items-link a {
+  padding: 10px;
+  background-color: #eaeaea;
+}
+.collections .view-items-link a:hover {
+  background-color: #684b98;
+  color: white;
+  text-decoration: none;
 }
 .collections .item h3 {
   padding: 1em 0;

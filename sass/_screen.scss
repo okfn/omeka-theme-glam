@@ -339,10 +339,7 @@ form {
         margin-bottom:1em;
     }
     label, input, select {
-        margin:1em 0;
-    }
-    input, select {
-        margin-right: .5em;
+        margin:1em .5em 1em 0;
     }
 }
 
@@ -484,6 +481,9 @@ th {
     }
     .view-items-link {
         margin:.5em 0;
+        a {
+            @include link-button;
+        }
     }
     .item h3 {
         padding: 1em 0;
