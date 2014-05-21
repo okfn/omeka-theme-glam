@@ -1,6 +1,5 @@
 @import "susy";
 @import "base";
-@import "mixins";
 @import "compass";
 
 /* -------------------------------------------------------------------------*/
@@ -25,14 +24,17 @@
 #advanced-search-form label {@include span-columns (3,12);}
 #advanced-search-form .label {@include span-columns (3,12);}
 #advanced-search-form .inputs {@include span-columns (9 omega, 12);}
+#advanced-search-form .field .two {@include span-columns(3,12);}
+.exhibits.summary #primary {@include span-columns (8,12);}
+.exhibits.summary #exhibit-pages {@include span-columns (4 omega, 12);}
 
 /* -------------------------------------------------------------------------*/
 /* General */
 
 #featured-image, 
-    #featured-collection, 
-    #featured-exhibit {
-        padding-right:1em;
+#featured-collection, 
+#featured-exhibit {
+    padding-right: 1em;
 }
 
 /* -------------------------------------------------------------------------*/
@@ -40,7 +42,6 @@
 
 #search-container {
     margin: 30px 0;
-
     input[type=text] {
         width: 70%;     
     }
@@ -50,17 +51,16 @@
 }
 /* -------------------------------------------------------------------------*/
 /* Advanced Search Form */
-#advanced-search-form {
-    .field {
-        .two {
-            @include span-columns(3,12);
-            label {
-                width:100% !important;
-            }
-        }
-        label, .label, input, select, button {
-           margin:1em 0;
-        }
+#advanced-search-form .field {
+    .two label {
+        width: 100% !important;
+    }
+    label, 
+    .label, 
+    input, 
+    select, 
+    button {
+       margin: 1em 0;
     }
 }
 /* -------------------------------------------------------------------------*/
@@ -73,39 +73,38 @@
 #top-nav .nav-menu {
     width: 100%;
     display: block;
-    overflow:initial;
+    overflow: initial;
     position: relative;
     list-style: none;
     margin: 0;
     padding: 0;
     z-index: 15;
     float: left;
-    background-color: white;
-    
+    background-color: white;    
     .active {
         background-color: lighten($accent-main, 10%);
         a {
-            color:white;
+            color: white;
         }
     }
-    
     li {
-        width:auto;
-        border:none;
+        width: auto;
+        border: none;
     }
     a {
         text-decoration: none;
-        padding:.5em;
+        padding: .5em;
 
-        &:link, &:visited {
+        &:link, 
+        &:visited {
             color: $accent-main;
         }
         
-        &:hover, &:focus {
+        &:hover, 
+        &:focus {
             background-color: $accent-main;
         }
     }
-
 /* a top level navigation item in the mega menu */
     .nav-item {
         list-style: none;
@@ -113,14 +112,14 @@
         float: left;
         padding: 0;
         margin: 5px 5px 0 0;
-        background-color:lighten($grey-light, 5%);
+        background-color: lighten($grey-light, 5%);
         position: relative;
 
     }
     .nav-item.active {
-        background-color:lighten($accent-main, 10%);
-        a{
-            color:white;
+        background-color: lighten($accent-main, 10%);
+        a {
+            color: white;
         }
     }
 /* first descendant link within a top level navigation item */
@@ -132,10 +131,10 @@
         border: 0;
         color: $accent-main;
         &:hover {
-            color:white;
+            color: white;
         }
-        &:focus{
-            color:white;
+        &:focus {
+            color: white;
         }
     }
 /* focus/open states of first descendant link within a top level 
@@ -149,7 +148,7 @@
    navigation item */
     .nav-item > a.open {
         background-color: $accent-main;
-        color:white;
+        color: white;
         border-bottom: none;
         z-index: 1;
     }
@@ -162,19 +161,18 @@
         margin: 0;
         background-color: $accent-light;
         z-index: 2;
-        border:1px solid lighten($grey-medium, 10%);
+        border: 1px solid lighten($grey-medium, 10%);
     }
     .sub-nav.open {
         display: block;
         background-color: lighten($grey-light, 10%);
         min-width: 250px;
-
         .active {
             background-color: lighten($grey-light, 10%);
             a {
-                color:$accent-main;
-                &:hover{
-                    color:white;
+                color: $accent-main;
+                &:hover {
+                    color: white;
                 }
             }
         }
@@ -183,9 +181,8 @@
             vertical-align: top;
             margin: 0;
             padding: 0;
-            
             a {
-                color:$accent-main;
+                color: $accent-main;
                 &:before {
                     content: "\2014\0020";
                 }
@@ -196,31 +193,30 @@
             list-style-type: none;
             margin: 0;
             padding: 0;
-
             a {
-                color:$accent-main;
+                color: $accent-main;
             }
             a:hover {
-                background-color:lighten($accent-light, 10%);
-                color:white;
+                background-color: lighten($accent-light, 10%);
+                color: white;
             }
         }
     }
 }
 
-#bottom-nav{
-    display:block;
+#bottom-nav {
+    display: block;
     overflow: auto;
-    margin-bottom:1em;
+    margin-bottom: 1em;
     li {
-        padding-right:20px;
+        padding-right: 20px;
         @include line-button;
-        display:block;
-        float:left;
+        display: block;
+        float: left;
         &.active {
             font-weight: bold;
         }
-        ul{
+        ul {
             display: none;
         }
     }
@@ -229,39 +225,34 @@
 /* -------------------------------------------------------------------------*/
 /* Exhibits */
 
-.exhibits.summary {
-    #primary {
-        @include span-columns (8,12);
-        .exhibit-description, .exhibit-credits {
-            padding-right:1em;
-        }
-    }
-    #exhibit-pages {
-        @include span-columns (4 omega, 12);
+.exhibits.summary #primary {
+    .exhibit-description, 
+    .exhibit-credits {
+        padding-right: 1em;
     }
 }
-
+.exhibits.summary #exhibit-pages {
+    padding-top: 0;
+}
 .exhibits.show {
     #secondary-nav.exhibit-page-nav li {
-        float:left;
-        margin-top:.5em;
+        float: left;
+        margin-top: .5em;
         ul li {
-            width:auto;
-
+            width: auto;
         }
     }
-    #exhibit-page-navigation{
+    #exhibit-page-navigation {
         #exhibit-nav-next, 
-            #exhibit-nav-prev {
-                width: 50%;
-            }
-         #exhibit-nav-up {
-            clear:both;
-            width:33%;
+        #exhibit-nav-prev {
+            width: 50%;
+        }
+        #exhibit-nav-up {
+            clear: both;
+            width: 33%;
             .current-page {
-                clear:none;
+                clear: none;
             }
         }
     }
 }
-
