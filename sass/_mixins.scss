@@ -8,6 +8,9 @@
         color:white;
         text-decoration: none;
    }
+   &:active {
+        background-color:$accent-light;
+   }
 }
 
 @mixin line-button {
