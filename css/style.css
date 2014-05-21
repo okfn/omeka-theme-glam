@@ -1336,11 +1336,12 @@ th {
 }
 .exhibits.show #exhibit-pages #secondary-nav li {
   border: none;
+  margin: 0 .5em 0 0;
 }
 .exhibits.show #exhibit-pages #secondary-nav ul {
   width: 100%;
   float: left;
-  margin: 0 0 5px 0;
+  margin: 0;
 }
 .exhibits.show #exhibit-pages #secondary-nav ul .current a {
   background-color: #7453a9;
@@ -1348,7 +1349,6 @@ th {
 }
 .exhibits.show #exhibit-pages #secondary-nav ul li {
   padding: 0;
-  margin: 0 5px 5px 0;
   display: block;
   float: left;
 }
@@ -1357,17 +1357,41 @@ th {
   display: block;
   background-color: #eaeaea;
   margin-bottom: .5em;
+  margin-bottom: 0;
 }
 .exhibits.show #exhibit-pages #secondary-nav ul li a:hover {
   background-color: #684b98;
   color: white;
   text-decoration: none;
 }
+.exhibits.show #exhibit-pages #secondary-nav > li:nth-child(2) {
+  display: block;
+}
+.exhibits.show #exhibit-pages #secondary-nav > li:nth-child(3) {
+  display: block;
+  clear: both;
+  margin-top: .5em;
+  border-bottom: 1px solid #eee;
+}
+.exhibits.show #exhibit-pages #secondary-nav > li:nth-child(3) a:before {
+  content: "\2014\0020";
+}
+.exhibits.show #exhibit-pages #secondary-nav > li:nth-child(3) ul {
+  padding-top: 3px;
+}
+.exhibits.show #exhibit-pages #secondary-nav > li:nth-child(4) {
+  display: block;
+}
+.exhibits.show #exhibit-pages #secondary-nav > li:nth-child(4) a:before {
+  content: "\2014\0020";
+}
 .exhibits.show #exhibit-pages #secondary-nav .exhibit-title {
   font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", sans-serif;
   text-transform: uppercase;
-  font-size: 1.25em;
-  padding-bottom: .5em;
+  padding: .5em 0;
+}
+.exhibits.show #exhibit-pages #secondary-nav .exhibit-title:after {
+  content: ":";
 }
 .exhibits.show #exhibit-child-pages {
   clear: both;
@@ -1417,24 +1441,7 @@ th {
 .exhibits.show #exhibit-page-navigation #exhibit-nav-next,
 .exhibits.show #exhibit-page-navigation #exhibit-nav-prev {
   width: 45%;
-  margin-top: .5em;
-}
-.exhibits.show #exhibit-page-navigation #exhibit-nav-next a,
-.exhibits.show #exhibit-page-navigation #exhibit-nav-prev a {
-  padding: 5px;
-  display: block;
-  background-color: #eaeaea;
-  margin-bottom: .5em;
-}
-.exhibits.show #exhibit-page-navigation #exhibit-nav-next a:hover,
-.exhibits.show #exhibit-page-navigation #exhibit-nav-prev a:hover {
-  background-color: #684b98;
-  color: white;
-  text-decoration: none;
-}
-.exhibits.show #exhibit-page-navigation #exhibit-nav-next a:hover,
-.exhibits.show #exhibit-page-navigation #exhibit-nav-prev a:hover {
-  color: white;
+  margin: .5em 0;
 }
 .exhibits.show #exhibit-page-navigation .current-page {
   clear: both;
@@ -1447,21 +1454,6 @@ th {
 .exhibits.show #exhibit-page-navigation #exhibit-nav-up {
   clear: both;
   width: 100%;
-}
-.exhibits.show #exhibit-page-navigation #exhibit-nav-up a {
-  display: block;
-  padding: 5px;
-  display: block;
-  background-color: #eaeaea;
-  margin-bottom: .5em;
-}
-.exhibits.show #exhibit-page-navigation #exhibit-nav-up a:hover {
-  background-color: #684b98;
-  color: white;
-  text-decoration: none;
-}
-.exhibits.show #exhibit-page-navigation #exhibit-nav-up a:hover {
-  color: white;
 }
 
 /* -------------------------------------------------------------------------*/
@@ -1774,7 +1766,6 @@ th {
   }
 
   .exhibits.show #secondary-nav.exhibit-page-nav li {
-    width: 100%;
     float: left;
     margin-top: .5em;
   }
@@ -1783,10 +1774,10 @@ th {
   }
   .exhibits.show #exhibit-page-navigation #exhibit-nav-next,
   .exhibits.show #exhibit-page-navigation #exhibit-nav-prev {
-    width: 33%;
+    width: 50%;
   }
   .exhibits.show #exhibit-page-navigation #exhibit-nav-up {
-    clear: none;
+    clear: both;
     width: 33%;
   }
   .exhibits.show #exhibit-page-navigation #exhibit-nav-up .current-page {

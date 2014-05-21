@@ -732,31 +732,51 @@ th {
             overflow:hidden;
             li {
                 border:none;
+                margin:0 .5em 0 0;
             }
             ul {               
                 width:100%;
                 float:left;
-                margin:0 0 5px 0;
+                margin:0;
                 .current a {
                     background-color: lighten($accent-main, 5%);
                     color:white;
                 }
                 li {
                     padding:0;
-                    margin:0 5px 5px 0;
                     display:block;
                     float:left;
 
                     a {
                         @include link-button;
-                    }       
+                        margin-bottom:0;
+                    } 
+
                 }
             }
+            & > li:nth-child(2) {            
+                display: block;
+            }
+            
+            & > li:nth-child(3) {
+                display: block;
+                clear: both; 
+                margin-top: .5em;
+                border-bottom: 1px solid #eee;
+                a {@include line-button;}
+                ul { padding-top: 3px; }
+            }
+            
+            & > li:nth-child(4) {
+                display: block;
+                a {@include line-button;}
+            }
+
             .exhibit-title {
                 font-family:$font-family-title;
                 text-transform: uppercase;
-                font-size: 1.25em;
-                padding-bottom:.5em;
+                padding:.5em 0;
+                &:after { content: ":" }
             }
         }
     }
@@ -799,13 +819,7 @@ th {
         #exhibit-nav-next, 
             #exhibit-nav-prev {
                 width: 45%;
-                margin-top:.5em;
-                a {
-                    @include link-button;
-                    &:hover{
-                        color:white;
-                    }
-                }
+                margin:.5em 0;
             }
         .current-page {
             clear:both;
@@ -818,14 +832,6 @@ th {
         #exhibit-nav-up {
             clear:both;
             width:100%;
-            a {
-                display:block;
-                @include link-button;
-
-                &:hover{
-                    color:white;    
-                }
-            }
         } 
     }
 }

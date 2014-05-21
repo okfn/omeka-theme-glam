@@ -243,7 +243,6 @@
 
 .exhibits.show {
     #secondary-nav.exhibit-page-nav li {
-        width:100%;
         float:left;
         margin-top:.5em;
         ul li {
@@ -254,10 +253,10 @@
     #exhibit-page-navigation{
         #exhibit-nav-next, 
             #exhibit-nav-prev {
-                width: 33%;
+                width: 50%;
             }
          #exhibit-nav-up {
-            clear:none;
+            clear:both;
             width:33%;
             .current-page {
                 clear:none;

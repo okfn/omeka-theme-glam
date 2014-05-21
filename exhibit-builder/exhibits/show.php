@@ -6,16 +6,16 @@ echo head(array(
 
 <nav id="exhibit-pages">
     <?php echo exhibit_builder_page_nav(); ?>
-    <?php if (count(exhibit_builder_child_pages(get_current_record('exhibit_page'))) > 0): ?>
-        <nav id="exhibit-child-pages">
-            <?php echo exhibit_builder_child_page_nav(); ?>
-        </nav>
-    <?php endif; ?>
 </nav>
 
 
 <div id="primary">
     <h1><span class="exhibit-page"><?php echo metadata('exhibit_page', 'title'); ?></h1>
+    <?php if (count(exhibit_builder_child_pages(get_current_record('exhibit_page'))) > 0): ?>
+        <nav id="exhibit-child-pages">
+            <?php echo exhibit_builder_child_page_nav(); ?>
+        </nav>
+    <?php endif; ?>
     
     <?php exhibit_builder_render_exhibit_page(); ?>
     
