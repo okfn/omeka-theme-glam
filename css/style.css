@@ -1348,7 +1348,7 @@ th {
 }
 .exhibits.show #exhibit-pages #secondary-nav li {
   border: none;
-  margin: 0 .5em 0 0;
+  margin: 0 .5em .5em 0;
 }
 .exhibits.show #exhibit-pages #secondary-nav ul {
   width: 100%;
