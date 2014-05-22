@@ -530,7 +530,8 @@ th {
     }
     .element {
         margin: 0 0 1em 0;
-        padding:0;
+        padding: 0;
+        clear: none;
     }
 
     .item {
@@ -550,9 +551,17 @@ th {
     }
 }
 
-.collection .image img {
-    @include box-shadow(-3px -3px 0 rgba(0,0,0,.2), -6px -6px 0 rgba(0,0,0,.1));
-    margin-left: 6px !important;
+.image {
+    float: left;
+    margin: 0 rhythm() rhythm() 0;
+    
+    img { float: left; }
+}
+
+.collection .image img,
+.exhibit .image img {
+    @include box-shadow(-6px -6px 0 #bbb, -12px -12px 0 #eee);
+    margin-left: 12px !important;
 }
 
 /* -------------------------------------------------------------------------*/

@@ -1190,6 +1190,7 @@ th {
 .collections .element {
   margin: 0 0 1em 0;
   padding: 0;
+  clear: none;
 }
 .collections .item {
   border-top: 1px solid #dddddd;
@@ -1204,11 +1205,20 @@ th {
   border-top: none;
 }
 
-.collection .image img {
-  -webkit-box-shadow: -3px -3px 0 rgba(0, 0, 0, 0.2), -6px -6px 0 rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: -3px -3px 0 rgba(0, 0, 0, 0.2), -6px -6px 0 rgba(0, 0, 0, 0.1);
-  box-shadow: -3px -3px 0 rgba(0, 0, 0, 0.2), -6px -6px 0 rgba(0, 0, 0, 0.1);
-  margin-left: 6px !important;
+.image {
+  float: left;
+  margin: 0 1.5em 1.5em 0;
+}
+.image img {
+  float: left;
+}
+
+.collection .image img,
+.exhibit .image img {
+  -webkit-box-shadow: -6px -6px 0 #bbbbbb, -12px -12px 0 #eeeeee;
+  -moz-box-shadow: -6px -6px 0 #bbbbbb, -12px -12px 0 #eeeeee;
+  box-shadow: -6px -6px 0 #bbbbbb, -12px -12px 0 #eeeeee;
+  margin-left: 12px !important;
 }
 
 /* -------------------------------------------------------------------------*/
