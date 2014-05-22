@@ -542,7 +542,54 @@ body {
 #featured-exhibit,
 #recent-items {
   overflow: auto;
-  margin: 1em 0 1.5em 0;
+  margin: 1em 0 0;
+}
+#featured-item h2, #featured-item #item-filters .collection, #item-filters #featured-item .collection,
+#featured-item h3,
+#featured-item .item,
+#featured-item .collection,
+#featured-item .exhibit,
+#featured-collection h2,
+#featured-collection #item-filters .collection,
+#item-filters #featured-collection .collection,
+#featured-collection h3,
+#featured-collection .item,
+#featured-collection .collection,
+#featured-collection .exhibit,
+#featured-exhibit h2,
+#featured-exhibit #item-filters .collection,
+#item-filters #featured-exhibit .collection,
+#featured-exhibit h3,
+#featured-exhibit .item,
+#featured-exhibit .collection,
+#featured-exhibit .exhibit,
+#recent-items h2,
+#recent-items #item-filters .collection,
+#item-filters #recent-items .collection,
+#recent-items h3,
+#recent-items .item,
+#recent-items .collection,
+#recent-items .exhibit {
+  padding: 0;
+}
+#featured-item h2, #featured-item #item-filters .collection, #item-filters #featured-item .collection,
+#featured-collection h2,
+#featured-collection #item-filters .collection,
+#item-filters #featured-collection .collection,
+#featured-exhibit h2,
+#featured-exhibit #item-filters .collection,
+#item-filters #featured-exhibit .collection,
+#recent-items h2,
+#recent-items #item-filters .collection,
+#item-filters #recent-items .collection {
+  padding-top: 0.75em;
+}
+#featured-item img,
+#featured-collection img,
+#featured-exhibit img,
+#recent-items img {
+  float: left;
+  margin: 1.5em 1.5em 1.5em 0;
 }
 
 .intro {
@@ -1048,11 +1095,9 @@ th {
 /* Browse and Item Pages */
 #recent-items .item {
   border-bottom: 1px solid #dddddd;
+  margin-bottom: 1.5em;
 }
 
-.item {
-  overflow: auto;
-}
 .item .item-img {
   padding-bottom: .5em;
 }
@@ -1115,6 +1160,13 @@ th {
 #item-filters .collection {
   overflow: initial;
   border-top: none;
+}
+
+.collection .image img {
+  -webkit-box-shadow: -3px -3px 0 rgba(0, 0, 0, 0.2), -6px -6px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: -3px -3px 0 rgba(0, 0, 0, 0.2), -6px -6px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: -3px -3px 0 rgba(0, 0, 0, 0.2), -6px -6px 0 rgba(0, 0, 0, 0.1);
+  margin-left: 6px !important;
 }
 
 /* -------------------------------------------------------------------------*/

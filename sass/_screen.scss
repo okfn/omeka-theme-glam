@@ -36,14 +36,14 @@
     overflow: auto;
 }
 #search-container{@include span-columns(12 omega);}
-.nav-menu {@include span-columns (12); margin-right:0;}
-#content {@include span-columns (12 omega);}
+.nav-menu {@include span-columns(12); margin-right:0;}
+#content {@include span-columns(12 omega);}
 .pagination {@include span-columns(12);}
-#item-filters {@include span-columns (12 omega);}
+#item-filters {@include span-columns(12 omega);}
 #sort-links{@include span-columns(12);}
 #outputs {@include span-columns(12)}
-#advanced-search-form label {@include span-columns (12);}
-#advanced-search-form .inputs {@include span-columns (12 omega);}
+#advanced-search-form label {@include span-columns(12);}
+#advanced-search-form .inputs {@include span-columns(12 omega);}
 .hentry .item-img{@include span-columns(12 omega);}
 .hentry .item-description {@include span-columns(12 omega);}
 footer {@include span-columns(12 omega);}
@@ -59,43 +59,70 @@ body {
     color: $text-color;
     margin:0;
 }
+
 .element-set,
-    .item,
-    .element, 
-    .collection,
-    .exhibit, 
-    .hTagcloud {
-        padding:1em 0;
-        overflow: auto;
-        clear:both;
+.item,
+.element, 
+.collection,
+.exhibit, 
+.hTagcloud {
+    padding:1em 0;
+    overflow: auto;
+    clear:both;
 }
+
 #featured-item,
-    #featured-collection,
-    #featured-exhibit, 
-    #recent-items {
-        overflow: auto;
-        margin:1em 0 1.5em 0;
+#featured-collection,
+#featured-exhibit, 
+#recent-items {
+    overflow: auto;
+    margin:1em 0 0;
+    
+    h2, 
+    h3,
+    .item,
+    .collection,
+    .exhibit {
+        padding: 0;
     }
+    
+    h2 {
+        @include padding-leader(1, 2 * $base-font-size);
+    }
+
+    img {
+        float: left;
+        margin: rhythm() rhythm() rhythm() 0;
+    }
+}
+
 .intro {
     font-style: italic;
 }
+
 #content {
     padding:1em 0 2em 0;
     overflow: auto;
 }
+
 abbr, acronym {
     border:none;
     font-style: normal;
 }
+
 .clear {
     clear:both;
 }
+
 a.show {
-    padding-left: 5px; font-style: italic;
+    padding-left: 5px;
+    font-style: italic;
 }
+
 blockquote {
     font-style:italic;
 }
+
 .view-items-link {
     margin:1em 0 .5em 0;
     a {
@@ -103,9 +130,11 @@ blockquote {
         display: inline;
     }
 }
+
 #outputs {
     margin-top:1em;
 }
+
 footer {
     padding:.5em 0;
     overflow: auto;
@@ -448,10 +477,10 @@ th {
 
 #recent-items .item {
     border-bottom:1px solid $grey-light;
+    @include trailer();
 }
     
 .item {
-    overflow: auto;
     .item-img{
         padding-bottom:.5em;
     }
@@ -500,6 +529,11 @@ th {
         @extend h2;
         border-top:none;
     }
+}
+
+.collection .image img {
+    @include box-shadow(-3px -3px 0 rgba(0,0,0,.2), -6px -6px 0 rgba(0,0,0,.1));
+    margin-left: 6px !important;
 }
 
 /* -------------------------------------------------------------------------*/
