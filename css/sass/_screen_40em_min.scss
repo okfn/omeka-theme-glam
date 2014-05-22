@@ -195,10 +195,14 @@
             padding: 0;
             a {
                 color: $accent-main;
-            }
-            a:hover {
-                background-color: lighten($accent-light, 10%);
-                color: white;
+                &:hover{
+                    background-color: lighten($accent-light, 10%);
+                    color: white;
+                }
+                &:focus {
+                    background-color: lighten($accent-light, 10%);
+                    color:white;
+                }
             }
         }
     }
