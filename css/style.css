@@ -517,6 +517,12 @@ footer {
 
 /* -------------------------------------------------------------------------*/
 /* General Styles */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 body {
   background-color: white;
   font-family: "Lato", Verdana, Arial, sans-serif;
@@ -627,6 +633,7 @@ blockquote {
   display: block;
   background-color: #eaeaea;
   margin-bottom: .5em;
+  border: 0;
   display: inline;
 }
 .view-items-link a:hover {
@@ -814,6 +821,7 @@ a:hover {
   display: block;
   background-color: #eaeaea;
   margin-bottom: .5em;
+  border: 0;
   line-height: 24px;
 }
 .pagination .pagination_next a:hover,
@@ -863,6 +871,7 @@ a:hover {
   display: block;
   background-color: #eaeaea;
   margin-bottom: .5em;
+  border: 0;
 }
 .item-pagination .next a:hover, .item-pagination .previous a:hover {
   background-color: #684b98;
@@ -990,32 +999,65 @@ form label, form input, form select {
   margin: 1em .5em 1em 0;
 }
 
+input[type=text],
+input[type=password] {
+  border-color: #dddddd;
+  border-style: solid;
+  border-width: 0.0625em;
+  padding: -0.0625em;
+  min-height: 24px;
+}
+
+input[type=submit],
+button,
+.button {
+  padding: 5px;
+  display: block;
+  background-color: #eaeaea;
+  margin-bottom: .5em;
+  border: 0;
+}
+input[type=submit]:hover,
+button:hover,
+.button:hover {
+  background-color: #684b98;
+  color: white;
+  text-decoration: none;
+}
+input[type=submit]:active,
+button:active,
+.button:active {
+  background-color: #be75cb;
+}
+
 /* -------------------------------------------------------------------------*/
 /*-- Search--*/
 #search-container #search-form {
   position: relative;
 }
 #search-container input[type=text] {
-  width: 50%;
   float: left;
   margin: 0;
 }
 #search-container input[type=submit] {
   float: left;
   margin: 0;
+  height: 24px;
+  width: 24px;
 }
 #search-container .show-advanced {
   padding: 5px;
   display: block;
   background-color: #eaeaea;
   margin-bottom: .5em;
+  border: 0;
   width: 10%;
   display: block;
   float: left;
   text-align: center;
   padding: 0;
   margin: 0 2px;
-  border: 1px solid #dddddd;
+  width: 24px;
 }
 #search-container .show-advanced:hover {
   background-color: #684b98;
@@ -1307,6 +1349,7 @@ th {
   display: block;
   background-color: #eaeaea;
   margin-bottom: .5em;
+  border: 0;
   display: initial;
 }
 #simple-pages-breadcrumbs a:hover {
@@ -1421,6 +1464,7 @@ th {
   display: block;
   background-color: #eaeaea;
   margin-bottom: .5em;
+  border: 0;
   margin-bottom: 0;
 }
 .exhibits.show #exhibit-pages #secondary-nav ul li a:hover {
@@ -1478,6 +1522,7 @@ th {
   display: block;
   background-color: #eaeaea;
   margin-bottom: .5em;
+  border: 0;
 }
 .exhibits.show #exhibit-child-pages .exhibit-child-nav li a:hover {
   background-color: #684b98;

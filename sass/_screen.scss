@@ -51,6 +51,11 @@ footer {@include span-columns(12 omega);}
 
 /* -------------------------------------------------------------------------*/
 /* General Styles */
+
+* {
+    @include box-sizing(border-box);
+}
+
 body {
     background-color:$background-color;
     font-family: $font-family-main;
@@ -377,6 +382,19 @@ form {
     }
 }
 
+input[type=text],
+input[type=password] {
+    border-color: $grey-light;
+    @include rhythm-borders(1px, 0, $base-font-size, solid);
+    min-height: $base-line-height;
+}
+
+input[type=submit],
+button,
+.button {
+    @include link-button;
+}
+
 /* -------------------------------------------------------------------------*/
 /*-- Search--*/
 
@@ -385,13 +403,14 @@ form {
         position:relative;
     }
     input[type=text] {
-        width: 50%;
         float:left;
         margin:0;        
     }
     input[type=submit] {
         float:left;
         margin:0;
+        height: $base-line-height;
+        width: $base-line-height;
     }
     .show-advanced {
         @include link-button;
@@ -401,7 +420,7 @@ form {
         text-align: center;
         padding:0;
         margin: 0 2px;
-        border: 1px solid $grey-light;
+        width: $base-line-height;
     }
     #advanced-form {
         // display: none;

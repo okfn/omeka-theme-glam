@@ -16,23 +16,19 @@
 
     <?php echo auto_discovery_link_tags(); ?>
 
-    <!-- External Type -->
-    <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    
     <!-- Plugin Stuff -->
     <?php fire_plugin_hook('public_head', array('view'=>$this)); ?>
 
     <!-- Stylesheets -->
     <?php
-    queue_css_file('style');
+    queue_css_url('http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic');
+    queue_css_file(array('iconfonts','style'));
     echo head_css();
     ?>
 
     <!-- JavaScripts -->
     <?php 
-    queue_js_file('jquery-accessibleMegaMenu');
-    queue_js_file('main');
-    queue_js_file('globals');
+    queue_js_file(array('jquery-accessibleMegaMenu', 'main', 'globals'));
     echo head_js(); 
     ?>
 </head>
