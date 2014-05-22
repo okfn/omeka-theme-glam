@@ -290,11 +290,12 @@ a {
         a {
             display: block;
             padding: 1em 0 1em 1em;
-            &:hover {
+        }
+        a:hover,
+        a:focus {
                 background-color: $accent-main;
                 @include link-colors(white);
                 text-decoration: none;
-            }
         }
         
         &:last-of-type {
@@ -325,7 +326,8 @@ a {
                 padding: 1em;
                 border-bottom: 1px solid white;      
             }
-            a:hover {
+            a:hover,
+            a:focus {
                 color: white;
                 text-decoration: none;
                 background-color: lighten($accent-light, 10%);
