@@ -748,6 +748,19 @@ a:hover {
   display: inline;
 }
 
+.asc a:after,
+.desc a:after {
+  font-family: "FontAwesome";
+}
+
+.asc a:after {
+  content: " \f0d8";
+}
+
+.desc a:after {
+  content: " \f0d7";
+}
+
 .secondary-nav,
 #secondary-nav {
   margin-bottom: 1em;
@@ -798,9 +811,6 @@ a:hover {
 }
 .pagination li.last {
   padding-right: 0;
-}
-.pagination .page-input {
-  padding-top: 5px;
 }
 .pagination .page-input form {
   padding: 0;

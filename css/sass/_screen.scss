@@ -213,6 +213,19 @@ a {
         }
 }
 
+.asc a:after,
+.desc a:after {
+    font-family: "FontAwesome";
+}
+
+.asc a:after {
+    content: " \f0d8";
+}
+
+.desc a:after {
+    content: " \f0d7";
+}
+
 .secondary-nav, 
     #secondary-nav {
         margin-bottom: 1em;
@@ -238,7 +251,6 @@ a {
     @include horizontal-list;
     margin:1em 0; 
     .page-input {
-        padding-top:5px;
         form {
             padding:0;
         }
