@@ -1093,6 +1093,11 @@ button:active,
   position: absolute;
   top: 0;
   text-align: center;
+  color: #684b98;
+}
+#search-container .show-advanced:hover,
+#search-container button:hover {
+  color: #fff;
 }
 #search-container .show-advanced:after,
 #search-container button:after {

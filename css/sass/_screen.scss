@@ -464,6 +464,11 @@ button,
         position: absolute;
         top: 0;
         text-align: center;
+        color: $accent-main;
+        
+        &:hover {
+            color: #fff;
+        }
         
         &:after {
             font-family: "FontAwesome";
