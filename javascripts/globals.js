@@ -1,7 +1,7 @@
 (function($) {
     $(document).ready(function() {
         var show_advanced = '<a href="#" class="show-advanced button">&hellip;</a>';
-        var search_submit = $('#search-form input[type=submit]');
+        var search_submit = $('#search-form button');
         var advanced_form = $('#advanced-form');
 
         /* 
@@ -13,6 +13,11 @@
         /*
             Setup flags for when "shift" key is used, mainly for
             tabbing between elements. 
+            
+            Shift = 16
+            Down = 40
+            Up = 38
+            Tab = 9
         */
         var shift_state = false;
         $(document).keydown( function(e) {
