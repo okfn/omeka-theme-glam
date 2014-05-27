@@ -181,8 +181,8 @@ h6 {
 #site-title {
     color:$accent-dark;
     font-family: $font-family-title;
-    font-variant: small-caps;
-    font-size: $base-font-size *3.5;
+    text-transform: uppercase;
+    font-size: $base-font-size * 2.5;
     font-weight: bold;
     line-height: $base-line-height * 2;
     margin: 20px 0;
@@ -265,13 +265,43 @@ a {
         } 
     }
     .pagination_next a, 
-        .pagination_previous a,
-        .previous-page a, 
-        .next-page a {
-            @include link-button;
-            line-height: $base-font-size * 1.5;
-        } 
+    .pagination_previous a,
+    .previous-page a, 
+    .next-page a {
+        @include link-button;
+        line-height: $base-font-size * 1.5;
+    } 
 }
+
+.pagination_next a,
+.pagination_previous a {
+    display: inline-block;
+    text-indent: -9999px;
+    position: relative;
+    width: 1.5 * $base-line-height;
+    text-align: center;
+}
+
+.pagination_next a:after,
+.pagination_previous a:after {
+    font-family: "FontAwesome";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1.5 * $base-line-height;
+    height: 1.5 * $base-line-height;
+    line-height: 1.5 * $base-line-height;
+    text-indent: 0;
+}
+
+.pagination_previous a:after {
+    content: "\f104";
+}
+
+.pagination_next a:after {
+    content: "\f105";
+}
+
 .item-pagination {
     @include horizontal-list;
     padding:2em 0 1em 0;

@@ -698,8 +698,8 @@ h6 {
 #site-title {
   color: #5c3f8d;
   font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", sans-serif;
-  font-variant: small-caps;
-  font-size: 56px;
+  text-transform: uppercase;
+  font-size: 40px;
   font-weight: bold;
   line-height: 48px;
   margin: 20px 0;
@@ -849,6 +849,35 @@ a:hover {
 .pagination .previous-page a:active,
 .pagination .next-page a:active {
   background-color: #be75cb;
+}
+
+.pagination_next a,
+.pagination_previous a {
+  display: inline-block;
+  text-indent: -9999px;
+  position: relative;
+  width: 36px;
+  text-align: center;
+}
+
+.pagination_next a:after,
+.pagination_previous a:after {
+  font-family: "FontAwesome";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  text-indent: 0;
+}
+
+.pagination_previous a:after {
+  content: "\f104";
+}
+
+.pagination_next a:after {
+  content: "\f105";
 }
 
 .item-pagination {
