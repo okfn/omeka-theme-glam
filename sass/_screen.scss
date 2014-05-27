@@ -370,12 +370,10 @@ a {
 /* Forms */
 
 form {
-    @include blueprint-form-sizes(80%, 80%, 250px);
-
     fieldset {
         border:0;
         padding:0;
-        margin-bottom:1em;
+        margin: 0 0 rhythm() 0;
     }
     label, input, select {
         margin:1em .5em 1em 0;
@@ -386,7 +384,8 @@ input[type=text],
 input[type=password] {
     border-color: $grey-light;
     @include rhythm-borders(1px, 0, $base-font-size, solid);
-    min-height: $base-line-height;
+    min-height: 1.5 * $base-line-height;
+    padding: rhythm(.25);
 }
 
 input[type=submit],
@@ -395,40 +394,72 @@ button,
     @include link-button;
 }
 
+.button:focus {
+    outline: -webkit-focus-ring-color auto 5px;
+}
+
 /* -------------------------------------------------------------------------*/
 /*-- Search--*/
 
 #search-container {
     #search-form {
         position:relative;
+        height: 1.5 * $base-line-height;
     }
     input[type=text] {
-        float:left;
-        margin:0;        
+        margin: 0;
+        @include calc(width, "100% - 34px");
     }
-    input[type=submit] {
-        float:left;
+
+    &.with-advanced input[type=text] {
+        @include calc(width, "100% - 76px");
+    }
+
+    .show-advanced,
+    button {
         margin:0;
-        height: $base-line-height;
-        width: $base-line-height;
-    }
-    .show-advanced {
-        @include link-button;
-        width: 10%;
-        display: block;
-        float: left;
+        width: 1.5 * $base-line-height;
+        position: absolute;
+        top: 0;
         text-align: center;
-        padding:0;
-        margin: 0 2px;
-        width: $base-line-height;
+        
+        &:after {
+            font-family: "FontAwesome";
+            text-indent: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            line-height: $base-line-height;
+            padding: rhythm(.25);
+        }
     }
+    
+    &.with-advanced .show-advanced {
+        right: 0;
+    }
+    
+    &.with-advanced button {
+        right: 1.5833 * $base-line-height;
+    }
+    
+    button {
+        text-indent: -9999px;
+        right: 0;
+    }
+
+    button:after {
+        content: "\f002";
+    }
+    
     #advanced-form {
         // display: none;
         position: absolute;
-        top: 2em;
+        top: 1.5 * $base-line-height;
         background-color: $background-color;
         z-index: 20;
-        width: 90%;
+        width: 100%;
         border: 1px solid;
         border-color: $grey-light;
         border-top-color: #fff;

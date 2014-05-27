@@ -1,5 +1,6 @@
 @mixin link-button {
-    padding: 5px;
+    min-height: 1.5 * $base-line-height;
+    padding: rhythm(.25);
     display: block;
     background-color: lighten($grey-light, 5%);
     margin-bottom:.5em;
@@ -19,3 +20,8 @@
         content: "\2014\0020";
     }
 }
+
+@mixin calc($property, $expression) { 
+  #{$property}: -webkit-calc(#{$expression}); 
+  #{$property}: calc(#{$expression}); 
+} 
