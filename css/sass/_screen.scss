@@ -422,6 +422,16 @@ form {
     }
 }
 
+select {
+    @include border-radius(0px);
+    border: 1px solid $grey-light;
+    height: 1.5 * $base-line-height;
+    line-height: 1.5 * $base-line-height;
+    font-size: $base-font-size;
+    margin-right: 3px !important;
+    display: inline-block;
+}
+
 input[type=text],
 input[type=password] {
     border-color: $grey-light;
@@ -537,19 +547,32 @@ button,
     .field {
         border-top:1px solid $grey-light;
         overflow: auto;
-        .two {
-            label {
-                width:100% !important;
-            }
-        }
-        .five select{
-            width:100% !important;
-        }
     }
     label, input, select, button {
         margin:.5em 0;
     }
 } 
+
+.remove_search {
+    padding: rhythm(.25) 10px;
+    text-indent: -9999px;
+    width: 1.5 * $base-line-height;
+    position: relative;
+    height: 1.5 * $base-line-height;
+    display: inline-block;
+
+    &:after {
+        content: "\f00d";
+        font-family: "FontAwesome";
+        text-indent: 0;
+        text-align: center;
+        width: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+        line-height: 1.5 * $base-line-height;
+    }
+}
 
 /* -------------------------------------------------------------------------*/
 /* Tables */

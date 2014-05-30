@@ -1034,6 +1034,20 @@ form label, form input, form select {
   margin: 1em .5em 1em 0;
 }
 
+select {
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  -o-border-radius: 0px;
+  border-radius: 0px;
+  border: 1px solid #dddddd;
+  height: 36px;
+  line-height: 36px;
+  font-size: 16px;
+  margin-right: 3px !important;
+  display: inline-block;
+}
+
 input[type=text],
 input[type=password] {
   border-color: #dddddd;
@@ -1160,14 +1174,28 @@ button:active,
   border-top: 1px solid #dddddd;
   overflow: auto;
 }
-#advanced-search-form .field .two label {
-  width: 100% !important;
-}
-#advanced-search-form .field .five select {
-  width: 100% !important;
-}
 #advanced-search-form label, #advanced-search-form input, #advanced-search-form select, #advanced-search-form button {
   margin: .5em 0;
+}
+
+.remove_search {
+  padding: 0.375em 10px;
+  text-indent: -9999px;
+  width: 36px;
+  position: relative;
+  height: 36px;
+  display: inline-block;
+}
+.remove_search:after {
+  content: "\f00d";
+  font-family: "FontAwesome";
+  text-indent: 0;
+  text-align: center;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  line-height: 36px;
 }
 
 /* -------------------------------------------------------------------------*/
