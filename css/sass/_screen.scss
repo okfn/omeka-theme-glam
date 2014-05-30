@@ -44,7 +44,6 @@
 #outputs {@include span-columns(12)}
 #advanced-search-form label {@include span-columns(12);}
 #advanced-search-form .inputs {@include span-columns(12 omega);}
-.hentry .item-img{@include span-columns(12 omega);}
 .hentry .item-description {@include span-columns(12 omega);}
 footer {@include span-columns(12 omega);}
 
@@ -603,6 +602,14 @@ th {
 .item {
     .item-img{
         padding-bottom:.5em;
+        height: rhythm(5);
+        float: right;
+        
+        img {
+            height: 100%;
+            width: auto;
+            float: right;
+        }
     }
     .tags{
         float:left;
@@ -655,8 +662,13 @@ th {
 .image {
     float: left;
     margin: 0 rhythm() rhythm() 0;
+    height: rhythm(5);
     
-    img { float: left; }
+    img { 
+        float: left; 
+        height: 100%;
+        width: auto;
+    }
 }
 
 .collection .image img,
@@ -856,6 +868,11 @@ th {
             }
         }
     }
+}
+
+.exhibit .description p:first-of-type,
+.collection .collection-description p:first-of-type {
+    margin-top: 0;
 }
 
 .exhibits.show {

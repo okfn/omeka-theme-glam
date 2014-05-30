@@ -491,14 +491,6 @@ table {
   display: inline;
 }
 
-.hentry .item-img {
-  width: 100%;
-  float: right;
-  margin-right: 0;
-  *margin-left: -1em;
-  display: inline;
-}
-
 .hentry .item-description {
   width: 100%;
   float: right;
@@ -1227,6 +1219,13 @@ th {
 
 .item .item-img {
   padding-bottom: .5em;
+  height: 7.5em;
+  float: right;
+}
+.item .item-img img {
+  height: 100%;
+  width: auto;
+  float: right;
 }
 .item .tags {
   float: left;
@@ -1293,9 +1292,12 @@ th {
 .image {
   float: left;
   margin: 0 1.5em 1.5em 0;
+  height: 7.5em;
 }
 .image img {
   float: left;
+  height: 100%;
+  width: auto;
 }
 
 .collection .image img,
@@ -1504,6 +1506,11 @@ th {
 }
 .exhibits.summary #exhibit-pages ul li ul a:before {
   content: "\2014\0020";
+}
+
+.exhibit .description p:first-of-type,
+.collection .collection-description p:first-of-type {
+  margin-top: 0;
 }
 
 .exhibits.show #exhibit-pages {
@@ -1725,23 +1732,8 @@ th {
     display: inline;
   }
 
-  .hentry .item-img {
-    width: 23.72881%;
-    float: right;
-    margin-right: 0;
-    *margin-left: -1em;
-    display: inline;
-  }
-
   .hentry .item-description {
     width: 74.57627%;
-    float: left;
-    margin-right: 1.69492%;
-    display: inline;
-  }
-
-  .hentry .tags {
-    width: 100%;
     float: left;
     margin-right: 1.69492%;
     display: inline;
@@ -1797,6 +1789,10 @@ th {
   #featured-collection,
   #featured-exhibit {
     padding-right: 1em;
+  }
+
+  .image {
+    float: right;
   }
 
   /* -------------------------------------------------------------------------*/

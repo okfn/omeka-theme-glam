@@ -18,9 +18,7 @@
 .pagination {@include span-columns(12);}
 #sort-links {@include span-columns(12);}
 #recent-items {@include span-columns (5 omega, 12);}
-.hentry .item-img{@include span-columns(3 omega, 12);}
 .hentry .item-description {@include span-columns(9, 12);}
-.hentry .tags {@include span-columns (12);}        
 #advanced-search-form label {@include span-columns (3,12);}
 #advanced-search-form .label {@include span-columns (3,12);}
 #advanced-search-form .inputs {@include span-columns (9 omega, 12);}
@@ -35,6 +33,10 @@
 #featured-collection, 
 #featured-exhibit {
     padding-right: 1em;
+}
+
+.image {
+    float: right;
 }
 
 /* -------------------------------------------------------------------------*/
