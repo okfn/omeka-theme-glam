@@ -531,7 +531,7 @@ body {
 .exhibit,
 .hTagcloud {
   padding: 1em 0;
-  overflow: auto;
+  overflow: hidden;
   clear: both;
 }
 
@@ -539,7 +539,7 @@ body {
 #featured-collection,
 #featured-exhibit,
 #recent-items {
-  overflow: auto;
+  overflow: hidden;
   margin: 1em 0 0;
 }
 #featured-item h2, #featured-item #item-filters .collection, #item-filters #featured-item .collection,
@@ -586,8 +586,8 @@ body {
 #featured-collection img,
 #featured-exhibit img,
 #recent-items img {
-  float: left;
-  margin: 1.5em 1.5em 1.5em 0;
+  float: right;
+  margin: 1.5em 0 1.5em 1.5em;
 }
 
 .intro {
@@ -1290,8 +1290,8 @@ th {
 }
 
 .image {
-  float: left;
-  margin: 0 1.5em 1.5em 0;
+  float: right;
+  margin: 0 0 1.5em 1.5em;
   height: 7.5em;
 }
 .image img {
@@ -1785,12 +1785,6 @@ th {
 
   /* -------------------------------------------------------------------------*/
   /* General */
-  #featured-image,
-  #featured-collection,
-  #featured-exhibit {
-    padding-right: 1em;
-  }
-
   .image {
     float: right;
   }

@@ -71,7 +71,7 @@ body {
 .exhibit, 
 .hTagcloud {
     padding:1em 0;
-    overflow: auto;
+    overflow: hidden;
     clear:both;
 }
 
@@ -79,7 +79,7 @@ body {
 #featured-collection,
 #featured-exhibit, 
 #recent-items {
-    overflow: auto;
+    overflow: hidden;
     margin:1em 0 0;
     
     h2, 
@@ -95,8 +95,8 @@ body {
     }
 
     img {
-        float: left;
-        margin: rhythm() rhythm() rhythm() 0;
+        float: right;
+        margin: rhythm() 0 rhythm() rhythm();
     }
 }
 
@@ -660,8 +660,8 @@ th {
 }
 
 .image {
-    float: left;
-    margin: 0 rhythm() rhythm() 0;
+    float: right;
+    margin: 0 0 rhythm() rhythm();
     height: rhythm(5);
     
     img { 
