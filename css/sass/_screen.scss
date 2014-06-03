@@ -93,6 +93,10 @@ body {
     h2 {
         @include padding-leader(1, 2 * $base-font-size);
     }
+    
+    .image {
+        @include leader();
+    }
 
     img {
         float: right;

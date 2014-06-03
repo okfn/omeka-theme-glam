@@ -582,6 +582,12 @@ body {
 #item-filters #recent-items .collection {
   padding-top: 0.75em;
 }
+#featured-item .image,
+#featured-collection .image,
+#featured-exhibit .image,
+#recent-items .image {
+  margin-top: 1.5em;
+}
 #featured-item img,
 #featured-collection img,
 #featured-exhibit img,
