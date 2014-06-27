@@ -627,6 +627,16 @@ th {
     }
 }
 
+#itemfiles a {
+    display: block;
+    height: rhythm(5);
+    
+    img {
+        height: 100%;
+        width: auto;
+    }
+}
+
 /* -------------------------------------------------------------------------*/
 /* Collections */
 

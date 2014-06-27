@@ -1259,6 +1259,15 @@ th {
   padding-right: 0;
 }
 
+#itemfiles a {
+  display: block;
+  height: 7.5em;
+}
+#itemfiles a img {
+  height: 100%;
+  width: auto;
+}
+
 /* -------------------------------------------------------------------------*/
 /* Collections */
 .collections .collection {
