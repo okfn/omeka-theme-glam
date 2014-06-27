@@ -44,7 +44,6 @@
 #outputs {@include span-columns(12)}
 #advanced-search-form label {@include span-columns(12);}
 #advanced-search-form .inputs {@include span-columns(12 omega);}
-.hentry .item-description {@include span-columns(12 omega);}
 footer {@include span-columns(12 omega);}
 
 
@@ -242,11 +241,11 @@ a {
         }
 }
 .browse, 
-    .tags,
-    .items {
-        .secondary-nav li, #secondary-nav li{
-            @include line-button;   
-        }
+  .tags,
+  .items {
+      .secondary-nav li, #secondary-nav li{
+          @include line-button;   
+      }
 }
 
 .pagination{
@@ -613,10 +612,6 @@ th {
             width: auto;
             float: right;
         }
-    }
-    .tags{
-        float:left;
-        padding:.5em 0;
     }
 }
 .show {

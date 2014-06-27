@@ -491,14 +491,6 @@ table {
   display: inline;
 }
 
-.hentry .item-description {
-  width: 100%;
-  float: right;
-  margin-right: 0;
-  *margin-left: -1em;
-  display: inline;
-}
-
 footer {
   width: 100%;
   float: right;
@@ -1232,10 +1224,6 @@ th {
   width: auto;
   float: right;
 }
-.item .tags {
-  float: left;
-  padding: .5em 0;
-}
 
 .show .element {
   border-top: 1px solid #dddddd;
@@ -1734,13 +1722,6 @@ th {
     float: right;
     margin-right: 0;
     *margin-left: -1em;
-    display: inline;
-  }
-
-  .hentry .item-description {
-    width: 74.57627%;
-    float: left;
-    margin-right: 1.69492%;
     display: inline;
   }
 
