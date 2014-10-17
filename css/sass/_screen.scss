@@ -1,8 +1,7 @@
-@import "susy";
 @import "base";
 @import "mixins";
 @import "compass";
-@import "blueprint/form";
+//@import "blueprint/form";
 
 /* -------------------------------------------------------------------------*/
 /* Table of Contents 
@@ -33,7 +32,7 @@
     @include container;
 /*    @include susy-grid-background;
 */
-    overflow: auto;
+    overflow: hidden;
 }
 #search-container{@include span-columns(12 omega);}
 .nav-menu {@include span-columns(12); margin-right:0;}
@@ -541,6 +540,43 @@ button,
     }
 }
 
+#search-filters,
+#item-filters {
+    ul {
+        list-style-type: none;
+        padding: 0;
+        @include trailer(1);
+    }
+    
+    li {
+        display: inline-block;
+        vertical-align: top;
+        
+        &:not(:last-of-type) {
+            border-right: 1px solid $text-color;
+            padding-right: .5em;
+            margin-right: .25em;
+        }
+    }
+    
+    ul ul {
+        display: inline-block;
+    }
+    
+    li li {
+        text-transform: lowercase;
+
+        &:not(:last-of-type):after {
+            content: ", ";
+        }
+        
+        &:not(:last-of-type) {
+            border-right: 0;
+            padding-right: 0;
+            margin-right: .125em;
+        }
+    }
+}
 /* -------------------------------------------------------------------------*/
 /* Advanced Search Form */
 #advanced-search-form {
@@ -840,13 +876,17 @@ th {
     margin:1em 0;
 }
 /* -------------------------------------------------------------------------*/
-/* Comments */
+/* Commenting */
 #comments-container {
     margin:1em 0;
     #comments {
         margin:0;
         padding:0;
     }
+}
+
+#recaptcha_area input {
+    min-height: 0;
 }
 
 /* -------------------------------------------------------------------------*/
