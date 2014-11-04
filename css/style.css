@@ -984,7 +984,6 @@ a:hover {
 #top-nav .sub-nav.open {
   display: block;
   width: 100%;
-  min-width: intrinsic;
   position: relative;
   margin: 0;
   padding: 0;
