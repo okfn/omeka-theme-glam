@@ -1299,6 +1299,16 @@ th {
 }
 
 /* -------------------------------------------------------------------------*/
+/* File Pages */
+body.files .item-file {
+  margin-bottom: 1.5em;
+}
+
+#sidebar {
+  clear: both;
+}
+
+/* -------------------------------------------------------------------------*/
 /* Collections */
 .collections .collection {
   margin-bottom: 2em;
