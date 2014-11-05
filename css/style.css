@@ -668,6 +668,7 @@ h1 {
   text-transform: uppercase;
   font-size: 40px;
   clear: both;
+  word-wrap: break-word;
 }
 
 h2, #item-filters .collection {
@@ -1254,6 +1255,11 @@ th {
   height: 100%;
   width: auto;
   float: right;
+}
+
+.item-file img {
+  max-width: 100%;
+  height: auto;
 }
 
 .show .element {

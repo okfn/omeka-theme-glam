@@ -166,6 +166,7 @@ h1 {
     text-transform: uppercase;
     font-size: $base-font-size *2.5;
     clear:both;
+    word-wrap: break-word;
 }
 h2 {
     font-size: $base-font-size * 2;
@@ -649,6 +650,12 @@ th {
         }
     }
 }
+
+.item-file img {
+    max-width: 100%;
+    height: auto;
+}
+
 .show {
     .element {
         border-top:1px solid $grey-light;
