@@ -1365,7 +1365,8 @@ body.files .item-file {
   padding-top: 1em;
 }
 .hTagcloud ul li {
-  display: inline;
+  display: inline-block;
+  margin-right: 20px;
 }
 .hTagcloud ul li a {
   text-decoration: none;
@@ -1374,113 +1375,29 @@ body.files .item-file {
 .hTagcloud ul .-popular {
   font-size: 120%;
 }
-.hTagcloud ul .popular a,
-.hTagcloud ul .-popular a {
-  color: #8dd258;
-}
-.hTagcloud ul .popular a:visited,
-.hTagcloud ul .-popular a:visited {
-  color: #eaeaea;
-}
-.hTagcloud ul .popular a:hover,
-.hTagcloud ul .-popular a:hover {
-  color: #43721f;
-}
 .hTagcloud ul .v-popular {
   font-size: 140%;
-}
-.hTagcloud ul .v-popular a {
-  color: #72C334;
-}
-.hTagcloud ul .v-popular a:visited {
-  color: #eaeaea;
-}
-.hTagcloud ul .v-popular a:hover {
-  color: #c6dc62;
 }
 .hTagcloud ul .vv-popular {
   font-size: 180%;
 }
-.hTagcloud ul .vv-popular a {
-  color: #5a9b29;
-}
-.hTagcloud ul .vv-popular a:visited {
-  color: #ddd;
-}
-.hTagcloud ul .vv-popular a:hover {
-  color: #B7D338;
-}
 .hTagcloud ul .vvv-popular {
   font-size: 220%;
-}
-.hTagcloud ul .vvv-popular a {
-  color: #d35a7d;
-}
-.hTagcloud ul .vvv-popular a:visited {
-  color: #ddd;
-}
-.hTagcloud ul .vvv-popular a:hover {
-  color: #4c1524;
 }
 .hTagcloud ul .vvvv-popular {
   font-size: 260%;
 }
-.hTagcloud ul .vvvv-popular a {
-  color: #C5355E;
-}
-.hTagcloud ul .vvvv-popular a:visited {
-  color: #555;
-}
-.hTagcloud ul .vvvv-popular a:hover {
-  color: #e8abbc;
-}
 .hTagcloud ul .vvvvv-popular {
   font-size: 300%;
-}
-.hTagcloud ul .vvvvv-popular a {
-  color: #8164b2;
-}
-.hTagcloud ul .vvvvv-popular a:visited {
-  color: #555;
-}
-.hTagcloud ul .vvvvv-popular a:hover {
-  color: #555;
 }
 .hTagcloud ul .vvvvvv-popular {
   font-size: 320%;
 }
-.hTagcloud ul .vvvvvv-popular a {
-  color: #684B98;
-}
-.hTagcloud ul .vvvvvv-popular a:visited {
-  color: #363636;
-}
-.hTagcloud ul .vvvvvv-popular a:hover {
-  color: #ddd;
-}
 .hTagcloud ul .vvvvvvv-popular {
   font-size: 340%;
 }
-.hTagcloud ul .vvvvvvv-popular a {
-  color: #513a76;
-}
-.hTagcloud ul .vvvvvvv-popular a:visited {
-  color: #363636;
-}
-.hTagcloud ul .vvvvvvv-popular a:hover {
-  color: #b9a8d4;
-}
 .hTagcloud ul .vvvvvvvv-popular {
   font-size: 360%;
-}
-.hTagcloud ul .vvvvvvvv-popular a {
-  color: #392954;
-}
-.hTagcloud ul .vvvvvvvv-popular a::visited {
-  color: #363636;
-}
-.hTagcloud ul .vvvvvvvv-popular a:hover {
-  color: #d4cae5;
 }
 
 /* -------------------------------------------------------------------------*/

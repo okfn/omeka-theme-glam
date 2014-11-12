@@ -748,7 +748,8 @@ body.files .item-file {
         padding-left:0;
         padding-top:1em;
         li {
-            display:inline;
+            display:inline-block;
+            margin-right: 20px;
             a {
                 text-decoration: none;
             }
@@ -756,111 +757,30 @@ body.files .item-file {
         .popular,
         .-popular {
             font-size:120%;
-            a {
-                color: lighten($accent-green, 10%);
-                &:visited {
-                    color:lighten($grey-light, 5%);
-                }
-                &:hover {
-                    color: darken($accent-green, 20%);
-                }
-            }
         }
         .v-popular {
             font-size:140%;
-            a {
-                color: $accent-green;
-                &:visited {
-                    color:lighten($grey-light, 5%);
-                }
-                &:hover {
-                    color: lighten($accent-yellow, 10%);
-                }
-            }
         }
         .vv-popular {
             font-size:180%;
-            a {
-                color: darken($accent-green, 10%);
-                &:visited {
-                    color: $grey-light;
-                }
-                &:hover {
-                    color: $accent-yellow;
-                }
-            }
         }
         .vvv-popular {
             font-size:220%;
-            a {
-                color: lighten($accent-red, 10%);
-                &:visited {
-                    color:$grey-light;
-                }
-                &:hover {
-                    color: darken($accent-red, 30%);
-                }
-            }
         }
         .vvvv-popular {
             font-size:260%;
-            a {
-                color: $accent-red;
-                &:visited {
-                    color: $grey-medium;
-                }
-                &:hover {
-                    color: lighten($accent-red, 30%);
-                }
-            }
         }
         .vvvvv-popular {
             font-size:300%;
-            a {
-                color: lighten($accent-main, 10%);
-                &:visited {
-                    color:$grey-medium;
-                }
-                &:hover {
-                    color: $grey-medium;
-                }
-            }
         }
         .vvvvvv-popular {
             font-size:320%;
-            a {
-                color: $accent-main;
-                &:visited {
-                    color: $grey-dark;
-                }
-                &:hover {
-                    color: $grey-light;
-                }
-            }
         }
         .vvvvvvv-popular {
             font-size:340%;
-            a {
-                color: darken($accent-main, 10%);
-                &:visited {
-                    color:$grey-dark;
-                }
-                &:hover {
-                    color: lighten($accent-main, 30%);
-                }
-            }
         }
         .vvvvvvvv-popular {
             font-size:360%;
-            a {
-                color: darken($accent-main, 20%);
-                &::visited{
-                    color:$grey-dark;
-                }
-                &:hover {
-                    color: lighten($accent-main, 40%);
-                }
-            }
         }
     }
 }
