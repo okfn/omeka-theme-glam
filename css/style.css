@@ -1366,7 +1366,8 @@ body.files .item-file {
 }
 .hTagcloud ul li {
   display: inline-block;
-  margin-right: 20px;
+  margin: 6px 20px;
+  margin-left: 0;
 }
 .hTagcloud ul li a {
   text-decoration: none;

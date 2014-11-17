@@ -749,7 +749,8 @@ body.files .item-file {
         padding-top:1em;
         li {
             display:inline-block;
-            margin-right: 20px;
+            margin: (.25 * $base-line-height) 20px;
+            margin-left: 0;
             a {
                 text-decoration: none;
             }
