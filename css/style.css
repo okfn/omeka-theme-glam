@@ -1266,8 +1266,15 @@ th {
   border-top: 1px solid #ddd;
 }
 .show .item-file {
-  float: left;
+  display: inline-block;
   padding-right: 1em;
+}
+.show [class^="video-"].item-file,
+.show [class*=" video-"].item-file,
+.show [class^="audio-"].item-file,
+.show [class*=" audio-"].item-file {
+  display: block;
+  padding-right: 0;
 }
 .show #output-format-list {
   margin: 0;
@@ -1295,11 +1302,11 @@ th {
   padding-right: 0;
 }
 
-#itemfiles a {
+#itemfiles .download-link {
   display: block;
   height: 7.5em;
 }
-#itemfiles a img {
+#itemfiles .download-link img {
   height: 100%;
   width: auto;
 }
@@ -1643,6 +1650,13 @@ body.files .item-file {
 .exhibits.show #exhibit-page-navigation #exhibit-nav-up {
   clear: both;
   width: 100%;
+}
+
+/* -------------------------------------------------------------------------*/
+/* Html5MediaPlayer */
+.mejs-inner button {
+  /* Prevents all media player buttons from showing. */
+  min-height: 0;
 }
 
 /* -------------------------------------------------------------------------*/

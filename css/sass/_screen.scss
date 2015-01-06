@@ -661,15 +661,24 @@ th {
         border-top:1px solid $grey-light;
     }
     .item-file {
-        float:left;
+        display: inline-block;
         padding-right:1em;
     }
+    
+    [class^="video-"].item-file,
+    [class*=" video-"].item-file,
+    [class^="audio-"].item-file,
+    [class*=" audio-"].item-file {
+        display: block;
+        padding-right: 0;
+    }
+    
     #output-format-list {
         @include horizontal-list;
     }
 }
 
-#itemfiles a {
+#itemfiles .download-link {
     display: block;
     height: rhythm(5);
     
@@ -994,4 +1003,12 @@ body.files .item-file {
             width:100%;
         } 
     }
+}
+
+/* -------------------------------------------------------------------------*/
+/* Html5MediaPlayer */
+
+.mejs-inner button {
+    /* Prevents all media player buttons from showing. */
+    min-height: 0;
 }
