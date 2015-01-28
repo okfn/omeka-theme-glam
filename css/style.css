@@ -1483,28 +1483,32 @@ body.files .item-file {
 
 /* -------------------------------------------------------------------------*/
 /* Exhibits */
-.exhibits.summary #exhibit-pages {
+#exhibit-pages:not(.full) {
   padding-top: 0;
 }
-.exhibits.summary #exhibit-pages ul {
+#exhibit-pages:not(.full) ul {
   padding: 0;
-  margin: 1em 0 0 0;
   list-style-type: none;
 }
-.exhibits.summary #exhibit-pages ul li {
+#exhibit-pages:not(.full) ul li {
   padding: .5em 0;
   display: block;
-  border-top: 2px solid #ddd;
 }
-.exhibits.summary #exhibit-pages ul li a {
+#exhibit-pages:not(.full) ul li a {
   display: block;
   padding-left: 1em;
 }
-.exhibits.summary #exhibit-pages ul li a:hover {
+#exhibit-pages:not(.full) ul li a:hover {
   text-decoration: none;
 }
-.exhibits.summary #exhibit-pages ul li ul a:before {
+#exhibit-pages:not(.full) ul li ul a:before {
   content: "\2014\0020";
+}
+#exhibit-pages:not(.full) > ul {
+  margin-left: 0;
+}
+#exhibit-pages:not(.full) > ul > li {
+  border-top: 2px solid #ddd;
 }
 
 .exhibit .description p:first-of-type,
@@ -1512,56 +1516,57 @@ body.files .item-file {
   margin-top: 0;
 }
 
-.exhibits.show #exhibit-pages {
-  padding: 1em 0;
-  /*        border-bottom:2px solid $grey-light;
-  */
+#exhibit-pages.full {
+  border-color: #ddd;
+  border-top-width: 0.125em;
+  border-top-style: solid;
+  padding-top: -0.125em;
 }
-.exhibits.show #exhibit-pages ul {
+#exhibit-pages.full ul {
   margin: 1em 0 0 0;
   list-style-type: none;
 }
-.exhibits.show #exhibit-pages ul li {
+#exhibit-pages.full ul li {
   display: block;
   border-top: 2px solid #ddd;
 }
-.exhibits.show #exhibit-pages ul li a {
+#exhibit-pages.full ul li a {
   display: block;
 }
-.exhibits.show #exhibit-pages ul li a:hover {
+#exhibit-pages.full ul li a:hover {
   text-decoration: none;
 }
-.exhibits.show #exhibit-pages ul li ul {
+#exhibit-pages.full ul li ul {
   margin-left: 2em;
 }
-.exhibits.show #exhibit-pages .current-page {
+#exhibit-pages.full .current-page {
   display: block;
   background-color: #BE75CB;
   padding: .5em;
   color: white;
 }
-.exhibits.show #exhibit-pages #secondary-nav {
+#exhibit-pages.full #secondary-nav {
   overflow: hidden;
 }
-.exhibits.show #exhibit-pages #secondary-nav li {
+#exhibit-pages.full #secondary-nav li {
   border: none;
   margin: 0 .5em .5em 0;
 }
-.exhibits.show #exhibit-pages #secondary-nav ul {
+#exhibit-pages.full #secondary-nav ul {
   width: 100%;
   float: left;
   margin: 0;
 }
-.exhibits.show #exhibit-pages #secondary-nav ul .current a {
+#exhibit-pages.full #secondary-nav ul .current a {
   background-color: #7453a9;
   color: white;
 }
-.exhibits.show #exhibit-pages #secondary-nav ul li {
+#exhibit-pages.full #secondary-nav ul li {
   padding: 0;
   display: block;
   float: left;
 }
-.exhibits.show #exhibit-pages #secondary-nav ul li a {
+#exhibit-pages.full #secondary-nav ul li a {
   min-height: 36px;
   padding: 0.375em;
   display: block;
@@ -1570,57 +1575,55 @@ body.files .item-file {
   border: 0;
   margin-bottom: 0;
 }
-.exhibits.show #exhibit-pages #secondary-nav ul li a:hover {
+#exhibit-pages.full #secondary-nav ul li a:hover {
   background-color: #684B98;
   color: white;
   text-decoration: none;
 }
-.exhibits.show #exhibit-pages #secondary-nav ul li a:active {
+#exhibit-pages.full #secondary-nav ul li a:active {
   background-color: #BE75CB;
 }
-.exhibits.show #exhibit-pages #secondary-nav > li:nth-child(2) {
+#exhibit-pages.full #secondary-nav > li:nth-child(2) {
   display: block;
 }
-.exhibits.show #exhibit-pages #secondary-nav > li:nth-child(3) {
+#exhibit-pages.full #secondary-nav > li:nth-child(3) {
   display: block;
   clear: both;
-  margin-top: .5em;
 }
-.exhibits.show #exhibit-pages #secondary-nav > li:nth-child(3) a:before {
+#exhibit-pages.full #secondary-nav > li:nth-child(3) a:before {
   content: "\2014\0020";
 }
-.exhibits.show #exhibit-pages #secondary-nav > li:nth-child(3) ul {
-  padding-top: 3px;
-}
-.exhibits.show #exhibit-pages #secondary-nav > li:nth-child(4) {
+#exhibit-pages.full #secondary-nav > li:nth-child(4) {
   display: block;
+  clear: left;
 }
-.exhibits.show #exhibit-pages #secondary-nav > li:nth-child(4) a:before {
+#exhibit-pages.full #secondary-nav > li:nth-child(4) a:before {
   content: "\2014\0020";
 }
-.exhibits.show #exhibit-pages #secondary-nav .exhibit-title {
+#exhibit-pages.full #secondary-nav .exhibit-title {
   font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", sans-serif;
   text-transform: uppercase;
   padding: .5em 0;
 }
-.exhibits.show #exhibit-pages #secondary-nav .exhibit-title:after {
+#exhibit-pages.full #secondary-nav .exhibit-title:after {
   content: ":";
 }
-.exhibits.show #exhibit-child-pages {
+
+#exhibit-child-pages {
   clear: both;
   overflow: hidden;
   padding: .5em 0;
 }
-.exhibits.show #exhibit-child-pages .exhibit-child-nav {
+#exhibit-child-pages .exhibit-child-nav {
   margin: .5em 0;
 }
-.exhibits.show #exhibit-child-pages .exhibit-child-nav li {
+#exhibit-child-pages .exhibit-child-nav li {
   border: none;
   display: block;
   float: left;
   margin: 0 5px 5px 0;
 }
-.exhibits.show #exhibit-child-pages .exhibit-child-nav li a {
+#exhibit-child-pages .exhibit-child-nav li a {
   min-height: 36px;
   padding: 0.375em;
   display: block;
@@ -1628,40 +1631,42 @@ body.files .item-file {
   margin-bottom: .5em;
   border: 0;
 }
-.exhibits.show #exhibit-child-pages .exhibit-child-nav li a:hover {
+#exhibit-child-pages .exhibit-child-nav li a:hover {
   background-color: #684B98;
   color: white;
   text-decoration: none;
 }
-.exhibits.show #exhibit-child-pages .exhibit-child-nav li a:active {
+#exhibit-child-pages .exhibit-child-nav li a:active {
   background-color: #BE75CB;
 }
-.exhibits.show #exhibit-child-pages .exhibit-child-nav li a:before {
+#exhibit-child-pages .exhibit-child-nav li a:before {
   content: "\2014\0020";
 }
-.exhibits.show .exhibit-block {
+
+.exhibit-block {
   margin-top: 1em;
   padding-right: 1em;
   overflow: auto;
   clear: both;
 }
-.exhibits.show .exhibit-block .exhibit-items.left {
+.exhibit-block .exhibit-items.left {
   margin-right: 5%;
 }
-.exhibits.show .exhibit-block .exhibit-items.right {
+.exhibit-block .exhibit-items.right {
   margin-left: 5%;
 }
-.exhibits.show #exhibit-page-navigation {
+
+#exhibit-page-navigation {
   clear: both;
   margin: 0;
   padding: 1em 0em;
 }
-.exhibits.show #exhibit-page-navigation #exhibit-nav-next,
-.exhibits.show #exhibit-page-navigation #exhibit-nav-prev {
+#exhibit-page-navigation #exhibit-nav-next,
+#exhibit-page-navigation #exhibit-nav-prev {
   width: 45%;
   margin: .5em 0;
 }
-.exhibits.show #exhibit-page-navigation .current-page {
+#exhibit-page-navigation .current-page {
   clear: both;
   display: block;
   background-color: #684B98;
@@ -1669,7 +1674,7 @@ body.files .item-file {
   color: white;
   margin-top: .5em;
 }
-.exhibits.show #exhibit-page-navigation #exhibit-nav-up {
+#exhibit-page-navigation #exhibit-nav-up {
   clear: both;
   width: 100%;
 }
@@ -1767,19 +1772,26 @@ body.files .item-file {
     display: inline;
   }
 
-  .exhibits.summary #primary {
+  .exhibits.summary #primary,
+  .exhibits.summary #content > h1:first-of-type,
+  .exhibits.show #content > h1:first-of-type,
+  #exhibit-blocks,
+  #exhibit-page-navigation {
     width: 66.10169%;
     float: left;
     margin-right: 1.69492%;
     display: inline;
   }
 
-  .exhibits.summary #exhibit-pages {
+  .exhibits #exhibit-pages:not(.full) {
     width: 32.20339%;
-    float: right;
+    display: inline-block;
     margin-right: 0;
-    *margin-left: -1em;
-    display: inline;
+  }
+
+  .full ~ #exhibit-blocks,
+  .full ~ #exhibit-page-navigation {
+    width: 100%;
   }
 
   /* -------------------------------------------------------------------------*/
