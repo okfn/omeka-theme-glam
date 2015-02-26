@@ -34,6 +34,7 @@
 </head>
 
 <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
+    <a href="#content" id="skipnav"><?php echo __('Skip to main content'); ?></a>
     <?php fire_plugin_hook('public_body', array('view'=>$this)); ?>
     <div id="wrap">
 
@@ -45,7 +46,7 @@
 
             <div id="site-title"><?php echo link_to_home_page(theme_logo()); ?></div>
 
-            <div id="search-container">
+            <div id="search-container" role="search">
                 <?php if (get_theme_option('use_advanced_search') === null || get_theme_option('use_advanced_search')): ?>
                 <?php echo search_form(array('show_advanced' => true)); ?>
                 <?php else: ?>
@@ -53,12 +54,12 @@
                 <?php endif; ?>
             </div>
             
-            <nav id="top-nav">
+            <nav id="top-nav" role="navigation">
                 <?php echo public_nav_main(); ?>
             </nav>
 
         </header>
         
-        <article id="content">
+        <article id="content" role="main" tabindex="-1">
         
             <?php fire_plugin_hook('public_content_top', array('view'=>$this)); ?>
