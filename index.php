@@ -1,7 +1,7 @@
 <?php echo head(array('bodyid'=>'home')); ?>
 
 <?php if (get_theme_option('Homepage Text')): ?>
-<p class="intro"><?php echo get_theme_option('Homepage Text'); ?></p>
+<section class="intro"><?php echo get_theme_option('Homepage Text'); ?></section>
 <?php endif; ?>
 
 <div id="featured">

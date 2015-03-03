@@ -28,22 +28,49 @@
 
 /* -------------------------------------------------------------------------*/
 /* Layout */
+#admin-bar {
+  text-align:left;
+  
+  font-size:$base-font-size;
+  & > ul {
+    @include container;
+    
+    li {
+      font-size:14px;
+    }
+  }
+}
+
 #wrap {
     @include container;
-/*    @include susy-grid-background;
-*/
-    overflow: hidden;
+  //@include susy-grid-background;
 }
-#search-container{@include span-columns(12 omega);}
-.nav-menu {@include span-columns(12); margin-right:0;}
-#content {@include span-columns(12 omega);}
-.pagination {@include span-columns(12);}
+
+header[role=banner] {
+  @include clearfix;
+  background-color:$grey-light;
+  margin: 0 -9999rem;
+  padding: 0 9999rem;
+}
+
+#search-container {
+  @include span-columns(12 omega);
+}
+
+.nav-menu {
+  @include span-columns(12);
+  margin-right:0;
+}
+#content {
+  @include span-columns(12 omega);
+  position:relative;
+  z-index:1;
+}
 #item-filters {@include span-columns(12 omega);}
 #sort-links{@include span-columns(12);}
 #outputs {@include span-columns(12)}
 #advanced-search-form label {@include span-columns(12);}
 #advanced-search-form .inputs {@include span-columns(12 omega);}
-footer {@include span-columns(12 omega);}
 
 
 /* -------------------------------------------------------------------------*/
@@ -53,6 +80,14 @@ footer {@include span-columns(12 omega);}
     @include box-sizing(border-box);
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
+html {
+  background-color:$footer-background;
+}
+
 body {
     background-color:$background-color;
     font-family: $font-family-main;
@@ -60,6 +95,10 @@ body {
     line-height: $base-line-height;
     color: $text-color;
     margin:0;
+}
+
+p {
+  margin-top:0.1em;
 }
 
 .element-set,
@@ -101,13 +140,9 @@ body {
     }
 }
 
-.intro {
-    font-style: italic;
-}
-
 #content {
     padding:1em 0 2em 0;
-    overflow: auto;
+    overflow-x: hidden;
 }
 
 abbr, acronym {
@@ -140,30 +175,111 @@ blockquote {
     margin-top:1em;
 }
 
-footer {
-    padding:.5em 0;
-    overflow: auto;
-    border-top:5px double $grey-light;
+#wrap > footer {
+  $footer-color: white;
+  $footer-link-color: transparentize($footer-color, .4);
+  $footer-disclaimer-color: transparentize($footer-color, .6);
+
+  @include clearfix;
+  background: $footer-background;
+  clear:both;
+  margin: 0 -9999rem;
+  padding: $gutter-width 9999rem;
+  color:$footer-color;
+
+  .footer-logo {
+    margin-right: 1em;
+    margin-bottom: 1em;
+    margin-top:-4px;
+  }
+
+  .footer-logo img {
+    height: 2em;
+  } 
+
+  ul {
+    margin: 0 0 1em 0;
+  }
+
+  ul li {
+    padding-right: 1em;
+  }
+
+  a {
+    color: $footer-link-color;
+
+    &:hover {
+      color: transparentize($footer-color, 0);
+    }
+    
+    &[rel~="external"]:after {
+      display:none;
+    }
+  }
+
+  .footer-primary {
+
+    li {
+      font-size: .8em;
+      font-weight: 400;
+    }
+
+    ul.footer-social {
+      margin-top: 1em;
+
+      li {
+        float: left;
+        font-size: 1em;
+        padding-right: .7em;
+        display:block;
+
+        &:last-child {
+          padding-right: 0;
+        }
+      }
+
+      img {
+        opacity: .7;
+        height: 1.6em;
+        padding: 1px;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  
+  hr {
+    @include span-columns(12);
+    border-color:$footer-disclaimer-color;
+    border-style: none none solid;
+    border-width: medium medium 1px;
+    margin-top:$base-spacing / 2;
+    margin-bottom:$base-spacing / 2;
+  }
+  
+  .footer-secondary {
+    @include span-columns(12);
+    font-size: 0.75rem;
+    color:$footer-disclaimer-color;
+  }
 }
+
 /* -------------------------------------------------------------------------*/
 /* Headings */
 
 #{headings()} {
     font-family: $font-family-title;
-    font-weight:normal;
-    line-height: $base-line-height * 1.5;
-    padding: .5em 0;
+    line-height: 1.1;
+    padding: .5em 0 0.2em 0;
     margin:0;
     color: $grey-medium;
 }
 #{headings(4,6)} {
     font-style: $base-font-size * 1.2;
 }
-#{headings(5,6)} {
-    font-weight: bold;
-}
 h1 {
-    text-transform: uppercase;
     font-size: $base-font-size *2.5;
     clear:both;
     word-wrap: break-word;
@@ -180,20 +296,30 @@ h6 {
     font-size:italic;
 }
 #site-title {
-    color:$accent-dark;
+    color:$grey-dark;
     font-family: $font-family-title;
-    text-transform: uppercase;
-    font-size: $base-font-size * 2.5;
+    font-size: $base-font-size * 1.5;
     font-weight: bold;
     line-height: $base-line-height * 2;
     margin: 20px 0;
-    a{text-decoration:none; color:$accent-dark;}
+    
+    a {
+      text-decoration:none;
+      color:$grey-dark;
+      display:block;
+      
+      img {
+        display: block;
+        height: 52px;
+        margin-top: 18px;
+      }
+    }
 }
 
 /* -------------------------------------------------------------------------*/
 /* Links */
 a {
-    @include link-colors($accent-main, saturate($accent-light,5%), $accent-light, lighten($accent-main, 10%), $accent-dark);
+    @include link-colors($accent-main, saturate($accent-light,5%), $accent-light, $accent-main, $accent-dark);
     text-decoration: none;
     &:hover{text-decoration:underline;}
 }
@@ -244,13 +370,24 @@ a {
   .tags,
   .items {
       .secondary-nav li, #secondary-nav li{
-          @include line-button;   
+          @include line-button;
       }
+}
+
+.pagination-nav {
+  background-color: $grey-light;
+  
+  .pagination {
+    @include clearfix;
+  }
 }
 
 .pagination{
     @include horizontal-list;
     margin:1em 0; 
+    background-color: $grey-light;
+    padding:2px;
+    
     .page-input {
         form {
             padding:0;
@@ -271,6 +408,7 @@ a {
     .next-page a {
         @include link-button;
         line-height: $base-font-size * 1.5;
+        margin-bottom:0;
     } 
 }
 
@@ -306,6 +444,7 @@ a {
 .item-pagination {
     @include horizontal-list;
     padding:2em 0 1em 0;
+    clear:both;
 
     .next a, .previous a {
         @include link-button;
@@ -340,6 +479,7 @@ a {
 /* Top Navigation - Mega Menu Styles */
 
 #top-nav {
+    clear:both;
     min-height: 40px;
 /*    position:relative;
 */    .nav-menu {
@@ -434,8 +574,8 @@ select {
 
 input[type=text],
 input[type=password] {
-    border-color: $grey-light;
-    @include rhythm-borders(1px, 0, $base-font-size, solid);
+    border-color: #fff;
+    @include rhythm-borders(2px, 0, $base-font-size, solid);
     min-height: 1.5 * $base-line-height;
     padding: rhythm(.25);
 }
@@ -636,46 +776,32 @@ th {
     border-bottom:1px solid $grey-light;
     @include trailer();
 }
-    
-.item {
-    .item-img{
-        padding-bottom:.5em;
-        height: rhythm(5);
-        float: right;
-        
-        img {
-            height: 100%;
-            width: auto;
-            float: right;
-        }
-    }
-}
-
-.item-file img {
-    max-width: 100%;
-    height: auto;
-}
 
 .show {
-    .element {
-        border-top:1px solid $grey-light;
-    }
-    .item-file {
-        display: inline-block;
-        padding-right:1em;
-    }
-    
-    [class^="video-"].item-file,
-    [class*=" video-"].item-file,
-    [class^="audio-"].item-file,
-    [class*=" audio-"].item-file {
-        display: block;
-        padding-right: 0;
-    }
-    
-    #output-format-list {
-        @include horizontal-list;
-    }
+  .element-set {
+    @include boxed (lighten($grey-light, 5%));
+    margin-bottom:$base-spacing;
+  }
+  
+  .element {
+    border-top:1px solid $grey-light;
+  }
+  .item-file {
+    margin-bottom:$base-spacing;
+    @include boxed (lighten($grey-light, 5%));
+  }
+  
+  [class^="video-"].item-file,
+  [class*=" video-"].item-file,
+  [class^="audio-"].item-file,
+  [class*=" audio-"].item-file {
+      display: block;
+      padding-right: 0;
+  }
+  
+  #output-format-list {
+      @include horizontal-list;
+  }
 }
 
 #itemfiles .download-link {
@@ -693,10 +819,6 @@ th {
 
 body.files .item-file {
     @include trailer();
-}
-
-#sidebar {
-    clear: both;
 }
 
 /* -------------------------------------------------------------------------*/
@@ -796,6 +918,72 @@ body.files .item-file {
 }
 
 /* -------------------------------------------------------------------------*/
+/* Home page */
+
+#home {
+  
+  .record {
+    h3 {
+      padding-top:0.2em;
+      padding-bottom:0.2em;
+    }
+    .image {
+      float:none;
+      display:block;
+      margin-left:0;
+      height:auto;
+      
+      img {
+        width:100%;
+        height:auto;
+        float:none;
+      }
+    }
+  }
+  
+  #featured-item {
+    @include boxed;
+    
+    h2 {
+      padding-top:0;  
+    }
+    
+    .record {
+      
+      .image {
+        float:none;
+        display:block;
+        margin:$base-spacing / 2 0 $base-spacing / 4 0;
+        height:auto;
+        
+        img {
+          width:100%;
+          height:auto;
+          float:none;
+        }
+      }
+      
+      :last-child {
+        margin-bottom:0;
+      }
+    }
+  }
+  
+  #featured-collection {
+    h2 {
+      border:none;
+    }
+  }
+  
+  #recent-items {
+    h2 {
+      margin-bottom:0.3em;
+    }
+  }
+}
+
+
+/* -------------------------------------------------------------------------*/
 /* Simple Pages */
 
 #simple-pages-breadcrumbs {
@@ -825,11 +1013,13 @@ body.files .item-file {
 /* -------------------------------------------------------------------------*/
 /* Commenting */
 #comments-container {
-    margin:1em 0;
-    #comments {
-        margin:0;
-        padding:0;
-    }
+  margin:1em 0;
+  @include boxed;
+  
+  #comments {
+    margin:0;
+    padding:0;
+  }
 }
 
 #recaptcha_area input {

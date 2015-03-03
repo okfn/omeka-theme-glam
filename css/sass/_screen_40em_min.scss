@@ -12,11 +12,67 @@
 
 /* -------------------------------------------------------------------------*/
 /* Layout */
-#site-title {@include span-columns (7,12);}
+#admin-bar {
+  text-align:right;
+  & > ul {
+    padding:0;
+  }
+}
+#site-title {
+  @include span-columns (7,12);
+  line-height: 96px;
+  margin-top:0;
+  margin-bottom:0;
+  font-size: $base-font-size * 1.7;
+}
 #search-container {@include span-columns (5 omega, 12);}
 #featured {@include span-columns (7,12);}
-.pagination {@include span-columns(12);}
-#sort-links {@include span-columns(12);}
+
+.secondary-nav + .pagination-nav {
+  @include span-columns(6,12);
+  
+  .pagination {
+    margin-top:0;
+    margin-bottom:0;
+  }
+}
+.pagination-nav + #sort-links {
+  @include span-columns(6 omega,12);
+  background-color: $grey-light;
+  display:table;
+  padding-top:7px;
+  padding-bottom:8px;
+  position:relative;
+  
+  .sort-label {
+    display:table-cell;
+    float:none;
+    text-align:right;
+    width:100%;
+  }
+  #sort-links-list {
+    display:table-cell;
+    text-align:right;
+    white-space:nowrap;
+    
+    li {
+      float:none;
+    }
+  }
+  
+  &:before {
+    content:'';
+    display:block;
+    background-color:$grey-light;
+    @include container;
+    width:70em;
+    position:absolute;
+    top:0;
+    bottom:0;
+    right:0;
+    z-index:-1;
+  }
+}
 #recent-items {@include span-columns (5 omega, 12);}
 #advanced-search-form label {@include span-columns (3,12);}
 #advanced-search-form .label {@include span-columns (3,12);}
@@ -69,7 +125,22 @@
     padding: 0;
     z-index: 15;
     float: left;
-    background-color: white;    
+    background-color:$accent-main;   
+    
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 9600px;
+      right: 100%;
+      background-color:$accent-main; 
+    }
+    &:after { 
+      left: 100%;
+    }
+    
     .active {
         background-color: lighten($accent-main, 10%);
         a {
@@ -100,8 +171,6 @@
         display: block;
         float: left;
         padding: 0;
-        margin: 5px 5px 0 0;
-        background-color: lighten($grey-light, 5%);
         position: relative;
 
     }
@@ -118,9 +187,10 @@
         padding: .5em 1em;
         margin: 0;
         border: 0;
-        color: $accent-main;
+        color: white;
         &:hover {
             color: white;
+            background-color:rgba(255,255,255,0.20);
         }
         &:focus {
             color: white;
@@ -248,4 +318,129 @@
             }
         }
     }
+}
+
+
+/* -------------------------------------------------------------------------*/
+/* Browse and Item Pages */
+.item.hentry {
+  position:relative;
+  min-height:150px;
+  
+  h2,
+  .item-description {
+    padding-left:150px;
+  }
+  
+  .item-img{
+    padding-bottom:.5em;
+    height: rhythm(5);
+    position:absolute;
+    left:0;
+    top:34px;
+    
+    img {
+        height: 100%;
+        width: auto;
+    }
+  }
+}
+
+.item-file img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* -------------------------------------------------------------------------*/
+/* Show */
+
+#primary {
+  @include span-columns(8,12);
+}
+#primary + #sidebar {
+  @include span-columns(4 omega,12);
+}
+
+
+/* -------------------------------------------------------------------------*/
+/* Footer */
+#wrap > footer {
+  .footer-logo {
+    float: left;
+    margin-bottom: 0;
+  }
+  
+  ul {
+    float: left;
+    margin-left: 1em;
+    margin-bottom: 0;
+    
+    li {
+      display: inline;
+      text-align: left;
+    }
+  }
+  
+  .footer-primary {
+    float: right;
+    
+    ul.footer-social {
+      float: right;
+      margin-top: 0;
+    }
+  }
+}
+
+
+/* -------------------------------------------------------------------------*/
+/* Home */
+#home {
+  .record {
+    overflow: visible;
+    position:relative;
+    min-height:146px;
+    
+    h3,
+    .item-description {
+      margin-right:150px;
+    }
+    
+    .image {
+      margin: 0 0 rhythm() rhythm();
+      height: rhythm(5);
+      position:absolute;
+      top:0;
+      right:0;
+      
+      img { 
+        height: 100%;
+        width: auto;
+      }
+    }
+  }
+  
+  #featured-item {
+    .record {
+      h3,
+      .item-description {
+        margin-right:0;
+      }
+      
+      .image {
+        position:static;
+      }
+    }
+  }
+  
+  #featured-collection {
+    h2,
+    .collection-description {
+      margin-right:150px;
+    }
+    
+    .image {
+      top:-10px;
+    }
+  }
 }
