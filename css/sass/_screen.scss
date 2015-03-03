@@ -47,7 +47,6 @@
 }
 
 header[role=banner] {
-  @include clearfix;
   background-color:$grey-light;
   margin: 0 -9999rem;
   padding: 0 9999rem;
@@ -301,7 +300,7 @@ h6 {
     font-size: $base-font-size * 1.5;
     font-weight: bold;
     line-height: $base-line-height * 2;
-    margin: 20px 0;
+    padding: 20px 0;
     
     a {
       text-decoration:none;
@@ -311,7 +310,6 @@ h6 {
       img {
         display: block;
         height: 52px;
-        margin-top: 18px;
       }
     }
 }
@@ -481,6 +479,7 @@ a {
 #top-nav {
     clear:both;
     min-height: 40px;
+    @include clearfix;
 /*    position:relative;
 */    .nav-menu {
         overflow: auto;

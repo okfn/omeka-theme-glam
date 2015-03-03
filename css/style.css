@@ -447,8 +447,6 @@ table {
 }
 
 header[role=banner] {
-  overflow: hidden;
-  *zoom: 1;
   background-color: #ECECEC;
   margin: 0 -9999rem;
   padding: 0 9999rem;
@@ -781,7 +779,7 @@ h6 {
   font-size: 24px;
   font-weight: bold;
   line-height: 48px;
-  margin: 20px 0;
+  padding: 20px 0;
 }
 #site-title a {
   text-decoration: none;
@@ -791,7 +789,6 @@ h6 {
 #site-title a img {
   display: block;
   height: 52px;
-  margin-top: 18px;
 }
 
 /* -------------------------------------------------------------------------*/
@@ -1050,6 +1047,8 @@ a:hover {
 #top-nav {
   clear: both;
   min-height: 40px;
+  overflow: hidden;
+  *zoom: 1;
   /*    position:relative;
   */
 }
@@ -1830,8 +1829,6 @@ body.files .item-file {
     margin-right: 2.85714%;
     display: inline;
     line-height: 96px;
-    margin-top: 0;
-    margin-bottom: 0;
     font-size: 27.2px;
   }
 
@@ -1994,6 +1991,9 @@ body.files .item-file {
   /* mega menu list */
   /*** Adapted from Emiglio by Kim Nguyen ****/
   /* mega menu list */
+  #top-nav {
+    overflow: visible;
+  }
   #top-nav .nav-menu {
     width: 100%;
     display: block;
