@@ -746,7 +746,7 @@ h1, h2, #item-filters .collection, h3, h4, h5, h6 {
   line-height: 1.1;
   padding: .5em 0 0.2em 0;
   margin: 0;
-  color: #555;
+  color: #4a4a4a;
 }
 
 h4, h5, h6 {
@@ -1800,6 +1800,16 @@ body.files .item-file {
 }
 
 /* -------------------------------------------------------------------------*/
+/* embed-codes */
+#embed-codes #embed-code-text {
+  width: 100%;
+  background-color: #A4A4A4;
+  border: none;
+  padding: 16px;
+  color: #fff;
+}
+
+/* -------------------------------------------------------------------------*/
 /* Screen - Mobile */
 @media screen and (min-width: 40em) {
   @font-face {
@@ -2091,7 +2101,7 @@ body.files .item-file {
     margin: 0;
     background-color: #10c5c0;
     z-index: 2;
-    border: 1px solid #6e6e6e;
+    border: 1px solid #bebebe;
   }
   #top-nav .nav-menu .sub-nav.open {
     display: block;

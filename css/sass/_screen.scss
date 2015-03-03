@@ -273,7 +273,7 @@ blockquote {
     line-height: 1.1;
     padding: .5em 0 0.2em 0;
     margin:0;
-    color: $grey-medium;
+    color: lighten($grey-dark, 8%);
 }
 #{headings(4,6)} {
     font-style: $base-font-size * 1.2;
@@ -1200,4 +1200,18 @@ body.files .item-file {
 .mejs-inner button {
     /* Prevents all media player buttons from showing. */
     min-height: 0;
+}
+
+
+/* -------------------------------------------------------------------------*/
+/* embed-codes */
+
+#embed-codes {
+  #embed-code-text {
+    width:100%;
+    background-color:$grey-medium;
+    border:none;
+    padding: $base-spacing / 2;
+    color:#fff;
+  }
 }
