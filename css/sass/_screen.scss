@@ -485,8 +485,8 @@ a {
         overflow: auto;
         background-color:lighten($grey-light, 5%);
         .active {
-            background-color: lighten($accent-main, 10%);
-            a{color:white;}
+            //background-color: lighten($accent-main, 10%);
+            //a{color:white;}
         }
     }
     li {

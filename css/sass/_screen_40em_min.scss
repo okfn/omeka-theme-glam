@@ -142,12 +142,6 @@
       left: 100%;
     }
     
-    .active {
-        background-color: lighten($accent-main, 10%);
-        a {
-            color: white;
-        }
-    }
     li {
         width: auto;
         border: none;
@@ -176,9 +170,9 @@
 
     }
     .nav-item.active {
-        background-color: lighten($accent-main, 10%);
+        //background-color: lighten($accent-main, 10%);
         a {
-            color: white;
+            //color: white;
         }
     }
 /* first descendant link within a top level navigation item */

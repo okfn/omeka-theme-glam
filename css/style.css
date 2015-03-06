@@ -1056,12 +1056,6 @@ a:hover {
   overflow: auto;
   background-color: #f9f9f9;
 }
-#top-nav .nav-menu .active {
-  background-color: #12dcd7;
-}
-#top-nav .nav-menu .active a {
-  color: white;
-}
 #top-nav li {
   display: block;
   width: 100%;
@@ -2035,12 +2029,6 @@ body.files .item-file {
   #top-nav .nav-menu:after {
     left: 100%;
   }
-  #top-nav .nav-menu .active {
-    background-color: #12dcd7;
-  }
-  #top-nav .nav-menu .active a {
-    color: white;
-  }
   #top-nav .nav-menu li {
     width: auto;
     border: none;
@@ -2061,12 +2049,6 @@ body.files .item-file {
     float: left;
     padding: 0;
     position: relative;
-  }
-  #top-nav .nav-menu .nav-item.active {
-    background-color: #12dcd7;
-  }
-  #top-nav .nav-menu .nav-item.active a {
-    color: white;
   }
   #top-nav .nav-menu .nav-item > a {
     position: relative;
