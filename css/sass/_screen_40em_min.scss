@@ -422,7 +422,21 @@
     }
   }
   
+  [id^="featured-"] {
+    h2,
+    p {
+      margin-right:150px;
+    }
+    
+    .image {
+      top:-10px;
+    }
+  }
+  
   #featured-item {
+    h2 {
+      margin-right:0;
+    }
     .record {
       h3,
       .item-description {
@@ -432,17 +446,6 @@
       .image {
         position:static;
       }
-    }
-  }
-  
-  #featured-collection {
-    h2,
-    .collection-description {
-      margin-right:150px;
-    }
-    
-    .image {
-      top:-10px;
     }
   }
 }

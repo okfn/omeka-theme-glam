@@ -2287,19 +2287,22 @@ body.files .item-file {
     height: 100%;
     width: auto;
   }
+  #home [id^="featured-"] h2, #home [id^="featured-"] #item-filters .collection, #item-filters #home [id^="featured-"] .collection,
+  #home [id^="featured-"] p {
+    margin-right: 150px;
+  }
+  #home [id^="featured-"] .image {
+    top: -10px;
+  }
+  #home #featured-item h2, #home #featured-item #item-filters .collection, #item-filters #home #featured-item .collection {
+    margin-right: 0;
+  }
   #home #featured-item .record h3,
   #home #featured-item .record .item-description {
     margin-right: 0;
   }
   #home #featured-item .record .image {
     position: static;
-  }
-  #home #featured-collection h2, #home #featured-collection #item-filters .collection, #item-filters #home #featured-collection .collection,
-  #home #featured-collection .collection-description {
-    margin-right: 150px;
-  }
-  #home #featured-collection .image {
-    top: -10px;
   }
 }
 /* -------------------------------------------------------------------------*/
