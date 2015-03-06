@@ -573,7 +573,7 @@ select {
 
 input[type=text],
 input[type=password] {
-    border-color: #fff;
+    border-color: $grey-light;
     @include rhythm-borders(2px, 0, $base-font-size, solid);
     min-height: 1.5 * $base-line-height;
     padding: rhythm(.25);
@@ -600,6 +600,7 @@ button,
     input[type=text] {
         margin: 0;
         @include calc(width, "100% - 34px");
+        border-color:#fff;
     }
 
     &.with-advanced input[type=text] {

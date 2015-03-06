@@ -1142,7 +1142,7 @@ select {
 
 input[type=text],
 input[type=password] {
-  border-color: #fff;
+  border-color: #ECECEC;
   border-width: 0.125em;
   border-style: solid;
   padding: -0.125em;
@@ -1187,6 +1187,7 @@ button:active,
   margin: 0;
   width: -webkit-calc(100% - 34px);
   width: calc(100% - 34px);
+  border-color: #fff;
 }
 #search-container.with-advanced input[type=text] {
   width: -webkit-calc(100% - 76px);
