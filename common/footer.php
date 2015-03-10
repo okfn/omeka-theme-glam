@@ -21,10 +21,13 @@
     </div><!-- end wrap -->
 
     <script>
-        jQuery(document).ready(function (){
-            Minimalist.megaMenu();
-            Minimalist.skipNav();
-        });
+    
+    jQuery(document).ready(function() {
+        
+        Omeka.showAdvancedForm();
+        Omeka.skipNav();
+        Omeka.megaMenu('#top-nav');
+    });
     </script>
 </body>
 </html>

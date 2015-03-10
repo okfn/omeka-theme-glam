@@ -18,10 +18,13 @@
 .pagination {@include span-columns(12);}
 #sort-links {@include span-columns(12);}
 #recent-items {@include span-columns (5 omega, 12);}
-#advanced-search-form label {@include span-columns (3,12);}
-#advanced-search-form .label {@include span-columns (3,12);}
-#advanced-search-form .inputs {@include span-columns (9 omega, 12);}
-#advanced-search-form .field .two {@include span-columns(3,12);}
+#advanced-search-form label,
+#advanced-search-form .label,
+.field .columns.alpha {@include span-columns (3,12);}
+#advanced-search-form .inputs,
+.field .columns.omega,
+.field .inputs,
+div#contribution-type-form div.inputs {@include span-columns (9 omega, 12);}
 
 .exhibits.summary #primary,
 .exhibits.summary #content > h1:first-of-type,

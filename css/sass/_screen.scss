@@ -428,6 +428,17 @@ a {
             content: "\2014\0020";
         }
     }
+
+    [aria-haspopup="true"]:after {
+        font-family: "FontAwesome";
+        content: "\f0da";
+        margin: 0 0 0 .5em;
+        vertical-align: bottom;
+    }
+
+    [aria-haspopup="true"].open:after {
+        content: "\f0d7";
+    }
 }
 
 /* -------------------------------------------------------------------------*/
@@ -516,16 +527,21 @@ button,
     }
     
     &.with-advanced .show-advanced {
-        right: 0;
-    }
-    
-    &.with-advanced button {
         right: 1.5833 * $base-line-height;
     }
     
+    &.with-advanced button {
+        right: 0;
+    }
+    
+    .show-advanced,
     button {
         text-indent: -9999px;
         right: 0;
+    }
+
+    .show-advanced:after {
+        content: "\f141";
     }
 
     button:after {
@@ -533,7 +549,6 @@ button,
     }
     
     #advanced-form {
-        // display: none;
         position: absolute;
         top: 1.5 * $base-line-height;
         background-color: $background-color;
@@ -546,14 +561,13 @@ button,
         text-align: left;
         
         &.closed {
-            left: -9999px;
+            display: none;
         }      
-        &.open  {
-            left: 0;
-        }
+
         label {
             font-weight: normal;
         }
+
         input[type=checkbox],
         input[type=radio] {
             margin: rhythm(.25) 5px 0 0;
@@ -601,12 +615,18 @@ button,
 }
 /* -------------------------------------------------------------------------*/
 /* Advanced Search Form */
+
+.field {
+    border-top:1px solid $grey-light;
+    overflow: auto;
+    
+    label {
+        display: inline-block;
+    }
+}
+
 #advanced-search-form {
     padding:2em 0;
-    .field {
-        border-top:1px solid $grey-light;
-        overflow: auto;
-    }
     label, input, select, button {
         margin:.5em 0;
     }
