@@ -115,7 +115,7 @@ $formAttributes['method'] = 'GET';
         </div>
     </div>
 
-    <div class="field">
+    <div class="type field">
         <?php echo $this->formLabel('item-type-search', __('Search By Type')); ?>
         <div class="inputs">
         <?php
