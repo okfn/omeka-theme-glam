@@ -89,7 +89,8 @@ $formAttributes['method'] = 'GET';
         </div>
         <button type="button" class="add_search"><?php echo __('Add a Field'); ?></button>
     </div>
-
+    
+    <?php if (get_theme_option('advanced_search_range') !== '0'): ?>
     <div id="search-by-range" class="field">
         <?php echo $this->formLabel('range', __('Search by a range of ID#s (example: 1-4, 156, 79)')); ?>
         <div class="inputs">
@@ -100,7 +101,9 @@ $formAttributes['method'] = 'GET';
         ?>
         </div>
     </div>
-
+    <?php endif; ?>
+    
+    <?php if (get_theme_option('advanced_search_collection') !== '0'): ?>
     <div class="collection field">
         <?php echo $this->formLabel('collection-search', __('Search By Collection')); ?>
         <div class="inputs">
@@ -114,7 +117,9 @@ $formAttributes['method'] = 'GET';
         ?>
         </div>
     </div>
-
+    <?php endif; ?>
+    
+    <?php if (get_theme_option('advanced_search_type') !== '0'): ?>
     <div class="type field">
         <?php echo $this->formLabel('item-type-search', __('Search By Type')); ?>
         <div class="inputs">
@@ -128,8 +133,9 @@ $formAttributes['method'] = 'GET';
         ?>
         </div>
     </div>
+    <?php endif; ?>
 
-    <?php if(is_allowed('Users', 'browse')): ?>
+    <?php if(is_allowed('Users', 'browse') && get_theme_option('advanced_search_user') !== '0'): ?>
     <div class="user field">
     <?php
         echo $this->formLabel('user-search', __('Search By User'));?>
@@ -145,7 +151,8 @@ $formAttributes['method'] = 'GET';
         </div>
     </div>
     <?php endif; ?>
-
+    
+    <?php if (get_theme_option('advanced_search_tags') !== '0'): ?>
     <div class="tag field">
         <?php echo $this->formLabel('tag-search', __('Search By Tags')); ?>
         <div class="inputs">
@@ -156,9 +163,9 @@ $formAttributes['method'] = 'GET';
         ?>
         </div>
     </div>
+    <?php endif; ?>
 
-
-    <?php if (is_allowed('Items','showNotPublic')): ?>
+    <?php if (is_allowed('Items','showNotPublic') && get_theme_option('advanced_search_public') !== '0'): ?>
     <div class="public field">
         <?php echo $this->formLabel('public', __('Public/Non-Public')); ?>
         <div class="inputs">
@@ -176,7 +183,8 @@ $formAttributes['method'] = 'GET';
         </div>
     </div>
     <?php endif; ?>
-
+    
+    <?php if (get_theme_option('advanced_search_featured') !== '0'): ?>
     <div class="featured field">
         <?php echo $this->formLabel('featured', __('Featured/Non-Featured')); ?>
         <div class="inputs">
@@ -193,8 +201,11 @@ $formAttributes['method'] = 'GET';
         ?>
         </div>
     </div>
-
-    <?php fire_plugin_hook('public_items_search', array('view' => $this)); ?>
+    <?php endif; ?>
+    
+    <?php if (get_theme_option('advanced_search_plugins') !== '0') 
+      fire_plugin_hook('public_items_search', array('view' => $this));
+    ?>
     <div>
         <?php if (!isset($buttonText)) $buttonText = __('Search for items'); ?>
         <input type="submit" class="submit" name="submit_search" id="submit_search_advanced" value="<?php echo $buttonText ?>">
