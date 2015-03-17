@@ -539,7 +539,7 @@ a {
             a:hover {
                 color:white;
                 text-decoration: none;
-                background-color:lighten($accent-light, 10%);
+                background-color:$accent-light;
             }
         }
         .active a{

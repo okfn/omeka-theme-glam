@@ -1105,7 +1105,7 @@ a:hover {
 #top-nav .sub-nav.open li a:hover {
   color: white;
   text-decoration: none;
-  background-color: #1bede7;
+  background-color: #10c5c0;
 }
 #top-nav .sub-nav.open .active a {
   color: white;
@@ -2083,7 +2083,7 @@ body.files .item-file {
     background-color: #0EADA9;
   }
   #top-nav .nav-menu .nav-item > a.open {
-    background-color: #0EADA9;
+    background-color: #A4A4A4;
     color: white;
     border-bottom: none;
     z-index: 1;
@@ -2095,20 +2095,18 @@ body.files .item-file {
     padding: 0;
     border: 0;
     margin: 0;
-    background-color: #10c5c0;
+    background-color: #A4A4A4;
     z-index: 2;
-    border: 1px solid #bebebe;
+    border-radius: 0px 0px 3px 3px;
+    border-radius: 0px 0px 3px 3px;
+    border-radius: 0px 0px 3px 3px;
   }
   #top-nav .nav-menu .sub-nav.open {
     display: block;
-    background-color: white;
     min-width: 250px;
   }
-  #top-nav .nav-menu .sub-nav.open .active {
-    background-color: white;
-  }
   #top-nav .nav-menu .sub-nav.open .active a {
-    color: #0EADA9;
+    color: #fff;
   }
   #top-nav .nav-menu .sub-nav.open .active a:hover {
     color: white;
@@ -2120,7 +2118,7 @@ body.files .item-file {
     padding: 0;
   }
   #top-nav .nav-menu .sub-nav.open ul a {
-    color: #0EADA9;
+    color: #fff;
   }
   #top-nav .nav-menu .sub-nav.open ul a:before {
     content: "\2014\0020";
@@ -2132,10 +2130,11 @@ body.files .item-file {
     padding: 0;
   }
   #top-nav .nav-menu .sub-nav.open li a {
-    color: #0EADA9;
+    color: #fff;
+    padding: 0.5em 1em;
   }
   #top-nav .nav-menu .sub-nav.open li a:hover {
-    background-color: #1bede7;
+    background-color: rgba(255, 255, 255, 0.2);
     color: white;
   }
   #top-nav .nav-menu .sub-nav.open li a:focus {
