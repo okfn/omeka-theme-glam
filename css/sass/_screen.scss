@@ -574,6 +574,7 @@ select {
 input[type=text],
 input[type=password] {
     border-color: $grey-light;
+    background: #fff;
     @include rhythm-borders(2px, 0, $base-font-size, solid);
     min-height: 1.5 * $base-line-height;
     padding: rhythm(.25);
