@@ -2200,6 +2200,7 @@ body.files .item-file {
     min-height: 150px;
   }
   .item.hentry h2, .item.hentry #item-filters .collection, #item-filters .item.hentry .collection,
+  .item.hentry h3,
   .item.hentry .item-description,
   .item.hentry .tags {
     padding-left: 150px;
