@@ -790,6 +790,9 @@ h6 {
   display: block;
   height: 52px;
 }
+#site-title .tagline {
+  font-size: 23px;
+}
 
 /* -------------------------------------------------------------------------*/
 /* Links */
@@ -1833,8 +1836,17 @@ body.files .item-file {
     float: left;
     margin-right: 2.85714%;
     display: inline;
-    line-height: 96px;
+    line-height: 55px;
     font-size: 27.2px;
+  }
+  #site-title a {
+    float: left;
+  }
+  #site-title .tagline {
+    float: left;
+    margin-left: 10px;
+    line-height: 70px;
+    position: absolute;
   }
 
   #search-container {

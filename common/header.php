@@ -43,7 +43,12 @@
 
             <?php echo theme_header_image(); ?>
 
-            <div id="site-title"><?php echo link_to_home_page(theme_logo()); ?></div>
+            <div id="site-title">
+              <?php echo link_to_home_page(theme_logo()); ?>
+              <?php if (get_theme_option('tagline')): ?>
+              <span class="tagline"><?php echo get_theme_option('tagline'); ?></span>
+              <?php endif; ?>
+            </div>
 
             <div id="search-container">
                 <?php if (get_theme_option('use_advanced_search') === null || get_theme_option('use_advanced_search')): ?>
