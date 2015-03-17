@@ -27,6 +27,11 @@
     <!-- Featured Exhibit -->
     <?php echo exhibit_builder_display_random_featured_exhibit(); ?>
     <?php endif; ?>
+    
+    <?php if (get_theme_option('homepage_text_two')): ?>
+    <div class="home-text"><?php echo get_theme_option('homepage_text_two'); ?></div>
+    <?php endif; ?>
+    
 </div> <!-- End Primary Column -->
 
 <?php
