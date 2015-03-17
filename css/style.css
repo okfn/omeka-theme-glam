@@ -1140,6 +1140,7 @@ select {
 input[type=text],
 input[type=password] {
   border-color: #ECECEC;
+  background: #fff;
   border-width: 0.125em;
   border-style: solid;
   padding: -0.125em;
