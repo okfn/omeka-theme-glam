@@ -2321,6 +2321,7 @@ body.files .item-file {
   }
   #home .featured-exhibit h2, #home .featured-exhibit #item-filters .collection, #item-filters #home .featured-exhibit .collection {
     padding-right: 150px;
+    margin-top: 0;
   }
 }
 /* -------------------------------------------------------------------------*/
