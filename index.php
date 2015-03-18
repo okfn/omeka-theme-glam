@@ -8,7 +8,7 @@
     <?php if (get_theme_option('Display Featured Item') !== '0'): ?>
     <!-- Featured Item -->
     <div id="featured-item">
-        <h2><?php echo __('Featured Item'); ?></h2>
+        <h2><?php echo __('Featured'); ?></h2>
         <?php echo random_featured_items(1); ?>
     </div><!--end featured-item-->
     <?php endif; ?>
@@ -16,7 +16,7 @@
     <?php if (get_theme_option('Display Featured Collection') !== '0'): ?>
     <!-- Featured Collection -->
     <div id="featured-collection">
-        <h2><?php echo __('Featured Collection'); ?></h2>
+        <h2><?php echo __('Featured'); ?></h2>
         <?php echo random_featured_collection(); ?>
     </div><!-- end featured collection -->
     <?php endif; ?>
@@ -25,7 +25,10 @@
             && plugin_is_active('ExhibitBuilder')
             && function_exists('exhibit_builder_display_random_featured_exhibit')): ?>
     <!-- Featured Exhibit -->
+    <div class="featured-exhibit">
+    <h2><?php echo __('Featured'); ?></h2>
     <?php echo exhibit_builder_display_random_featured_exhibit(); ?>
+    </div>
     <?php endif; ?>
     
     <?php if (get_theme_option('homepage_text_two')): ?>

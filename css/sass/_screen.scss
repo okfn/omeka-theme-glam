@@ -115,7 +115,6 @@ p {
 #featured-collection,
 #featured-exhibit, 
 #recent-items {
-    overflow: hidden;
     margin:1em 0 0;
     
     h2, 
@@ -946,6 +945,15 @@ body.files .item-file {
     }
   }
   
+  [id^="featured-"],
+  .featured-exhibit,
+  #recent-items {
+    h2 {
+      font-size:20px;
+      padding-top:1.5em;
+    }
+  }
+  
   #featured-item {
     @include boxed;
     
@@ -980,6 +988,20 @@ body.files .item-file {
     }
   }
   
+  .featured-exhibit {
+    h2 {
+      margin-top:1em;
+      padding-bottom:0;
+    }
+    #featured-exhibit {
+      margin-top:0;
+      
+      h2 {
+        display:none;
+      }
+    }
+  }
+
   #recent-items {
     h2 {
       margin-bottom:0.3em;
