@@ -21,6 +21,8 @@ $formAttributes['method'] = 'GET';
         ?>
         </div>
     </div>
+    
+    <?php if (get_theme_option('advanced_search_fields') !== '0'): ?>
     <div id="search-narrow-by-fields" class="field">
         <div class="label"><?php echo __('Narrow by Specific Fields'); ?></div>
         <div class="inputs">
@@ -89,6 +91,7 @@ $formAttributes['method'] = 'GET';
         </div>
         <button type="button" class="add_search"><?php echo __('Add a Field'); ?></button>
     </div>
+    <?php endif; ?>
     
     <?php if (get_theme_option('advanced_search_range') !== '0'): ?>
     <div id="search-by-range" class="field">
