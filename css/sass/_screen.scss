@@ -574,10 +574,13 @@ select {
 input[type=text],
 input[type=password] {
     border-color: $grey-light;
-    background: $grey-light;
     @include rhythm-borders(2px, 0, $base-font-size, solid);
     min-height: 1.5 * $base-line-height;
     padding: rhythm(.25);
+}
+
+.inputs input[type=text] {
+  background: $grey-light;
 }
 
 input[type=submit],
