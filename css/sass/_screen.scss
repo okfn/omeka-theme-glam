@@ -1119,7 +1119,7 @@ body.files .item-file {
             overflow:hidden;
             li {
                 border:none;
-                margin:0 .5em .5em 0;
+                margin:0 0 0.5em 0;
             }
             ul {               
                 width:100%;
@@ -1135,8 +1135,8 @@ body.files .item-file {
                     float:left;
 
                     a {
-                        @include link-button;
-                        margin-bottom:0;
+                        margin:0;
+                        padding: 0.5em 1em;
                     } 
 
                 }
@@ -1159,9 +1159,7 @@ body.files .item-file {
             }
 
             .exhibit-title {
-                font-family:$font-family-title;
-                text-transform: uppercase;
-                padding:.5em 0;
+                color: $grey-medium;
                 &:after { content: ":" }
             }
         }
@@ -1214,6 +1212,7 @@ body.files .item-file {
             padding:.5em 0;
             color:white;
             margin-top:.5em;
+            display:none;
         }
         #exhibit-nav-up {
             clear:both;

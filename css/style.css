@@ -1681,7 +1681,7 @@ body.files .item-file {
 }
 .exhibits.show #exhibit-pages #secondary-nav li {
   border: none;
-  margin: 0 .5em .5em 0;
+  margin: 0 0 0.5em 0;
 }
 .exhibits.show #exhibit-pages #secondary-nav ul {
   width: 100%;
@@ -1698,21 +1698,8 @@ body.files .item-file {
   float: left;
 }
 .exhibits.show #exhibit-pages #secondary-nav ul li a {
-  min-height: 36px;
-  padding: 0.375em;
-  display: block;
-  background-color: #f9f9f9;
-  margin-bottom: .5em;
-  border: 0;
-  margin-bottom: 0;
-}
-.exhibits.show #exhibit-pages #secondary-nav ul li a:hover {
-  background-color: #0EADA9;
-  color: white;
-  text-decoration: none;
-}
-.exhibits.show #exhibit-pages #secondary-nav ul li a:active {
-  background-color: #10c5c0;
+  margin: 0;
+  padding: 0.5em 1em;
 }
 .exhibits.show #exhibit-pages #secondary-nav > li:nth-child(2) {
   display: block;
@@ -1735,9 +1722,7 @@ body.files .item-file {
   content: "\00A0\0020";
 }
 .exhibits.show #exhibit-pages #secondary-nav .exhibit-title {
-  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-  text-transform: uppercase;
-  padding: .5em 0;
+  color: #A4A4A4;
 }
 .exhibits.show #exhibit-pages #secondary-nav .exhibit-title:after {
   content: ":";
@@ -1804,6 +1789,7 @@ body.files .item-file {
   padding: .5em 0;
   color: white;
   margin-top: .5em;
+  display: none;
 }
 .exhibits.show #exhibit-page-navigation #exhibit-nav-up {
   clear: both;
@@ -2192,22 +2178,31 @@ body.files .item-file {
     padding-top: 0;
   }
 
-  .exhibits.show #secondary-nav.exhibit-page-nav li {
-    float: left;
-    margin-top: .5em;
+  .exhibits.show #exhibit-pages {
+    width: 31.42857%;
+    float: right;
+    margin-right: 0;
+    *margin-left: -2em;
+    display: inline;
   }
-  .exhibits.show #secondary-nav.exhibit-page-nav li ul li {
+  .exhibits.show #exhibit-pages #secondary-nav.exhibit-page-nav li {
+    float: none;
+  }
+  .exhibits.show #exhibit-pages #secondary-nav.exhibit-page-nav li ul li {
     width: auto;
+    float: none;
+    margin: 0;
+    border-top: 2px solid #ECECEC;
   }
-  .exhibits.show #exhibit-page-navigation #exhibit-nav-next,
-  .exhibits.show #exhibit-page-navigation #exhibit-nav-prev {
+  .exhibits.show #exhibit-pages #exhibit-page-navigation #exhibit-nav-next,
+  .exhibits.show #exhibit-pages #exhibit-page-navigation #exhibit-nav-prev {
     width: 50%;
   }
-  .exhibits.show #exhibit-page-navigation #exhibit-nav-up {
+  .exhibits.show #exhibit-pages #exhibit-page-navigation #exhibit-nav-up {
     clear: both;
     width: 33%;
   }
-  .exhibits.show #exhibit-page-navigation #exhibit-nav-up .current-page {
+  .exhibits.show #exhibit-pages #exhibit-page-navigation #exhibit-nav-up .current-page {
     clear: none;
   }
 
